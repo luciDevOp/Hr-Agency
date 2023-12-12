@@ -1,20 +1,17 @@
 function Hero(){
     return (
-    <section id="hero" className="d-flex align-items-center">
+    <section id="hero" className="d-flex align-items-center hero-bg">
 
-    <div className="container">
+    <div className="container hero-pad">
       <div className="row">
         <div className="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-          <h1>Head Hunting Agency</h1>
-          <h2>We are team of talented HR staff ready to get you hired!</h2>
-          <div className="d-flex justify-content-center justify-content-lg-start">
-            <a href="#about" className="btn-get-started scrollto">Get Started</a>
-            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" className="glightbox btn-watch-video"><i className="bi bi-play-circle"></i><span>Watch Video</span></a>
-          </div>
+          <h1 >Global reach with local knowledge</h1>
+          <p>Welcome to the Romania’s leading executive search firms, Head Hunting IMD. We aim to create a true people advantage for our clients, by finding the best fit for both the employer and the employee. Enjoy your browsing; we strive to make your visit lead to personal insight and inspiration.</p>
         </div>
-        <div className="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="assets/img/hero-img.png" className="img-fluid animated" alt="" />
+        <div className="col-lg-6 d-flex flex-column justify-content-right pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+          <h1 className="IMD">IMD-Bucharest, Romania</h1>
         </div>
+
       </div>
     </div>
 

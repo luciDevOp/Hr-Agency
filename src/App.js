@@ -1,35 +1,27 @@
 import './App.css';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Asked from './components/Asked';
-import Call from './components/Call';
-import Clients from './components/Clients';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import Pricing from './components/Pricing';
-import Services from './components/Services';
-import Skills from './components/Skills';
-import Team from './components/Team';
-import Why from './components/Why';
-
+import Home from "./pages/Home";
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Services from './pages/Services';
+import { Route, Routes } from 'react-router-dom';
+import GlobalOffices from './pages/GlobalOffices';
+import GlobalMarket from './pages/GlobalMarket';
+import OurCommitment from './pages/OurCommitment';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Hero />
-      <Clients />
-      <About />
-      <Why />
-      <Skills />
-      <Services />
-      <Call />
-      <Team />
-      <Pricing />
-      <Asked />
-      <Contact />
-      <Footer />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/about-global-offices' element={<GlobalOffices />} />
+        <Route path='/about-global-market-coverage' element={<GlobalMarket />} />
+        <Route path='/about-our-commitment' element={<OurCommitment />} />
+        <Route path='/services' element={<Services />} />
+        <Route path='/contact' element={<Contact />} />
+      </Routes>
     </div>
   );
 }

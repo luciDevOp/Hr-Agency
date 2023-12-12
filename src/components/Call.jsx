@@ -5,13 +5,26 @@ const Call = () => {
         <section id="cta" className="cta">
       <div className="container" data-aos="zoom-in">
 
-        <div className="row">
-          <div className="col-lg-9 text-center text-lg-start">
-            <h3>Call To Action</h3>
-            <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div className="row justify-content-center">
+          <div className="col-lg-3 text-center">
+            <img className="call-icons" src='/assets/img/years.png' />
+            <h1>10</h1>
+            <h3>Years of Experience</h3>
           </div>
-          <div className="col-lg-3 cta-btn-container text-center">
-            <a className="cta-btn align-middle" href="#">Call To Action</a>
+          <div className="col-lg-3 text-center">
+            <img className="call-icons" src='/assets/img/job offers.png' />
+            <h1>4,312</h1>
+            <h3>Job Offers</h3>
+          </div>
+          <div className="col-lg-3 text-center">
+            <img className="call-icons" src='/assets/img/resumes.png' />
+            <h1>10,231</h1>
+            <h3>Resumes Added</h3>
+          </div>
+          <div className="col-lg-3 text-center">
+            <img className="call-icons" src='/assets/img/satisfaction.png' />
+            <h1>100%</h1>
+            <h3>Clients Satisfaction</h3>
           </div>
         </div>
 
