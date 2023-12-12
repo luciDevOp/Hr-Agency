@@ -8,17 +8,17 @@ const Call = () => {
         <div className="row justify-content-center">
           <div className="col-lg-3 text-center">
             <img className="call-icons" src='/assets/img/years.png' />
-            <h1>10</h1>
+            <h1>18+</h1>
             <h3>Years of Experience</h3>
           </div>
           <div className="col-lg-3 text-center">
             <img className="call-icons" src='/assets/img/job offers.png' />
-            <h1>4,312</h1>
-            <h3>Job Offers</h3>
+            <h1>330+</h1>
+            <h3>Clients</h3>
           </div>
           <div className="col-lg-3 text-center">
             <img className="call-icons" src='/assets/img/resumes.png' />
-            <h1>10,231</h1>
+            <h1>23,286</h1>
             <h3>Resumes Added</h3>
           </div>
           <div className="col-lg-3 text-center">

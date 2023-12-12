@@ -386,6 +386,373 @@ Her ability to persuade, to influence, convince and her passion are truly one of
               </MDBRow>
             </MDBContainer>
           </MDBCarouselItem>
+          
+          <MDBCarouselItem>
+            <MDBContainer>
+              <MDBRow className="text-center">
+                <MDBCol lg="4" className="mb-5 mb-md-0">
+                  <div className="d-flex justify-content-center mb-4">
+                    <img
+                      src="/assets/img/testimonials/alexandra.jpeg"
+                      className="rounded-circle shadow-1-strong"
+                      width="150"
+                      height="150"
+                    />
+                  </div>
+                  <h5 className="mb-3">Alexandra Negoita</h5>
+                  <h6 className="testimonial-text mb-3">Sales Account Manager at InterContinental</h6>
+                  <p className="px-xl-3">
+                    <MDBIcon fas icon="quote-left" className="pe-2" />
+                    Loreda is the best person to have around at the beginning of your career and not only. She is professional , understanding, she knows how to challenge you and how to make you be the best ! I have learned so many things from her and I hope someday we will have the chance to work togheter again !
+                    <MDBIcon fas icon="quote-left" className="pe-1 p-1" />
+                  </p>
+                  <MDBTypography
+                    listUnStyled
+                    className="d-flex justify-content-center mb-0"
+                  >
+                    </MDBTypography>
+                </MDBCol>
+                <MDBCol lg="4" className="d-none d-lg-block">
+                  <div className="d-flex justify-content-center mb-4">
+                    <img
+                      src="/assets/img/testimonials/liana.jpeg"
+                      className="rounded-circle shadow-1-strong"
+                      width="150"
+                      height="150"
+                    />
+                  </div>
+                  <h5 className="mb-3">Liana Uzunov</h5>
+                  <h6 className="testimonial-text mb-3">Director, Talent Acquisitions @ AbbVie</h6>
+                  <p className="px-xl-3">
+                    <MDBIcon fas icon="quote-left" className="pe-2" />
+                    Loreda is having an innovative approach towards a project, being open and supportive. Loreda is looking for results being a hands-on manager.
+                    <MDBIcon fas icon="quote-left" className="pe-1 p-1" />
+                  </p>
+                  <MDBTypography
+                    listUnStyled
+                    className="d-flex justify-content-center mb-0"
+                  >
+                    </MDBTypography>
+                </MDBCol>
+                <MDBCol lg="4" className="d-none d-lg-block">
+                  <div className="d-flex justify-content-center mb-4">
+                    <img
+                      src="/assets/img/testimonials/valentina.jpeg"
+                      className="rounded-circle shadow-1-strong"
+                      width="150"
+                      height="150"
+                    />
+                  </div>
+                  <h5 className="mb-3">Valentina Marinoiu</h5>
+                  <h6 className="testimonial-text mb-3">Integrated Business Planning Director @ Kandia Dulce</h6>
+                  <p className="px-xl-3">
+                    <MDBIcon fas icon="quote-left" className="pe-2" />
+                    
+First time when I met Loreda, I had the feeling that I knew her for ages. She has that ability to make you feeling comfortable and talk like with a friend. On top of this, she is very professional, and she knows exactly where anyone fits, offering the best solution for employees and employers too.
+She is very serious and dedicated to her work, but she always remembers to those she works with, that business could be more pleasant when you meet a smile on a face.
+                    <MDBIcon fas icon="quote-left" className="pe-1 p-1" />
+                  </p>
+                  <MDBTypography
+                    listUnStyled
+                    className="d-flex justify-content-center mb-0"
+                  >
+                    </MDBTypography>
+                </MDBCol>
+              </MDBRow>
+            </MDBContainer>
+          </MDBCarouselItem>
+          <MDBCarouselItem>
+            <MDBContainer>
+              <MDBRow className="text-center">
+                <MDBCol lg="4" className="mb-5 mb-md-0">
+                  <div className="d-flex justify-content-center mb-4">
+                    <img
+                      src="/assets/img/testimonials/ema.jpeg"
+                      className="rounded-circle shadow-1-strong"
+                      width="150"
+                      height="150"
+                    />
+                  </div>
+                  <h5 className="mb-3">Ema Vidican</h5>
+                  <h6 className="testimonial-text mb-3">Psychotherapist | Career Counselor</h6>
+                  <p className="px-xl-3">
+                    <MDBIcon fas icon="quote-left" className="pe-2" />
+                    I've know Loreda since I joined Stanton Chase International. I can say that it's a true pleasure to meet her & even an greater pleasure to work with her.
+She is an excellent team-player and she has exceptional ability to establish social relationship, she doesn't jump on conclusion, is full of ideas, always enthusiastic and she talks & discuss freely.
+                    <MDBIcon fas icon="quote-left" className="pe-1 p-1" />
+                  </p>
+                  <MDBTypography
+                    listUnStyled
+                    className="d-flex justify-content-center mb-0"
+                  >
+                    </MDBTypography>
+                </MDBCol>
+                <MDBCol lg="4" className="d-none d-lg-block">
+                  <div className="d-flex justify-content-center mb-4">
+                    <img
+                      src="/assets/img/testimonials/alexandru.jpeg"
+                      className="rounded-circle shadow-1-strong"
+                      width="150"
+                      height="150"
+                    />
+                  </div>
+                  <h5 className="mb-3">Alexandru Horatiu Didea</h5>
+                  <h6 className="testimonial-text mb-3">Managing Partner @ WorkSpace Studio</h6>
+                  <p className="px-xl-3">
+                    <MDBIcon fas icon="quote-left" className="pe-2" />
+                    In 2008 Loreda helped us find the right people for the vacant sales positions in our company. Her understanding of our needs, knowledge of the market and result oriented approach make me recommend her work to anyone that needs HR services.
+                    <MDBIcon fas icon="quote-left" className="pe-1 p-1" />
+                  </p>
+                  <MDBTypography
+                    listUnStyled
+                    className="d-flex justify-content-center mb-0"
+                  >
+                    </MDBTypography>
+                </MDBCol>
+                <MDBCol lg="4" className="d-none d-lg-block">
+                  <div className="d-flex justify-content-center mb-4">
+                    <img
+                      src="/assets/img/testimonials/roxana.png"
+                      className="rounded-circle shadow-1-strong"
+                      width="150"
+                      height="150"
+                    />
+                  </div>
+                  <h5 className="mb-3">Roxana Petrea</h5>
+                  <h6 className="testimonial-text mb-3">Roxana Petrea @ The Care Hub</h6>
+                  <p className="px-xl-3">
+                    <MDBIcon fas icon="quote-left" className="pe-2" />
+                    I worked with Loreda on several top-management recruitment projects and she was the one that found the best candidates for our positions. Even if the projects were difficult, her creativity and ambition helped her in achieving great results and I recommend her for her professionalism.
+                    <MDBIcon fas icon="quote-left" className="pe-1 p-1" />
+                  </p>
+                  <MDBTypography
+                    listUnStyled
+                    className="d-flex justify-content-center mb-0"
+                  >
+                    </MDBTypography>
+                </MDBCol>
+              </MDBRow>
+            </MDBContainer>
+          </MDBCarouselItem>
+          <MDBCarouselItem>
+            <MDBContainer>
+              <MDBRow className="text-center">
+                <MDBCol lg="4" className="mb-5 mb-md-0">
+                  <div className="d-flex justify-content-center mb-4">
+                    <img
+                      src="/assets/img/testimonials/gabriela.jpeg"
+                      className="rounded-circle shadow-1-strong"
+                      width="150"
+                      height="150"
+                    />
+                  </div>
+                  <h5 className="mb-3">Gabriela Spirache</h5>
+                  <h6 className="testimonial-text mb-3">Project Manager @ Teach for Romania</h6>
+                  <p className="px-xl-3">
+                    <MDBIcon fas icon="quote-left" className="pe-2" />
+                    Full of enthusiasm and energy, Loreda is an excellent professional in the recruitment industry. Knowledgeable and efficient, she is a person you can always rely upon to deliver results, whatever the challenge...
+                    <MDBIcon fas icon="quote-left" className="pe-1 p-1" />
+                  </p>
+                  <MDBTypography
+                    listUnStyled
+                    className="d-flex justify-content-center mb-0"
+                  >
+                    </MDBTypography>
+                </MDBCol>
+                <MDBCol lg="4" className="d-none d-lg-block">
+                  <div className="d-flex justify-content-center mb-4">
+                    <img
+                      src="/assets/img/testimonials/florin.jpeg"
+                      className="rounded-circle shadow-1-strong"
+                      width="150"
+                      height="150"
+                    />
+                  </div>
+                  <h5 className="mb-3">Florin Petrescu</h5>
+                  <h6 className="testimonial-text mb-3">Marketing Manager @ Schubert Music Publishing</h6>
+                  <p className="px-xl-3">
+                    <MDBIcon fas icon="quote-left" className="pe-2" />
+                    
+I had the pleasure to work with Loreda in 2008 during the recruitment process for my new job at Reader's Digest. I appreciated Loreda's professionalism during this process which was straightforward, answered my questions, included a very good briefing and left no issues unaddressed. Overall the process was very well conducted, smooth and using high standards.
+                    <MDBIcon fas icon="quote-left" className="pe-1 p-1" />
+                  </p>
+                  <MDBTypography
+                    listUnStyled
+                    className="d-flex justify-content-center mb-0"
+                  >
+                    </MDBTypography>
+                </MDBCol>
+                <MDBCol lg="4" className="d-none d-lg-block">
+                  <div className="d-flex justify-content-center mb-4">
+                    <img
+                      src="/assets/img/testimonials/silvia.jpeg"
+                      className="rounded-circle shadow-1-strong"
+                      width="150"
+                      height="150"
+                    />
+                  </div>
+                  <h5 className="mb-3">Silvia Mihalache</h5>
+                  <h6 className="testimonial-text mb-3">Business Development Specialist @ Harris Computer</h6>
+                  <p className="px-xl-3">
+                    <MDBIcon fas icon="quote-left" className="pe-2" />
+                    I had the chance to meet and to work closely with Loreda for almost 2 years in Grafton Recruitment. Loreda is a resourceful, creative, and solution-oriented person who was frequently able to come up with new and innovative approaches in the Company.
+She develops an effective scoping from detail to “big picture”.
+                    <MDBIcon fas icon="quote-left" className="pe-1 p-1" />
+                  </p>
+                  <MDBTypography
+                    listUnStyled
+                    className="d-flex justify-content-center mb-0"
+                  >
+                    </MDBTypography>
+                </MDBCol>
+              </MDBRow>
+            </MDBContainer>
+          </MDBCarouselItem>
+          <MDBCarouselItem>
+            <MDBContainer>
+              <MDBRow className="text-center">
+                <MDBCol lg="4" className="mb-5 mb-md-0">
+                  <div className="d-flex justify-content-center mb-4">
+                    <img
+                      src="/assets/img/testimonials/emanuel.jpeg"
+                      className="rounded-circle shadow-1-strong"
+                      width="150"
+                      height="150"
+                    />
+                  </div>
+                  <h5 className="mb-3">Emanuel Grigorcea</h5>
+                  <h6 className="testimonial-text mb-3">Entrepreneurship @ PEP Cafe CustomShop, PEP Garage</h6>
+                  <p className="px-xl-3">
+                    <MDBIcon fas icon="quote-left" className="pe-2" />
+                    When I first met Loreda I was impressed by her dynamism, energy and persuasion. With a smile on her face, she has the power to convince you that there is place out there for any initiative and for any dream you have. I'll be glad to work and do business again with Loreda.
+                    <MDBIcon fas icon="quote-left" className="pe-1 p-1" />
+                  </p>
+                  <MDBTypography
+                    listUnStyled
+                    className="d-flex justify-content-center mb-0"
+                  >
+                    </MDBTypography>
+                </MDBCol>
+                <MDBCol lg="4" className="d-none d-lg-block">
+                  <div className="d-flex justify-content-center mb-4">
+                    <img
+                      src="/assets/img/testimonials/irina.jpeg"
+                      className="rounded-circle shadow-1-strong"
+                      width="150"
+                      height="150"
+                    />
+                  </div>
+                  <h5 className="mb-3">Irina Popovici</h5>
+                  <h6 className="testimonial-text mb-3">Recruitment Consultant @ T-Mobile Czech Republic</h6>
+                  <p className="px-xl-3">
+                    <MDBIcon fas icon="quote-left" className="pe-2" />
+                    The first thing that strikes you about Loreda is her approach full of energy and enthusiasm regarding people and projects and her ability to transmit to the others the desire to achieve high standard results. Loreda succeeds every time to build and keep a business and friendship relationship with both clients and candidates by showing professional approach, fast reaction and dedication.
+                    <MDBIcon fas icon="quote-left" className="pe-1 p-1" />
+                  </p>
+                  <MDBTypography
+                    listUnStyled
+                    className="d-flex justify-content-center mb-0"
+                  >
+                    </MDBTypography>
+                </MDBCol>
+                <MDBCol lg="4" className="d-none d-lg-block">
+                  <div className="d-flex justify-content-center mb-4">
+                    <img
+                      src="/assets/img/testimonials/cristian.jpeg"
+                      className="rounded-circle shadow-1-strong"
+                      width="150"
+                      height="150"
+                    />
+                  </div>
+                  <h5 className="mb-3">Cristian Nistoreasa</h5>
+                  <h6 className="testimonial-text mb-3">Certified Learning & Development Facilitator @ Wilson Learning</h6>
+                  <p className="px-xl-3">
+                    <MDBIcon fas icon="quote-left" className="pe-2" />
+                    Loreda is one of the more articulate people I have met who is able to easily make sense of things that are complicated. Her excellent interpersonal skills and comfort with people allow her to easily adapt to others and make them feel comfortable in their relationships with her. I have found working with Loreda a unique pleasure, as she has both the curiosity and wisdom of a well-rounded person.
+                    <MDBIcon fas icon="quote-left" className="pe-1 p-1" />
+                  </p>
+                  <MDBTypography
+                    listUnStyled
+                    className="d-flex justify-content-center mb-0"
+                  >
+                    </MDBTypography>
+                </MDBCol>
+              </MDBRow>
+            </MDBContainer>
+          </MDBCarouselItem>
+          <MDBCarouselItem>
+            <MDBContainer>
+              <MDBRow className="text-center">
+                <MDBCol lg="4" className="mb-5 mb-md-0">
+                  <div className="d-flex justify-content-center mb-4">
+                    <img
+                      src="/assets/img/testimonials/serban.jpeg"
+                      className="rounded-circle shadow-1-strong"
+                      width="150"
+                      height="150"
+                    />
+                  </div>
+                  <h5 className="mb-3">Serban Cazanisteanu</h5>
+                  <h6 className="testimonial-text mb-3">General Manager @ MINDO SA</h6>
+                  <p className="px-xl-3">
+                    <MDBIcon fas icon="quote-left" className="pe-2" />
+                    Loreda is one of the most dedicated persons I have been in contact with along my career. She is more than a HR professional - she is a trustworthy friend and in the same time a business partner. Loreda is unique in her ability to find the right professionals and matching them with the proper organizations. To sum up “most probably the best“ human resource that I have ever encountered.
+                    <MDBIcon fas icon="quote-left" className="pe-1 p-1" />
+                  </p>
+                  <MDBTypography
+                    listUnStyled
+                    className="d-flex justify-content-center mb-0"
+                  >
+                    </MDBTypography>
+                </MDBCol>
+                <MDBCol lg="4" className="d-none d-lg-block">
+                  <div className="d-flex justify-content-center mb-4">
+                    <img
+                      src="/assets/img/testimonials/cara.jpeg"
+                      className="rounded-circle shadow-1-strong"
+                      width="150"
+                      height="150"
+                    />
+                  </div>
+                  <h5 className="mb-3">Cristina M. Caramizaru</h5>
+                  <h6 className="testimonial-text mb-3">Senior Consultant | Career Coach</h6>
+                  <p className="px-xl-3">
+                    <MDBIcon fas icon="quote-left" className="pe-2" />
+                    I have worked together with Loreda in SCI, where I have been very impressed of her drive for achieving results, targets and numbers. Loreda is a very ethical professional towards her clients, candidates and colleagues. She is completing every goal with passion and responsibility for every party involved. Loreda is a very good Project Manager especially in the services / consulting area from all points of view: client management, creative sourcing, customer servicing, etc.
+                    <MDBIcon fas icon="quote-left" className="pe-1 p-1" />
+                  </p>
+                  <MDBTypography
+                    listUnStyled
+                    className="d-flex justify-content-center mb-0"
+                  >
+                    </MDBTypography>
+                </MDBCol>
+                <MDBCol lg="4" className="d-none d-lg-block">
+                  <div className="d-flex justify-content-center mb-4">
+                    <img
+                      src="/assets/img/testimonials/dan.jpeg"
+                      className="rounded-circle shadow-1-strong"
+                      width="150"
+                      height="150"
+                    />
+                  </div>
+                  <h5 className="mb-3">Dan Oprescu</h5>
+                  <h6 className="testimonial-text mb-3">Country Lead RO & MD @ Er-Kim Pharmaceuticals</h6>
+                  <p className="px-xl-3">
+                    <MDBIcon fas icon="quote-left" className="pe-2" />
+                    Loreda has a highly strategic approach with an eye for details.
+She excels in creating an atmosphere of mutual trust possessing the right competencies of an experienced career coach with a wide business overview.
+                    <MDBIcon fas icon="quote-left" className="pe-1 p-1" />
+                  </p>
+                  <MDBTypography
+                    listUnStyled
+                    className="d-flex justify-content-center mb-0"
+                  >
+                    </MDBTypography>
+                </MDBCol>
+              </MDBRow>
+            </MDBContainer>
+          </MDBCarouselItem>
       </MDBCarousel>
     </MDBContainer>
     </section>
