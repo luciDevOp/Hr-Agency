@@ -20,6 +20,7 @@ function Header() {
             </ul>
           </li>
           <li><Link className="nav-link scrollto" to="/services">Services</Link></li>
+          <li><Link className="nav-link scrollto" to="/blog">Media Lab</Link></li>
           <li><Link className="nav-link scrollto" to="/contact">Contact</Link></li>
 
           <li><Link className="getstarted scrollto" to="/about">Get Started</Link></li>

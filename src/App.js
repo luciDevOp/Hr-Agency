@@ -2,12 +2,20 @@ import './App.css';
 import Header from './components/Header';
 import Home from "./pages/Home";
 import About from './pages/About';
+import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import Services from './pages/Services';
 import { Route, Routes } from 'react-router-dom';
 import GlobalOffices from './pages/GlobalOffices';
 import GlobalMarket from './pages/GlobalMarket';
 import OurCommitment from './pages/OurCommitment';
+import Event1 from './pages/Event1';
+import Event3 from './pages/Event3';
+import Event2 from './pages/Event2';
+import Event4 from './pages/Event4';
+import Event5 from './pages/Event5';
+import Event6 from './pages/Event6';
+import Event7 from './pages/Event7';
 
 function App() {
   return (
@@ -21,6 +29,14 @@ function App() {
         <Route path='/about-our-commitment' element={<OurCommitment />} />
         <Route path='/services' element={<Services />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/blog' element={<Blog />} />
+        <Route path='/blog-event-1' element={<Event1 />} />
+        <Route path='/blog-event-2' element={<Event2 />} />
+        <Route path='/blog-event-3' element={<Event3 />} />
+        <Route path='/blog-event-4' element={<Event4 />} />
+        <Route path='/blog-event-5' element={<Event5 />} />
+        <Route path='/blog-event-6' element={<Event6 />} />
+        <Route path='/blog-event-7' element={<Event7 />} />
       </Routes>
     </div>
   );
