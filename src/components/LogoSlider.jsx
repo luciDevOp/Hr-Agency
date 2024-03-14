@@ -1,111 +1,164 @@
-import React, {Component} from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React from "react";
 
-class LogoSlider extends Component{
-  render(){
-    const settings = {
-      slidesToShow: 7,
-    slidesToScroll: 1,
-    infinite: true,
-    autoplay: true,
-    speed: 10000,
-    autoplaySpeed: 0,
-    cssEase: 'linear',
-    arrows: false,
-    };
-    return(
-      <div className="mainContainer">
-        <Slider {...settings}>
-        <div className='container'>
-        <img src='https://logowik.com/content/uploads/images/aco-gruppe7259.jpg' />
+function LogoSlider() {
+  return (
+    <div className="logos">
+      <div className="logos-slide">
+        <img src="https://logowik.com/content/uploads/images/aco-gruppe7259.jpg" />
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwJ46N8CMb1ODKg5YLOjUaTKgnywEtSOLVPiGZBnFCFw&s" />
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGKyB15eDomSha1jLVn5w5jp5VHebGvtiA74UPlF9A2g&s" />
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxiO9sWIgL7R5CwlsrZGq_fTgW9zDB-OFgrF7O4EJV7g&s" />
+        <img src="https://logowik.com/content/uploads/images/alcon.jpg" />
+        <img src="https://asset.brandfetch.io/idh85SOEuh/idR1cvaNiI.png" />
+        <img src="https://media.licdn.com/dms/image/C4D0BAQE5SVMhyi8ZYQ/company-logo_200_200/0/1631349515453?e=2147483647&v=beta&t=5QyBA2zVc4WscIZDE8Eu-2g-EJpsgk6a0sWYimLNSrc" />
+        <img src="https://i.pinimg.com/originals/01/ca/da/01cada77a0a7d326d85b7969fe26a728.jpg" />
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1gfsrToi5DoCTFRY7-QrleqaM05oLVpSCP69LQ8jRdA&s" />
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0kP7Q-JEvvAvFz1VDYVRDBK0eTeGEJKqXbeBq140STg&s" />
+        <img src="https://download.logo.wine/logo/Auchan/Auchan-Logo.wine.png" />
+        <img src="https://autonet.az/web/img/new-logo-fb.png" />
+        <img src="https://imworld.ro/2016/wp-content/uploads/2016/08/Avangate-logo-04.png" />
+        <img src="https://logowik.com/content/uploads/images/axa5054.jpg" />
+        <img src="https://storage.googleapis.com/mrfinance.appspot.com/wordpress/1/2020/03/banca-transilvania-logo.png" />
+        <img src="https://1000logos.net/wp-content/uploads/2020/03/McLaren-Logo-2002.jpg" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Mercedes_Benz_Logo_11.jpg/800px-Mercedes_Benz_Logo_11.jpg?20130508224951" />
+        <img src="https://plazaromania.ro/wp-content/uploads/2017/02/bcr_logo.jpg" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/2048px-BMW.svg.png" />
+        <img src="https://romanianyellowpages.ro/wp-content/uploads/2014/06/brd-logo-primary1.jpg" />
+        <img src="https://res.cloudinary.com/dkatmtbbc/image/upload/v1/publications/mohhvabthsw6nqyhfp3m.jpg" />
+        <img src="https://www.casa-antonie.ro/wp-content/uploads/2018/08/carrefour.jpg" />
+        <img src="https://www.logo.wine/a/logo/HBO/HBO-Logo.wine.svg" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Honda.svg/2560px-Honda.svg.png" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Kaufland_201x_logo.svg/2048px-Kaufland_201x_logo.svg.png" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Lidl-Logo.svg/2048px-Lidl-Logo.svg.png" />
+        <img src="https://logowik.com/content/uploads/images/hewitt-associates2849.logowik.com.webp" />
+        <img src="https://www.aspo.com/hubfs/Images/Logos/Aspo_logo_some.png" />
+        <img src="https://upload.wikimedia.org/wikipedia/ro/thumb/e/e8/Bancpost.svg/2560px-Bancpost.svg.png" />
+        <img src="https://1000logos.net/wp-content/uploads/2020/09/BASF-Logo.png" />
+        <img src="https://logos-world.net/wp-content/uploads/2021/08/Brilliance-Symbol.png" />
+        <img src="https://assets-global.website-files.com/640b54881d62e1308fc494f8/652fdc252b28e26669365f82_BusinessLease-LOGO-Landscape.png" />
+        <img src="https://www.corasupport.org/wp-content/uploads/2016/01/bristol-myers-squibb-logo-e1476302468899.jpg" />
+        <img src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/092014/bwin.png?itok=zMognic0" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cadbury.svg/1280px-Cadbury.svg.png" />
+        <img src="https://www.winmarkt.ro/en/wp-content/uploads/2016/04/logo07.jpg" />
+        <img src="https://tukuz.com/wp-content/uploads/2020/10/chase-de-vere-logo-vector.png" />
+        <img src="https://kommunikasjon.ntb.no/data/images/00041/b23989e5-64b6-4791-8bc7-f754a784a12f.jpg/social" />
+        <img src="https://inginerie.ulbsibiu.ro/wp-content/uploads/2017/12/Continental-logo-logotype.png" />
+        <img src="https://www.fcrapid.ro/wp-content/uploads/23-Dacris.jpg" />
+        <img src="https://i.pinimg.com/originals/49/0d/8e/490d8e60e2c5b3eb5325037df652fff4.png" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Daimler_logo.jpg" />
+        <img src="https://www.arilog.ro/uploads/members/delamode.jpg" />
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT64EvByq-1E9Qxs_s311vYzUwq2zQAVjp9pA&usqp=CAU" />
+        <img src="https://logowik.com/content/uploads/images/danfoss7157.logowik.com.webp" />
+        <img src="https://cdn.iconscout.com/icon/free/png-256/free-dhl-express-3442895-2875356.png" />
+        <img src="https://logowik.com/content/uploads/images/dpd-dynamic-parcel-distribution5336.jpg" />
+        <img src="https://en.dussmanngroup.com/downloads/dussmann/logo-dussmann-rgb.png" />
+        <img src="https://static.vecteezy.com/system/resources/previews/015/743/369/original/ebe-letter-logo-design-in-illustration-logo-calligraphy-designs-for-logo-poster-invitation-etc-vector.jpg" />
+        <img src="https://allvectorlogo.com/img/2017/09/ecolab-logo.png" />
+        <img src="https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/igdw9649hwlwh2mjitiq" />
+        <img src="https://logowik.com/content/uploads/images/e-on1236.logowik.com.webp" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Eti_logo.png" />
+        <img src="https://logowik.com/content/uploads/images/eurofins-scientific1551.jpg" />
+        <img src="https://www.brandient.com/wp-content/uploads/2017/10/Europharm-rebranding-bt-Brandient-Logo-Design-1.jpg" />
+        <img src="https://seekvectorlogo.com/wp-content/uploads/2022/01/eventim-international-vector-logo-2022-small.png" />
+        <img src="https://media.licdn.com/dms/image/C4D0BAQHxvCxObWcKQA/company-logo_200_200/0/1631357028268/evialis_galicia_logo?e=2147483647&v=beta&t=EvscZJPNjPO9N_N0mFcB5dHWp9hO3dRY4zZZLtksRa0" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Fox_International_Channels_logo_20130122.png" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Fokker_official_logo.png" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/EY_logo_2019.svg/768px-EY_logo_2019.svg.png" />
+        <img src="https://tukuz.com/wp-content/uploads/2019/05/fresenius-medical-care-logo-vector.png" />
+        <img src="https://upload.wikimedia.org/wikipedia/de/b/b6/Fricke-Gruppe_logo.svg" />
+        <img src="https://www.logo.wine/a/logo/FrieslandCampina/FrieslandCampina-Logo.wine.svg" />
+        <img src="https://allevo.ro/wp-content/uploads/2017/09/Logo-Garanti-Bank-300x225.jpg" />
+        <img src="https://technica.ch/wp-content/uploads/2020/10/Galika-Logo.jpg" />
+        <img src="https://1000logos.net/wp-content/uploads/2021/03/Gazprom-logo.jpg" />
+        <img src="https://logowik.com/content/uploads/images/gea-engineering-new-20225715.jpg" />
+        <img src="https://cdn.worldvectorlogo.com/logos/gewiss-1.svg" />
+        <img src="https://addaptny.org/wp-content/uploads/2017/11/GKN-Aerospace-Logo.png" />
+        <img src="https://logowik.com/content/uploads/images/glencore4479.logowik.com.webp" />
+        <img src="https://www.gmv.com/sites/default/files/content/image/2021/11/03/115/gmv_rgbredblack.png" />
+        <img src="https://getlogo.net/wp-content/uploads/2019/10/grammer-ag-logo-vector.png" />
+        <img src="https://seekvectorlogo.com/wp-content/uploads/2018/02/grant-thornton-vector-logo.png" />
+        <img src="https://media.machinerypark.com/brand/56/98/381-286/h%C3%BCnnebeck.jpg" />
+        <img src="https://pattern.us/wp-content/uploads/2020/06/39.Intersnack.png" />
+        <img src="https://logowik.com/content/uploads/images/johnson-johnson-new-2023-vertical23760.logowik.com.webp" />
+        <img src="https://www.arilog.ro/uploads/members/Logo_KLG_site.png" />
+        <img src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/092016/untitled-2_79.jpg?itok=lm5Jwrdh" />
+        <img src="https://en.kruk.eu/media/file/image/logo_kruk-1.png" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/KWS_SAAT_AG_logo.jpg" />
+        <img src="https://www.single-pair-ethernet.com/sites/default/files/styles/4_3/public/2020-08/lapp-logo-weg.jpg?itok=7d0ipbtN" />
+        <img src="https://logowik.com/content/uploads/images/leroy-merlin8331.jpg" />
+        <img src="https://www.agrisuport.ro/wp-content/uploads/2019/09/Libra-Bank.png" />
+        <img src="https://chemarkrom.ro/wp-content/uploads/2018/10/limagrain-logo.png" />
+        <img src="https://image.pitchbook.com/rhlz4ZLAF0m7Uze4XPIpJXyDSvI1618596604104_200x200" />
+        <img src="https://www.manutan.com/medias/img/logos/logo_Manutan.jpg" />
+        <img src="https://www.maisadour.com/storage/2021/07/maisadour-logo-rond.png" />
+        <img src="https://logowik.com/content/uploads/images/689_marksandspencer.jpg" />
+        <img src="https://s3-us-west-2.amazonaws.com/cbi-image-service-prd/original/389b3b31-bcad-41ed-b875-5eb8b3388fec.jpeg" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/MedPark_Hospital.jpg" />
+        <img src="https://upload.wikimedia.org/wikipedia/ro/thumb/1/1d/Logo_Mega_Image.svg/1200px-Logo_Mega_Image.svg.png" />
+        <img src="https://merxu.com/pages-assets/social-merxu-logo.png" />
+        <img src="https://i.pinimg.com/originals/86/39/68/863968d4e6c26b27ab214a867a0f9c2c.png" />
+        <img src="https://logowik.com/content/uploads/images/855_metro.jpg" />
+        <img src="https://logos-world.net/wp-content/uploads/2023/03/Miele-Logo.jpg" />
+        <img src="https://ami.cname.ro/_/company/mirus-consultanta-fiscala/mediaPool/Mirus_11191313.jpg" />
+        <img src="https://findvectorlogo.com/wp-content/uploads/2019/01/mks-instruments-vector-logo.png" />
+        <img src="https://www.adstore.it/wp-content/uploads/2017/11/logo-motivi.jpg" />
+        <img src="https://labs.ligaac.ro/content/upload/files/firme-09_8c69c288d1.png" />
+        <img src="https://www.belli-france.com/wp-content/uploads/2017/07/logo-mr-bricolage.jpg" />
+        <img src="https://logovectorseek.com/wp-content/uploads/2019/11/nidec-corporation-logo-vector.png" />
+        <img src="https://bsnl.ch/wp-content/uploads/2016/07/2.novartis-logo.jpg" />
+        <img src="https://cdn.worldvectorlogo.com/logos/ntn.svg" />
+        <img src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/092010/snr.gif?itok=Bkaht-x5" />
+        <img src="https://content.nlinbusiness.com/app/uploads/sites/25/2022/08/NRCC-Logo-2-1024x369.png" />
+        <img src="https://logowik.com/content/uploads/images/pepsico4720.jpg" />
+        <img src="https://images.philips.com/is/image/PhilipsConsumer/Philips_Wordmark-ALI-global?wid=700&$jpglarge$&fit=crop" />
+        <img src="https://procaresoftware.com/wp-content/uploads/2020/05/blog-sub_new-logo-3550664.png" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/PricewaterhouseCoopers_Logo.svg/2560px-PricewaterhouseCoopers_Logo.svg.png" />
+        <img src="https://1000logos.net/wp-content/uploads/2020/04/Raiffeisen-Bank-International-Logo.jpg" />
+        <img src="https://cdn.worldvectorlogo.com/logos/reader-s-digest.svg" />
+        <img src="https://seeklogo.com/images/R/rompetrol-logo-E5D7093995-seeklogo.com.png" />
+        <img src="https://upload.wikimedia.org/wikipedia/it/thumb/f/f3/Logo_Riello.svg/1280px-Logo_Riello.svg.png" />
+        <img src="https://logowik.com/content/uploads/images/rossmann2254.jpg" />
+        <img src="https://logowik.com/content/uploads/images/sandoz-new9018.logowik.com.webp" />
+        <img src="https://brand.securitas.com/wp-content/uploads/2021/02/SEC_Logotype_2.png" />
+        <img src="https://logowik.com/content/uploads/images/sensata-technologies3812.jpg" />
+        <img src="https://www.thesiadgroup.com/documents/104637/0/siad_italiana.JPG/28c05a4a-9eae-d6b8-70a9-66e343e44198?version=1.0&t=1541407122963" />
+        <img src="https://1000logos.net/wp-content/uploads/2021/03/Sixt-Logo.png" />
+        <img src="https://cep.org.nz/wp-content/uploads/2022/03/Signify-logo-300x300.jpg" />
+        <img src="https://sofmedica.com/wp-content/uploads/2022/06/sofmedica-vert-albastru-16-jpg-webp.webp" />
+        <img src="https://logowik.com/content/uploads/images/770_sodexo.jpg" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Stada_logo.svg" />
+        <img src="https://tukuz.com/wp-content/uploads/2019/06/sun-chemical-logo-vector.png" />
+        <img src="https://www.b2bcentral.co.za/wp-content/uploads/2017/06/Ascendis-acquisition-Sunwave-Pharma-logo.jpg" />
+        <img src="https://swiss-capital.co/wp-content/uploads/2022/06/LOGO.svg" />
+        <img src="https://1000logos.net/wp-content/uploads/2020/08/Syngenta-Logo.png" />
+        <img src="https://wpcdn.us-east-1.vip.tn-cloud.net/www.wccbcharlotte.com/content/uploads/2016/06/Takata-logo.jpg" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/TakkoLogo.svg/800px-TakkoLogo.svg.png" />
+        <img src="https://tukuz.com/wp-content/uploads/2020/05/terapia-sa-a-sun-pharma-company-logo-vector.png" />
+        <img src="https://pic.stonecontact.com/picture201511/201611/2279/20161101104104114-6a45a36bO.jpg" />
+        <img src="https://mldup8b2mw9t.i.optimole.com/cb:W5TT.4274f/w:auto/h:auto/q:mauto/f:best/https://www.thehackettgroup.com/wp-content/uploads/2023/02/hackett-logo-site-image-yoast.png" />
+        <img src="https://tkk-group.com/img/c9a58128-d602-4059-bb3b-199148313d19/novica-dve-naslovnica.jpg?fm=jpg&q=80&fit=max&crop=980%2C560%2C88%2C0&w=600" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/TMF_Group.png" />
+        <img src="https://logowik.com/content/uploads/images/trumpf8115.jpg" />
+        <img src="https://upload.wikimedia.org/wikipedia/en/archive/b/b9/20130819104932%21TSB_logo_2013.svg" />
+        <img src="https://www.umeb.ro/image/max_0/motoare-electrice-asincrone-tip-asr-0_600-400.jpg" />
+        <img src="https://clcprojects.com/wp-content/uploads/2018/02/Unimasters.jpg" />
+        <img src="https://seeklogo.com/images/T/TUV-logo-44EF751C05-seeklogo.com.png" />
+        <img src="https://play-lh.googleusercontent.com/aSbXoxsHyN-Xb2gfiW4rQmI0rOyixjexha8YOdJsClDhUDl9LzsWplmuNyxeJqKaww" />
+        <img src="https://www.ergar.org/wp-content/uploads/2019/03/vertis_logo_hi-res_trasparent-300x225.png" />
+        <img src="https://s23775.pcdn.co/wp-content/uploads/sites/44/2017/09/Velcro-We-R-the-World-Press-and-News.jpg.optimal.jpg" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Vitesco_Technologies_logo.svg/1200px-Vitesco_Technologies_logo.svg.png" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Volvo_Trucks_%26_Bus_logo.jpg/600px-Volvo_Trucks_%26_Bus_logo.jpg?20150923181237" />
+        <img src="https://findvectorlogo.com/wp-content/uploads/2018/12/wacker-chemie-ag-vector-logo.png" />
+        <img src="https://www.aftermarketnews.com/wp-content/uploads/2016/02/Wegmann-Logo-e1484067709864.png" />
+        <img src="https://findvectorlogo.com/wp-content/uploads/2019/02/weidmuller-gruppe-vector-logo.png" />
+        <img src="https://logos-world.net/wp-content/uploads/2022/12/Whirlpool-Logo.png" />
+        <img src="https://feelinglucky.ro/wp-content/uploads/winmasters-logo.png" />
+        <img src="https://www.startupcafe.ro/sites/default/files/2023-09/yazaki-logo.jpg" />
+        <img src="https://i.pinimg.com/564x/12/86/99/128699f55ba10f7d9ed14473de504540.jpg" />
+        <img src="https://web-material3.yokogawa.com/1/10029/tabs/trademark.jpg" />
       </div>
-      <div className='container'>
-        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwJ46N8CMb1ODKg5YLOjUaTKgnywEtSOLVPiGZBnFCFw&s' />
-      </div>
-      <div className='container'>
-        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGKyB15eDomSha1jLVn5w5jp5VHebGvtiA74UPlF9A2g&s' />
-      </div>
-      <div className='container'>
-        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxiO9sWIgL7R5CwlsrZGq_fTgW9zDB-OFgrF7O4EJV7g&s' />
-      </div>
-      <div className='container'>
-        <img src='https://logowik.com/content/uploads/images/alcon.jpg' />
-      </div>
-      <div className='container'>
-        <img src='https://asset.brandfetch.io/idh85SOEuh/idR1cvaNiI.png' />
-      </div>
-      <div className='container'>
-        <img src='https://media.licdn.com/dms/image/C4D0BAQE5SVMhyi8ZYQ/company-logo_200_200/0/1631349515453?e=2147483647&v=beta&t=5QyBA2zVc4WscIZDE8Eu-2g-EJpsgk6a0sWYimLNSrc' />
-      </div>
-      <div className='container'>
-        <img src='https://i.pinimg.com/originals/01/ca/da/01cada77a0a7d326d85b7969fe26a728.jpg' />
-      </div>
-      <div className='container'>
-        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1gfsrToi5DoCTFRY7-QrleqaM05oLVpSCP69LQ8jRdA&s' />
-      </div>
-      <div className='container'>
-        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0kP7Q-JEvvAvFz1VDYVRDBK0eTeGEJKqXbeBq140STg&s' />
-      </div>
-      <div className='container'>
-        <img src='https://download.logo.wine/logo/Auchan/Auchan-Logo.wine.png' />
-      </div>
-      <div className='container'>
-        <img src='https://autonet.az/web/img/new-logo-fb.png' />
-      </div>
-      <div className='container'>
-        <img src='https://imworld.ro/2016/wp-content/uploads/2016/08/Avangate-logo-04.png' />
-      </div>
-      <div className='container'>
-        <img src='https://logowik.com/content/uploads/images/axa5054.jpg' />
-      </div>
-      <div className='container'>
-        <img src='https://storage.googleapis.com/mrfinance.appspot.com/wordpress/1/2020/03/banca-transilvania-logo.png' />
-      </div>
-      <div className='container'>
-        <img src='https://1000logos.net/wp-content/uploads/2020/03/McLaren-Logo-2002.jpg' />
-      </div>
-      <div className='container'>
-        <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Mercedes_Benz_Logo_11.jpg/800px-Mercedes_Benz_Logo_11.jpg?20130508224951' />
-      </div>
-      <div className='container'>
-        <img src='https://plazaromania.ro/wp-content/uploads/2017/02/bcr_logo.jpg' />
-      </div>
-      <div className='container'>
-        <img src='https://dynamicassets.basf.com/is/image/basf/basf-light-blue:16x9?dpr=off&fmt=webp-alpha&fit=crop%2C1&wid=1256&hei=710' />
-      </div>
-      <div className='container'>
-        <img src='https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/eeftn25do44bbml1yvh2' />
-      </div>
-      <div className='container'>
-        <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/2048px-BMW.svg.png' />
-      </div>
-      <div className='container'>
-        <img src='https://romanianyellowpages.ro/wp-content/uploads/2014/06/brd-logo-primary1.jpg' />
-      </div>
-      <div className='container'>
-        <img src='https://res.cloudinary.com/dkatmtbbc/image/upload/v1/publications/mohhvabthsw6nqyhfp3m.jpg' />
-      </div>
-      <div className='container'>
-        <img src='https://www.casa-antonie.ro/wp-content/uploads/2018/08/carrefour.jpg' />
-      </div>
-      <div className='container'>
-        <img src='https://www.logo.wine/a/logo/HBO/HBO-Logo.wine.svg' />
-      </div>
-      <div className='container'>
-        <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Honda.svg/2560px-Honda.svg.png' />
-      </div>
-      <div className='container'>
-        <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Kaufland_201x_logo.svg/2048px-Kaufland_201x_logo.svg.png' />
-      </div>
-      <div className='container'>
-        <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Lidl-Logo.svg/2048px-Lidl-Logo.svg.png' />
-      </div>
-        </Slider>
-      </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default LogoSlider;

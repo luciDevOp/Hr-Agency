@@ -7,8 +7,11 @@
   <title>HeadHunting Agency</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+  <base href="/" />
+  
 
   <!-- Favicons -->
+  
   <script src="https://kit.fontawesome.com/a4f693f3a1.js" crossorigin="anonymous"></script>
 
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
@@ -27,10 +30,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="path-to-node-modules/swiper/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="path-to-node-modules/swiper/components/navigation/navigation.min.css" />
-  <link rel="stylesheet" href="path-to-node-modules/swiper/components/pagination/pagination.min.css" />
+ 
   
 
   <!-- Template Main CSS File -->
@@ -40,6 +40,7 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/navigation/navigation.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
@@ -47,10 +48,19 @@
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $(".mobile-nav-toggle").click(function() {
+      $(".navbar ul").slideToggle();
+    });
+  });
+</script>
   
     
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>.
+  
+  <script src="assets/js/main.js"></script>
   </body>
 </html>
