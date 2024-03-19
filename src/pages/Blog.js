@@ -9,7 +9,6 @@ import {
 import Footer from "../components/Footer";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -175,7 +174,7 @@ function Blog() {
       <section id="posts" class="posts">
         <div class="container" data-aos="fade-up">
           <div class="row g-5">
-            <div class="col-lg-4">
+            <div class="col-lg-4">  
               <div class="post-entry-1 lg">
                 <a href="/blog-event-1">
                   <img src="assets/img/swiss.jpeg" alt="" class="img-fluid" />
@@ -200,6 +199,15 @@ function Blog() {
                 <div class="post-meta"></div>
                 <h2>
                   <a href="/blog-event-8">Presenting Ramona Ungureanu</a>
+                </h2>
+              </div>
+              <div class="post-entry-1 pt-5">
+                <a href="/blog-event-11">
+                  <img src="assets/img/events/pwn/pwn5.jpeg" alt="" class="img-fluid" />
+                </a>
+                <div class="post-meta"></div>
+                <h2>
+                  <a href="/blog-event-11">HHA proud member of Professional Women Network</a>
                 </h2>
               </div>
             </div>
@@ -252,6 +260,21 @@ function Blog() {
                       </a>
                     </h2>
                   </div>
+                  <div class="post-entry-1">
+                    <a href="/blog-event-10">
+                      <img
+                        src="assets/img/wr2.jpeg"
+                        alt=""
+                        class="img-fluid"
+                      />
+                    </a>
+                    <div class="post-meta"></div>
+                    <h2>
+                      <a href="/blog-event-10">
+                      The Third Edition of WOMENRISE
+                      </a>
+                    </h2>
+                  </div>  
                 </div>
                 <div class="col-lg-6 border-start custom-border">
                   <div class="post-entry-1">
@@ -393,15 +416,95 @@ function Blog() {
       </div>
 
       <div className="container">
-        <div className="d-flex justify-content-center align-items-center">
-          <img src="assets/img/breakfast.jpeg" className="img-fluid" />
+        <div className="row">
+          <div className="col-lg-6">
+            <div className="d-flex justify-content-center align-items-center">
+              <img src="assets/img/breakfast.jpeg" className="img-fluid" />
+            </div>
+            <h3
+              className="d-flex justify-content-center align-items-center pt-5"
+              style={{ textAlign: "center"}}
+            >
+              Business Breakfast - The Right Business Choice
+            </h3>
+          </div>
+          <div className="col-lg-6">
+            <div className="d-flex justify-content-center align-items-center">
+              <img src="assets/img/brcc-ss.png" className="img-fluid brcc-ss" />
+            </div>
+            <h3
+              className="d-flex justify-content-center align-items-center pt-5"
+              style={{textAlign: "center"}}
+            >
+              As of March 2024, HHA proud member of BRCC
+            </h3>
+          </div>
         </div>
-        <h3
-          className="d-flex justify-content-center align-items-center pt-5"
-          style={{ color: "#7947a2" }}
-        >
-          Business Breakfast - The Right Business Choice
-        </h3>
+        <div className="row">
+        <div className="col-lg-6">
+            <div className="d-flex justify-content-center align-items-center pt-5">
+              <img src="assets/img/gala-awards.jpeg" className="img-fluid gala-awards" />
+            </div>
+            <h3
+              className="d-flex justify-content-center align-items-center pt-5"
+              style={{textAlign: "center"}}
+            >
+              BRCC Gala Awards 2024
+            </h3>
+            <p className="d-flex justify-content-center align-items-center pt-5" style={{textAlign: "center"}}>I am thrilled to have been a part of the BRCC Gala Awards 2024, celebrating incredible success stories, excellence, commitment, innovation, sustainability, achievements.
+Just discovered new things: blue mobility, and Franui.
+The energy in the room was truly electric!
+It was an honor to be surrounded by so many talented professionals who are making a difference in their respective fields.
+Looking forward to seeing what the future holds for all of us and the impact we will continue to make.</p>
+                    <div className="d-flex justify-content-center align-items-center">
+                    <a href="#" style={{textAlign: "center"}}>#successStories #excellence #commitment #innovation #sustainability #achievements #blueMobility #franui #BRCC #galaAwards</a>
+                    </div>
+          </div>
+          <div className="col-lg-6">
+            <div className="d-flex justify-content-center align-items-center pt-5">
+              <img src="assets/img/events/seara.jpeg" className="img-fluid gala-awards" />
+            </div>
+            <h3
+              className="d-flex justify-content-center align-items-center pt-5"
+              style={{textAlign: "center"}}
+            >
+              De Ziua Femeii, From WOMEN to WOMEN
+            </h3>
+            <p className="d-flex justify-content-center align-items-center pt-5" style={{textAlign: "center"}}>Once in a while you need to take a break, to breath, to look inside you for all the beauty, pain, trauma, and to indulge.
+Last evening was about us. Sezatoarea de Seara by SPACES</p>
+          </div>
+          <div className="row">
+          <div className="col-lg-6">
+            <div className="d-flex justify-content-center align-items-center pt-5">
+              <img src="assets/img/pwn-alumni.jpeg" className="img-fluid" />
+            </div>
+            <h3
+              className="d-flex justify-content-center align-items-center pt-5"
+              style={{textAlign: "center"}}
+            >
+              PWN Alumni Women on Board
+            </h3>
+            <p className="d-flex justify-content-center align-items-center pt-5" style={{textAlign: "center"}}>Great insights, experienced speakers, and valuable knowledge were shared today during the PWN Alumni Women on Board second edition. The event focused on supporting women in business and society, with discussions centered around gender diversity in corporate boards, board-ready women initiatives, gender mainstreaming, and gender equality in administration boards. One of the key takeaways was the importance of consolidating the application of equal remuneration for equal work among men and women via remuneration transparency. These were only a few of the many topics discussed during the event.</p>
+                    <div className="d-flex justify-content-center align-items-center">
+                    <a href="#" style={{textAlign: "center"}}>#WomenInBusiness #GenderDiversity #GenderEquality #PWNAlumni #BoardReadyWomen #RemunerationTransparency #pwn #romania</a>
+                    </div>
+          </div>
+          <div className="col-lg-6">
+            <div className="d-flex justify-content-center align-items-center pt-5">
+              <img src="assets/img/pwn-event.jpeg" className="img-fluid pwn-event" />
+            </div>
+            <h3
+              className="d-flex justify-content-center align-items-center pt-5"
+              style={{textAlign: "center"}}
+            >
+              Event by PWN cu Teodora Metiu
+            </h3>
+            <p className="d-flex justify-content-center align-items-center pt-5" style={{textAlign: "center"}}>For those who couldn’t join the event or don’t know her yet, Mrs. Teodora Mețiu is one of the best trainers one can have. She conquered the TV world with over 7.200 hours of live transmissions, 72.000 news presented and 300 hours of tv materials from presidential or local elections and many more.
+
+Yesterday she showed us how to use our voice in your advantage, how to do everything with love and attention and we would like to thank her for this!</p>
+          </div>
+          </div>
+        </div>
       </div>
 
       <div class="container pt-5 mt-5">
@@ -423,8 +526,7 @@ function Blog() {
               </p>
               <a
                 href="https://bestplacestoworkfor.org"
-                className="pt-5 my-3"
-                style={{ fontSize: 35 }}
+                className="pt-5 my-3 best-places"
               >
                 www.bestplacestoworkfor.org
               </a>

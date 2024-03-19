@@ -2347,3 +2347,89 @@ section {
 .certified-img {
   max-height: 70%;
 }
+
+.completed-card {
+  position: relative;
+}
+
+.completed-card::after {
+  content: "Completed";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 30px;
+  font-weight: bold;
+  color: green; /* Adjust the text color */
+}
+.pwn-img {
+  background: url("../img/events/pwn/pwn-banner.png") center;
+  background-size: cover;
+  padding: 200px 0;
+}
+@media (max-width: 768px) {
+  .pwn-img {
+    display: none;
+  }
+}
+#event .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #d082f7;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#event .social-links a:hover {
+  background: #209dd8;
+  color: #fff;
+  text-decoration: none;
+}
+.pad{
+  margin-left: -100px;
+}
+@media (max-width: 768px) {
+  .pad{
+    margin-left: 0px;
+  }
+  .padd{
+    margin-left: -40px;
+    padding-top: 50px;
+  }
+}
+.padd{
+  padding-left: 100px;
+}
+
+.best-places{
+  font-size: 20px;
+}
+.brcc-ss{
+  height: 270px;
+}
+@media (max-width: 768px) {
+  .best-places{
+    font-size: 10px;
+  }
+  .brcc-ss{
+    padding-top: 20px;
+    height: auto;
+  }
+}
+.gala-awards{
+  max-width: 50%;
+}
+.pwn-event{
+  max-width: 86%;
+}

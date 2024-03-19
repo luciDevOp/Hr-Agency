@@ -66,6 +66,12 @@ const Footer = () => {
                 >
                   <i className="bx bxl-facebook"></i>
                 </a>
+                <a
+                  href="https://www.instagram.com/headhuntingagency/"
+                  className="instagram"
+                >
+                  <i className="bx bxl-instagram"></i>
+                </a>
               </div>
               <p className="mt-3">
                 Website powered by{" "}

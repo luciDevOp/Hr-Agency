@@ -18,6 +18,9 @@ import Event6 from "./pages/Event6";
 import Event7 from "./pages/Event7";
 import Event8 from "./pages/Event8";
 import Event9 from "./pages/Event9";
+import Event10 from "./pages/Event10";
+import Event11 from "./pages/Event11";
+
 import Privacy from "./pages/Privacy";
 import Vacancies from "./pages/Vacancies";
 
@@ -48,6 +51,10 @@ function App() {
         <Route path="/blog-event-7" element={<Event7 />} />
         <Route path="/blog-event-8" element={<Event8 />} />
         <Route path="/blog-event-9" element={<Event9 />} />
+        <Route path="/blog-event-10" element={<Event10 />} />
+        <Route path="/blog-event-11" element={<Event11 />} />
+
+
       </Routes>
     </div>
   );

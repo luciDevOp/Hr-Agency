@@ -11,12 +11,15 @@ const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
     >
       <div className="modal-dialog" role="document">
         <div className="modal-content">
+          
           <div className="modal-header">
             <h5 className="modal-title">{jobDetails.title}</h5>
           </div>
           <div className="modal-body">
+
             <p className="job-title">Location: {jobDetails.location}</p>
             <p>{jobDetails.description}</p>
+          
             <p className="job-title">Requirements:</p>
             <ul>
               {jobDetails.require && jobDetails.require.one && (
@@ -106,6 +109,37 @@ const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
                 <li>{jobDetails.require.more5}</li>
               )}
             </ul>
+              {jobDetails.salariu && (
+                <p className="job-title">Salariu: {jobDetails.salariu}</p>
+              )}
+
+              {jobDetails.beneficii1 && (
+                <p className="job-title">Beneficii:</p>
+              )}
+              <ul>
+              {jobDetails.beneficii1 && (
+                <li>{jobDetails.beneficii1}</li>
+              )}
+              {jobDetails.beneficii1 && (
+                <li>{jobDetails.beneficii2}</li>
+              )}
+              {jobDetails.beneficii1 && (
+                <li>{jobDetails.beneficii3}</li>
+              )}
+              {jobDetails.beneficii1 && (
+                <li>{jobDetails.beneficii4}</li>
+              )}
+              {jobDetails.beneficii1 && (
+                <li>{jobDetails.beneficii5}</li>
+              )}
+              {jobDetails.beneficii1 && (
+                <li>{jobDetails.beneficii6}</li>
+              )}
+              {jobDetails.beneficii1 && (
+                <li>{jobDetails.beneficii7}</li>
+              )}
+              </ul>
+
             <p className="job-title">Contact: office@hha.ro</p>
           </div>
           <div className="modal-footer">
@@ -188,6 +222,7 @@ function Vacancies() {
       secondTitle3: "Gestionarea Riscurilor",
       secondTitle4: "Managementul Resurselor",
       type: "Full time/On site",
+      completed: true,
     },
     {
       title: "Global Total Rewards Director",
@@ -319,6 +354,7 @@ function Vacancies() {
         more04: "Team Development.",
       },
       type: "Full time/Remote",
+      completed: true,
     },
     {
       title: "Social Worker/Community Worker",
@@ -334,6 +370,106 @@ function Vacancies() {
         five: "responsible for assisting with advocacy and human rights efforts by investigating and providing support, while safeguarding their civil liberties.",
         six: "learning to determine social service needs of clients, develop appropriate solutions, and case plans, and provide ongoing case management services.",
       },
+      type: "Full time/On site",
+    },
+    {
+      title: "Maritime Construction Manager ( Caisson)",
+      location: "Maroc",
+      completed: true,
+      type: "Full time/On site",
+    },
+    {
+      title: "Construction Manager Oil & Gas",
+      location: "Dubai Fountain St - Dubai - United Arab Emirates",
+      description:
+        "The successful Construction Manager will lead an established team of Section Head and Engineers all working together to secure the completion of the project within time and budget. Their responsibility includes the definition of detailed construction plans and schedule giving priorities where necessary; They will ensure the availability of technical documentation and on time request for necessary project personnel, materials and equipment.They will also be responsible for the Financial results of the Project and the proper management of resources (materials, equipment & manpower) in order to ensure financial results better than budgeted. The main focus is always customer satisfaction.",
+      require: {
+        one: "BSc or MSc in any relevant Engineering Discipline (ideally Civil or Mechanical)",
+        two: "min. 5 years management experience in construction industry at similar level",
+        three:
+          "proven leadership skills",
+        four: "proven analytical, planning and organizing skills",
+        five: "communication and interpersonal skills",
+        six: "capability to perform under stressful situations",
+        seven: "result driven and decisive personality",
+        eight: "basic business, legal and contractual awareness",
+        nine: "fluency in the English language",
+        ten: "knowledge of project management tools",
+        eleven: "knowledge of basic financial concepts",
+      },
+      type: "Full time/On site",
+    },
+    {
+      title: "Project Manager Construction",
+      location: "Targoviste, Romania",
+      description: "Urmareste realizarea proiectelor de constructii conform cerintelor clientului si conditiilor contractuale asumate.",
+        require: {
+          one: "absolvent facultatea de constructii -inginer constructor.",
+          two: "experienta si competenta in activitatea de constructii civile/industriale - min. 10 ani in activitatea de Site Manager si/sau Project Manager",
+          three: "cunostinte de legislatie si normative in domeniul constructiilor",
+          four: "bune abilitati de comunicare/negociere, planificare si organizare.",
+          five: "capacitate de analiza sinteza si interpretare.",
+          six: "coordonarea activitatii bazata pe MS PROJECT.",
+          seven:
+            "cunoasterea AUTOCAD",
+          eight: "certificari in managementul proiectelor ( constituie un avantaj).",
+          nine: "disponibilitatea la deplasari si a lucra in diverse locatii pentru coordonarea santierelor.",
+          ten: "capacitatea de a coordona mai multe santiere in acelasi timp .",
+          more: "Experienta extinsa in toate fazele proiectelor de constructii :",
+          more0:
+            "Planificare , urmarire lucrari, urmarire budget , urmarire comenzi materiale in santier , implementare ,livrare.",
+          more01:
+            "Abilitate in a lucra cu echipe diverse.",
+          more1:
+            "Asigurarea unei comunicari eficiente si eficace intre membri echipelor de proiect.",
+          more2:
+            "Capacitatea de a gestiona situatii de criza",
+          more3:
+            "Identificarea si gestionarea eficienta a riscurilor proiectelor pentru a asigura respectarea termenelor si bugetelor .",
+          more4:
+            "Utilizarea eficienta a resurselor materiale , umane si echipamente pentru a optimiza eficienta si rentabilitatea proiectului.",
+          more5: "Intelegere profunda a aspectelor tehncie ale constructiilor , normelor si reglementarilor din domeniul constructiilor."
+        },
+      secondTitle1: "Gestionarea Proiectelor",
+      secondTitle2: "Coordonarea Echipelor",
+      secondTitle3: "Gestionarea Riscurilor",
+      secondTitle4: "Managementul Resurselor",
+      type: "Full time/On site",
+      salariu: "2.500-3.000 eur (NET) + bonusuri in functie de performanta"
+    },
+    {
+      title: "National Key Account Manager",
+      location: "Bucharest, Romania",
+      description:
+        "Cautam un Manager vanzari IKA, cu experienta de vanzare pe piata de IKA (retele internationale de magazine retail), ambitios, curajos si motivat de evolutie permanenta (personala, a vanzarilor, a celor cu care lucreaza).",
+      require: {
+        one: "experienta intr-o pozitie similara, pe piata de IKA (retele international de magazine retail) de cel putin 4 ani;",
+        two: "cunoasterea pietei de birotica&amp;papetarie – reprezinta un avantaj;",
+        three:
+          "proactivitate in gasirea de solutii si rezolvare a situatilor;",
+        four: "persuasiune si consecventa;",
+        five: "capacitate de analiza si sinteza;",
+        six: "abilitate si experienta in managementul conflictelor;",
+        seven: "Cunostinte si experienta de lucru cu bugete;",
+        eight: "Cunoasterea limbii engleze cel putin de nivel mediu – reprezinta un avantaj;",
+        nine: "Operare PC: Word, Excel;",
+        ten: "Carnet de conducere categoria B.",
+        more: "Raspunde de realizarea target de profit direct,cifra afaceri si margine pentru departamentul IKA",
+        more0: "Stabileste strategia de vanzare a departamentului in conformitate cu strategia companiei",
+        more01: "Stabileste termenii si conditiile de colaborare cu clientii",
+        more02: "Decide si participa la negocierea directa pe conditiile de colaborare cu clientii",
+        more03: "Verifica si valideaza campaniile si promotiile conform calendarului de marketing/ la nevoie",
+        more1: "Propunerea si implementarea de proiecte (promotii) comune cu fiecare client IKA in parte cat si a proiectelor locale per magazin;",
+        more2: "Promovarea si vanzarea produselor din portofoliu;",
+        more3: "Analiza concurentei si propunerea de proiecte strategice in acord cu aceasta analiza.",
+      },
+      beneficii1: "un pachet motivant, format din parte fixa si parte variabila, direct proportionala cu rezultatele obtinute;",
+      beneficii2: "tichete de masa;",
+      beneficii3: "smartphone / laptop;",
+      beneficii4: "masina (se poate folosi si masina proprie, cu decontarea cheltuielilor);",
+      beneficii5: "pachet de servicii medicale;",
+      beneficii6: "abonament la Bookster;",
+      beneficii7: "posibilitatea de a accesa servicile 7Card;",
       type: "Full time/On site",
     },
   ];
@@ -354,32 +490,34 @@ function Vacancies() {
           </p>
         </div>
         <div className="row">
-          {jobs.map((job, index) => (
-            <div className="col-lg-6 col-md-12 col-12 mt-4 pt-2" key={index}>
-              <div className="card border-0 bg-light rounded shadow">
-                <div className="card-body p-4">
-                  <span className="badge rounded-pill job-type float-md-end mb-3 mb-sm-0">
-                    {job.type}
-                  </span>
-                  <h5>{job.title}</h5>
-                  <div className="mt-3">
-                    <span className="text-muted d-block">
-                      <i class="fa-solid fa-location-dot"></i> {job.location}
-                    </span>
-                  </div>
-                  <div className="mt-3">
-                    <button
-                      className="details-button"
-                      onClick={() => openJobDetailsModal(job)}
-                    >
-                      View Details
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
+  {jobs.map((job, index) => (
+    <div className={`col-lg-6 col-md-12 col-12 mt-4 pt-2 ${job.completed ? 'opacity-50' : ''}`} key={index}>
+      <div className={`card border-0 bg-light rounded shadow ${job.completed ? 'completed-card' : ''}`}>
+        <div className="card-body p-4">
+          <span className="badge rounded-pill job-type float-md-end mb-3 mb-sm-0">
+            {job.type}
+          </span>
+          <h5>{job.title}</h5>
+          <div className="mt-3">
+            <span className="text-muted d-block">
+              <i className="fa-solid fa-location-dot"></i> {job.location}
+            </span>
+          </div>
+          <div className="mt-3">
+            <button
+              className="details-button"
+              onClick={() => openJobDetailsModal(job)}
+              disabled={job.completed}
+            >
+              View Details
+            </button>
+          </div>
         </div>
+      </div>
+    </div>
+  ))}
+</div>
+
 
         {selectedJob && (
           <JobDetailsModal
