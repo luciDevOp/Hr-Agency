@@ -2418,6 +2418,30 @@ section {
 .brcc-ss{
   height: 270px;
 }
+.business-img{
+  padding-left: 100px;
+  max-width: 90%;
+}
+
+.gala-awards{
+  max-width: 50%;
+}
+.pwn-event{
+  max-width: 86%;
+}
+.business-img{
+  padding-left: 100px;
+  max-width: 90%;
+}
+.network1{
+  max-width: 70%;
+  align-self: center;
+}
+.network2{
+  width: 430px;
+  align-self: center;
+
+}
 @media (max-width: 768px) {
   .best-places{
     font-size: 10px;
@@ -2426,10 +2450,10 @@ section {
     padding-top: 20px;
     height: auto;
   }
-}
-.gala-awards{
-  max-width: 50%;
-}
-.pwn-event{
-  max-width: 86%;
+  .business-img{
+    padding-right: 50px;
+  }
+  .network2{
+    max-width: 50%;
+  }
 }

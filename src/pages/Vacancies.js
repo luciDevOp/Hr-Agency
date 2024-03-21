@@ -18,7 +18,14 @@ const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
           <div className="modal-body">
 
             <p className="job-title">Location: {jobDetails.location}</p>
-            <p>{jobDetails.description}</p>
+            <p className="job-title" style={{marginBottom: "-10px"}}>Description:</p>
+            <p>{jobDetails.description.split('\n').map((item, key) => (
+              <React.Fragment key={key}>
+                {item}
+                <br/>
+                {'\u00A0\u00A0'} {/* Unicode for two non-breaking spaces */}
+              </React.Fragment>
+            ))}</p>
           
             <p className="job-title">Requirements:</p>
             <ul>
@@ -120,22 +127,22 @@ const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
               {jobDetails.beneficii1 && (
                 <li>{jobDetails.beneficii1}</li>
               )}
-              {jobDetails.beneficii1 && (
+              {jobDetails.beneficii2 && (
                 <li>{jobDetails.beneficii2}</li>
               )}
-              {jobDetails.beneficii1 && (
+              {jobDetails.beneficii3 && (
                 <li>{jobDetails.beneficii3}</li>
               )}
-              {jobDetails.beneficii1 && (
+              {jobDetails.beneficii4 && (
                 <li>{jobDetails.beneficii4}</li>
               )}
-              {jobDetails.beneficii1 && (
+              {jobDetails.beneficii5 && (
                 <li>{jobDetails.beneficii5}</li>
               )}
-              {jobDetails.beneficii1 && (
+              {jobDetails.beneficii6 && (
                 <li>{jobDetails.beneficii6}</li>
               )}
-              {jobDetails.beneficii1 && (
+              {jobDetails.beneficii7 && (
                 <li>{jobDetails.beneficii7}</li>
               )}
               </ul>
@@ -228,7 +235,7 @@ function Vacancies() {
       title: "Global Total Rewards Director",
       location: "Bucharest, Romania",
       description:
-        "A strategic role within the Global People Leadership Team. This position is responsible for overseeing the design, development, implementation, and administration of the compensation and benefits programs, as well as managing the global people operations to ensure accurate and efficient management of people processes and data analytics. The right hand and partner to the People Leadership Team and EVP, People on all matters related to compensation, operations and compliance.",
+        "\nA strategic role within the Global People Leadership Team. This position is responsible for overseeing the design, development, implementation, and administration of the compensation and benefits programs, as well as managing the global people operations to ensure accurate and efficient management of people processes and data analytics.\n The right hand and partner to the People Leadership Team and EVP, People on all matters related to compensation, operations and compliance.",
       require: {
         one: "bachelor's degree in human resources, business administration, Economics, or a related field. A master's degree – an advantage.",
         two: "a strong background (10+ Years of experience) in developing, managing, and evaluating various components of compensation and benefits programs, data analytics, and HR system management. ",
@@ -257,12 +264,13 @@ function Vacancies() {
       secondTitle2: "People Operations:",
       secondTitle3: "Team Management and Collaboration:",
       type: "Full time/On site",
+      completed: true,
     },
     {
       title: "Vertical Marketing Manager Energy / Oil & Gas Utilities",
       location: "Bucharest, Romania",
       description:
-        "As the Vertical Segment Manager, the main focus will be leading the development and execution of strategic marketing initiatives for the Energy / Oil & Gas vertical.",
+        "\nAs the Vertical Segment Manager, the main focus will be leading the development and execution of strategic marketing initiatives for the Energy / Oil & Gas vertical.",
       require: {
         one: "experience in Energy / Oil & Gas Utilities.",
         two: "bachelor’s degree in marketing, Business, or related field. MBA is a plus.",
@@ -284,7 +292,7 @@ function Vacancies() {
       title: "Vertical Marketing Manager Public Safety and Security",
       location: "Bucharest, Romania",
       description:
-        "As the Vertical Segment Manager, the main focus will be leading the development and execution of strategic marketing initiatives for the Public Safety and Security vertical.",
+        "\nAs the Vertical Segment Manager, the main focus will be leading the development and execution of strategic marketing initiatives for the Public Safety and Security vertical.",
       require: {
         one: "experience in Public Safety and Security.",
         two: "bachelor’s degree in marketing, Business, or related field. MBA is a plus.",
@@ -306,7 +314,7 @@ function Vacancies() {
       title: "B2B Area Sales Manager in Plastic Industry",
       location: "Bucharest, Romania",
       description:
-        "As a rapidly growing international company, our client works tirelessly to offer customers the best solutions, therefore looking for a B2B Sales Manager in Bucharest, Romania.",
+        "\nAs a rapidly growing international company, our client works tirelessly to offer customers the best solutions, therefore looking for a B2B Sales Manager in Bucharest, Romania.",
       require: {
         one: "B2B sales experience, preferably in plastic industry related to manufacturing and construction sector, as well as FMCG and pharmaceutical",
         two: "direct selling experience.",
@@ -338,7 +346,7 @@ function Vacancies() {
       title: "Senior Director IT & Security",
       location: "Remote Global",
       description:
-        "As the Senior Director, Information Technology and Security you will be playing a pivotal role in defining and implementing the strategic direction of our client’s rapidly growing organization.",
+        "\nAs the Senior Director, Information Technology and Security you will be playing a pivotal role in defining and implementing the strategic direction of our client’s rapidly growing organization.",
       require: {
         one: "proven experience in developing IT strategy and building IT organizations in a SAAS environment.",
         two: "12+ years of progressive IT experience with 8+ years of leadership experience.",
@@ -360,7 +368,7 @@ function Vacancies() {
       title: "Social Worker/Community Worker",
       location: "Bucharest, Romania",
       description:
-        "Community Based Program for Blind children and young people",
+        "\nCommunity Based Program for Blind children and young people",
       require: {
         one: "passionate about social change and inclusion of people with disabilities to provide case management services to Blind/sight impaired children, families, and young adults.",
         two: "work within the multi-disciplinary team.",
@@ -382,7 +390,7 @@ function Vacancies() {
       title: "Construction Manager Oil & Gas",
       location: "Dubai Fountain St - Dubai - United Arab Emirates",
       description:
-        "The successful Construction Manager will lead an established team of Section Head and Engineers all working together to secure the completion of the project within time and budget. Their responsibility includes the definition of detailed construction plans and schedule giving priorities where necessary; They will ensure the availability of technical documentation and on time request for necessary project personnel, materials and equipment.They will also be responsible for the Financial results of the Project and the proper management of resources (materials, equipment & manpower) in order to ensure financial results better than budgeted. The main focus is always customer satisfaction.",
+        "\nThe successful Construction Manager will lead an established team of Section Head and Engineers all working together to secure the completion of the project within time and budget. Their responsibility includes the definition of detailed construction plans and schedule giving priorities where necessary;\n They will ensure the availability of technical documentation and on time request for necessary project personnel, materials and equipment.\nThey will also be responsible for the Financial results of the Project and the proper management of resources (materials, equipment & manpower) in order to ensure financial results better than budgeted. The main focus is always customer satisfaction.",
       require: {
         one: "BSc or MSc in any relevant Engineering Discipline (ideally Civil or Mechanical)",
         two: "min. 5 years management experience in construction industry at similar level",
@@ -402,7 +410,7 @@ function Vacancies() {
     {
       title: "Project Manager Construction",
       location: "Targoviste, Romania",
-      description: "Urmareste realizarea proiectelor de constructii conform cerintelor clientului si conditiilor contractuale asumate.",
+      description: "\nUrmareste realizarea proiectelor de constructii conform cerintelor clientului si conditiilor contractuale asumate.",
         require: {
           one: "absolvent facultatea de constructii -inginer constructor.",
           two: "experienta si competenta in activitatea de constructii civile/industriale - min. 10 ani in activitatea de Site Manager si/sau Project Manager",
@@ -441,7 +449,7 @@ function Vacancies() {
       title: "National Key Account Manager",
       location: "Bucharest, Romania",
       description:
-        "Cautam un Manager vanzari IKA, cu experienta de vanzare pe piata de IKA (retele internationale de magazine retail), ambitios, curajos si motivat de evolutie permanenta (personala, a vanzarilor, a celor cu care lucreaza).",
+        "\nCautam un Manager vanzari IKA, cu experienta de vanzare pe piata de IKA (retele internationale de magazine retail), ambitios, curajos si motivat de evolutie permanenta (personala, a vanzarilor, a celor cu care lucreaza).",
       require: {
         one: "experienta intr-o pozitie similara, pe piata de IKA (retele international de magazine retail) de cel putin 4 ani;",
         two: "cunoasterea pietei de birotica&amp;papetarie – reprezinta un avantaj;",
@@ -470,6 +478,79 @@ function Vacancies() {
       beneficii5: "pachet de servicii medicale;",
       beneficii6: "abonament la Bookster;",
       beneficii7: "posibilitatea de a accesa servicile 7Card;",
+      type: "Full time/On site",
+    },
+    {
+      title: "Office Assistant",
+      location: "Bucharest, Romania",
+      description:
+        "\nCandidatul ideal trebuie să cunoască limba română și limba engleză, să aibă o atitudine proactivă față de învățare și dezvoltare, să ofere sprijin colegilor și să promoveze un mediu de lucru pozitiv. \nUn bun asistent de birou trebuie să aibă abilități organizatorice excelente și un bun simț al detaliilor, astfel încât nimic să nu fie neglijat, dar trebuie să fie capabil să lucreze bine cu alte persoane și cu clienții, dacă este necesar.",
+      require: {
+        one: "înțelegere temeinică a procedurilor de gestionare a birourilor",
+        two: "abilități excelente de organizare și de gestionare a timpului",
+        three: "abilități analitice și aptitudini de rezolvare a problemelor",
+        four: "abilități de comunicare scrisă și verbală",
+        five: "dorința de a învăța și de a se adapta la noi responsabilități.",
+        six: "cunoștințe de operare în MS Office",
+        more: "organizarea biroului și asistarea colegilor în moduri care să eficientizeze procedurile",
+        more0: "crearea și actualizarea înregistrărilor, asigurând acuratețea și validitatea informațiilor",
+        more01: "programează și planifică întâlniri și programări",
+        more02: "rezolvă defecțiunile legate de birou și răspunde la solicitări sau probleme",
+        more03: "efectuați sarcini de recepționer atunci când este necesar",
+      },
+      type: "Full time/On site",
+    },
+    {
+      title: "Senior Attorney | Corporate & Commercial Law",
+      location: "Bucharest, Romania",
+      description:
+        "\nSeeking a Senior Attorney for the consultancy practice| Corporate & Commercial Law. \nAre you an accomplished attorney looking for a new challenge and be part of a legal team renowned for its commitment to excellence and a client-focused approach? Do you thrive in a dynamic environment where your skills are valued and your ideas arealways heard? \nIf the answer is yes, we would love you to join our team!",
+      require: {
+        one: "law degree, admitted to the bar.",
+        two: "at least 6 (six) years of experience practicing corporate and commercial law, having previously assisted high-profile clients and large companies.",
+        three: "proficient in English language, written and spoken.",
+        four: "personal and professional skills we expect.",
+        five: "strong analytical, research, and writing skills.",
+        six: "excellent communication and interpersonal abilities.",
+        seven: "demonstrated ability to work effectively both independently and as part of a team.",
+        eight: "commitment to upholding ethical standards and client confidentiality.",
+        more: "drafting, reviewing, and negotiating various legal documents, including contracts, agreements, and corporate policies.",
+        more0: "advising on corporate governance matters and ensuring compliance with relevant laws and regulations.",
+        more01: "supporting corporate transactions, including mergers, acquisitions, and divestitures.",
+        more02: "conducting legal research and providing guidance on emerging legal issues and industry trends.",
+      },
+      beneficii1: "competitive salary commensurate with experience and performance bonus prospects.",
+      beneficii2: "opportunities for professional development and advancement.",
+      beneficii3: "involvement in large-scale projects carried out at national and international level.",
+      beneficii4: "supportive and friendly work environment.",
+      type: "Full time/On site",
+    },
+    {
+      title: "Senior Attorney | White Collar Crime",
+      location: "Bucharest, Romania",
+      description:
+        "\nSeeking a Senior Attorney for the consultancy practice| Corporate & Commercial Law. \nAre you an accomplished attorney looking for a new challenge and be part of a legal team renowned for its commitment to excellence and a client-focused approach? Do you thrive in a dynamic environment where your skills are valued and your ideas arealways heard? \nIf the answer is yes, we would love you to join our team!",
+      require: {
+        one: "law degree, admitted to the bar.",
+        two: "at least 4 (four) years of experience practicing litigation law, criminal law, with a focus on criminal defense.",
+        three: "proven track record of success in representing clients in court and achieving favorable outcomes.",
+        four: "proficient in English language, written and spoken.",
+        five: "driver’s license.",
+        six: "personal and professional skills we expect.",
+        seven: "strong analytical, research, and writing skills.",
+        eight: "excellent communication and interpersonal abilities.",
+        nine: "demonstrated ability to work effectively both independently and as part of a team.",
+        ten: "commitment to upholding ethical standards and client confidentiality.",
+        eleven: "ability to work effectively under pressure and manage competing priorities.",
+        more: "providing strategic legal advice and representation to clients in criminal proceedings, including trials and hearings.",
+        more0: "managing a diverse caseload of White Collar criminal matters, ranging from fraud and bribery to tax evasion and cybercrime.",
+        more01: "conducting thorough legal research, case analysis, and preparation of defense strategies.",
+        more02: "building and maintaining strong relationships with clients, investigation bodies and other legal professionals.",
+      },
+      beneficii1: "competitive salary commensurate with experience and performance bonus prospects.",
+      beneficii2: "opportunities for professional development and advancement.",
+      beneficii3: "working with high-profile clients (individuals and companies) in resonant criminal cases.",
+      beneficii4: "supportive and friendly work environment.",
       type: "Full time/On site",
     },
   ];

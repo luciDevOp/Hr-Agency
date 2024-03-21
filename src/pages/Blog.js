@@ -440,6 +440,38 @@ function Blog() {
             </h3>
           </div>
         </div>
+        <div class="row py-5 my-5 justify-content-center align-items-center">
+            <div class="col-lg-6 order-md-2">
+              <div class="d-lg-flex post-entry-2">
+
+                <div className="py-5 mt-5">
+                  <h3 style={{textAlign: "center"}}>
+                   <a href="https://business-mark.ro/event/tomorrowwork-2024/">Tomorrow@Work Conference</a>, organized by <a href="https://www.linkedin.com/company/businessmark/">BusinessMark</a> at  <a href="https://www.linkedin.com/company/jw_marriott/">JW Marriott</a> Bucharest Grand Hotel
+                  </h3>
+                  <p style={{textAlign: "center"}}>
+                  💡 People with the help of AI generates the success in business - not only people, not only AI.<br></br>
+                  💡There is need for complex technologies, but there is also need for good people;<br></br>
+                  💡In banking there are four necessary skills for success: digital skills, regulatory, data literacy, cybersecurity.<br></br>
+                  💡In terms of importance programming AI will be replaced with interacting with AI<br></br>
+                  </p>
+                  <p style={{textAlign: "center", paddingBottom: "20px"}}>It was great to meet or to meet again, or watch their presentation people from HR community such as <a href="https://www.linkedin.com/in/ginacruceru/">Gina Cruceru</a>, <a href="https://www.linkedin.com/in/andreea-mihnea-568469/">Andreea Mihnea</a>, <a href="https://www.linkedin.com/in/danadobrescu/">Dana Dobrescu</a>, <a href="https://www.linkedin.com/in/florentinagreger/">Florentina Greger</a>, <a href="https://www.linkedin.com/in/simona-ciora/">Simona Ciora</a>, <a href="https://www.linkedin.com/in/gabriela-costache-6521a82/">Gabriela COSTACHE</a>, <a href="https://www.linkedin.com/in/andreicretu/">Andrei Cretu</a>, <a href="https://www.linkedin.com/in/timeamozgirs/">Timea Mozgirs</a>, <a href="https://www.linkedin.com/in/alina-n%C4%83stase-costea-b32abb52/">Alina (Năstase) Costea</a>, <a href="https://www.linkedin.com/in/anamariadiceanu/">Ana Maria Diceanu</a>, <a href="https://www.linkedin.com/in/leonardrizoiu/">Leonard RIZOIU</a>, <a href="https://www.linkedin.com/in/mihaizant/">Mihai ZANT</a>, <a href="https://www.linkedin.com/in/luiza-banyai-2420111/">Luiza Banyai</a>, <a href="https://www.linkedin.com/in/mihaibajan/">Mihai Bajan</a>, <a href="https://www.linkedin.com/in/filip-nemteanu/">Filip Nemteanu</a>, <a href="https://www.linkedin.com/in/silviu-dragomir-54b16810/">Silviu Dragomir</a>, <a href="https://www.linkedin.com/in/mihaela-georgiana-tomescu/">Mihaela Tomescu</a>, <a href="https://www.linkedin.com/in/alexandra-kogalniceanu-3166151b/">Alexandra Kogalniceanu</a>, <a href="https://www.linkedin.com/in/catalina-stanciu/">Catalina Stanciu</a>, <a href="https://www.linkedin.com/in/cezar-c%C3%A2rligeanu-72420733/">Cezar Cârligeanu</a>, <a href="#">Head Hunting Agency, part of IMD International Search Group, Partner Romania for Best Places to Work</a>,</p>
+                  <div className="d-flex justify-content-center align-items-center">
+                    <a href="#" style={{textAlign: "center"}}>#tomorrowatwork2024 #futureofwork #businessmark #headhuntingagency</a>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 order-md-2 ">
+                <a>
+                  <img
+                    className="article-image"
+                    src="assets/img/business.jpg"
+                    alt=""
+                    class="img-fluid business-img"
+                  />
+                </a>
+              </div>
+          </div>
         <div className="row">
         <div className="col-lg-6">
             <div className="d-flex justify-content-center align-items-center pt-5">
