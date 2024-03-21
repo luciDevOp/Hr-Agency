@@ -274,7 +274,22 @@ function Blog() {
                       The Third Edition of WOMENRISE
                       </a>
                     </h2>
-                  </div>  
+                  </div>
+                  <div class="post-entry-1">
+                    <a href="/blog-event-12">
+                      <img
+                        src="assets/img/network.jpg"
+                        alt=""
+                        class="img-fluid"
+                      />
+                    </a>
+                    <div class="post-meta"></div>
+                    <h2>
+                      <a href="/blog-event-12">
+                      Networking Breakfast
+                      </a>
+                    </h2>
+                  </div>    
                 </div>
                 <div class="col-lg-6 border-start custom-border">
                   <div class="post-entry-1">
