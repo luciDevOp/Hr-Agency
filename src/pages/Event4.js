@@ -9,8 +9,8 @@ const Event4 = () => {
           <h2>Deutschsprachiger Wirtschaftsklub Nord-Transilvanien</h2>
         </div>
 
-        <section class="my-5 text-center">
-          <p class="lead">
+        <section className="my-5 text-center">
+          <p className="lead">
             The Deutschsprachiger Wirtschaftsklub Nord-Transilvanien serves as a
             vibrant and collaborative hub for German-speaking businesses and
             professionals in the North Transylvania region. This business club

@@ -17,10 +17,9 @@ const Event12 = () => {
         </div>
         <div className="row justify-content-center pt-3">
             <img
-            className="article-image"
+            className="article-image img-fluid"
             src="assets/img/network.jpg"
             alt=""
-            class="img-fluid"
             style={{maxWidth: "70%"}}
             />
         </div>

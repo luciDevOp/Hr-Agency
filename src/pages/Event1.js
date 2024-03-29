@@ -5,10 +5,10 @@ import PhotoAlbum from "react-photo-album";
 const photos = [
   { src: "assets/img/events/swiss/swiss1.jpeg", width: 1000, height: 900 },
   { src: "assets/img/events/swiss/swiss2.jpeg", width: 1000, height: 1300 },
-  { src: "assets/img/events/swiss/swiss3.jpeg", width: 1500, height: 1300 },
-  { src: "assets/img/events/swiss/swiss4.jpeg", width: 1000, height: 1000 },
+  { src: "assets/img/events/swiss/swiss3.jpeg", width: 700, height: 800 },
+  { src: "assets/img/events/swiss/swiss4.jpeg", width: 1000, height: 1100 },
   { src: "assets/img/events/swiss/swiss5.jpeg", width: 1000, height: 1200 },
-  { src: "assets/img/events/swiss/swiss6.jpeg", width: 1300, height: 900 },
+  { src: "assets/img/events/swiss/swiss6.jpeg", width: 900, height: 600 },
   { src: "assets/img/events/swiss/swiss7.jpeg", width: 800, height: 900 },
 ];
 
@@ -20,8 +20,8 @@ const Event1 = () => {
           <h2>Swiss Chamber of Commerce</h2>
         </div>
 
-        <section class="my-5 text-center">
-          <p class="lead">
+        <section className="my-5 text-center">
+          <p className="lead">
             The Swiss Chamber of Commerce is a dynamic and influential
             organization that serves as a central hub for businesses,
             professionals, and entrepreneurs within Switzerland and on the
@@ -34,7 +34,7 @@ const Event1 = () => {
         </section>
 
         <div className="container">
-          <PhotoAlbum layout="rows" photos={photos} spacing={0} padding={10} />
+          <PhotoAlbum layout="rows" photos={photos} spacing={10} padding={10} />
         </div>
       </div>
       <Footer />

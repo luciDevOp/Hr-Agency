@@ -11,8 +11,8 @@ function Event9() {
           </h2>
         </div>
 
-        <section class="my-5 text-center">
-          <p class="lead">
+        <section className="my-5 text-center">
+          <p className="lead">
             <span style={{ color: "#7947a2", fontWeight: "700" }}>Robert</span>{" "}
             is a certified CIEEM ecologist and environmental consultant, with
             over six years of applied professional experience in environmental

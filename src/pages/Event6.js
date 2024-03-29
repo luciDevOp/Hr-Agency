@@ -21,8 +21,8 @@ const Event6 = () => {
           <h2>Advantage Austria</h2>
         </div>
 
-        <section class="my-5 text-center">
-          <p class="lead">
+        <section className="my-5 text-center">
+          <p className="lead">
             Advantage Austria is the global brand representing the international
             activities of the Austrian Federal Economic Chamber and its regional
             chambers. With a focus on promoting Austria's economic interests

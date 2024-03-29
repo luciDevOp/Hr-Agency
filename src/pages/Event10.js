@@ -16,8 +16,8 @@ const Event10 = () => {
           <h2>WOMENRISE</h2>
         </div>
 
-        <section class="my-5 text-center">
-          <p class="lead">
+        <section className="my-5 text-center">
+          <p className="lead">
 
           I am ecstatic to announce my participation in the third edition of <span style={{ color: "#7947a2", fontWeight: "700" }}>WOMENRISE</span>{" "}, a prestigious event curated by <a href="https://www.linkedin.com/company/dynamic-business-connections/">Dynamic Business Connections</a>, celebrating the prowess of women leaders and innovators who have left an indelible mark on the business landscape.
 

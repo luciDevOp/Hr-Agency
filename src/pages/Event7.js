@@ -28,8 +28,8 @@ const Event7 = () => {
           <h2>Romanian Diversity Chamber of Commerce</h2>
         </div>
 
-        <section class="my-5 text-center">
-          <p class="lead">
+        <section className="my-5 text-center">
+          <p className="lead">
             The Romanian Diversity Chamber of Commerce (RDCC) is a dynamic
             organization committed to promoting diversity and inclusion in the
             business landscape of Romania. Dedicated to fostering an environment

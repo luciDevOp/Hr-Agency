@@ -64,8 +64,8 @@ const Event11 = () => {
                 >
                   <i className="bx bxl-instagram"></i>
                 </a><br></br>
-                <i class='bx bx-envelope pt-3'><span style={{paddingLeft: "5px", fontSize: "20px"}}>loreda.dragomir@hha.ro</span></i><br></br>
-                <i class='bx bx-phone pt-3' ><span style={{paddingLeft: "5px", fontSize: "20px"}}>+40 (731) 100 2820</span></i>
+                <i className='bx bx-envelope pt-3'><span style={{paddingLeft: "5px", fontSize: "20px"}}>loreda.dragomir@hha.ro</span></i><br></br>
+                <i className='bx bx-phone pt-3' ><span style={{paddingLeft: "5px", fontSize: "20px"}}>+40 (731) 100 2820</span></i>
                 </div>
                 </div>
             </div>

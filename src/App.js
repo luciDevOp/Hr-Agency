@@ -21,6 +21,7 @@ import Event9 from "./pages/Event9";
 import Event10 from "./pages/Event10";
 import Event11 from "./pages/Event11";
 import Event12 from "./pages/Event12";
+import Event13 from "./pages/Event13";
 import Privacy from "./pages/Privacy";
 import Vacancies from "./pages/Vacancies";
 
@@ -54,8 +55,7 @@ function App() {
         <Route path="/blog-event-10" element={<Event10 />} />
         <Route path="/blog-event-11" element={<Event11 />} />
         <Route path="/blog-event-12" element={<Event12 />} />
-
-
+        <Route path="/blog-event-13" element={<Event13 />} />
       </Routes>
     </div>
   );

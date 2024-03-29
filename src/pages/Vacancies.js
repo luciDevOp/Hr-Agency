@@ -1,15 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Footer from "../components/Footer";
 
 const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (event.target.classList.contains('modal')) {
+        onClose();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleOutsideClick);
+    } else {
+      document.removeEventListener('mousedown', handleOutsideClick);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleOutsideClick);
+    };
+  }, [isOpen, onClose]);
   return (
     <div
       className={`modal ${isOpen ? "show" : ""}`}
       tabIndex="-1"
       role="dialog"
-      style={{ display: isOpen ? "block" : "none" }}
+      style={{ display: isOpen ? "block" : "none", backgroundColor: "rgba(0, 0, 0, 0.5)", }}
     >
-      <div className="modal-dialog" role="document">
+      <div className="modal-dialog modal-lg" role="document">
         <div className="modal-content">
           
           <div className="modal-header">
@@ -84,6 +101,12 @@ const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
               )}
               {jobDetails.require && jobDetails.require.more03 && (
                 <li>{jobDetails.require.more03}</li>
+              )}
+              {jobDetails.require && jobDetails.require.more04 && (
+                <li>{jobDetails.require.more04}</li>
+              )}
+              {jobDetails.require && jobDetails.require.more05 && (
+                <li>{jobDetails.require.more05}</li>
               )}
             </ul>
             {jobDetails.require && jobDetails.require.more && (
@@ -552,6 +575,41 @@ function Vacancies() {
       beneficii3: "working with high-profile clients (individuals and companies) in resonant criminal cases.",
       beneficii4: "supportive and friendly work environment.",
       type: "Full time/On site",
+    },
+    {
+      title: "Business Developer | Casa Expeditii",
+      location: "Sibiu, Romania",
+      description:
+        "\nCandidatul ideal trebuie să cunoască limba română și limba engleză, să aibă o atitudine proactivă față de învățare și dezvoltare, să ofere sprijin colegilor și să promoveze un mediu de lucru pozitiv. \nUn bun asistent de birou trebuie să aibă abilități organizatorice excelente și un bun simț al detaliilor, astfel încât nimic să nu fie neglijat, dar trebuie să fie capabil să lucreze bine cu alte persoane și cu clienții, dacă este necesar.",
+        require: {
+        one: "Experienta relevanta in domeniu, experienta vanzari case experditii este un plus",
+        two: "Baza de date clienti constituie un avantaj",
+        three: "Networking este foarte important",
+        more: "Persoana aleasa trebuie sa stie foarte bine tipurile de remorci care sunt pe piata, capacitatea lor de incarcare, aranjarea marfii in interior in cazul grupajelor si amarfurilor vrac",
+        more0: "Job-ul va fi sa caute marfuri care se vor incarca in camioanele partenerilor externi sau camioane proprii disponibile",
+        more01: "Daca nu sunt camioane proprii disponibile, are responsabilitaea sa gaseasca camioane la furrnizorii agreati",
+        more02: "De asemenea are responsabilitatea sa caute marfa care sa se adapteze disponibilitatilor",
+        more03: "Va face comenzile de transport",
+        more04: "Trebuie sa urmareasca marfurile/camioanele zilnic, daca sunt particularitati si de 2 ori/zi, pentru a nu se depasi timpii de tranzit",
+        more05: "La finalul cursei va trebui sa dea spre facturare la contabilitate, date care vor fi transmise DOAR prin mail",
+      },
+      type: "Full time/Hybrid",
+      salariu: "Salariu motivant + comision la incasare, acest comision se va stabili de comun acord la inceputul perioadei de proba + Beneficii!!"
+    },
+    {
+      title: "Chief HR Officer",
+      location: "Global",
+      description:"\nAs a key member of our client’s team, an international software creator for gaming industry, with presence in more than 25 countries, the CHRO will play a crucial role in attracting, retaining, motivating and developing the international teams.",
+      require: {
+        one: "Proven experience as a CHRO, or in a similar senior strategic leadership role in a fast-paced, technology-driven organization (minimum 10 years)",
+        two: "Demonstrated success in developing and implementing strategic HR initiatives that drive business outcomes and high performance at regional or global level.",
+        three: "Data-driven mindset with the ability to leverage HR analytics and metrics for decision-making.",
+        more: "Global Employer Branding",
+        more0: "HR Operations and Performance Management",
+        more01: "Culture and Employee Experience",
+        more02: "Global Talent Acquisition and Leadership and Talent Development",
+      },
+      type: "Full time/Remote",
     },
   ];
 

@@ -18,8 +18,8 @@ const Event5 = () => {
           <h2>Professional Women Network Romania</h2>
         </div>
 
-        <section class="my-5 text-center">
-          <p class="lead">
+        <section className="my-5 text-center">
+          <p className="lead">
             The Professional Women Network Romania (PWNR) is a dynamic and
             empowering community dedicated to supporting and advancing the
             professional growth of women in various industries across Romania.

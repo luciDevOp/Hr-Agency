@@ -8,23 +8,23 @@ import {
 } from "swiper/modules";
 import Footer from "../components/Footer";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import MyPDFViewer from "../pdf/pdf";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
-
+// zip -r 1.zip .
 function Blog() {
   return (
     <div data-aos="fade-up">
       <div className="section-title blog-header" data-aos="fade-up">
         <h2>People for People</h2>
       </div>
-      <section id="hero-slider" class="hero-slider">
-        <div class="container-md" data-aos="fade-in">
-          <div class="row">
-            <div class="col-12">
+      <section id="hero-slider" className="hero-slider">
+        <div className="container-md" data-aos="fade-in">
+          <div className="row">
+            <div className="col-12">
               <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                 spaceBetween={50}
@@ -171,19 +171,19 @@ function Blog() {
       <div className="section-title blog-header">
         <h2>Events</h2>
       </div>
-      <section id="posts" class="posts">
-        <div class="container" data-aos="fade-up">
-          <div class="row g-5">
-            <div class="col-lg-4">  
-              <div class="post-entry-1 lg">
+      <section id="posts" className="posts">
+        <div className="container" data-aos="fade-up">
+          <div className="row g-5">
+            <div className="col-lg-4">  
+              <div className="post-entry-1 lg">
                 <a href="/blog-event-1">
-                  <img src="assets/img/swiss.jpeg" alt="" class="img-fluid" />
+                  <img src="assets/img/swiss.jpeg" alt="" className="img-fluid" />
                 </a>
-                <div class="post-meta"></div>
+                <div className="post-meta"></div>
                 <h2>
                   <a href="/blog-event-1">Swiss Chamber of Commerce</a>
                 </h2>
-                <p class="mb-4 d-block">
+                <p className="mb-4 d-block">
                   The Swiss Chamber of Commerce serves as a pivotal organization
                   dedicated to fostering economic and business relations within
                   Switzerland and beyond. As a key player in the business
@@ -192,98 +192,98 @@ function Blog() {
                   companies, and stakeholders.
                 </p>
               </div>
-              <div class="post-entry-1 lg">
+              <div className="post-entry-1 lg">
                 <a href="/blog-event-8">
-                  <img src="assets/img/ramona.jpeg" alt="" class="img-fluid" />
+                  <img src="assets/img/ramona.jpeg" alt="" className="img-fluid" />
                 </a>
-                <div class="post-meta"></div>
+                <div className="post-meta"></div>
                 <h2>
                   <a href="/blog-event-8">Presenting Ramona Ungureanu</a>
                 </h2>
               </div>
-              <div class="post-entry-1 pt-5">
+              <div className="post-entry-1 pt-5">
                 <a href="/blog-event-11">
-                  <img src="assets/img/events/pwn/pwn5.jpeg" alt="" class="img-fluid" />
+                  <img src="assets/img/events/pwn/pwn5.jpeg" alt="" className="img-fluid" />
                 </a>
-                <div class="post-meta"></div>
+                <div className="post-meta"></div>
                 <h2>
                   <a href="/blog-event-11">HHA proud member of Professional Women Network</a>
                 </h2>
               </div>
             </div>
 
-            <div class="col-lg-8">
-              <div class="row g-5">
-                <div class="col-lg-6 border-start custom-border">
-                  <div class="post-entry-1">
+            <div className="col-lg-8">
+              <div className="row g-5">
+                <div className="col-lg-6 border-start custom-border">
+                  <div className="post-entry-1">
                     <a href="/blog-event-2">
                       <img
                         src="assets/img/nrcc.jpeg"
                         alt=""
-                        class="img-fluid"
+                        className="img-fluid"
                       />
                     </a>
-                    <div class="post-meta"></div>
+                    <div className="post-meta"></div>
                     <h2>
                       <a href="/blog-event-2">
                         Netherlands Romanian Chamber of Commerce
                       </a>
                     </h2>
                   </div>
-                  <div class="post-entry-1">
+                  <div className="post-entry-1">
                     <a href="/blog-event-3">
                       <img
                         src="assets/img/brcc.jpeg"
                         alt=""
-                        class="img-fluid"
+                        className="img-fluid"
                       />
                     </a>
-                    <div class="post-meta"></div>
+                    <div className="post-meta"></div>
                     <h2>
                       <a href="/blog-event-3">
                         British Romanian Chamber of Commerce
                       </a>
                     </h2>
                   </div>
-                  <div class="post-entry-1">
+                  <div className="post-entry-1">
                     <a href="/blog-event-4">
                       <img
                         src="assets/img/dwnt.jpeg"
                         alt=""
-                        class="img-fluid"
+                        className="img-fluid"
                       />
                     </a>
-                    <div class="post-meta"></div>
+                    <div className="post-meta"></div>
                     <h2>
                       <a href="/blog-event-4">
                         Deutschsprachiger Wirtschaftsklub Nord-Transilvanien
                       </a>
                     </h2>
                   </div>
-                  <div class="post-entry-1">
+                  <div className="post-entry-1">
                     <a href="/blog-event-10">
                       <img
                         src="assets/img/wr2.jpeg"
                         alt=""
-                        class="img-fluid"
+                        className="img-fluid"
                       />
                     </a>
-                    <div class="post-meta"></div>
+                    <div className="post-meta"></div>
                     <h2>
                       <a href="/blog-event-10">
                       The Third Edition of WOMENRISE
                       </a>
                     </h2>
                   </div>
-                  <div class="post-entry-1">
+                  <div className="post-entry-1">
                     <a href="/blog-event-12">
                       <img
                         src="assets/img/network.jpg"
                         alt=""
-                        class="img-fluid"
+                        className="img-fluid"
                       />
                     </a>
-                    <div class="post-meta"></div>
+                    <div className="post-meta"></div>
                     <h2>
                       <a href="/blog-event-12">
                       Networking Breakfast
@@ -291,57 +291,70 @@ function Blog() {
                     </h2>
                   </div>    
                 </div>
-                <div class="col-lg-6 border-start custom-border">
-                  <div class="post-entry-1">
+                <div className="col-lg-6 border-start custom-border">
+                  <div className="post-entry-1">
                     <a href="/blog-event-5">
-                      <img src="assets/img/pwn.jpeg" alt="" class="img-fluid" />
+                      <img src="assets/img/pwn.jpeg" alt="" className="img-fluid" />
                     </a>
-                    <div class="post-meta"></div>
+                    <div className="post-meta"></div>
                     <h2>
                       <a href="/blog-event-5">
                         Professional Women Network Romania
                       </a>
                     </h2>
                   </div>
-                  <div class="post-entry-1">
+                  <div className="post-entry-1">
                     <a href="/blog-event-6">
                       <img
                         src="assets/img/austria.jpeg"
                         alt=""
-                        class="img-fluid"
+                        className="img-fluid"
                       />
                     </a>
-                    <div class="post-meta"></div>
+                    <div className="post-meta"></div>
                     <h2>
                       <a href="/blog-event-6">Advantage Austria</a>
                     </h2>
                   </div>
-                  <div class="post-entry-1">
+                  <div className="post-entry-1">
                     <a href="/blog-event-7">
                       <img
                         src="assets/img/diversity.jpeg"
                         alt=""
-                        class="img-fluid"
+                        className="img-fluid"
                       />
                     </a>
-                    <div class="post-meta"></div>
+                    <div className="post-meta"></div>
                     <h2>
                       <a href="/blog-event-7">
                         Romanian Diversity Chamber of Commerce
                       </a>
                     </h2>
                   </div>
-                  <div class="post-entry-1 lg">
+                  <div className="post-entry-1 lg">
                     <a href="/blog-event-9">
                       <img
                         src="assets/img/robert-present.jpeg"
                         alt=""
-                        class="img-fluid"
+                        className="img-fluid"
                       />
                     </a>
-                    <div class="post-meta"></div>
+                    <div className="post-meta"></div>
                     <h2>
                       <a href="/blog-event-9">Presenting Robert Negru</a>
+                    </h2>
+                  </div>
+                  <div className="post-entry-1 ">
+                    <a href="/blog-event-13">
+                      <img
+                        src="assets/img/best.jpg"
+                        alt=""
+                        className="img-fluid"
+                      />
+                    </a>
+                    <div className="post-meta"></div>
+                    <h2>
+                      <a href="/blog-event-13">Launching of Strategic Partnership between<br></br>Centrul de Limbi Straine A_BEST & <br></br>AC Language School Texas, USA</a>
                     </h2>
                   </div>
                 </div>
@@ -350,34 +363,33 @@ function Blog() {
           </div>
         </div>
       </section>
-      <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center event-bg ">
-        <div class="col-md-5 p-lg-5 mx-auto article-info">
-          <h1 class="display-4 fw-normal" style={{ color: "#fff" }}>
+      <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center event-bg ">
+        <div className="col-md-5 p-lg-5 mx-auto article-info">
+          <h1 className="display-4 fw-normal" style={{ color: "#fff" }}>
             Loreda Dragomir & Robert Negru{" "}
           </h1>
-          <p class="lead fw-normal" style={{ color: "#fff" }}>
+          <p className="lead fw-normal" style={{ color: "#fff" }}>
             Bucharest Business Club & Connections by Consiliul Patronatelor ESG
             din Romania
           </p>
         </div>
       </div>
 
-      <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-        <div class="me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden diploma"></div>
-        <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden event"></div>
+      <div className="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+        <div className="me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden diploma"></div>
+        <div className="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden event"></div>
       </div>
 
-      <div class="category-section my-5 py-5">
-        <div class="container" data-aos="fade-up">
-          <div class="row">
-            <div class="col-lg-12 order-md-2">
-              <div class="d-lg-flex post-entry-2">
-                <a class="me-4 thumbnail d-inline-block mb-4 mb-lg-0">
+      <div className="category-section my-5 py-5">
+        <div className="container" data-aos="fade-up">
+          <div className="row">
+            <div className="col-lg-12 order-md-2">
+              <div className="d-lg-flex post-entry-2">
+                <a className="me-4 thumbnail d-inline-block mb-4 mb-lg-0">
                   <img
-                    className="article-image"
+                    className="article-image img-fluid"
                     src="assets/img/diploma-loreda.jpeg"
                     alt=""
-                    class="img-fluid"
                   />
                 </a>
                 <div className="py-5 mt-5">
@@ -397,29 +409,29 @@ function Blog() {
             </div>
           </div>
 
-          <div class="row justify-content-center my-5">
-            <div class="col-lg-6">
-              <div class="border-bottom">
+          <div className="row justify-content-center my-5">
+            <div className="col-lg-6">
+              <div className="border-bottom">
                 <img
                   src="assets/img/diploma-sef.jpeg"
                   alt=""
-                  class="img-fluid article-img"
+                  className="img-fluid article-img"
                 />
-                <h5 class="my-3">
+                <h5 className="my-3">
                   Honored to receive from His Majesty Mr. Giles Portman, new
                   British Ambassador and Light Into Europe Association the
                   Community Support Award
                 </h5>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div className="col-lg-6">
               <div>
                 <img
                   src="assets/img/diploma-group.jpeg"
                   alt=""
-                  class="img-fluid article-img"
+                  className="img-fluid article-img"
                 />
-                <h5 class="my-3">
+                <h5 className="my-3">
                   We extend our heartfelt appreciation to His Majesty Mr. Giles
                   Portman, the British Embassy, and the Light Into Europe
                   Association for this remarkable recognition
@@ -455,9 +467,9 @@ function Blog() {
             </h3>
           </div>
         </div>
-        <div class="row py-5 my-5 justify-content-center align-items-center">
-            <div class="col-lg-6 order-md-2">
-              <div class="d-lg-flex post-entry-2">
+        <div className="row py-5 my-5 justify-content-center align-items-center">
+            <div className="col-lg-6 order-md-2">
+              <div className="d-lg-flex post-entry-2">
 
                 <div className="py-5 mt-5">
                   <h3 style={{textAlign: "center"}}>
@@ -476,13 +488,12 @@ function Blog() {
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6 order-md-2 ">
+              <div className="col-lg-6 order-md-2 ">
                 <a>
                   <img
-                    className="article-image"
+                    className="article-image img-fluid business-img"
                     src="assets/img/business.jpg"
                     alt=""
-                    class="img-fluid business-img"
                   />
                 </a>
               </div>
@@ -554,15 +565,15 @@ Yesterday she showed us how to use our voice in your advantage, how to do everyt
         </div>
       </div>
 
-      <div class="container pt-5 mt-5">
-        <h3 class="text-center">
+      <div className="container pt-5 mt-5">
+        <h3 className="text-center">
           Our Manager Partner Loreda Silvia Dragomir is Partner for Romania at{" "}
           <br />
           Best Places to Work starting February 2024
         </h3>
-        <div class="row pt-5">
-          <div class="col-lg-6 pb-5">
-            <div class="text-center text-md-left pt-5">
+        <div className="row pt-5">
+          <div className="col-lg-6 pb-5">
+            <div className="text-center text-md-left pt-5">
               <h1>
                 Would you like to get your oganization certified as a Best Place
                 to Work ?
@@ -579,16 +590,67 @@ Yesterday she showed us how to use our voice in your advantage, how to do everyt
               </a>
             </div>
           </div>
-          <div class="col-lg-6">
+          <div className="col-lg-6">
             <img
               src="assets/img/certified.jpg"
               alt="Image"
-              class="img-fluid mx-auto d-block certified-img"
+              className="img-fluid mx-auto d-block certified-img"
             />
           </div>
         </div>
-      </div>
+        <div className="row pt-5 justify-content-center">
+          <p className="lead pb-5" style={{textAlign: "center"}}>Despite the global challenges in terms of employees turnover and declining engagement level, the average level of engagement of the top performing companies in Romania is 82% and this is something to be proud of.
 
+This is an elite group of employers in Romania making sure that their employees are engaged, motivated, appreciated, respected and enjoy coming to work.
+
+Research from this year has shown more than 85% of employees in the top workplaces list believe their company delivers on its promises it makes to staff, with 80% saying their leaders communicate and explain the vision of the company and pay close attention to their employees’ performance as well as wellbeing. The following companies  are able to align them with the company’s goals.:</p>
+            <div className="d-flex justify-content-center align-items-center">
+              <p style={{textAlign: "center"}} className="pb-5">⭐<a href="https://www.linkedin.com/company/mcdonald%27s-corporation/">McDonald's</a> 🤝<a href="https://www.linkedin.com/company/therebeldot/">RebelDot</a> ✨<a href="https://www.linkedin.com/company/pluxeegroup/">Pluxee</a> ⭐<a href="https://www.linkedin.com/company/msd-romania/">MSD Romania</a> 💡<a href="https://www.linkedin.com/company/arctic-sa/">Arctic</a> 🌟 <a href="https://www.linkedin.com/company/faptic-technology/">Faptic Technology</a></p>
+            </div>
+          <div className="col-lg-6 d-flex justify-content-center">
+            <img
+              src="assets/img/mec.jpg"
+              alt="Image"
+              className="img-fluid certified-img"
+            />
+          </div>
+          <h5 style={{textAlign: "center"}}>Starting with March 2024 we are proudly Best Places to Work Romania<br></br> in partnership with Head Hunting Agency is a proud member of HR Club Association.<br></br></h5>
+          <a style={{textAlign: "center"}} className="pt-2 pb-5" href="https://hr-club.ro/ro">https://hr-club.ro/ro</a>
+        </div>
+        <div className="row pt-5">
+          <div className="col-lg-6">
+            <img
+              src="assets/img/brcc-img.jpg"
+              alt="Image"
+              className="img-fluid mx-auto d-block"
+            />
+          </div>
+          <div className="col-lg-6 pb-5">
+            <div className="text-center text-md-right">
+              <h5 className="pt-4">
+              Today our Managing Partner, Loreda Silvia Dragomir was one of the speakers of The Imperatives for the next decades event, organized by British Romanian Chamber of Commerce.
+              </h5>
+              <p className="lead">There were two main themes being discussed ESG Standards in 2024 and Sustainable Actions in Public and Private Sectors.</p>
+              <p className="py-1">
+Topics presented included:<br></br>
+✨ The impact of sustainability and climate on businesses<br></br>
+✨The role of the Boards in addressing sustainability and climate resilience<br></br>
+✨Investor Perspectives on ESG<br></br>
+✨Exploration of challenges and opportunities for companies in meeting ESG criteria<br></br>
+✨Insights into successful sustainability initiatives from government bodies and public sector organizations<br></br>
+✨Showcase of sustainable practices and initiatives undertaken by private enterprises: Community Engagement and Social Impact<br></br>
+              </p>
+            </div>
+          </div>
+          <div className="row">
+            <p style={{textAlign: "center"}}  className="lead">
+              Thank you <a href="https://www.linkedin.com/in/ileana-botez-mba-6284069/">Ileana Botez</a>, <a href="https://www.linkedin.com/in/alina-prahoveanu-6a9b0017/">Alina Prahoveanu</a> <a href="https://www.linkedin.com/in/simona-f%C4%83tu-7925781a/">Simona Fătu</a> <a href="https://www.linkedin.com/in/ramona-moldovan-1197786/">Ramona Moldovan</a> <a href="https://www.linkedin.com/in/ionut-nache-67559010/">Ionut NACHE</a> <a href="https://www.linkedin.com/in/mathieu-gregori/">Mathieu Gregori</a> <a href="https://www.linkedin.com/in/raulpop/">Raul Pop</a> <a href="https://www.linkedin.com/in/cipriandsandu/">Ciprian Sandu</a> <br></br>for sharing their time, experience and inputs.<br></br>
+              Thank you <a href="https://www.linkedin.com/in/madalinaciinaru/">Madalina Ciinaru</a>, <a href="https://www.linkedin.com/in/anna-n%C4%83stase-anamaria-n%C4%83stase-77b536142/">Anna Năstase</a> <a href="https://linkedin.com/in/cevasea/">Cristiana Elisabeta Vasea</a> for well done organization.<br></br>
+              Thank you <a href='https://www.linkedin.com/in/bogdan-pletea/'>Bogdan Pletea CMIRM®</a> for doing an extraordinary job at moderating the event!<br></br></p>
+          </div>
+        </div>
+      </div>
+      <MyPDFViewer />
       <Footer />
     </div>
   );

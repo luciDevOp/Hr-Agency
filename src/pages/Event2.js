@@ -4,28 +4,29 @@ import PhotoAlbum from "react-photo-album";
 import ReactPlayer from "react-player";
 
 const photos = [
-  { src: "assets/img/events/nrcc/nrcc1.jpeg", width: 1000, height: 900 },
-  { src: "assets/img/events/nrcc/nrcc2.jpeg", width: 1000, height: 1300 },
-  { src: "assets/img/events/nrcc/nrcc3.jpeg", width: 1000, height: 1300 },
+  { src: "assets/img/events/nrcc/nrcc1.jpeg", width: 1080, height: 1200 },
+  { src: "assets/img/events/nrcc/nrcc2.jpeg", width: 1080, height: 1200 },
+  { src: "assets/img/events/nrcc/nrcc3.jpeg", width: 1000, height: 1900 },
   { src: "assets/img/events/nrcc/nrcc4.jpeg", width: 1000, height: 1300 },
-  { src: "assets/img/events/nrcc/nrcc5.jpeg", width: 1000, height: 1200 },
-  { src: "assets/img/events/nrcc/nrcc6.jpeg", width: 1300, height: 900 },
-  { src: "assets/img/events/nrcc/nrcc7.jpeg", width: 800, height: 900 },
-  { src: "assets/img/events/nrcc/nrcc8.jpeg", width: 800, height: 1000 },
-  { src: "assets/img/events/nrcc/nrcc9.jpeg", width: 1300, height: 800 },
-  { src: "assets/img/events/nrcc/nrcc11.jpeg", width: 1300, height: 800 },
-  { src: "assets/img/events/nrcc/nrcc12.jpeg", width: 800, height: 1200 },
-  { src: "assets/img/events/nrcc/nrcc13.jpeg", width: 800, height: 900 },
-  { src: "assets/img/events/nrcc/nrcc14.jpeg", width: 800, height: 900 },
-  { src: "assets/img/events/nrcc/nrcc15.jpeg", width: 1300, height: 900 },
-  { src: "assets/img/events/nrcc/nrcc16.jpeg", width: 1000, height: 800 },
-  { src: "assets/img/events/nrcc/nrcc17.jpeg", width: 1500, height: 1000 },
-  { src: "assets/img/events/nrcc/nrcc18.jpeg", width: 1200, height: 800 },
-  { src: "assets/img/events/nrcc/nrcc19.jpeg", width: 1000, height: 1200 },
-  { src: "assets/img/events/nrcc/nrcc20.jpeg", width: 1000, height: 900 },
-  { src: "assets/img/events/nrcc/nrcc21.jpeg", width: 1200, height: 900 },
-  { src: "assets/img/events/nrcc/nrcc22.jpeg", width: 1000, height: 900 },
-  { src: "assets/img/events/nrcc/nrcc23.jpeg", width: 1300, height: 900 },
+  { src: "assets/img/events/nrcc/nrcc5.jpeg", width: 900, height: 1600 },
+  { src: "assets/img/events/nrcc/nrcc6.jpeg", width: 900, height: 900 },
+  { src: "assets/img/events/nrcc/nrcc7.jpeg", width: 900, height: 1600 },
+  { src: "assets/img/events/nrcc/nrcc8.jpeg", width: 800, height: 1500 },
+  { src: "assets/img/events/nrcc/nrcc9.jpeg", width: 1000, height: 700 },
+  { src: "assets/img/events/nrcc/nrcc10.jpeg", width: 800, height: 2000 },
+  { src: "assets/img/events/nrcc/nrcc11.jpeg", width: 1000, height: 900 },
+  { src: "assets/img/events/nrcc/nrcc12.jpeg", width: 1000, height: 1300 },
+  { src: "assets/img/events/nrcc/nrcc13.jpeg", width: 800, height: 1200 },
+  { src: "assets/img/events/nrcc/nrcc14.jpeg", width: 1000, height: 900 },
+  { src: "assets/img/events/nrcc/nrcc15.jpeg", width: 1000, height: 1200 },
+  { src: "assets/img/events/nrcc/nrcc16.jpeg", width: 1000, height: 700 },
+  { src: "assets/img/events/nrcc/nrcc17.jpeg", width: 1000, height: 700 },
+  { src: "assets/img/events/nrcc/nrcc18.jpeg", width: 900, height: 700 },
+  { src: "assets/img/events/nrcc/nrcc19.jpeg", width: 1000, height: 1000 },
+  { src: "assets/img/events/nrcc/nrcc20.jpeg", width: 600, height: 670 },
+  { src: "assets/img/events/nrcc/nrcc21.jpeg", width: 700, height: 600 },
+  { src: "assets/img/events/nrcc/nrcc22.jpeg", width: 600, height: 800 },
+  { src: "assets/img/events/nrcc/nrcc23.jpeg", width: 1000, height: 600 },
 ];
 
 const Event2 = () => {
@@ -36,8 +37,8 @@ const Event2 = () => {
           <h2>Netherlands Romanian Chamber of Commerce</h2>
         </div>
 
-        <section class="my-5 text-center">
-          <p class="lead">
+        <section className="my-5 text-center">
+          <p className="lead">
             The Netherlands Romanian Chamber of Commerce serves as a vital
             platform facilitating economic and trade relations between the
             Netherlands and Romania. This dynamic organization plays a pivotal

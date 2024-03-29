@@ -3,9 +3,9 @@ import Footer from "../components/Footer";
 import PhotoAlbum from "react-photo-album";
 
 const photos = [
-  { src: "assets/img/events/brcc/brcc1.jpeg", width: 1300, height: 1200 },
-  { src: "assets/img/events/brcc/brcc2.jpeg", width: 1000, height: 1300 },
-  { src: "assets/img/events/brcc/brcc3.jpeg", width: 1300, height: 1300 },
+  { src: "assets/img/events/brcc/brcc1.jpeg", width: 1000, height: 1100 },
+  { src: "assets/img/events/brcc/brcc2.jpeg", width: 1000, height: 1000 },
+  { src: "assets/img/events/brcc/brcc3.jpeg", width: 1000, height: 1300 },
   { src: "assets/img/events/brcc/brcc4.jpeg", width: 1000, height: 1000 },
   { src: "assets/img/events/brcc/brcc5.jpeg", width: 1200, height: 800 },
   { src: "assets/img/events/brcc/brcc6.jpeg", width: 1300, height: 900 },
@@ -22,8 +22,8 @@ const Event3 = () => {
           <h2>British Romanian Chamber of Commerce</h2>
         </div>
 
-        <section class="my-5 text-center">
-          <p class="lead">
+        <section className="my-5 text-center">
+          <p className="lead">
             The British Romanian Chamber of Commerce serves as a pivotal bridge
             connecting the business communities of the United Kingdom and
             Romania. With a commitment to fostering economic growth and

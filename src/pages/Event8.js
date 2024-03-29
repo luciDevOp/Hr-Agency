@@ -11,8 +11,8 @@ function Event8() {
           </h2>
         </div>
 
-        <section class="my-5 text-center">
-          <p class="lead">
+        <section className="my-5 text-center">
+          <p className="lead">
             <span style={{ color: "#7947a2", fontWeight: "700" }}>Ramona</span>{" "}
             has twenty years of work experience, out of which fifteen were
             dedicated to Human Resources and Quality Assurance, developing
