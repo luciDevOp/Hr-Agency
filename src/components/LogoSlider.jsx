@@ -102,7 +102,6 @@ function LogoSlider() {
         <img src="https://ami.cname.ro/_/company/mirus-consultanta-fiscala/mediaPool/Mirus_11191313.jpg" />
         <img src="https://findvectorlogo.com/wp-content/uploads/2019/01/mks-instruments-vector-logo.png" />
         <img src="https://www.adstore.it/wp-content/uploads/2017/11/logo-motivi.jpg" />
-        <img src="https://labs.ligaac.ro/content/upload/files/firme-09_8c69c288d1.png" />
         <img src="https://www.belli-france.com/wp-content/uploads/2017/07/logo-mr-bricolage.jpg" />
         <img src="https://logovectorseek.com/wp-content/uploads/2019/11/nidec-corporation-logo-vector.png" />
         <img src="https://bsnl.ch/wp-content/uploads/2016/07/2.novartis-logo.jpg" />

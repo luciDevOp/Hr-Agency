@@ -56,7 +56,7 @@ const Team = () => {
               </div>
               <div className="member-info">
                 <h4>Ramona Ungureanu</h4>
-                <span>Partener Coaching & Career Management</span>
+                <span>Partner Coaching & Career Management</span>
                 <p>Empowering lives, crafting futures.</p>
                 <div className="social">
                   <a href="https://www.linkedin.com/in/ramonaungureanu/">
@@ -87,6 +87,62 @@ const Team = () => {
                 <p>For a greener tomorrow.</p>
                 <div className="social">
                   <a href="https://www.linkedin.com/in/robertmnegru-wildlife/">
+                    {" "}
+                    <i className="ri-linkedin-box-fill"></i>{" "}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row">
+          <div
+            className="col-lg-6 mt-4"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          >
+            <div className="member d-flex align-items-start">
+              <div className="pic">
+                <img
+                  src="assets/img/valentina.jpeg"
+                  className="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div className="member-info">
+                <h4>Valentina Călin</h4>
+                <span>International Researcher</span>
+                <p>Finding the right person for the right job.</p>
+                <div className="social">
+                  <a href="https://www.linkedin.com/in/valentina-c%C4%83lin-43a968176/">
+                    {" "}
+                    <i className="ri-linkedin-box-fill"></i>{" "}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            className="col-lg-6 mt-4"
+            data-aos="zoom-in"
+            data-aos-delay="400"
+          >
+            <div className="member d-flex align-items-start">
+              <div className="pic" >
+                <img
+                  src="assets/img/ana.jpeg"
+                  className="img-fluid"
+                  alt=""
+                  
+                />
+              </div>
+              <div className="member-info ana">
+                <h4>Ana Slatineanu</h4>
+                <span>Partner International Recruiter & <br/>Organizational Psychology Consultant</span>
+                <p>“The ability to understand people is one of the greatest<br/> assets anyone can ever have.” John C. Maxwell</p>
+                <div className="social">
+                  <a href="https://www.linkedin.com/in/anamarialatinea/">
                     {" "}
                     <i className="ri-linkedin-box-fill"></i>{" "}
                   </a>

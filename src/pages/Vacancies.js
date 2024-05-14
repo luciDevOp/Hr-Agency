@@ -105,9 +105,52 @@ const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
               {jobDetails.require && jobDetails.require.more04 && (
                 <li>{jobDetails.require.more04}</li>
               )}
-              {jobDetails.require && jobDetails.require.more05 && (
-                <li>{jobDetails.require.more05}</li>
+              {jobDetails.require && jobDetails.require.more06 && (
+                <li>{jobDetails.require.more06}</li>
               )}
+              {jobDetails.require && jobDetails.require.more07 && (
+                <li>{jobDetails.require.more07}</li>
+              )}
+              {jobDetails.require && jobDetails.require.more08 && (
+                <li>{jobDetails.require.more08}</li>
+              )}
+              {jobDetails.require && jobDetails.require.more09 && (
+                <li>{jobDetails.require.more09}</li>
+              )}
+              {jobDetails.require && jobDetails.require.more09 && (
+                <li>{jobDetails.require.more09}</li>
+              )}
+              {jobDetails.require && jobDetails.require.more10 && (
+                <li>{jobDetails.require.more10}</li>
+              )}
+              {jobDetails.require && jobDetails.require.more11 && (
+                <li>{jobDetails.require.more11}</li>
+              )}
+              {jobDetails.require && jobDetails.require.more12 && (
+                <li>{jobDetails.require.more12}</li>
+              )}
+              {jobDetails.require && jobDetails.require.more13 && (
+                <li>{jobDetails.require.more13}</li>
+              )}
+              {jobDetails.require && jobDetails.require.more14 && (
+                <li>{jobDetails.require.more14}</li>
+              )}
+              {jobDetails.require && jobDetails.require.more15 && (
+                <li>{jobDetails.require.more15}</li>
+              )}
+              {jobDetails.require && jobDetails.require.more16 && (
+                <li>{jobDetails.require.more16}</li>
+              )}
+              {jobDetails.require && jobDetails.require.more17 && (
+                <li>{jobDetails.require.more17}</li>
+              )}
+              {jobDetails.require && jobDetails.require.more18 && (
+                <li>{jobDetails.require.more18}</li>
+              )}
+              {jobDetails.require && jobDetails.require.more19 && (
+                <li>{jobDetails.require.more19}</li>
+              )}
+              
             </ul>
             {jobDetails.require && jobDetails.require.more && (
               <p>{jobDetails.secondTitle2}</p>
@@ -140,11 +183,12 @@ const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
               )}
             </ul>
               {jobDetails.salariu && (
-                <p className="job-title">Salariu: {jobDetails.salariu}</p>
+                <p className="job-title">Salary: {jobDetails.salariu}</p>
               )}
+              
 
               {jobDetails.beneficii1 && (
-                <p className="job-title">Beneficii:</p>
+                <p className="job-title">Benefits:</p>
               )}
               <ul>
               {jobDetails.beneficii1 && (
@@ -219,6 +263,7 @@ function Vacancies() {
         five: "advanced English",
       },
       type: "Full time/On site",
+      completed: true,
     },
     {
       title: "Construction Site Manager",
@@ -345,6 +390,7 @@ function Vacancies() {
         four: "english is a must.",
       },
       type: "Full time/Hybrid",
+      completed: true,
     },
     {
       title: "General Manager IFN",
@@ -522,6 +568,7 @@ function Vacancies() {
         more03: "efectuați sarcini de recepționer atunci când este necesar",
       },
       type: "Full time/On site",
+      completed: true,
     },
     {
       title: "Senior Attorney | Corporate & Commercial Law",
@@ -597,6 +644,44 @@ function Vacancies() {
       salariu: "Salariu motivant + comision la incasare, acest comision se va stabili de comun acord la inceputul perioadei de proba + Beneficii!!"
     },
     {
+      title: "Key Account Manager",
+      location: "Bucharest, Romania",
+      description:
+        "\nKey Account Manager-ul va raporta CEO/ Deputy CEO, se va ocupa de relatia cu clientii / consumatorii finali de energie electrica, va administra un portofoliu de clienti finali si va dezvolta acest portofoliu.",
+        require: {
+        one: "Studii superioare in domeniul economic sau electrotehnic",
+        two: "Experienta in domeniu de minim 5 ani",
+        three: "Experienta in vanzari sau KAM de minim 5 ani",
+        four: 'Abilitati de comunicare, prezentare, negociere',
+        five: 'Limba Engleza- obligatoriu',
+        six: 'Permis de conducere categoria A',
+        more: "Identificarea potențialilor clienți pentru a stabili relații și a identifica oportunități de vânzare;",
+        more0: "Prezentarea detaliata a produselor și/sau serviciilor companiei, evidențiind beneficiile și caracteristicile cheie pentru a satisface nevoile clienților;",
+        more01: "Negocierea termenilor și condițiilor de vânzare cât și prețurilor pentru a obține acordul clienților, gestionând eventualele obiecții și negociind în mod proactiv;",
+        more02: "Dezvoltarea și prezentarea ofertelor personalizate, adaptate nevoilor și bugetelor clienților;",
+        more03: "Monitorizarea și gestionarea întregului proces de vânzare, de la identificarea oportunităților până la încheierea tranzacției;",
+        more04: "Menținerea relațiilor cu clienții existenți, oferind suport post-vânzare și asigurându-se că sunt îndeplinite așteptările acestora;",
+        more05: "Identificarea direcţiilor de dezvoltare şi propunerea promovarii de produse/soluţii noi;",
+        more06: "Asigurarea calitatatii serviciilor pre-vânzare;",
+        more07: 'Elaborarea/implementarea programelor de măsurare a satisfacţiei clienţilor, propunerea măsurilor de îmbunătăţire;',
+        more08: 'Urmărirea respectarii obligaţiilor contractuale către clienţi;',
+        more09: 'Asigurarea rezolvarii cerinţelor clienţilor, concomitent cu susţinerea intereselor firmei;',
+        more10: 'Determinarea liniei comerciale de dezvoltare a societăţii pe zona de furnizare;',
+        more11: 'Întocmirea rapoartelor şi situațiilor ce reflectă activitatea comercială;',
+        more12: 'Cunoaşterea: acte legislative în domeniul comercial; condițiile pieței și perspectivele de dezvoltare a acestora; principiile organizării societăţii; procedura de bugetare; sistemul de instrumente comerciale; formulare de raportare;',
+        more13: 'Dezvoltarea măsurilor pentru reducerea impactului factorilor care conduc la creșterea prețurilor;',
+        more14: 'Răspunderea stabilirii corecte a documentelor care se întocmesc în domeniul comercial şi de circuitul lor în cadrul societăţii;',
+        more15: 'Consultanta către conducerea societăţii în probleme care sunt de competenţa serviciului;',
+        more16: 'Reprezentarea societatii în cazurile încredinţate prin delegare;',
+        more17: 'Răspunde de eficienţa şi calitatea lucrărilor executate în cadrul serviciului la termenele stabilite prin reglementări interne sau prin alte acte normative;',
+        more18: 'Răspunde de respectarea programului de lucru şi a disciplinei muncii în cadrul serviciului pe care îl coordonează;',
+        more19: 'Răspunde de îndeplinirea oricăror altor sarcini atribuite de superiorul ierarhic, de regulamentul de aplicare a acesteia, precum şi de celelalte reglementări legale în vigoare, pe linie comercială;',
+      },
+      salariu: 'Se ofera salariul atractiv, bonus anual, masina de serviciu.',
+      type: "Full time/On site",
+      beneficii1: 'Exista posibilitate de dezvoltare, se ofera cursuri, training-uri.',
+    },
+    {
       title: "Chief HR Officer",
       location: "Global",
       description:"\nAs a key member of our client’s team, an international software creator for gaming industry, with presence in more than 25 countries, the CHRO will play a crucial role in attracting, retaining, motivating and developing the international teams.",
@@ -610,6 +695,61 @@ function Vacancies() {
         more02: "Global Talent Acquisition and Leadership and Talent Development",
       },
       type: "Full time/Remote",
+      completed: true,
+    },
+    {
+      title: "Senior Accountant",
+      location: "Bucharest, Romania",
+      description:"\nFor our client,  a global family of 30,000 professionals across 260 independent firms working in more than 100 countries, we are looking for a Senior Accountant, based in Bucharest.      ",
+      require: {
+        one: "More than 3-4 years of experience in accounting;",
+        two: "Experience in consulting company -advantage;",
+        three: "Well organized and communicative;",
+        four: 'Good command of English;',
+        five: 'Excellent computer knowledge:',
+        more: "Responsible for the review/preparation of all primary accounting documents according to the local compliance regulations;",
+        more0: "Responsible for the monthly bookkeeping, registration of primary documents (invoices, bank statements, advance payment reports);",
+        more01: "Responsible for the accurate preparation of balance sheet and income statements and various other accounting statements and reports required by the client;",
+        more02: "Review and check the accuracy of payroll records, sales, purchase ledgers etc.;",
+        more03: 'Prepare the monthly tax returns, by indicated deadlines;',
+        more04: 'Identify particular risks related to the client transaction',
+        more05: 'Reconciliation of the accounts from the balance sheet;',
+        more06: 'Document storage after closing procedures;',
+        more07: 'Coordinate the juniors.',
+      },
+      type: "Full time/On site",
+      salariu: 'Competitive;',
+      beneficii1: 'Clear career growth with bi-annual performance assessment;',
+      beneficii2: 'ACCA full support (covered fees and study materials, paid study leaves);',
+      beneficii3: 'International business exposure;',
+      beneficii4: 'Morning flexible hours;',
+      beneficii5: 'Friendly leadership ;',
+      beneficii6: 'Modern office;',
+    },
+    {
+      title: "Internal Auditor",
+      location: "Bucharest, Romania",
+      description:"\nFor our client,  a global family of 30,000 professionals across 260 independent firms working in more than 100 countries, we are looking for a Internal Auditor, based in Bucharest.\nWe are looking for enthusiastic team members, who are proactive, passionate, self-driven and who are willing to learn and build a promising career in a dynamic and friendly environment.      ",
+      require: {
+        one: "Degree in economical area or are at the final stage of completion;",
+        two: "Experience in audit or other financial sector -advantage;",
+        three: "Good knowledge of accounting principles and usual accounting notes;",
+        four: 'Willingness to work within a dynamic team;',
+        five: 'Good command of English;',
+        six: 'Thirsty for new challenges and strong analytical skills;',
+        more: "Inventory on the client companies’ status",
+        more0: "Creating and maintaining audit files",
+        more01: "Preparing summary documents and reports",
+        more02: "Testing controls and identifying risks",
+        more03: 'Validating important financial data and records',
+      },
+      type: "Full time/On site",
+      beneficii1: 'Clear career growth with bi-annual performance assessment;',
+      beneficii2: 'ACCA full support (covered fees and study materials, paid study leaves);',
+      beneficii3: 'International business exposure;',
+      beneficii4: 'Morning flexible hours;',
+      beneficii5: 'Friendly leadership ;',
+      beneficii6: 'Modern office;',
     },
   ];
 
