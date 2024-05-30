@@ -2221,6 +2221,12 @@ section {
 .video-container {
   height: 700px;
 }
+@media (max-width: 768px) {
+  .londra-video{
+    margin-top: -100px;
+  }
+}
+
 
 .product-device {
   position: absolute;
@@ -2456,4 +2462,41 @@ section {
   .network2{
     max-width: 50%;
   }
+}
+/* ERROR CSSS ////////// */
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+  color: #343a40;
+  text-align: center;
+  padding: 20px;
+}
+
+.error-heading {
+  font-size: 6rem;
+  margin: 0;
+}
+
+.error-paragraph {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.error-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.error-button:hover {
+  background-color: #0056b3;
 }

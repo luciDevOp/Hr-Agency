@@ -10,6 +10,7 @@ const Map = () => {
           <img
             className="img-fluid imd-map-img"
             src="assets/img/map-purple.png"
+            alt="IMD Global Reach Map"
           />
         </div>
       </div>

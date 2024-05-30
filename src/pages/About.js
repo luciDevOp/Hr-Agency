@@ -60,8 +60,9 @@ function About() {
           <div className="col-md-6 info-image d-none d-md-block">
             <img
               src="assets/img/img-about.png"
-              alt="Image"
+              alt=""
               className="img-fluid mx-5"
+
             />
           </div>
         </div>

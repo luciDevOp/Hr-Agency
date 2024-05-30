@@ -26,7 +26,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/iulia.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Iulia Lascau</h5>
@@ -56,7 +56,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/ioana.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Ioana Predescu</h5>
@@ -84,7 +84,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/doina.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Doina Popescu</h5>
@@ -118,7 +118,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/corina.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Corina Neagu</h5>
@@ -147,7 +147,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/mihai.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Berzava Mihai</h5>
@@ -176,7 +176,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/sorina.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Sorina Faier</h5>
@@ -211,7 +211,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/carmen.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Carmen David</h5>
@@ -238,7 +238,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/ion.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Ion Gabriel Chirvase</h5>
@@ -269,7 +269,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/dorel.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Dorel Radu</h5>
@@ -307,7 +307,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/cristina.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Cristina Filip</h5>
@@ -337,7 +337,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/adina.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Adina Rotileanu</h5>
@@ -367,7 +367,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/stavros.jpg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Stavros Mavroudis</h5>
@@ -401,7 +401,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/anca.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Anca Motca</h5>
@@ -428,7 +428,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/james.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">James H. Pogue, PhDd</h5>
@@ -457,7 +457,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/jose.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">José Afonso</h5>
@@ -495,7 +495,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/alexandra.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Alexandra Negoita</h5>
@@ -523,7 +523,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/liana.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Liana Uzunov</h5>
@@ -548,7 +548,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/valentina.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Valentina Marinoiu</h5>
@@ -584,7 +584,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/ema.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Ema Vidican</h5>
@@ -613,7 +613,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/alexandru.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Alexandru Horatiu Didea</h5>
@@ -640,7 +640,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/roxana.png"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Roxana Petrea</h5>
@@ -673,7 +673,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/gabriela.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Gabriela Spirache</h5>
@@ -699,7 +699,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/florin.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Florin Petrescu</h5>
@@ -728,7 +728,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/silvia.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Silvia Mihalache</h5>
@@ -762,7 +762,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/emanuel.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Emanuel Grigorcea</h5>
@@ -789,7 +789,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/irina.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Irina Popovici</h5>
@@ -818,7 +818,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/cristian.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Cristian Nistoreasa</h5>
@@ -854,7 +854,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/serban.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Serban Cazanisteanu</h5>
@@ -883,7 +883,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/cara.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Cristina M. Caramizaru</h5>
@@ -914,7 +914,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/dan.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Dan Oprescu</h5>
@@ -946,7 +946,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/misu.jpg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Alexandru Mișu</h5>
@@ -972,7 +972,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/baiu.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Cosmin Baiu</h5>
@@ -999,7 +999,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/arnold.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Arnold Lang</h5>
@@ -1029,7 +1029,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/radu.jpg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Radu Constantin Ungureanu</h5>
@@ -1059,7 +1059,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/perrin.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Alina Perrin</h5>
@@ -1091,7 +1091,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/gavrilescu.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Gabriel Gavrilescu</h5>
@@ -1123,7 +1123,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/dragan.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">George Dragan</h5>
@@ -1152,7 +1152,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/eftimie.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Claudia Eftimie</h5>
@@ -1182,7 +1182,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/manuel.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Manuel Ionescu</h5>
@@ -1221,7 +1221,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/leahu.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Oana Leahu</h5>
@@ -1250,7 +1250,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/gheorghe.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Andreea Gheorghe</h5>
@@ -1279,7 +1279,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/silvana.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Dr. Silvana Vasilescu</h5>
@@ -1317,7 +1317,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/andrea.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Andrea Colantoni</h5>
@@ -1347,7 +1347,7 @@ export default function Testimonials() {
                       src="/assets/img/testimonials/dinu.jpeg"
                       className="rounded-circle shadow-1-strong"
                       width="150"
-                      height="150"
+                      height="150" alt='testimonials'
                     />
                   </div>
                   <h5 className="mb-3">Sorin Ovidiu Dinu</h5>

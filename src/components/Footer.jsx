@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-3 col-md-6 footer-contact mb-3">
-              <img className="logo-img" src="assets/img/hha-logo.png" />
+              <img className="logo-img" src="assets/img/hha-logo.png" alt="hha-logo"/>
               <p>
                 City Gate Office Building – South Tower
                 <br />

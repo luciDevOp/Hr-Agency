@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   Navigation,
   Pagination,
@@ -176,12 +176,12 @@ function Blog() {
           <div className="row g-5">
             <div className="col-lg-4">  
               <div className="post-entry-1 lg">
-                <a href="/blog-event-1">
+                <a href="/blog/swiss-chamber-of-commerce">
                   <img src="assets/img/swiss.jpeg" alt="" className="img-fluid" />
                 </a>
                 <div className="post-meta"></div>
                 <h2>
-                  <a href="/blog-event-1">Swiss Chamber of Commerce</a>
+                  <a href="/blog/swiss-chamber-of-commerce">Swiss Chamber of Commerce</a>
                 </h2>
                 <p className="mb-4 d-block">
                   The Swiss Chamber of Commerce serves as a pivotal organization
@@ -193,30 +193,30 @@ function Blog() {
                 </p>
               </div>
               <div className="post-entry-1 lg">
-                <a href="/blog-event-8">
+                <a href="/blog/ramona-ungureanu">
                   <img src="assets/img/ramona.jpeg" alt="" className="img-fluid" />
                 </a>
                 <div className="post-meta"></div>
                 <h2>
-                  <a href="/blog-event-8">Presenting Ramona Ungureanu</a>
+                  <a href="/blog/ramona-ungureanu">Presenting Ramona Ungureanu</a>
                 </h2>
               </div>
               <div className="post-entry-1 pt-5">
-                <a href="/blog-event-11">
+                <a href="/blog/member-professional-women-network">
                   <img src="assets/img/events/pwn/pwn5.jpeg" alt="" className="img-fluid" />
                 </a>
                 <div className="post-meta"></div>
                 <h2>
-                  <a href="/blog-event-11">HHA proud member of Professional Women Network</a>
+                  <a href="/blog/member-professional-women-network">HHA proud member of Professional Women Network</a>
                 </h2>
               </div>
               <div className="post-entry-1 pt-5">
-                <a href="/blog-event-14">
+                <a href="/blog/ana-slatineanu">
                   <img src="assets/img/ana.jpeg" alt="" className="img-fluid" style={{borderRadius: 190}}/>
                 </a>
                 <div className="post-meta"></div>
                 <h2 style={{fontSize: 25}}>
-                  <a href="/blog-event-14">Presenting Ana Slatineanu</a>
+                  <a href="/blog/ana-slatineanu">Presenting Ana Slatineanu</a>
                 </h2>
               </div>
             </div>
@@ -225,7 +225,7 @@ function Blog() {
               <div className="row g-5">
                 <div className="col-lg-6 border-start custom-border">
                   <div className="post-entry-1">
-                    <a href="/blog-event-2">
+                    <a href="/blog/NRCC">
                       <img
                         src="assets/img/nrcc.jpeg"
                         alt=""
@@ -234,13 +234,13 @@ function Blog() {
                     </a>
                     <div className="post-meta"></div>
                     <h2>
-                      <a href="/blog-event-2">
+                      <a href="/blog/NRCC">
                         Netherlands Romanian Chamber of Commerce
                       </a>
                     </h2>
                   </div>
                   <div className="post-entry-1">
-                    <a href="/blog-event-3">
+                    <a href="/blog/BRCC">
                       <img
                         src="assets/img/brcc.jpeg"
                         alt=""
@@ -249,13 +249,13 @@ function Blog() {
                     </a>
                     <div className="post-meta"></div>
                     <h2>
-                      <a href="/blog-event-3">
+                      <a href="/blog/BRCC">
                         British Romanian Chamber of Commerce
                       </a>
                     </h2>
                   </div>
                   <div className="post-entry-1">
-                    <a href="/blog-event-4">
+                    <a href="/blog/DWNT">
                       <img
                         src="assets/img/dwnt.jpeg"
                         alt=""
@@ -264,13 +264,13 @@ function Blog() {
                     </a>
                     <div className="post-meta"></div>
                     <h2>
-                      <a href="/blog-event-4">
+                      <a href="/blog/DWNT">
                         Deutschsprachiger Wirtschaftsklub Nord-Transilvanien
                       </a>
                     </h2>
                   </div>
                   <div className="post-entry-1">
-                    <a href="/blog-event-10">
+                    <a href="/blog/womenrise">
                       <img
                         src="assets/img/wr2.jpeg"
                         alt=""
@@ -279,13 +279,13 @@ function Blog() {
                     </a>
                     <div className="post-meta"></div>
                     <h2>
-                      <a href="/blog-event-10">
+                      <a href="/blog/womenrise">
                       The Third Edition of WOMENRISE
                       </a>
                     </h2>
                   </div>
                   <div className="post-entry-1">
-                    <a href="/blog-event-12">
+                    <a href="/blog/networking-breakfast">
                       <img
                         src="assets/img/network.jpg"
                         alt=""
@@ -294,13 +294,13 @@ function Blog() {
                     </a>
                     <div className="post-meta"></div>
                     <h2>
-                      <a href="/blog-event-12">
+                      <a href="/blog/networking-breakfast">
                       Networking Breakfast
                       </a>
                     </h2>
                   </div>
                   <div className="post-entry-1">
-                    <a href="/blog-event-15">
+                    <a href="/blog/valentina-calin">
                       <img
                         src="assets/img/valentina.jpeg"
                         alt=""
@@ -309,7 +309,7 @@ function Blog() {
                     </a>
                     <div className="post-meta"></div>
                     <h2>
-                      <a href="/blog-event-15">
+                      <a href="/blog/valentina-calin">
                       Presenting Valentina Călin
                       </a>
                     </h2>
@@ -317,18 +317,18 @@ function Blog() {
                 </div>
                 <div className="col-lg-6 border-start custom-border">
                   <div className="post-entry-1">
-                    <a href="/blog-event-5">
+                    <a href="/blog/professional-women-network">
                       <img src="assets/img/pwn.jpeg" alt="" className="img-fluid" />
                     </a>
                     <div className="post-meta"></div>
                     <h2>
-                      <a href="/blog-event-5">
+                      <a href="/blog/professional-women-network">
                         Professional Women Network Romania
                       </a>
                     </h2>
                   </div>
                   <div className="post-entry-1">
-                    <a href="/blog-event-6">
+                    <a href="/blog/advantage-austria">
                       <img
                         src="assets/img/austria.jpeg"
                         alt=""
@@ -337,11 +337,11 @@ function Blog() {
                     </a>
                     <div className="post-meta"></div>
                     <h2>
-                      <a href="/blog-event-6">Advantage Austria</a>
+                      <a href="/blog/advantage-austria">Advantage Austria</a>
                     </h2>
                   </div>
                   <div className="post-entry-1">
-                    <a href="/blog-event-7">
+                    <a href="/blog-RDCC">
                       <img
                         src="assets/img/diversity.jpeg"
                         alt=""
@@ -350,13 +350,13 @@ function Blog() {
                     </a>
                     <div className="post-meta"></div>
                     <h2>
-                      <a href="/blog-event-7">
+                      <a href="/blog/RDCC">
                         Romanian Diversity Chamber of Commerce
                       </a>
                     </h2>
                   </div>
                   <div className="post-entry-1 lg">
-                    <a href="/blog-event-9">
+                    <a href="/blog/robert-negru">
                       <img
                         src="assets/img/robert-present.jpeg"
                         alt=""
@@ -365,11 +365,11 @@ function Blog() {
                     </a>
                     <div className="post-meta"></div>
                     <h2>
-                      <a href="/blog-event-9">Presenting Robert Negru</a>
+                      <a href="/blog/robert-negru">Presenting Robert Negru</a>
                     </h2>
                   </div>
                   <div className="post-entry-1 ">
-                    <a href="/blog-event-13">
+                    <a href="/blog/a_best-ac_texas">
                       <img
                         src="assets/img/best.jpg"
                         alt=""
@@ -378,7 +378,20 @@ function Blog() {
                     </a>
                     <div className="post-meta"></div>
                     <h2>
-                      <a href="/blog-event-13">Launching of Strategic Partnership between<br></br>Centrul de Limbi Straine A_BEST & <br></br>AC Language School Texas, USA</a>
+                      <a href="/blog/a_best-ac_texas">Launching of Strategic Partnership between<br></br>Centrul de Limbi Straine A_BEST & <br></br>AC Language School Texas, USA</a>
+                    </h2>
+                  </div>
+                  <div className="post-entry-1 ">
+                    <a href="/blog/IMD-international-london">
+                      <img
+                        src="assets/img/londra.jpeg"
+                        alt=""
+                        className="img-fluid"
+                      />
+                    </a>
+                    <div className="post-meta"></div>
+                    <h2>
+                      <a href="/blog/IMD-international-london">Annual General Meeting <br/>IMD International London</a>
                     </h2>
                   </div>
                 </div>
@@ -409,13 +422,13 @@ function Blog() {
           <div className="row">
             <div className="col-lg-12 order-md-2">
               <div className="d-lg-flex post-entry-2">
-                <a className="me-4 thumbnail d-inline-block mb-4 mb-lg-0">
+                <div className="me-4 thumbnail d-inline-block mb-4 mb-lg-0">
                   <img
                     className="article-image img-fluid"
                     src="assets/img/diploma-loreda.jpeg"
-                    alt=""
+                    alt="Diploma Loreda Dragomir"
                   />
-                </a>
+                </div>
                 <div className="py-5 mt-5">
                   <h1>
                     Light Into Europe Association the Community Support Award
@@ -470,7 +483,7 @@ function Blog() {
         <div className="row">
           <div className="col-lg-6">
             <div className="d-flex justify-content-center align-items-center">
-              <img src="assets/img/breakfast.jpeg" className="img-fluid" />
+              <img src="assets/img/breakfast.jpeg" className="img-fluid" alt=""/>
             </div>
             <h3
               className="d-flex justify-content-center align-items-center pt-5"
@@ -481,7 +494,7 @@ function Blog() {
           </div>
           <div className="col-lg-6">
             <div className="d-flex justify-content-center align-items-center">
-              <img src="assets/img/brcc-ss.png" className="img-fluid brcc-ss" />
+              <img src="assets/img/brcc-ss.png" className="img-fluid brcc-ss" alt=""/>
             </div>
             <h3
               className="d-flex justify-content-center align-items-center pt-5"
@@ -505,27 +518,27 @@ function Blog() {
                   💡In banking there are four necessary skills for success: digital skills, regulatory, data literacy, cybersecurity.<br></br>
                   💡In terms of importance programming AI will be replaced with interacting with AI<br></br>
                   </p>
-                  <p style={{textAlign: "center", paddingBottom: "20px"}}>It was great to meet or to meet again, or watch their presentation people from HR community such as <a href="https://www.linkedin.com/in/ginacruceru/">Gina Cruceru</a>, <a href="https://www.linkedin.com/in/andreea-mihnea-568469/">Andreea Mihnea</a>, <a href="https://www.linkedin.com/in/danadobrescu/">Dana Dobrescu</a>, <a href="https://www.linkedin.com/in/florentinagreger/">Florentina Greger</a>, <a href="https://www.linkedin.com/in/simona-ciora/">Simona Ciora</a>, <a href="https://www.linkedin.com/in/gabriela-costache-6521a82/">Gabriela COSTACHE</a>, <a href="https://www.linkedin.com/in/andreicretu/">Andrei Cretu</a>, <a href="https://www.linkedin.com/in/timeamozgirs/">Timea Mozgirs</a>, <a href="https://www.linkedin.com/in/alina-n%C4%83stase-costea-b32abb52/">Alina (Năstase) Costea</a>, <a href="https://www.linkedin.com/in/anamariadiceanu/">Ana Maria Diceanu</a>, <a href="https://www.linkedin.com/in/leonardrizoiu/">Leonard RIZOIU</a>, <a href="https://www.linkedin.com/in/mihaizant/">Mihai ZANT</a>, <a href="https://www.linkedin.com/in/luiza-banyai-2420111/">Luiza Banyai</a>, <a href="https://www.linkedin.com/in/mihaibajan/">Mihai Bajan</a>, <a href="https://www.linkedin.com/in/filip-nemteanu/">Filip Nemteanu</a>, <a href="https://www.linkedin.com/in/silviu-dragomir-54b16810/">Silviu Dragomir</a>, <a href="https://www.linkedin.com/in/mihaela-georgiana-tomescu/">Mihaela Tomescu</a>, <a href="https://www.linkedin.com/in/alexandra-kogalniceanu-3166151b/">Alexandra Kogalniceanu</a>, <a href="https://www.linkedin.com/in/catalina-stanciu/">Catalina Stanciu</a>, <a href="https://www.linkedin.com/in/cezar-c%C3%A2rligeanu-72420733/">Cezar Cârligeanu</a>, <a href="#">Head Hunting Agency, part of IMD International Search Group, Partner Romania for Best Places to Work</a>,</p>
+                  <p style={{textAlign: "center", paddingBottom: "20px"}}>It was great to meet or to meet again, or watch their presentation people from HR community such as <a href="https://www.linkedin.com/in/ginacruceru/">Gina Cruceru</a>, <a href="https://www.linkedin.com/in/andreea-mihnea-568469/">Andreea Mihnea</a>, <a href="https://www.linkedin.com/in/danadobrescu/">Dana Dobrescu</a>, <a href="https://www.linkedin.com/in/florentinagreger/">Florentina Greger</a>, <a href="https://www.linkedin.com/in/simona-ciora/">Simona Ciora</a>, <a href="https://www.linkedin.com/in/gabriela-costache-6521a82/">Gabriela COSTACHE</a>, <a href="https://www.linkedin.com/in/andreicretu/">Andrei Cretu</a>, <a href="https://www.linkedin.com/in/timeamozgirs/">Timea Mozgirs</a>, <a href="https://www.linkedin.com/in/alina-n%C4%83stase-costea-b32abb52/">Alina (Năstase) Costea</a>, <a href="https://www.linkedin.com/in/anamariadiceanu/">Ana Maria Diceanu</a>, <a href="https://www.linkedin.com/in/leonardrizoiu/">Leonard RIZOIU</a>, <a href="https://www.linkedin.com/in/mihaizant/">Mihai ZANT</a>, <a href="https://www.linkedin.com/in/luiza-banyai-2420111/">Luiza Banyai</a>, <a href="https://www.linkedin.com/in/mihaibajan/">Mihai Bajan</a>, <a href="https://www.linkedin.com/in/filip-nemteanu/">Filip Nemteanu</a>, <a href="https://www.linkedin.com/in/silviu-dragomir-54b16810/">Silviu Dragomir</a>, <a href="https://www.linkedin.com/in/mihaela-georgiana-tomescu/">Mihaela Tomescu</a>, <a href="https://www.linkedin.com/in/alexandra-kogalniceanu-3166151b/">Alexandra Kogalniceanu</a>, <a href="https://www.linkedin.com/in/catalina-stanciu/">Catalina Stanciu</a>, <a href="https://www.linkedin.com/in/cezar-c%C3%A2rligeanu-72420733/">Cezar Cârligeanu</a>, <a href="https://hha.ro/">Head Hunting Agency, part of IMD International Search Group, Partner Romania for Best Places to Work</a>,</p>
                   <div className="d-flex justify-content-center align-items-center">
-                    <a href="#" style={{textAlign: "center"}}>#tomorrowatwork2024 #futureofwork #businessmark #headhuntingagency</a>
+                    <a href="https://hha.ro/" style={{textAlign: "center"}}>#tomorrowatwork2024 #futureofwork #businessmark #headhuntingagency</a>
                   </div>
                   </div>
                 </div>
               </div>
               <div className="col-lg-6 order-md-2 ">
-                <a>
+                <div>
                   <img
                     className="article-image img-fluid business-img"
                     src="assets/img/business.jpg"
                     alt=""
                   />
-                </a>
+                </div>
               </div>
           </div>
         <div className="row">
         <div className="col-lg-6">
             <div className="d-flex justify-content-center align-items-center pt-5">
-              <img src="assets/img/gala-awards.jpeg" className="img-fluid gala-awards" />
+              <img src="assets/img/gala-awards.jpeg" className="img-fluid gala-awards" alt=""/>
             </div>
             <h3
               className="d-flex justify-content-center align-items-center pt-5"
@@ -539,12 +552,12 @@ The energy in the room was truly electric!
 It was an honor to be surrounded by so many talented professionals who are making a difference in their respective fields.
 Looking forward to seeing what the future holds for all of us and the impact we will continue to make.</p>
                     <div className="d-flex justify-content-center align-items-center">
-                    <a href="#" style={{textAlign: "center"}}>#successStories #excellence #commitment #innovation #sustainability #achievements #blueMobility #franui #BRCC #galaAwards</a>
+                    <a href="https://hha.ro/" style={{textAlign: "center"}}>#successStories #excellence #commitment #innovation #sustainability #achievements #blueMobility #franui #BRCC #galaAwards</a>
                     </div>
           </div>
           <div className="col-lg-6">
             <div className="d-flex justify-content-center align-items-center pt-5">
-              <img src="assets/img/events/seara.jpeg" className="img-fluid gala-awards" />
+              <img src="assets/img/events/seara.jpeg" className="img-fluid gala-awards" alt=""/>
             </div>
             <h3
               className="d-flex justify-content-center align-items-center pt-5"
@@ -558,7 +571,7 @@ Last evening was about us. Sezatoarea de Seara by SPACES</p>
           <div className="row">
           <div className="col-lg-6">
             <div className="d-flex justify-content-center align-items-center pt-5">
-              <img src="assets/img/pwn-alumni.jpeg" className="img-fluid" />
+              <img src="assets/img/pwn-alumni.jpeg" className="img-fluid" alt=""/>
             </div>
             <h3
               className="d-flex justify-content-center align-items-center pt-5"
@@ -568,12 +581,12 @@ Last evening was about us. Sezatoarea de Seara by SPACES</p>
             </h3>
             <p className="d-flex justify-content-center align-items-center pt-5" style={{textAlign: "center"}}>Great insights, experienced speakers, and valuable knowledge were shared today during the PWN Alumni Women on Board second edition. The event focused on supporting women in business and society, with discussions centered around gender diversity in corporate boards, board-ready women initiatives, gender mainstreaming, and gender equality in administration boards. One of the key takeaways was the importance of consolidating the application of equal remuneration for equal work among men and women via remuneration transparency. These were only a few of the many topics discussed during the event.</p>
                     <div className="d-flex justify-content-center align-items-center">
-                    <a href="#" style={{textAlign: "center"}}>#WomenInBusiness #GenderDiversity #GenderEquality #PWNAlumni #BoardReadyWomen #RemunerationTransparency #pwn #romania</a>
+                    <a href="https://hha.ro/"  style={{textAlign: "center"}}>#WomenInBusiness #GenderDiversity #GenderEquality #PWNAlumni #BoardReadyWomen #RemunerationTransparency #pwn #romania</a>
                     </div>
           </div>
           <div className="col-lg-6">
             <div className="d-flex justify-content-center align-items-center pt-5">
-              <img src="assets/img/pwn-event.jpeg" className="img-fluid pwn-event" />
+              <img src="assets/img/pwn-event.jpeg" className="img-fluid pwn-event" alt=''/>
             </div>
             <h3
               className="d-flex justify-content-center align-items-center pt-5"
@@ -617,7 +630,7 @@ Yesterday she showed us how to use our voice in your advantage, how to do everyt
           <div className="col-lg-6">
             <img
               src="assets/img/certified.jpg"
-              alt="Image"
+              alt=""
               className="img-fluid mx-auto d-block certified-img"
             />
           </div>
@@ -634,7 +647,7 @@ Research from this year has shown more than 85% of employees in the top workplac
           <div className="col-lg-6 d-flex justify-content-center">
             <img
               src="assets/img/mec.jpg"
-              alt="Image"
+              alt=""
               className="img-fluid certified-img"
             />
           </div>
@@ -645,7 +658,7 @@ Research from this year has shown more than 85% of employees in the top workplac
           <div className="col-lg-6">
             <img
               src="assets/img/brcc-img.jpg"
-              alt="Image"
+              alt=""
               className="img-fluid mx-auto d-block"
             />
           </div>

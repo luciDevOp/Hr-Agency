@@ -1,12 +1,6 @@
 import React from "react";
 import Footer from "../components/Footer";
-import PhotoAlbum from "react-photo-album";
 
-const photos = [
-  { src: "assets/img/wr1.jpeg", width: 1200, height: 1700 },
-  { src: "assets/img/wr2.jpeg", width: 2000, height: 1500 },
-  { src: "assets/img/wr3.jpeg", width: 1200, height: 1700 },
-];
 
 const Event11 = () => {
   return (

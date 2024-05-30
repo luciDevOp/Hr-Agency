@@ -24,7 +24,7 @@ function GlobalMarket() {
               <h3>
                 <img
                   src="/assets/img/flags/i-australia.png"
-                  className="flags"
+                  className="flags" alt=''
                 />
                 <a
                   href="https://www.imdsearch.com/about/global-offices/australia/"
@@ -54,7 +54,7 @@ function GlobalMarket() {
 
             <article>
               <h3>
-                <img src="/assets/img/flags/i-belgium.png" className="flags" />
+                <img src="/assets/img/flags/i-belgium.png" className="flags" alt='' />
                 <a
                   href="https://www.imdsearch.com/about/global-offices/belgium"
                   className="countries"
@@ -83,7 +83,7 @@ function GlobalMarket() {
 
             <article>
               <h3>
-                <img src="/assets/img/flags/i-brazil.png" className="flags" />
+                <img src="/assets/img/flags/i-brazil.png" className="flags" alt='' />
                 <a
                   href="https://www.imdsearch.com/about/global-offices/brazil"
                   className="countries"
@@ -102,7 +102,7 @@ function GlobalMarket() {
 
             <article>
               <h3>
-                <img src="/assets/img/flags/i-canada.png" className="flags" />
+                <img src="/assets/img/flags/i-canada.png" className="flags" alt='' />
                 <a
                   href="https://www.imdsearch.com/about/global-offices/canada"
                   className="countries"
@@ -126,7 +126,7 @@ function GlobalMarket() {
 
             <article>
               <h3>
-                <img src="/assets/img/flags/i-chile.png" className="flags" />
+                <img src="/assets/img/flags/i-chile.png" className="flags" alt='' />
                 <a
                   href="https://www.imdsearch.com/about/global-offices/chile"
                   className="countries"
@@ -145,7 +145,7 @@ function GlobalMarket() {
 
             <article>
               <h3>
-                <img src="/assets/img/flags/ch-lgflag.gif" className="flags" />
+                <img src="/assets/img/flags/ch-lgflag.gif" className="flags" alt='' />
                 <a
                   href="https://www.imdsearch.com/about/global-offices/china"
                   className="countries"
@@ -164,7 +164,7 @@ function GlobalMarket() {
 
             <article>
               <h3>
-                <img src="/assets/img/flags/cz.gif" className="flags" />
+                <img src="/assets/img/flags/cz.gif" className="flags" alt='' />
                 <a
                   href="https://www.imdsearch.com/about/global-offices/czech-republic"
                   className="countries"
@@ -185,7 +185,7 @@ function GlobalMarket() {
           <div className="col-lg-3 col-md-4">
             <article>
               <h3>
-                <img src="/assets/img/flags/i-denmark.png" className="flags" />
+                <img src="/assets/img/flags/i-denmark.png" className="flags" alt='' />
                 <a
                   href="https://www.imdsearch.com/about/global-offices/denmark"
                   className="countries"
@@ -204,7 +204,7 @@ function GlobalMarket() {
 
             <article>
               <h3>
-                <img src="/assets/img/flags/i-finland.png" className="flags" />
+                <img src="/assets/img/flags/i-finland.png" className="flags" alt='' />
                 <a
                   href="https://www.imdsearch.com/about/global-offices/finland"
                   className="countries"
@@ -223,7 +223,7 @@ function GlobalMarket() {
 
             <article>
               <h3>
-                <img src="/assets/img/flags/i-france.png" className="flags" />
+                <img src="/assets/img/flags/i-france.png" className="flags" alt='' />
                 <a
                   href="https://www.imdsearch.com/about/global-offices/france"
                   className="countries"
@@ -242,7 +242,7 @@ function GlobalMarket() {
 
             <article>
               <h3>
-                <img src="/assets/img/flags/i-germany.png" className="flags" />
+                <img src="/assets/img/flags/i-germany.png" className="flags" alt='' />
                 <a
                   href="https://www.imdsearch.com/about/global-offices/germany"
                   className="countries"
@@ -276,7 +276,7 @@ function GlobalMarket() {
 
             <article>
               <h3>
-                <img src="/assets/img/flags/hu-lgflag.gif" className="flags" />
+                <img src="/assets/img/flags/hu-lgflag.gif" className="flags" alt='' />
                 <a
                   href="https://www.imdsearch.com/about/global-offices/hungary"
                   className="countries"
@@ -295,7 +295,7 @@ function GlobalMarket() {
 
             <article>
               <h3>
-                <img src="/assets/img/flags/in-flag.gif" className="flags" />
+                <img src="/assets/img/flags/in-flag.gif" className="flags" alt='' />
                 <a
                   href="https://www.imdsearch.com/about/global-offices/india"
                   className="countries"
@@ -319,7 +319,7 @@ function GlobalMarket() {
 
             <article>
               <h3>
-                <img src="/assets/img/flags/i-italy.png" className="flags" />
+                <img src="/assets/img/flags/i-italy.png" className="flags" alt='' />
                 <a
                   href="https://www.imdsearch.com/about/global-offices/italy"
                   className="countries"
@@ -340,7 +340,7 @@ function GlobalMarket() {
           <div className="col-lg-3 col-md-4">
             <article>
               <h3>
-                <img src="/assets/img/flags/i-mexico.png" className="flags" />
+                <img src="/assets/img/flags/i-mexico.png" className="flags" alt='' />
                 <a
                   href="https://www.imdsearch.com/about/global-offices/mexico"
                   className="countries"
@@ -371,7 +371,7 @@ function GlobalMarket() {
               <h3>
                 <img
                   src="/assets/img/flags/i-netherlands.png"
-                  className="flags"
+                  className="flags" alt=''
                 />
                 <a
                   href="https://www.imdsearch.com/about/global-offices/netherlands"
@@ -398,7 +398,7 @@ function GlobalMarket() {
               <h3>
                 <img
                   src="/assets/img/flags/i-new-zealand.png"
-                  className="flags"
+                  className="flags" alt=''
                 />
                 <a
                   href="https://www.imdsearch.com/about/global-offices/new-zealand"
@@ -418,7 +418,7 @@ function GlobalMarket() {
 
             <article>
               <h3>
-                <img src="/assets/img/flags/i-norway.png" className="flags" />
+                <img src="/assets/img/flags/i-norway.png" className="flags" alt='' />
                 <a
                   href="https://www.imdsearch.com/about/global-offices/norway"
                   className="countries"
@@ -437,7 +437,7 @@ function GlobalMarket() {
 
             <article>
               <h3>
-                <img src="/assets/img/flags/i-poland.png" className="flags" />
+                <img src="/assets/img/flags/i-poland.png" className="flags" alt='' />
                 <a
                   href="https://www.imdsearch.com/about/global-offices/poland"
                   className="countries"
@@ -458,7 +458,7 @@ function GlobalMarket() {
               <h3>
                 <img
                   src="/assets/img/flags/serbia-yi-flag.gif"
-                  className="flags"
+                  className="flags" alt=''
                 />
                 <a
                   href="https://www.imdsearch.com/about/global-offices/serbia"
@@ -478,7 +478,7 @@ function GlobalMarket() {
 
             <article>
               <h3>
-                <img src="/assets/img/flags/sk.gif" className="flags" />
+                <img src="/assets/img/flags/sk.gif" className="flags" alt='' />
                 <a
                   href="https://www.imdsearch.com/about/global-offices/slovakia"
                   className="countries"
@@ -499,7 +499,7 @@ function GlobalMarket() {
           <div className="col-lg-3 col-md-4">
             <article>
               <h3>
-                <img src="/assets/img/flags/i-spain.png" className="flags" />
+                <img src="/assets/img/flags/i-spain.png" className="flags" alt='' />
                 <a
                   href="https://www.imdsearch.com/about/global-offices/spain"
                   className="countries"
@@ -518,7 +518,7 @@ function GlobalMarket() {
 
             <article>
               <h3>
-                <img src="/assets/img/flags/i-sweden.png" className="flags" />
+                <img src="/assets/img/flags/i-sweden.png" className="flags" alt='' />
                 <a
                   href="https://www.imdsearch.com/about/global-offices/sweden"
                   className="countries"
@@ -549,7 +549,7 @@ function GlobalMarket() {
               <h3>
                 <img
                   src="/assets/img/flags/i-switzerland.png"
-                  className="flags"
+                  className="flags" alt=''
                 />
                 <a
                   href="https://www.imdsearch.com/about/global-offices/switzerland"
@@ -569,7 +569,7 @@ function GlobalMarket() {
 
             <article>
               <h3>
-                <img src="/assets/img/flags/ae-flag.gif" className="flags" />
+                <img src="/assets/img/flags/ae-flag.gif" className="flags" alt='' />
                 <a
                   href="https://www.imdsearch.com/about/global-offices/united-arab-emirates"
                   className="countries"
@@ -590,7 +590,7 @@ function GlobalMarket() {
               <h3>
                 <img
                   src="/assets/img/flags/i-united-kingdom.png"
-                  className="flags"
+                  className="flags" alt=''
                 />
                 <a
                   href="https://www.imdsearch.com/about/global-offices/united-kingdom"
@@ -612,7 +612,7 @@ function GlobalMarket() {
               <h3>
                 <img
                   src="/assets/img/flags/i-united-states.png"
-                  className="flags"
+                  className="flags" alt=''
                 />
                 <a
                   href="https://www.imdsearch.com/about/global-offices/united-states"
@@ -641,7 +641,7 @@ function GlobalMarket() {
             </article>
             <article>
               <h3>
-                <img src="/assets/img/flags/ro-flag.gif" className="flags" />
+                <img src="/assets/img/flags/ro-flag.gif" className="flags" alt='' />
                 <a
                   href="https://www.imdsearch.com/about/global-offices/romania/"
                   className="countries"

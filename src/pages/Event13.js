@@ -38,7 +38,7 @@ const Event13 = () => {
                   </p>
                   <p className="pt-5" style={{textAlign: "center", paddingBottom: "20px"}}>Best of Luck, Aura ICODIN, Centrul de Limbi Straine A_BEST & team!</p>
                   <div className="d-flex justify-content-center align-items-center">
-                    <a href="#" style={{textAlign: "center"}}>#LanguageLearning #Education #StrategicPartnership</a>
+                    <a href="https://hha.ro/" style={{textAlign: "center"}}>#LanguageLearning #Education #StrategicPartnership</a>
                   </div>
                   </div>
                 </div>

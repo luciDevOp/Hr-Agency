@@ -1,6 +1,7 @@
 import "./App.css";
 import Header from "./components/Header";
 import Home from "./pages/Home";
+import Error from "./pages/Error";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
@@ -24,6 +25,7 @@ import Event12 from "./pages/Event12";
 import Event13 from "./pages/Event13";
 import Event14 from "./pages/Event14";
 import Event15 from "./pages/Event15";
+import Event16 from "./pages/Event16";
 import Privacy from "./pages/Privacy";
 import Vacancies from "./pages/Vacancies";
 
@@ -40,28 +42,28 @@ function App() {
           path="/about-global-market-coverage"
           element={<GlobalMarket />}
         />
+        <Route path="/error" element={<Error />} />
         <Route path="/about-our-commitment" element={<OurCommitment />} />
         <Route path="/services" element={<Services />} />
         <Route path="/vacancies" element={<Vacancies />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/blog-event-1" element={<Event1 />} />
-        <Route path="/blog-event-2" element={<Event2 />} />
-        <Route path="/blog-event-3" element={<Event3 />} />
-        <Route path="/blog-event-4" element={<Event4 />} />
-        <Route path="/blog-event-5" element={<Event5 />} />
-        <Route path="/blog-event-6" element={<Event6 />} />
-        <Route path="/blog-event-7" element={<Event7 />} />
-        <Route path="/blog-event-8" element={<Event8 />} />
-        <Route path="/blog-event-9" element={<Event9 />} />
-        <Route path="/blog-event-10" element={<Event10 />} />
-        <Route path="/blog-event-11" element={<Event11 />} />
-        <Route path="/blog-event-12" element={<Event12 />} />
-        <Route path="/blog-event-13" element={<Event13 />} />
-        <Route path="/blog-event-14" element={<Event14 />} />
-        <Route path="/blog-event-15" element={<Event15 />} />
-
-
+        <Route path="/blog/swiss-chamber-of-commerce" element={<Event1 />} />
+        <Route path="/blog/NRCC" element={<Event2 />} />
+        <Route path="/blog/BRCC" element={<Event3 />} />
+        <Route path="/blog/DWNT" element={<Event4 />} />
+        <Route path="/blog/professional-women-network" element={<Event5 />} />
+        <Route path="/blog/advantage-austria" element={<Event6 />} />
+        <Route path="/blog/RDCC" element={<Event7 />} />
+        <Route path="/blog/ramona-ungureanu" element={<Event8 />} />
+        <Route path="/blog/robert-negru" element={<Event9 />} />
+        <Route path="/blog/womenrise" element={<Event10 />} />
+        <Route path="/blog/member-professional-women-network" element={<Event11 />} />
+        <Route path="/blog/networking-breakfast" element={<Event12 />} />
+        <Route path="/blog/a_best-ac_texas" element={<Event13 />} />
+        <Route path="/blog/ana-slatineanu" element={<Event14 />} />
+        <Route path="/blog/valentina-calin" element={<Event15 />} />
+        <Route path="/blog/IMD-international-london" element={<Event16 />} />
       </Routes>
     </div>
   );

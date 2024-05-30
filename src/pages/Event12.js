@@ -41,7 +41,7 @@ const Event12 = () => {
                   </p>
                   <p className="pt-5" style={{textAlign: "center", paddingBottom: "20px"}}>Special thanks to <a href="https://www.linkedin.com/company/dentons/">Dentons</a>, <a href="https://www.linkedin.com/in/perry-v-zizzi-98a209/">Perry V. Zizzi</a>, <a href="https://www.linkedin.com/company/romanian-diversity-chamber-of-commerce/">Romanian Diversity Chamber of Commerce</a>, <a href="https://www.linkedin.com/in/lestatmonroe/">Lestat Monroe</a>, <a href="https://www.linkedin.com/in/andreea-bereczki/">Andreea Bereczki</a>!</p>
                   <div className="d-flex justify-content-center align-items-center">
-                    <a href="#" style={{textAlign: "center"}}>#business #growth #refugeetalent #romania</a>
+                    <a href="https://hha.ro/" style={{textAlign: "center"}}>#business #growth #refugeetalent #romania</a>
                   </div>
                   </div>
                 </div>

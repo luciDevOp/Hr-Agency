@@ -23,7 +23,7 @@ const Team = () => {
                 <img
                   src="assets/img/loreda.jpeg"
                   className="img-fluid"
-                  alt=""
+                  alt="Loreda Dragomir, Managing Partner"
                 />
               </div>
               <div className="member-info">
@@ -51,7 +51,7 @@ const Team = () => {
                 <img
                   src="assets/img/ramona.jpeg"
                   className="img-fluid"
-                  alt=""
+                  alt="Ramona Ungureanu, Partner Coaching & Career Management"
                 />
               </div>
               <div className="member-info">
@@ -78,7 +78,7 @@ const Team = () => {
                 <img
                   src="assets/img/robert.jpeg"
                   className="img-fluid"
-                  alt=""
+                  alt="Robert M. Negru, ESG Consultant"
                 />
               </div>
               <div className="member-info">
@@ -106,7 +106,7 @@ const Team = () => {
                 <img
                   src="assets/img/valentina.jpeg"
                   className="img-fluid"
-                  alt=""
+                  alt="Valentina Călin, International Researcher"
                 />
               </div>
               <div className="member-info">
@@ -133,7 +133,7 @@ const Team = () => {
                 <img
                   src="assets/img/ana.jpeg"
                   className="img-fluid"
-                  alt=""
+                  alt="Ana Slatineanu, Partner International Recruiter & Organizational Psychology Consultant"
                   
                 />
               </div>

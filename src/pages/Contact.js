@@ -51,6 +51,7 @@ const Contact = () => {
 
         <div className="row py-5">
           <iframe
+            title="Google Maps Location"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2846.834544426918!2d26.068978662492324!3d44.47756412095432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b203a2c1b62eef%3A0x5f30cd4376fc4a6c!2sRegus!5e0!3m2!1sro!2sro!4v1704799245249!5m2!1sro!2sro"
             width="470"
             height="300"
@@ -59,10 +60,6 @@ const Contact = () => {
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
-        </div>
-
-        <div className="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-          <img src="" />
         </div>
       </div>
       <Footer />

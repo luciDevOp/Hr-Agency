@@ -35,14 +35,20 @@ const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
           <div className="modal-body">
 
             <p className="job-title">Location: {jobDetails.location}</p>
+            {jobDetails.description && (
             <p className="job-title" style={{marginBottom: "-10px"}}>Description:</p>
-            <p>{jobDetails.description.split('\n').map((item, key) => (
-              <React.Fragment key={key}>
-                {item}
-                <br/>
-                {'\u00A0\u00A0'} {/* Unicode for two non-breaking spaces */}
-              </React.Fragment>
-            ))}</p>
+          )}
+            {jobDetails.description && (
+              <p>
+                {jobDetails.description.split('\n').map((item, key) => (
+                  <React.Fragment key={key}>
+                    {item}
+                    <br/>
+                    {'\u00A0\u00A0'}
+                  </React.Fragment>
+                ))}
+              </p>
+            )}
           
             <p className="job-title">Requirements:</p>
             <ul>
@@ -250,6 +256,7 @@ function Vacancies() {
         five: "advanced English",
       },
       type: "Full time/Hybrid",
+      completed: true,
     },
     {
       title: "Plant Manager",

@@ -1,0 +1,4 @@
+# Authorized digital sellers for hha.ro
+
+# Currently, no authorized digital sellers as of May 2024
+CONTACT=office@hha.ro
