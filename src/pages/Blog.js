@@ -601,6 +601,46 @@ Yesterday she showed us how to use our voice in your advantage, how to do everyt
           </div>
         </div>
       </div>
+      <div className='container'>
+      <div className="row">
+        <div className="col-lg-6">
+            <div className="d-flex justify-content-center align-items-center pt-5">
+              <img src="assets/img/events/magnetico/magnetico2.jpeg" className="img-fluid " alt=""/>
+            </div>
+          </div>
+          <div className="col-lg-6">
+            <div className="d-flex justify-content-center align-items-center pt-5">
+              <img src="assets/img/events/magnetico/magnetico1.jpeg" className="img-fluid " alt=""/>
+            </div>
+
+          </div>
+          <h3 className="text-center pt-3">
+              Magnetico
+            </h3>
+            <h5 className="d-flex justify-content-center align-items-center pt-5">
+              How to attract and retain talents improving the employer branding and creating meaningful HR practices.
+            </h5>
+        </div>
+        <div className="row">
+        <div className="col-lg-6">
+            <div className="d-flex justify-content-center align-items-center pt-5">
+              <img src="assets/img/events/rsm/rsm2.jpeg" className="img-fluid " alt=""/>
+            </div>
+          </div>
+          <div className="col-lg-6">
+            <div className="d-flex justify-content-center align-items-center pt-5 mt-4">
+              <img src="assets/img/events/rsm/rsm1.jpeg" className="img-fluid " alt=""/>
+            </div>
+
+          </div>
+          <h3 className="text-center pt-5">
+          RSM Romania & BRCC 
+            </h3>
+            <h5 className="d-flex justify-content-center align-items-center pt-3">
+            New Trends in International Taxation and Transfer Pricing.
+            </h5>
+        </div>
+      </div>
 
       <div className="container pt-5 mt-5">
         <h3 className="text-center">

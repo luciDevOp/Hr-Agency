@@ -129,7 +129,7 @@ function Services() {
               <div className="icon">
                 <i class="bx bxs-paper-plane"></i>
               </div>
-              <h4>
+              <h2>
                 <a
                   href="#recruitment"
                   className="service-link"
@@ -137,7 +137,7 @@ function Services() {
                 >
                   Recruitment
                 </a>
-              </h4>
+              </h2>
               <p>
                 Efficient and tailored recruitment services, connecting your
                 company with the right individuals to foster growth.
@@ -176,7 +176,7 @@ function Services() {
           >
             <div className="icon-box">
               <div className="icon">
-                <i class="bx bx-line-chart-down"></i>
+                <i className="bx bx-line-chart-down"></i>
               </div>
               <h4>
                 <a
@@ -200,7 +200,7 @@ function Services() {
           >
             <div className="icon-box">
               <div className="icon">
-                <i class="bx bx-pie-chart"></i>
+                <i className="bx bx-pie-chart"></i>
               </div>
               <h4>
                 <a
@@ -224,7 +224,7 @@ function Services() {
           >
             <div className="icon-box">
               <div className="icon">
-                <i class="bx bx-donate-heart"></i>
+                <i className="bx bx-donate-heart"></i>
               </div>
               <h4>
                 <a
@@ -249,7 +249,7 @@ function Services() {
           >
             <div className="icon-box">
               <div className="icon">
-                <i class="bx bxs-comment-check"></i>
+                <i className="bx bxs-comment-check"></i>
               </div>
               <h4>
                 <a
@@ -270,7 +270,7 @@ function Services() {
         </div>
       </div>
       <div className="container" id="service">
-        <section id="headHunting" class="my-5 text-center hidden-left">
+        <section id="headHunting" className="my-5 text-center hidden-left">
           <h1 className="pb-5">Head Hunting</h1>
           <p className="lead">
             Our Head Hunting service specializes in precision talent
@@ -282,9 +282,9 @@ function Services() {
           </p>
         </section>
 
-        <section id="executiveSearch" class="my-5 text-center hidden-right">
+        <section id="executiveSearch" className="my-5 text-center hidden-right">
           <h1 className="pb-5">Executive Search</h1>
-          <p class="lead">
+          <p className="lead">
             Elevate your leadership team with our bespoke Executive Search
             solutions. We go beyond conventional recruitment, providing tailored
             strategies to identify, evaluate, and place executives who will
@@ -294,9 +294,9 @@ function Services() {
           </p>
         </section>
 
-        <section id="recruitment" class="my-5 text-center hidden-left">
+        <section id="recruitment" className="my-5 text-center hidden-left">
           <h1 className="pb-5">Recruitment</h1>
-          <p class="lead">
+          <p className="lead">
             Efficiency meets customization in our Recruitment services. We
             connect your company with the right individuals through a
             streamlined process that considers not only the skills and
@@ -306,9 +306,9 @@ function Services() {
           </p>
         </section>
 
-        <section id="careerManagement" class="my-5 text-center hidden-right">
+        <section id="careerManagement" className="my-5 text-center hidden-right">
           <h1 className="pb-5">Career Management</h1>
-          <p class="lead">
+          <p className="lead">
             Empower your workforce with our personalized Career Management
             services. We provide individuals with the tools and strategies
             needed for professional advancement and fulfillment. From skill
@@ -317,9 +317,9 @@ function Services() {
           </p>
         </section>
 
-        <section id="humanCapitalAdvisory" class="my-5 text-center hidden-left">
+        <section id="humanCapitalAdvisory" className="my-5 text-center hidden-left">
           <h1 className="pb-5">Human Capital Advisory</h1>
-          <p class="lead">
+          <p className="lead">
             Navigate the complexities of workforce optimization with our Human
             Capital Advisory services. We offer strategic guidance to align your
             talent with organizational objectives, enhancing productivity and
@@ -330,10 +330,10 @@ function Services() {
 
         <section
           id="assessmentDevelopment"
-          class="my-5 text-center hidden-right"
+          className="my-5 text-center hidden-right"
         >
           <h1 className="pb-5">Assessment and Development Centers</h1>
-          <p class="lead">
+          <p className="lead">
             Invest in the growth of your team through our Assessment and
             Development Centers. Our comprehensive programs are designed to
             identify and nurture individual and collective capabilities. By
@@ -342,9 +342,9 @@ function Services() {
           </p>
         </section>
 
-        <section id="management" class="my-5 text-center hidden-left">
+        <section id="management" className="my-5 text-center hidden-left">
           <h1 className="pb-5">Management Consultancy</h1>
-          <p class="lead">
+          <p className="lead">
             Transform your business with our Management Consultancy services. We
             provide transformative guidance, fostering operational excellence
             and strategic leadership. Whether you're navigating change,
@@ -353,9 +353,9 @@ function Services() {
           </p>
         </section>
 
-        <section id="esgConsultancy" class="my-5 text-center hidden-right">
+        <section id="esgConsultancy" className="my-5 text-center hidden-right">
           <h1 className="pb-5">ESG Consultancy</h1>
-          <p class="lead">
+          <p className="lead">
             Dedicate your business to environmental, social, and governance
             (ESG) excellence with our specialized ESG Consultancy services. We
             guide you in adopting ethical practices and responsible corporate
