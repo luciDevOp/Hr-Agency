@@ -313,7 +313,16 @@ function Blog() {
                       Presenting Valentina Călin
                       </a>
                     </h2>
-                  </div>   
+                  </div>  
+                  <div className="post-entry-1 pt-5" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                  <a href="/blog/mihaela-marin">
+                      <img src="assets/img/mihaela.jpeg" alt="" className="img-fluid " style={{height: 350}}/>
+                    </a>
+                    <div className="post-meta"></div>
+                    <h2 style={{fontSize: 25}}>
+                      <a href="/blog/mihaela-marin">Presenting Mihaela Marin</a>
+                    </h2>
+                  </div> 
                 </div>
                 <div className="col-lg-6 border-start custom-border">
                   <div className="post-entry-1">
@@ -415,6 +424,35 @@ function Blog() {
       <div className="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
         <div className="me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden diploma"></div>
         <div className="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden event"></div>
+      </div>
+
+      <div className="category-section my-5 py-5">
+      <div className="container" data-aos="fade-up">
+      <div className="row justify-content-center my-5">
+            <div className="col-lg-6">
+              <div className="border-bottom">
+                <img
+                  src="assets/img/pozahr.jpeg"
+                  alt=""
+                  className="img-fluid article-img"
+                />
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div>
+                <img
+                  src="assets/img/dog.jpeg"
+                  alt=""
+                  className="img-fluid article-img"
+                />
+                <h5 className="my-4">
+                We were pleased and honored to participate to Guide Dog Open Day by Light into Europe Charity<br/>
+                Thank you Alexandru Stingu Dragomir for you implication and support!
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="category-section my-5 py-5">
