@@ -111,6 +111,9 @@ const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
               {jobDetails.require && jobDetails.require.more04 && (
                 <li>{jobDetails.require.more04}</li>
               )}
+              {jobDetails.require && jobDetails.require.more05 && (
+                <li>{jobDetails.require.more05}</li>
+              )}
               {jobDetails.require && jobDetails.require.more06 && (
                 <li>{jobDetails.require.more06}</li>
               )}
@@ -119,9 +122,6 @@ const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
               )}
               {jobDetails.require && jobDetails.require.more08 && (
                 <li>{jobDetails.require.more08}</li>
-              )}
-              {jobDetails.require && jobDetails.require.more09 && (
-                <li>{jobDetails.require.more09}</li>
               )}
               {jobDetails.require && jobDetails.require.more09 && (
                 <li>{jobDetails.require.more09}</li>
@@ -186,6 +186,21 @@ const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
             <ul>
               {jobDetails.require && jobDetails.require.more5 && (
                 <li>{jobDetails.require.more5}</li>
+              )}
+              {jobDetails.require && jobDetails.require.more6 && (
+                <li>{jobDetails.require.more6}</li>
+              )}
+              {jobDetails.require && jobDetails.require.more7 && (
+                <li>{jobDetails.require.more7}</li>
+              )}
+              {jobDetails.require && jobDetails.require.more8 && (
+                <li>{jobDetails.require.more8}</li>
+              )}
+              {jobDetails.require && jobDetails.require.more9 && (
+                <li>{jobDetails.require.more9}</li>
+              )}
+              {jobDetails.require && jobDetails.require.more001 && (
+                <li>{jobDetails.require.more001}</li>
               )}
             </ul>
               {jobDetails.salariu && (
@@ -557,6 +572,7 @@ function Vacancies() {
       beneficii6: "abonament la Bookster;",
       beneficii7: "posibilitatea de a accesa servicile 7Card;",
       type: "Full time/On site",
+      completed: true,
     },
     {
       title: "Office Assistant",
@@ -736,9 +752,11 @@ function Vacancies() {
       beneficii4: 'Morning flexible hours;',
       beneficii5: 'Friendly leadership ;',
       beneficii6: 'Modern office;',
+      completed: true,
     },
     {
       title: "Internal Auditor",
+      completed: true,
       location: "Bucharest, Romania",
       description:"\nFor our client,  a global family of 30,000 professionals across 260 independent firms working in more than 100 countries, we are looking for a Internal Auditor, based in Bucharest.\nWe are looking for enthusiastic team members, who are proactive, passionate, self-driven and who are willing to learn and build a promising career in a dynamic and friendly environment.      ",
       require: {
@@ -973,6 +991,160 @@ function Vacancies() {
         more01: "Drafting legal documents",
         more02: "Representing clients in court",
         more03: 'Negotiating contracts',
+      },
+      type: "Full time/On site",
+    }, 
+    {
+      title: "Retail Manager",
+      location: "Arad, Bacau, Bucuresti, Brasov, Constanta, Craiova, Cluj- Napoca, Iasi, Oradea, Ploiesti, Pitesti, Sibiu, Suceava, Targu Mures, Timisoara",
+      description: "\nThe Retail Manager is responsible for overseeing and organizing the daily operations of allocated departments, ensuring maximum performance and adherence to company policies. This role includes direct client interaction, staff supervision, and budget management to maintain economic and financial performance.",
+      require: {
+        one: "Relevant experience in retail - A minimum of 2 years of experience.",
+        two: "Relevant experience working directly with clients.",
+        three: "Organizing store operations or allocated departments.",
+        four: "Supervising, guiding and motivating staff towards best performance.",
+        five: "Preparing and controlling budget for allocated departments.",
+        more5: "Leadership.",
+        more6: "Proactivity.",
+        more7: "Adaptability.",
+        more8: "Decision-making capacity.",
+        more9: "Dynamism.",
+        more001: "Ethical.",
+        more: "Department management.",
+        more01: "People management.",
+        more02: "Economic and financial performance.",
+        more03: "Trusted partner of the store’s management team.",
+        more04: "Compliance with safety and health rules at work."
+      },
+      secondTitle4: 'Must have:',
+      type: "Full time/On site"
+    }, 
+    {
+      title: "Solutions Architect - Capital Markets",
+      location: "Fully remote",
+      type: "Full time, contractors welcome",
+      description: "\nOur client is an international network of developers building hybrid smart contracts that combine on-chain code with an extensive collection of secure off-chain services. \nThe Solution Architect - Capital Markets is a strategic role responsible for driving the adoption of our client’s products within the capital markets industry. This role entails collaborating with Sales and Marketing teams to promote our client’s technology, working closely with major institutions to gather requirements and deliver innovative solutions, and contributing significantly to the development of our client’s capital markets product strategy.",
+      require: {
+        one: "Technical pre/post-sales technology experience, working with major institutions in the capital markets and/or broader financial industry.",
+        two: "Strong knowledge of blockchain technology.",
+        three: "Hands-on experience with middleware, integration architecture patterns, web services technologies, and APIs.",
+        four: "Proven experience in building and delivering Proofs of Concept (PoCs) and responding to functional and technical elements of proposals independently.",
+        five: "Excellent English - both verbal and written.",
+        six: "Good presentation and communication skills.",
+        seven: "Experience in any of the following programming languages: Solidity, Golang, Rust, JS, Java, Python, C/C++.",
+        eight: "Familiarity with networking protocols, private IP environments, cloud infrastructure, and the implementation of SSL/TLS security measures.",
+        nine: "Knowledge of capital markets concepts, financial instruments, and trading processes as well as understanding of financial regulations and compliance standards (e.g., MiFID II, Dodd-Frank).",
+        ten: "Experience with private/permissioned blockchain technologies such as Hyperledger Fabric and R3 Corda as well as with trading platforms, order management systems, payment systems, and related protocols (e.g., FIX, Swift).",
+        more: "Drive the successful adoption of our clients’ products in the capital markets industry by establishing strong relationships with key stakeholders, including major financial institutions, and providing technical expertise and guidance throughout the sales and implementation process.",
+        more01: "Lead and actively participate in gathering requirements, scoping projects, and designing innovative solutions that leverage our client’s products to address specific use cases and challenges within the capital markets industry.",
+        more02: "Contribute significantly to the development of our client’s capital markets product strategy by providing valuable insights, market feedback, and technical expertise, thereby influencing the direction and roadmap of the product.",
+        more03: "Collaborate closely with internal technical teams, including developers and engineers, to provide feedback and guidance on product enhancements, bug fixes, and new feature development, ensuring that the capital markets requirements are effectively addressed.",
+        more04: "Develop and maintain a comprehensive understanding of the capital markets industry, including market trends, challenges, and emerging technologies, to effectively position and promote our client’s products."
+      }
+    },    
+    {
+      title: "Global Senior CRM Manager",
+      location: "Fully remote",
+      description: "\nOur client is an international verification platform securing the whole user journey, offering customizable KYC, KYB, transaction monitoring, and fraud prevention solutions. This allows customers to orchestrate their verification process, welcome more customers worldwide, meet compliance requirements, reduce costs, and protect people and businesses.",
+      require: {
+        one: "Degree in Marketing, Business Administration, or related fields.",
+        two: "Proven track record of success as a CRM Manager, preferably with global or multi-market experience.",
+        three: "In-depth knowledge of CRM software, data analysis tools, and customer engagement platforms.",
+        four: "A strong leader with exceptional analytical, strategic, and interpersonal skills.",
+        five: "Excellent command of English, with additional languages considered a plus.",
+        more: "Global experience in developing and executing comprehensive CRM strategies to enhance customer engagement, loyalty, and retention.",
+        more01: "Collaborating closely with the marketing, sales, and product teams to ensure CRM strategies align with business goals.",
+        more02: "Analyzing customer data and feedback to tailor CRM initiatives and personalize customer communication.",
+        more03: "Leveraging state-of-the-art CRM technologies and data analytics tools to drive insights and optimize campaigns.",
+        more04: "Leading and mentoring a global CRM team.",
+        more05: "Managing key stakeholder relationships within the company to advocate for customer-centric strategies."
+      },
+      type: "Full time/Remote",
+    },       
+     {
+      title: "IT Coordinator",
+      location: "Bucharest, Romania",
+      description:"\nThe IT Coordinator will work with the IT ServiceDesk team to manage their daily tasks. The IT Coordinator will also provide technical support and guidance to staff and clients, fix issues, and implement IT policies and procedures.",
+      require: {
+        one: "Experience in an IT technical client–facing role.",
+        two: "Knowledge of PC hardware set-up and configuration (including printers and wireless devices).",
+        three: "Knowledge of Microsoft based operating systems and tools (Windows 10, Group Policies and Active Directory) with emphasis on troubleshooting MS Office 365 based services (Outlook, Word, Excel, PowerPoint, Teams, SharePoint, OneDrive).",
+        four: 'Passion for Apple iOS, iPadOS and MacOS products and services.',
+        five: 'Experience in using ticketing system would be beneficial (e.g. Jira, ServiceNow, BMC, …).',
+        six: 'Previous experience in dealing with vendors and IT procurement.',
+        seven: 'Ability to write and update VB/PowerShell scripts would be beneficial.',
+        eight: 'Ability to document IT processes and procedures would be beneficial.',
+        nine: 'Experience working in an ITIL driven environment is welcomed.',
+        more: "Written and verbal communication skills.",
+        more01: "A team player with the focus on quality, accuracy and positive internal client experience.",
+        more02: "English CEFR B2 (Confident English speaker, able to understand technical manuals, able to fluently communicate with European management as well as Europe and Global Level 2 and Level 3 support teams.)",
+        more03: 'Able to communicate in non-technical terms with his internal clients. ',
+        more04: 'Problem diagnosis and analytical skills. ',
+        more05: 'Can adapt to differing demands, prioritizing tasks, where appropriate.',
+        more06: 'Able to make decisions and remain calm while under pressure.',
+        more07: 'Proactive with a "can-do" attitude in all areas, with a strong sense of self-motivation.',
+      },
+      secondTitle1: 'Personal Skills and Attributes:',
+      type: "Full time/On site",
+    },
+    {
+      title: "Estimator Preturi",
+      location: "Bucharest, Romania",
+      description: "\nEstimatorul Preturi (Senior Estimator) este responsabil pentru evaluarea si calcularea costurilor asociate cu proiectele de constructii. Acest rol crucial implica analiza detaliata a planurilor de constructie, a specificatiilor tehnice si a altor documente relevante pentru a estima costurile materialelor, manoperei si echipamentelor necesare pentru finalizarea proiectului.",
+      require: {
+        one: "Studii superioare(cu sau fara master) in domeniul tehnic (TCM, Mecanica, AR, etc).",
+        two: "Cunostinte de limba engleza nivel avansat.",
+        three: "Cunostinte programe de operare OFFICE (Excel, Word, PP) – nivel avansat.",
+        four: "Sa fie o persoana dinamica, comunicativa si adaptabila cu o atitudine pozitiva.",
+        five: "Cunostinte de desen tehnic reprezinta un avantaj.",
+        six: "Minim 7 ani experienta customer support, inginerie.",
+        more: "Analizarea planurilor de constructie si a documentelor tehnice pentru a identifica cerintele proiectului;",
+        more01: "Va asigurati că toate proiectele sunt furnizate la prețul corect, in colaborare cu parteneri internationali (clienti, architecti);",
+        more02: "Lucrați îndeaproape cu managerii de cont și calculați oferte pentru diferite proiecte din întreaga lume, folosind specificațiile, desenele tehnice/modelele 3D ale arhitectului și informații suplimentare furnizate de partenerul nostru;",
+        more03: "Odată ce proiectul este confirmat, asigurați procesarea comenzii și un bun transfer de informatii;",
+        more04: "Identificati oportunitățile de îmbunătățire continua in procesele si proiectele in care sunteti implicat;",
+        more05: "Ridicați întrebări tehnico-comerciale adecvate, participați la întâlniri de clarificare a ofertelor;",
+        more06: "Calculați și optimizați orele de manopera in functie de proiect si volume in colaborare cu departamentele operationale echipele de operațiuni / inginerie cu privire la aspectele de execuție. Pregătiți documentele tehnice și planurile și obțineți aprobări formale pentru depunerea ofertelor;",
+        more07: "Colaborati cu funcțiile Financiar, Vanzari și PMO pentru cerințele și aprobările proiectelor;",
+        more08: "Estimați costurile detaliate și colaborați cu managementul intern pe aspecte cheie, inclusiv strategia de prețuri;",
+        more09: "Înțelegeți temeinic și respectați codul de conduită organizațional și practicile de afaceri;",
+        more10: "Linia de raportare este directa catre Managerul de department din Olanda si indirecta raportare in Romania."
+      },
+      type: "Full time/On site"
+    },
+    
+    {
+      title: "Sales Engineer – Defense – EMEA",
+      location: "Bucharest, Romania",
+      description:"\nResponsible for representing our client’s  technology portfolio in the EMEA region, including our command center technologies for both public-safety and government customers.\nThe Sales Engineer will work in a team with another Account Executive based out of EMEA.\nCandidate may reside in any major European country and have a valid current passport.",
+      require: {
+        one: "BS or MS degree in Computer Science, related technical discipline, or equivalent combination of education and work experience.",
+        two: "Strong technical background with 5+ years technical pre-sales experience in computer software, digital video, surveillance, data link, or computer networking.",
+        three: "Experience in the Defense or ISR industries.",
+        four: 'Familiarity with NATO STANAG Standards and/or Military Standards (MIL-STD) for video with multiplexed metadata.',
+        five: 'Understanding of surveillance workflows, with knowledge of data-link (Radio/Microwave/SATCOM).',
+        six: 'Good communication and presentation skills with the ability to articulate the advantages of our client’s products to business and technical decision makers, as well as senior executives.',
+        seven: 'Self-motivated, with a proven ability to work on own initiative.',
+        eight: 'Good Customer relationship and management.',
+        nine: 'Good problem solving skills and the ability to think “outside of the box.”',
+        ten: 'Ability to work with a wide variety of individuals onsite and remote, from senior executives to technical decision makers.',
+        eleven: 'Fluent with spoken and written English with the ability to clearly communicate and document complex technical issues.',
+        twelve: 'Conversant in multiple languages relevant to the region ( EMEA).',
+        more: "Propose to partners and customers our client’s technical design solutions.",
+        more01: "Demonstrate and explain our client’s products to potential clients.",
+        more02: "Assist sales managers with overall account management within assigned accounts.",
+        more03: 'Assist sales account managers with project management for complex presales engagements.',
+        more04: 'Complete technical sections for RFP/RFI/RFQ responses for assigned accounts.',
+        more05: 'Provide pre-sales technical/architectural support to partners and customers.',
+        more06: 'Stay tuned with industry trends and technical developments that effect target markets.',
+        more07: 'Run market and competitive researchers.',
+        more08: 'Establish long-term relationships with resellers & integrators.',
+        more09: 'Attend and assist with the setup and operation of technical systems at regional trainings.',
+        more10: 'Participate in specialized events, conferences and tradeshows.',
+        more11: 'Provide support on-site and remote post-sale support when necessary.',
+        more12: 'Develop and maintain relationships with key partners within the region',
+        more13: 'Work with the company’s expert overlays  to identify and close operations centers.',
+        more14: 'Travel  intensively throughout allocated area without restriction.',
       },
       type: "Full time/On site",
     },
