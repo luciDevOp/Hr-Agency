@@ -85,6 +85,15 @@ const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
               {jobDetails.require && jobDetails.require.eleven && (
                 <li>{jobDetails.require.eleven}</li>
               )}
+              {jobDetails.require && jobDetails.require.twelve && (
+                <li>{jobDetails.require.twelve}</li>
+              )}
+              {jobDetails.require && jobDetails.require.thirteen && (
+                <li>{jobDetails.require.thirteen}</li>
+              )}
+              {jobDetails.require && jobDetails.require.fourteen && (
+                <li>{jobDetails.require.fourteen}</li>
+              )}
             </ul>
             {jobDetails.require && jobDetails.require.more && (
               <p className="job-title">Key Responsibilities:</p>
@@ -203,6 +212,46 @@ const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
                 <li>{jobDetails.require.more001}</li>
               )}
             </ul>
+            
+              {jobDetails.musthave1 && (
+                <p className="job-title">Must have:</p>
+              )}
+              <ul>
+              {jobDetails.musthave1 && (
+                <li>{jobDetails.musthave1}</li>
+              )}
+              {jobDetails.musthave2 && (
+                <li>{jobDetails.musthave2}</li>
+              )}
+              {jobDetails.musthave3 && (
+                <li>{jobDetails.musthave3}</li>
+              )}
+              {jobDetails.musthave4 && (
+                <li>{jobDetails.musthave4}</li>
+              )}
+              </ul>
+
+              {jobDetails.profile1 && (
+                <p className="job-title">Your profile:</p>
+              )}
+              <ul>
+              {jobDetails.profile1 && (
+                <li>{jobDetails.profile1}</li>
+              )}
+              {jobDetails.profile2 && (
+                <li>{jobDetails.profile2}</li>
+              )}
+              {jobDetails.profile3 && (
+                <li>{jobDetails.profile3}</li>
+              )}
+              {jobDetails.profile4 && (
+                <li>{jobDetails.profile4}</li>
+              )}
+              {jobDetails.profile5 && (
+                <li>{jobDetails.profile5}</li>
+              )}
+              </ul>
+
               {jobDetails.salariu && (
                 <p className="job-title">Salary: {jobDetails.salariu}</p>
               )}
@@ -399,6 +448,7 @@ function Vacancies() {
           "creation and execution of targeted marketing campaigns (offline and online).",
         more03: "maximize reach, impact, performance of campaigns.",
       },
+      completed: true,
       type: "Full time/Hybrid",
     },
     {
@@ -919,6 +969,7 @@ function Vacancies() {
     },
     {
       title: "Junior Real Estate Lawyer",
+      completed: true,
       location: "Bucharest, Romania",
       description:"\nFor our client, an international Law Firm, we are seeking a Junior Lawyer to join their dynamic team in Bucharest.\nThis full-time position is ideal for someone with real estate law experience and specialization. \nThe successful candidate will provide legal advice, handle cases, and manage client relationships to support our client’s objectives.",
       require: {
@@ -1063,6 +1114,7 @@ function Vacancies() {
     },       
      {
       title: "IT Coordinator",
+      completed: true,
       location: "Bucharest, Romania",
       description:"\nThe IT Coordinator will work with the IT ServiceDesk team to manage their daily tasks. The IT Coordinator will also provide technical support and guidance to staff and clients, fix issues, and implement IT policies and procedures.",
       require: {
@@ -1087,34 +1139,10 @@ function Vacancies() {
       secondTitle1: 'Personal Skills and Attributes:',
       type: "Full time/On site",
     },
-    {
-      title: "Estimator Preturi",
-      location: "Bucharest, Romania",
-      description: "\nEstimatorul Preturi (Senior Estimator) este responsabil pentru evaluarea si calcularea costurilor asociate cu proiectele de constructii. Acest rol crucial implica analiza detaliata a planurilor de constructie, a specificatiilor tehnice si a altor documente relevante pentru a estima costurile materialelor, manoperei si echipamentelor necesare pentru finalizarea proiectului.",
-      require: {
-        one: "Studii superioare(cu sau fara master) in domeniul tehnic (TCM, Mecanica, AR, etc).",
-        two: "Cunostinte de limba engleza nivel avansat.",
-        three: "Cunostinte programe de operare OFFICE (Excel, Word, PP) – nivel avansat.",
-        four: "Sa fie o persoana dinamica, comunicativa si adaptabila cu o atitudine pozitiva.",
-        five: "Cunostinte de desen tehnic reprezinta un avantaj.",
-        six: "Minim 7 ani experienta customer support, inginerie.",
-        more: "Analizarea planurilor de constructie si a documentelor tehnice pentru a identifica cerintele proiectului;",
-        more01: "Va asigurati că toate proiectele sunt furnizate la prețul corect, in colaborare cu parteneri internationali (clienti, architecti);",
-        more02: "Lucrați îndeaproape cu managerii de cont și calculați oferte pentru diferite proiecte din întreaga lume, folosind specificațiile, desenele tehnice/modelele 3D ale arhitectului și informații suplimentare furnizate de partenerul nostru;",
-        more03: "Odată ce proiectul este confirmat, asigurați procesarea comenzii și un bun transfer de informatii;",
-        more04: "Identificati oportunitățile de îmbunătățire continua in procesele si proiectele in care sunteti implicat;",
-        more05: "Ridicați întrebări tehnico-comerciale adecvate, participați la întâlniri de clarificare a ofertelor;",
-        more06: "Calculați și optimizați orele de manopera in functie de proiect si volume in colaborare cu departamentele operationale echipele de operațiuni / inginerie cu privire la aspectele de execuție. Pregătiți documentele tehnice și planurile și obțineți aprobări formale pentru depunerea ofertelor;",
-        more07: "Colaborati cu funcțiile Financiar, Vanzari și PMO pentru cerințele și aprobările proiectelor;",
-        more08: "Estimați costurile detaliate și colaborați cu managementul intern pe aspecte cheie, inclusiv strategia de prețuri;",
-        more09: "Înțelegeți temeinic și respectați codul de conduită organizațional și practicile de afaceri;",
-        more10: "Linia de raportare este directa catre Managerul de department din Olanda si indirecta raportare in Romania."
-      },
-      type: "Full time/On site"
-    },
     
     {
       title: "Sales Engineer – Defense – EMEA",
+      completed: true,
       location: "Bucharest, Romania",
       description:"\nResponsible for representing our client’s  technology portfolio in the EMEA region, including our command center technologies for both public-safety and government customers.\nThe Sales Engineer will work in a team with another Account Executive based out of EMEA.\nCandidate may reside in any major European country and have a valid current passport.",
       require: {
@@ -1147,6 +1175,237 @@ function Vacancies() {
         more14: 'Travel  intensively throughout allocated area without restriction.',
       },
       type: "Full time/On site",
+    },
+    {
+      title: "Business Development Manager",
+      location: "Bucharest, Romania",
+      description:"\nThe company specializes in partial and full cargo transportation to/from the Balkan countries to/from the Baltic countries, Poland and Scandinavian countries.\nWe are looking for a positive person who is not afraid of challenges and has experience working in the transportation industry to join our team, complement it and become an important part of it.",
+      require: {
+        one: "Work experience in the field of Transport at least 5 years.",
+        two: "Excellent knowledge of the Romanian (Native) and English language. Knowledge of other languages is an advantage",
+        three: "Experience in the Defense or ISR industries.",
+        four: 'Positive attitude, desire to grow together with the company and improve;',
+        five: 'Logical thinking, prudence and quick orientation;',
+        six: 'Good communication and negotiation skills;',
+        seven: 'Ability to improvise, creativity',
+        eight: 'Ability to motivate and unite people for a common goal',
+        nine: 'Interest in logistics innovations, market trends',
+        ten: 'Activity and initiative',
+        more: "Work with clients, Negotiations, Conclusion of contracts",
+        more01: "New Client search, cold calling, visiting clients, networking",
+        more02: "Cooperation with other team members about transport",
+        more03: 'Transportation process control',
+        more04: 'Solving problems with clients',
+        more05: 'Developing sales department',
+        more06: 'Motivation and training of employees',
+        more07: 'Development and implementation of branch activity strategy',
+      },
+      type: "Full time/On site",
+    },
+    {
+      title: "Senior Generic Recruiter",
+      location: "Bucharest, Romania",
+      description:"\nGeneric Recruiter for an international Recruitment company",
+      require: {
+        one: "University Degree",
+        two: "5 years’ experience in HR consultancy, generic recruitment being a plus",
+        three: "Native Romanian",
+        four: 'English advanced',
+        five: 'Driver licence',
+        six: 'Self-motivated, independent, can-do attitude',
+        seven: 'Client centric',
+        eight: 'Project management',
+        nine: 'Good presentation and communication skills',
+        ten: 'Both people and results orientation',
+        more: "Managing full life-cycle recruitment process for entry - middle level profiles across multiple industries.",
+        more01: "Establishing the recruitment details and strategy for each project in close cooperation with the client.",
+        more02: "Advertising job openings using different channels - specialized sites and social media (Facebook, OLX, E-jobs, Bestjobs, Glassdoor, Hipo, Jooble, etc.)",
+        more03: 'Screening, sourcing and filtering CVs, candidates, applicants.',
+        more04: 'Performing interviews (face-to-face, video, phone) with candidates in order to assess qualifications, skills and previous employment to enable the best job matching.',
+        more05: 'Scheduling final interviews with the clients.',
+        more06: 'Providing feedback to each candidate according to the client’s decision and assisting in the offering process of the selected candidate.',
+        more07: 'Representing DAS WORK in career fairs and recruitment events.',
+        more08: 'Providing consultancy to the clients regarding salary ranges, comp. & ben structure and the availability of the requested profiles on the market.',
+        more09: 'Establishing and maintaining a professional working relationship with clients.',
+        more10: 'On boarding new employees to client by creating offer letters, employment contracts and new starter packs.',
+        more11: 'Preparing and drafting employment documents (individual labor contracts / temporary work contracts, job descriptions, addendums, personal data sheets, decisions, work certificates).',
+        more12: 'Preparing monthly table sheets, processing timesheets and facilitating salary calculations.',
+        more13: 'Managing the employee’s account expenses (travel & other job-related);',
+        more14: 'Overseeing employee benefits (such as meal vouchers and/or gift vouchers);',
+        more15: 'Keeping in touch with the external services suppliers (meal ticket provider, banks, labor medicine clinics).',
+        more16: 'Managing the database of employees by operating at the correct time entries and exits.',
+        more17: 'Registering the clients and temporary employees’ requests and operating all the necessary activities.',
+        more18: 'Scheduling and attending periodical meetings with the clients and employees in order to fully understand their needs and solve any inquiries, requests, incidents.',
+        more19: 'Continuously updating the database in regard to employee’s specific information.',
+      },
+      type: "Full time/Hybrid",
+    },
+    {
+      title: "Estimator Preturi",
+      location: "Craiova, Romania On site sau Remote Bucuresti",
+      description:"\nEstimatorul Preturi (Senior Estimator) este responsabil pentru evaluarea si calcularea costurilor asociate cu proiectele de constructii.\n Acest rol crucial implica analiza detaliata a planurilor de constructie, a specificatiilor tehnice si a altor documente relevante pentru a estima costurile materialelor, manoperei si echipamentelor necesare pentru finalizarea proiectului.",
+      require: {
+        one: "Studii superioare(cu sau fara master) in domeniul tehnic (TCM, Mecanica, AR, etc).",
+        two: "Cunostinte de limba engleza nivel avansat.",
+        three: "Cunostinte programe de operare OFFICE (Excel, Word, PP) – nivel avansat.",
+        four: 'Sa fie o persoana dinamica, comunicativa si adaptabila cu o atitudine pozitiva.',
+        five: 'Cunostinte de desen tehnic reprezinta un avantaj.',
+        six: 'Minim 7 ani experienta customer support, inginerie',
+        more: "Analizarea planurilor de constructie si a documentelor tehnice pentru a identifica cerintele proiectului;",
+        more01: "Va asigurati că toate proiectele sunt furnizate la prețul corect, in colaborare cu parteneri internationali (clienti, architecti);",
+        more02: "Lucrați îndeaproape cu managerii de cont și calculați oferte pentru diferite proiecte din întreaga lume, folosind specificațiile, desenele tehnice/modelele 3D ale arhitectului și informații suplimentare furnizate de partenerul nostru;",
+        more03: 'Odată ce proiectul este confirmat, asigurați procesarea comenzii și un bun transfer de informatii;',
+        more04: 'Identificati oportunitățile de îmbunătățire continua in procesele si proiectele in care sunteti implicat;',
+        more05: 'Ridicați întrebări tehnico-comerciale adecvate, participați la întâlniri de clarificare a ofertelor;',
+        more06: 'Calculați și optimizați orele de manopera in functie de proiect si volume in colaborare cu departamentele operationale echipele de operațiuni / inginerie cu privire la aspectele de execuție. Pregătiți documentele tehnice și planurile și obțineți aprobări formale pentru depunerea ofertelor;',
+        more07: 'Colaborati cu funcțiile Financiar, Vanzari și PMO pentru cerințele și aprobările proiectelor;',
+        more08: 'Estimați costurile detaliate și colaborați cu managementul intern pe aspecte cheie, inclusiv strategia de prețuri;',
+        more09: 'Înțelegeți temeinic și respectați codul de conduită organizațional și practicile de afaceri',
+        more10: 'Linia de raportare este directa catre Managerul de department din Olanda si indirecta raportare in Romania.',
+      },
+      type: "Full time/On site",
+    },
+    {
+      title: "B2B Sales Agent",
+      location: "Bucharest, Romania",
+      description:"\nEstimatorul Preturi (Senior Estimator) este responsabil pentru evaluarea si calcularea costurilor asociate cu proiectele de constructii.\n Acest rol crucial implica analiza detaliata a planurilor de constructie, a specificatiilor tehnice si a altor documente relevante pentru a estima costurile materialelor, manoperei si echipamentelor necesare pentru finalizarea proiectului.",
+      require: {
+        one: "Basic technical understanding",
+        two: "From the industry is a big asset",
+        three: "At least 3 years of experience in sales",
+        four: 'Confident, serious appearance',
+        five: 'Willingness to travel',
+        six: 'Good English at least B2, Romanian at least C1',
+        more: "Providing customer support and advice on all communication channels",
+        more01: "Acquiring new customers",
+        more02: "Visiting customers and potential customers",
+        more03: 'Maintaining and retaining existing customers',
+        more04: 'Following up on offers and leads',
+        more05: 'Analysing the area/market potential for the business unit',
+        more06: 'Attending trade fairs',
+        more07: 'Submitting suggestions for product improvements',
+        more08: 'Monitoring the competition',
+        more09: 'Providing technical support to customers',
+        more10: 'Creating and conducting customer training courses / webinars',
+      },
+      type: "Full time/On site",
+    },
+    {
+      title: "National Sales Manager",
+      location: "Bucharest, Romania",
+      description:"\nEstimatorul Preturi (Senior Estimator) este responsabil pentru evaluarea si calcularea costurilor asociate cu proiectele de constructii.\n Acest rol crucial implica analiza detaliata a planurilor de constructie, a specificatiilor tehnice si a altor documente relevante pentru a estima costurile materialelor, manoperei si echipamentelor necesare pentru finalizarea proiectului.",
+      require: {
+        one: "Very good leadership skills and experience to motivate and develop the team",
+        two: "Maintaining and building long-term customer relationships",
+        three: "Development and implementation of sales strategies to increase sales growth and new customer acquisition",
+        four: 'Continuous market, competition and customer needs analysis to develop new potentials',
+        five: 'Basic technical understanding',
+        six: 'At least 7 years of experience in sales and minimum 2-3 years’ experience as head of sales',
+        seven: 'Willingness to travel',
+        eight: 'Good English at least C1, Romanian at least C2',
+        more: "Disciplinary and operational management of the Romanian sales team",
+        more01: "Reporting to Director Sales & Marketing Global (based in Germany) and temporarily to Managing Director Gerhard Ruck",
+        more02: "Bottom-up planning Romania incl. forecast",
+        more03: 'Independent management of overarching projects for the further development of the Romanian sales team',
+        more04: 'Keeping an eye on the competition, providing input on the product portfolio to ensure profitable growth of the company.',
+      },
+      type: "Full time/On site",
+    },
+    {
+      title: "Cloud Platform Operations Team Lead",
+      location: "Brasov, Romania",
+      description:"\nOur IT Infrastructure department is continuing to grow. As a result, we are looking for a Cloud Platform Operations Team Lead with strategic responsibility.\n The role of the Cloud Platform Operations Team Lead is part of Brasov Management Team. From this role, you will lead the unit by enabling the employees to work efficient and develop in their career, derives the unit goals from department goals and will be responsible for the unit budget.\n Managing the complete Cloud Platform Operations unit, you will work closely with the Director Software Technology BV Plant in order to achieve the business goals.",
+      require: {
+        one: "Bachelor or Master (preferable) degree in Computer Science, Electronic/Electrical Engineering or a related field",
+        two: "A former Cloud Platform Operations engineer with strong, successful and proved technical and people lead experience",
+        three: "Strong leadership, professional attitude – leading by example",
+        four: 'Proactive and highly organized, with strong time management and planning skills',
+        five: 'Ability to articulate and gain engagement for own ideas to both technical and non-technical audiences',
+        six: 'Ability to motivate in a team-oriented, collaborative environment',
+        seven: 'Strategic planning for achieving business results',
+        eight: 'Strong agile mindset aligned with business values',
+        nine: 'Experience of advising key stakeholders at senior and board level',
+        ten: 'Excellent written and oral communication skills',
+        eleven: 'Excellent spoken and written English, knowledge of the German language is an advantage',
+        twelve: 'Technical experience in Hyperscaler Platform, IdP & Infrastructure offerings',
+        thirteen: 'Knowledge of automation processes and tools (e.g. DevSecOps) in the Cloud Platform environment',
+        fourteen: 'Management experience in the Cloud Platform Operations field more than 2 years',
+        more: "Define together with the Director Software Technology BV the strategy and goals of the unit; plan and monitor the successful implementation of this strategy",
+        more01: "Establish clear organizational structures and succession plans aligned with appropriate responsibilities, accountabilities and personal development for all staff of the Unit, in line with any anticipated growth",
+        more02: "Prioritize, budget and allocate projects and resources in line with business priorities for the development unit",
+        more03: 'Ensure that technology standards and best practices are maintained across the organization',
+        more04: 'Implement consistent standards and approaches throughout the Cloud Platform Operation teams',
+        more05: 'Responsible for his/her own work planning in line with the objectives set together with the Director',
+        more06: 'Ensure effective internal communications both within the Cloud Platform Operations team and across the organization',
+        more07: 'Ensure that the skills and experience of the Cloud Platform Operations team are consistent with its scientific, technological and business needs in order to provide quality for the present and future services',
+        more08: 'Responsible for the quality and technical approach taken by team members, ensuring it is in-line with the company strategy – and that projects are delivered on time and on budget',
+        more09: 'Facilitate the decision making throughout the team regarding technology and methodology, including standardization of system architecture, reusable code base development, versions of software tools, best practice, source control and deployment processes',
+        more10: 'Responsible for technical recruitment, appraisals, one to one meetings, identifying training needs and motivating the team',
+        more11: 'Driver of innovation and improvement projects',
+        more12: 'Ensure participation of the unit in academic and external events',
+      },
+      musthave1: 'Strong technical experience in Microsoft Azure Service offerings',
+      musthave2: 'Strong technical experience in other Hyperscaler (e.g. AWS, Google) Service offerings',
+      musthave3: 'Widespread knowledge of Infrastructure as Code methodologies',
+      musthave4: 'Technical experience in OnPrem infrastructure services like Active Directory and Virtualization',
+      profile1: 'Highly self-motivated and driven',
+      profile2: 'Reliable, flexible and cooperative',
+      profile3: 'Positive attitude towards working in team in an international environment, with a self-starter attitude and eagerness to tackle unknowns',
+      profile4: 'Interest in keeping up with current and upcoming developments and technologies in the field of software engineering',
+      profile5: 'Willingness for business travels to the German HQ and relating plants and subsidiaries',
+      beneficii1: 'Great career opportunity in an innovative and dynamic working environment',
+      beneficii2: 'Competitive salary package & benefits, according to performance and professional experience',
+      beneficii3: 'Modern facilities located in Braşov',
+      beneficii4: 'Achievement Bonuses & Rewards',
+      beneficii5: 'Flexible working program (Flexible hours, Work from home)',
+      beneficii6: 'Canteen discount, outdoor terrace and coffee corner on site',
+      beneficii7: 'Medical services on site and private health and life insurance',
+      type: "Full time/Hybrid",
+    },
+    {
+      title: "Performance Marketing Manager",
+      location: "Global",
+      description:"\nOur client is specialized in app purchases, online transactions and payments. \nOur client's global team consists of more than 50 product-driven people. \nThe Performance Marketing Manager will play a crucial role in our client's digital marketing efforts, creating a strategy for paid ads across different regions.",
+      require: {
+        one: "At least 3 years of experience in digital marketing, ideally within a B2B software company.",
+        two: "Hands-on experience with Google ads, Facebook ads, LinkedIn ads, YouTube, etc.",
+        three: "Very good English, preferably NATIVE English. (English writing must be as good as speaking English)",
+        four: 'Data and insight orientation is a key strength. ',
+        five: 'Combining this analytical approach with client experience.',
+        six: 'Results driven',
+        seven: 'Independence',
+        eight: 'Leadership',
+        more: "Manage all demand generation channels including LinkedIn, Facebook, Google, and others.",
+        more01: "Conduct ad hoc research and analysis, market researches in order to create the right strategy and support business objectives.",
+        more02: "Create a strategy and implement it.",
+        more03: 'Measure and track the performance of digital marketing efforts.',
+        more04: 'Identify new channels, tactics, run experiments, introduce new products and services in accordance with needs and requests.',
+        more05: 'Collaborate with marketing colleagues and cross-functional teams to improve conversion rates.',
+        more06: 'Prepare analysis and reports for management, recommend areas for improvement, as well as solutions for challenges and issues.',
+        more07: 'Manage freelancers and agencies.',
+        more08: 'in time, develop own team.',
+      },
+      type: "Full time/Remote",
+    },
+    {
+      title: "B2B Sales Representative West Romania",
+      location: "Romania",
+      description:"\nFor our Client, a Polish company operating in the construction materials ( fastening systems and various technological solutions for constructions) we are lookinf for a B2B Sales Representative in the West part of Romania.",
+      require: {
+        one: "University degree - Bachelor’s degree in business or related fields",
+        two: "English and Romanian -  conversational level",
+        three: "Any other languages is a plus",
+        four: 'Driver licence',
+        five: 'Strong interpersonal and communication skills as well as presentation and negotiation',
+        more: "Manage all demand generation channels including LinkedIn, Facebook, Google, and others.",
+        more01: "Communicating the benefits of a company’s products in order to drive sales. ",
+        more02: "Main point of contact between a business and its prospects or clients.",
+        more03: 'Identifying and educating prospective customers while supporting existing clients with information and assistance that relates to products and services.',
+        more04: 'Selling products and services using solid arguments to prospective customers',
+        more05: 'Performing cost-­benefit analyses of existing and potential customers',
+        more06: 'Maintaining positive business relationships to ensure future sales',
+      },
+      type: "Full time/Hybrid",
     },
   ];
 

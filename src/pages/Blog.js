@@ -210,15 +210,6 @@ function Blog() {
                   <a href="/blog/member-professional-women-network">HHA proud member of Professional Women Network</a>
                 </h2>
               </div>
-              <div className="post-entry-1 pt-5">
-                <a href="/blog/ana-slatineanu">
-                  <img src="assets/img/ana.jpeg" alt="" className="img-fluid" style={{borderRadius: 190}}/>
-                </a>
-                <div className="post-meta"></div>
-                <h2 style={{fontSize: 25}}>
-                  <a href="/blog/ana-slatineanu">Presenting Ana Slatineanu</a>
-                </h2>
-              </div>
             </div>
 
             <div className="col-lg-8">
@@ -763,6 +754,44 @@ Topics presented included:<br></br>
               Thank you <a href="https://www.linkedin.com/in/madalinaciinaru/">Madalina Ciinaru</a>, <a href="https://www.linkedin.com/in/anna-n%C4%83stase-anamaria-n%C4%83stase-77b536142/">Anna Năstase</a> <a href="https://linkedin.com/in/cevasea/">Cristiana Elisabeta Vasea</a> for well done organization.<br></br>
               Thank you <a href='https://www.linkedin.com/in/bogdan-pletea/'>Bogdan Pletea CMIRM®</a> for doing an extraordinary job at moderating the event!<br></br></p>
           </div>
+
+        </div>
+        <div className="row pt-5">
+        <div className="col-lg-12 py-5">
+            <div className="text-center text-md-right">
+              <h3 className="pt-4">
+              BRCC Summer Garden Party              </h3>
+              <p>Honored to be part of such a wonderful project, Thank you, <a href='https://nineoclock.ro/'>Nine O'Clock</a></p>
+              <p></p>
+            </div>
+          </div>
+          <div className="col-lg-6 py-5">
+            <img
+              style={{maxWidth: "60%"}}
+              src="assets/img/garden3.jpeg"
+              alt=""
+              className="img-fluid mx-auto d-block"
+            />
+          </div>
+          <div className="col-lg-6 py-5">
+            <img 
+              style={{maxWidth: "60%"}}
+              src="assets/img/garden1.jpeg"
+              alt=""
+              className="img-fluid mx-auto d-block"
+            />
+          </div>
+          <div className="col-lg-12 pt-5">
+            <img
+              style={{maxWidth: "50%"}}
+              src="assets/img/garden2.jpeg"
+              alt=""
+              className="img-fluid mx-auto d-block"
+            />
+          </div>
+          <div className="row">
+          </div>
+          
         </div>
       </div>
       <MyPDFViewer />

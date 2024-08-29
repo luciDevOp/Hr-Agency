@@ -23,7 +23,6 @@ import Event10 from "./pages/Event10";
 import Event11 from "./pages/Event11";
 import Event12 from "./pages/Event12";
 import Event13 from "./pages/Event13";
-import Event14 from "./pages/Event14";
 import Event15 from "./pages/Event15";
 import Event16 from "./pages/Event16";
 import Event17 from "./pages/Event17";
@@ -62,7 +61,6 @@ function App() {
         <Route path="/blog/member-professional-women-network" element={<Event11 />} />
         <Route path="/blog/networking-breakfast" element={<Event12 />} />
         <Route path="/blog/a_best-ac_texas" element={<Event13 />} />
-        <Route path="/blog/ana-slatineanu" element={<Event14 />} />
         <Route path="/blog/valentina-calin" element={<Event15 />} />
         <Route path="/blog/IMD-international-london" element={<Event16 />} />
         <Route path="/blog/mihaela-marin" element={<Event17 />} />

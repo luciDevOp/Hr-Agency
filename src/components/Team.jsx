@@ -125,36 +125,6 @@ const Team = () => {
           <div
             className="col-lg-6 mt-4"
             data-aos="zoom-in"
-            data-aos-delay="400"
-          >
-            <div className="member d-flex align-items-start">
-              <div className="pic" >
-                <img
-                  src="assets/img/ana.jpeg"
-                  className="img-fluid"
-                  alt="Ana Slatineanu, Partner International Recruiter & Organizational Psychology Consultant"
-                  
-                />
-              </div>
-              <div className="member-info ana">
-                <h4>Ana Slatineanu</h4>
-                <span>Partner International Recruiter & <br/>Organizational Psychology Consultant</span>
-                <p>“The ability to understand people is one of the greatest<br/> assets anyone can ever have.” John C. Maxwell</p>
-                <div className="social">
-                  <a href="https://www.linkedin.com/in/anamarialatinea/">
-                    {" "}
-                    <i className="ri-linkedin-box-fill"></i>{" "}
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="row">
-        <div className="row justify-content-md-center">
-          <div
-            className="col-lg-6 mt-4"
-            data-aos="zoom-in"
             data-aos-delay="300"
           >
             <div className="member d-flex align-items-start">
@@ -179,7 +149,6 @@ const Team = () => {
               </div>
             </div>
           </div>
-        </div>
         </div>
       </div>
     </section>
