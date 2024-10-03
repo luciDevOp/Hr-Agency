@@ -49,6 +49,9 @@ const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
                 ))}
               </p>
             )}
+            {jobDetails.tipContract && (
+              <p className="job-title">Tip contract: {jobDetails.tipContract}</p>
+            )}
           
             <p className="job-title">Requirements:</p>
             <ul>
@@ -299,6 +302,7 @@ const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
 
 function Vacancies() {
   const [selectedJob, setSelectedJob] = useState(null);
+  const [filter, setFilter] = useState("open"); // Default filter set to 'open'
 
   const openJobDetailsModal = (jobDetails) => {
     setSelectedJob(jobDetails);
@@ -1407,7 +1411,66 @@ function Vacancies() {
       },
       type: "Full time/Hybrid",
     },
+    {
+      title: "Community Manager - Clinica Dentară",
+      location: "Bucuresti, Romania",
+      tipContract: 'Colaborare PFA/SRL',
+      description:"\nClinica stomatologică din București, cu o echipă de medici specialiști, caută un Community Manager pentru a gestiona și dezvolta rețelele sociale și campaniile de marketing digital.",
+      require: {
+        one: "Experiență anterioară în marketing digital și gestionarea rețelelor sociale, preferabil în domeniul sănătății sau al serviciilor.",
+        two: "Cunoștințe avansate de utilizare a platformelor de social media (Facebook, Instagram, TikTok, YouTube) și a instrumentelor de analiză a performanței.",
+        three: "Abilități excelente de comunicare scrisă și verbală.",
+        four: 'Creativitate și capacitatea de a genera idei inovatoare pentru campanii de marketing.',
+        five: 'Capacitatea de a lucra atât independent, cât și în echipă, într-un mediu dinamic.',
+        more: "Dezvoltarea și Implementarea Strategiilor de Marketing: Crearea și gestionarea strategiilor de marketing digital pentru a promova serviciile clinicii dentare, cu scopul de a atrage noi pacienți și de a crește gradul de conștientizare a brandului.",
+        more01: "Gestionarea Rețelelor Sociale: Administrarea conturilor de social media ale clinicii (Facebook, Instagram, TikTok, YouTube), inclusiv crearea de conținut atractiv, programarea postărilor și interacțiunea cu comunitatea online.",
+        more02: "Analiza Performanței: Monitorizarea și analizarea rezultatelor campaniilor de marketing și a activităților de pe rețelele sociale, utilizând metrici relevante pentru a evalua impactul și a propune îmbunătățiri.",
+        more03: 'Crearea de Conținut: Generarea de conținut original și captivant, inclusiv articole, postări, imagini și videoclipuri, care să reflecte valorile clinicii și să informeze pacienții despre serviciile oferite.',
+        more04: 'Colaborarea cu Echipa: Lucrul îndeaproape cu echipa de marketing și cu personalul clinicii pentru a asigura coerența mesajelor și a campaniilor, respectând cerințele fișei de post.',
+        more05: 'Gestionarea Relațiilor cu Pacienții: Răspunsul la întrebările și comentariile pacienților pe platformele de social media, menținând un ton profesionist și prietenos.',
+      },
+      beneficii1: 'Oportunitatea de a lucra într-un mediu profesionist și stimulativ.',
+      beneficii2: 'Flexibilitate în programul de lucru, cu opțiunea de a lucra hibrid.',
+      beneficii3: 'Posibilitatea de a contribui la creșterea și dezvoltarea unei clinici dentare de top.',
+      type: "Full time/Hybrid",
+    },
+    {
+      title: "Payroll Specialist",
+      location: "Bucharest, Romania",
+      description:"\nWe are looking for a payroll specialist to join our team on site, in Bucharest. If you are working well in a team, but also thriving individually, we have just the job for you!",
+      require: {
+        one: "Bachelor’s degree in Human Resources",
+        two: "Proven experience of at least 2-3 years as a payroll specialist in a private corporate  environment",
+        three: "Thorough knowledge of payroll procedures, international ones as well;",
+        four: 'Experience with payroll calculations and verification for international and European  countries',
+        five: 'Good knowledge of Labor Romanian legislation',
+        six: 'Proficient in Microsoft Office;',
+        seven: 'Strong English language knowledge, professional working proficiency.',
+        eight: 'Knowledge of the Italian language is a plus;',
+        nine: 'Good communication skills and team spirit;',
+        ten: 'Positive approach and strong work ethic;',
+        eleven: "Highly detail-oriented and organized person;",
+        twelve: "Ability to meet a constant stream of deadlines.",
+        thirteen: "Willingness to work on site is a requirement.",
+        more: "Calculates employee salaries",
+        more01: "Manages databases and staff files ",
+        more02: "Oversees job descriptions, certificates, evaluation sheets, internal regulations, disciplinary  investigations and payslips ",
+        more03: 'Processing payroll calculations and verification for international and European countries  accurately and on time',
+        more04: 'Ensuring compliance with tax laws',
+        more05: 'Collects the data, prepares and verifies the monthly payroll for salaries',
+        more06: 'Prepares the files, reports and payment documents when needed for management or  different institutions',
+        more07: 'Carries out internal communication',
+        more08: 'Permanently monitors legislative changes in the field of labor relations and taxes. ',
+      },
+      beneficii1: 'Attractive financial package;',
+      beneficii2: 'Meal tickets;',
+      beneficii3: 'Professional environment in our office situated in a central area.',
+      type: "Full time/On site",
+    },
   ];
+  const filteredJobs = jobs.filter((job) =>
+    filter === "completed" ? job.completed : !job.completed
+  );
 
   return (
     <section>
@@ -1418,41 +1481,65 @@ function Vacancies() {
             Head Hunting Agency is a premier HR business committed to the art of
             connecting exceptional talent with progressive organizations. Our
             mission is to elevate recruitment standards, ensuring our clients
-            build robust, high-performing teams. As a dynamic headhunting agency
-            experiencing rapid growth, we are actively seeking dedicated
-            individuals to join our team and contribute to the ongoing success
-            of both our clients and candidates.
+            build robust, high-performing teams.
           </p>
         </div>
-        <div className="row">
-  {jobs.map((job, index) => (
-    <div className={`col-lg-6 col-md-12 col-12 mt-4 pt-2 ${job.completed ? 'opacity-50' : ''}`} key={index}>
-      <div className={`card border-0 bg-light rounded shadow ${job.completed ? 'completed-card' : ''}`}>
-        <div className="card-body p-4">
-          <span className="badge rounded-pill job-type float-md-end mb-3 mb-sm-0">
-            {job.type}
-          </span>
-          <h5>{job.title}</h5>
-          <div className="mt-3">
-            <span className="text-muted d-block">
-              <i className="fa-solid fa-location-dot"></i> {job.location}
-            </span>
-          </div>
-          <div className="mt-3">
+
+        {/* Filter Buttons */}
+        <div className="text-center mb-4">
+          <div className="btn-group custom-btn-group" role="group">
             <button
-              className="details-button"
-              onClick={() => openJobDetailsModal(job)}
-              disabled={job.completed}
+              className={`btn custom-btn ${filter === "open" ? "active" : ""}`}
+              onClick={() => setFilter("open")}
             >
-              View Details
+              Open Jobs
+            </button>
+            <button
+              className={`btn custom-btn ${filter === "completed" ? "active" : ""}`}
+              onClick={() => setFilter("completed")}
+            >
+              Completed Jobs
             </button>
           </div>
         </div>
-      </div>
-    </div>
-  ))}
-</div>
 
+        <div className="row">
+          {filteredJobs.map((job, index) => (
+            <div
+              className={`col-lg-6 col-md-12 col-12 mt-4 pt-2 ${
+                job.completed ? "opacity-50" : ""
+              }`}
+              key={index}
+            >
+              <div
+                className={`card border-0 bg-light rounded shadow ${
+                  job.completed ? "completed-card" : ""
+                }`}
+              >
+                <div className="card-body p-4">
+                  <span className="badge rounded-pill job-type float-md-end mb-3 mb-sm-0">
+                    {job.type}
+                  </span>
+                  <h5>{job.title}</h5>
+                  <div className="mt-3">
+                    <span className="text-muted d-block">
+                      <i className="fa-solid fa-location-dot"></i> {job.location}
+                    </span>
+                  </div>
+                  <div className="mt-3">
+                    <button
+                      className="details-button"
+                      onClick={() => openJobDetailsModal(job)}
+                      disabled={job.completed}
+                    >
+                      View Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
 
         {selectedJob && (
           <JobDetailsModal

@@ -2316,6 +2316,31 @@ section {
 .job-type {
   background-color: #7947a2;
 }
+.custom-btn-group .custom-btn {
+  background-color: #7947a2;
+  color: white;
+  border: 1px solid #7947a2;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.custom-btn-group .custom-btn.active,
+.custom-btn-group .custom-btn:hover {
+  background-color: #9e6bcd;
+  border-color: #9e6bcd;
+  transform: scale(1.05);
+}
+
+.custom-btn-group .custom-btn:focus {
+  box-shadow: none;
+}
+
+.custom-btn-group .custom-btn:not(:last-child) {
+  margin-right: 10px;
+}
+
 
 .details-button {
   padding: 8px 20px;
