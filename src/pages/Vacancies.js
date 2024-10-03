@@ -98,6 +98,30 @@ const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
                 <li>{jobDetails.require.fourteen}</li>
               )}
             </ul>
+            {jobDetails.require && jobDetails.require.nice && (
+                <p className="job-title">Nice to have:</p>
+              )}
+            <ul>
+              {jobDetails.require && jobDetails.require.nice && (
+                <li>{jobDetails.require.nice}</li>
+              )}
+              {jobDetails.require && jobDetails.require.nice1 && (
+                <li>{jobDetails.require.nice1}</li>
+              )}
+              {jobDetails.require && jobDetails.require.nice2 && (
+                <li>{jobDetails.require.nice2}</li>
+              )}
+              {jobDetails.require && jobDetails.require.nice3 && (
+                <li>{jobDetails.require.nice3}</li>
+              )}
+              {jobDetails.require && jobDetails.require.nice4 && (
+                <li>{jobDetails.require.nice4}</li>
+              )}
+              {jobDetails.require && jobDetails.require.nice5 && (
+                <li>{jobDetails.require.nice5}</li>
+              )}
+            </ul>
+
             {jobDetails.require && jobDetails.require.more && (
               <p className="job-title">Key Responsibilities:</p>
             )}
@@ -556,6 +580,7 @@ function Vacancies() {
     },
     {
       title: "Project Manager Construction",
+      completed: true,
       location: "Targoviste, Romania",
       description: "\nUrmareste realizarea proiectelor de constructii conform cerintelor clientului si conditiilor contractuale asumate.",
         require: {
@@ -704,26 +729,26 @@ function Vacancies() {
       type: "Full time/On site",
       completed: true,
     },
-    {
-      title: "Business Developer | Casa Expeditii",
-      location: "Sibiu, Romania",
-      description:
-        "\nCandidatul ideal trebuie să cunoască limba română și limba engleză, să aibă o atitudine proactivă față de învățare și dezvoltare, să ofere sprijin colegilor și să promoveze un mediu de lucru pozitiv. \nUn bun asistent de birou trebuie să aibă abilități organizatorice excelente și un bun simț al detaliilor, astfel încât nimic să nu fie neglijat, dar trebuie să fie capabil să lucreze bine cu alte persoane și cu clienții, dacă este necesar.",
-        require: {
-        one: "Experienta relevanta in domeniu, experienta vanzari case experditii este un plus",
-        two: "Baza de date clienti constituie un avantaj",
-        three: "Networking este foarte important",
-        more: "Persoana aleasa trebuie sa stie foarte bine tipurile de remorci care sunt pe piata, capacitatea lor de incarcare, aranjarea marfii in interior in cazul grupajelor si amarfurilor vrac",
-        more0: "Job-ul va fi sa caute marfuri care se vor incarca in camioanele partenerilor externi sau camioane proprii disponibile",
-        more01: "Daca nu sunt camioane proprii disponibile, are responsabilitaea sa gaseasca camioane la furrnizorii agreati",
-        more02: "De asemenea are responsabilitatea sa caute marfa care sa se adapteze disponibilitatilor",
-        more03: "Va face comenzile de transport",
-        more04: "Trebuie sa urmareasca marfurile/camioanele zilnic, daca sunt particularitati si de 2 ori/zi, pentru a nu se depasi timpii de tranzit",
-        more05: "La finalul cursei va trebui sa dea spre facturare la contabilitate, date care vor fi transmise DOAR prin mail",
-      },
-      type: "Full time/Hybrid",
-      salariu: "Salariu motivant + comision la incasare, acest comision se va stabili de comun acord la inceputul perioadei de proba + Beneficii!!"
-    },
+    // {
+    //   title: "Business Developer | Casa Expeditii",
+    //   location: "Sibiu, Romania",
+    //   description:
+    //     "\nCandidatul ideal trebuie să cunoască limba română și limba engleză, să aibă o atitudine proactivă față de învățare și dezvoltare, să ofere sprijin colegilor și să promoveze un mediu de lucru pozitiv. \nUn bun asistent de birou trebuie să aibă abilități organizatorice excelente și un bun simț al detaliilor, astfel încât nimic să nu fie neglijat, dar trebuie să fie capabil să lucreze bine cu alte persoane și cu clienții, dacă este necesar.",
+    //     require: {
+    //     one: "Experienta relevanta in domeniu, experienta vanzari case experditii este un plus",
+    //     two: "Baza de date clienti constituie un avantaj",
+    //     three: "Networking este foarte important",
+    //     more: "Persoana aleasa trebuie sa stie foarte bine tipurile de remorci care sunt pe piata, capacitatea lor de incarcare, aranjarea marfii in interior in cazul grupajelor si amarfurilor vrac",
+    //     more0: "Job-ul va fi sa caute marfuri care se vor incarca in camioanele partenerilor externi sau camioane proprii disponibile",
+    //     more01: "Daca nu sunt camioane proprii disponibile, are responsabilitaea sa gaseasca camioane la furrnizorii agreati",
+    //     more02: "De asemenea are responsabilitatea sa caute marfa care sa se adapteze disponibilitatilor",
+    //     more03: "Va face comenzile de transport",
+    //     more04: "Trebuie sa urmareasca marfurile/camioanele zilnic, daca sunt particularitati si de 2 ori/zi, pentru a nu se depasi timpii de tranzit",
+    //     more05: "La finalul cursei va trebui sa dea spre facturare la contabilitate, date care vor fi transmise DOAR prin mail",
+    //   },
+    //   type: "Full time/Hybrid",
+    //   salariu: "Salariu motivant + comision la incasare, acest comision se va stabili de comun acord la inceputul perioadei de proba + Beneficii!!"
+    // },
     {
       title: "Key Account Manager",
       location: "Bucharest, Romania",
@@ -885,6 +910,7 @@ function Vacancies() {
     },
     {
       title: "Office Manager",
+      completed:true,
       location: "Bucharest, Romania",
       description:"\nOur client is a Romanian company, with more than 10 years’ experience in the field of energy.\nThey are currently looking for an OFFICE MANAGER to help with organizing daily activities of their office, situated in the Northern part of the city.\nWe are searching for a candidate knowing well Romanian language, as well as English, with a positive, proactive attitude, willing to learn and develop, helping others, and assisting colleagues.\nThe OFFICE MANAGER must have great planning and organizing abilities, attention to detail, and good customer service and team work.",
       require: {
@@ -933,6 +959,7 @@ function Vacancies() {
     },
     {
       title: "Senior Environment Expert",
+      completed: true,
       location: "Bucharest, Romania",
       description:"\nIndustry: Renewable Energy Projects\nThe Senior Environmental Expert must have relevant experience in Romanian/EU environmental permitting process, environmental and social impact assessments, environmental risks’ evaluation, mitigation and management, in establishment of project programs for the monitoring and management of environmental aspects, compliance and objectives’ achievement, including in regard with the integration of international regulations.",
       require: {
@@ -1099,6 +1126,7 @@ function Vacancies() {
     },    
     {
       title: "Global Senior CRM Manager",
+      completed: true,
       location: "Fully remote",
       description: "\nOur client is an international verification platform securing the whole user journey, offering customizable KYC, KYB, transaction monitoring, and fraud prevention solutions. This allows customers to orchestrate their verification process, welcome more customers worldwide, meet compliance requirements, reduce costs, and protect people and businesses.",
       require: {
@@ -1270,53 +1298,84 @@ function Vacancies() {
       type: "Full time/On site",
     },
     {
-      title: "B2B Sales Agent",
+      title: "Area Sales Manager",
       location: "Bucharest, Romania",
-      description:"\nEstimatorul Preturi (Senior Estimator) este responsabil pentru evaluarea si calcularea costurilor asociate cu proiectele de constructii.\n Acest rol crucial implica analiza detaliata a planurilor de constructie, a specificatiilor tehnice si a altor documente relevante pentru a estima costurile materialelor, manoperei si echipamentelor necesare pentru finalizarea proiectului.",
+      description:"\nThe Area Sales Manager is responsible for overseeing sales operations in a specific geographic area. This role involves developing sales strategies, managing a team of sales representatives, and ensuring the company meets its sales targets.\n The Area Sales Manager will work closely with the sales team, marketing department, and senior management to drive sales growth and expand the company’s customer base.",
       require: {
-        one: "Basic technical understanding",
-        two: "From the industry is a big asset",
-        three: "At least 3 years of experience in sales",
-        four: 'Confident, serious appearance',
-        five: 'Willingness to travel',
-        six: 'Good English at least B2, Romanian at least C1',
-        more: "Providing customer support and advice on all communication channels",
-        more01: "Acquiring new customers",
-        more02: "Visiting customers and potential customers",
-        more03: 'Maintaining and retaining existing customers',
-        more04: 'Following up on offers and leads',
-        more05: 'Analysing the area/market potential for the business unit',
-        more06: 'Attending trade fairs',
-        more07: 'Submitting suggestions for product improvements',
-        more08: 'Monitoring the competition',
-        more09: 'Providing technical support to customers',
-        more10: 'Creating and conducting customer training courses / webinars',
+        one: "Bachelor’s degree in Business, Marketing, or a related field.",
+        three: "At lest 3 years of experience in sales management, preferably in a similar industry.",
+        four: 'Proven track record of achieving sales targets and managing a high-performing sales team.',
+        five: 'Strong leadership and communication skills.',
+        six: 'Ability to analyze data, develop insights, and make data-driven decisions.',
+        seven: 'Knowledge of CRM software and sales analytics tools.',
+        eight: 'Ability to travel within the assigned area.',
+        nine: 'Excellent negotiation and presentation skills.',
+        more: "Develop and implement sales strategies to achieve targets in the assigned area.",
+        more01: "Analyze sales trends, identify opportunities for growth, and propose action plans to  meet objectives",
+        more02: "Monitor competitor activities and market trends to stay ahead of the competition.",
+        more03: 'Lead, motivate, and manage a team of sales representatives.',
+        more04: 'Set performance goals for the team and ensure they are met through regular coaching,  mentoring, and performance reviews',
+        more05: 'Recruit, train, and onboard new sales representatives.',
+        more06: 'Build and maintain strong relationships with key customers and stakeholders. ',
+        more07: 'Address customer concerns, provide solutions, and ensure high levels of customer  satisfaction.',
+        more08: 'Visit clients regularly and gather feedback to improve product offerings and service  levels',
+        more09: 'Track and report on sales metrics, including revenue, market share, and customer  acquisition rates.',
+        more10: 'Provide weekly/monthly sales forecasts and reports to upper management. ',
+        more11: 'Ensure timely collection of outstanding payments from customers. ',
+        more12: 'Identify and expand business opportunities in the assigned area. ',
+        more13: 'Optimize coverage of the region by analyzing customer needs and adjusting territories as  necessary.',
+        more14: 'Organize and manage promotional events, product launches, and other sales campaigns.',
+        more15: 'Work closely with marketing, product development, and logistics teams to ensure  smooth operations and the successful launch of new products.',
+        more16: 'Share feedback with internal teams to drive improvements in products and services.',
       },
       type: "Full time/On site",
     },
     {
       title: "National Sales Manager",
       location: "Bucharest, Romania",
-      description:"\nEstimatorul Preturi (Senior Estimator) este responsabil pentru evaluarea si calcularea costurilor asociate cu proiectele de constructii.\n Acest rol crucial implica analiza detaliata a planurilor de constructie, a specificatiilor tehnice si a altor documente relevante pentru a estima costurile materialelor, manoperei si echipamentelor necesare pentru finalizarea proiectului.",
-      require: {
-        one: "Very good leadership skills and experience to motivate and develop the team",
-        two: "Maintaining and building long-term customer relationships",
-        three: "Development and implementation of sales strategies to increase sales growth and new customer acquisition",
-        four: 'Continuous market, competition and customer needs analysis to develop new potentials',
-        five: 'Basic technical understanding',
-        six: 'At least 7 years of experience in sales and minimum 2-3 years’ experience as head of sales',
-        seven: 'Willingness to travel',
-        eight: 'Good English at least C1, Romanian at least C2',
-        more: "Disciplinary and operational management of the Romanian sales team",
-        more01: "Reporting to Director Sales & Marketing Global (based in Germany) and temporarily to Managing Director Gerhard Ruck",
-        more02: "Bottom-up planning Romania incl. forecast",
-        more03: 'Independent management of overarching projects for the further development of the Romanian sales team',
-        more04: 'Keeping an eye on the competition, providing input on the product portfolio to ensure profitable growth of the company.',
+      description:"\nThe National Sales Manager is responsible for overseeing and driving the sales performance across all regions within the country. This role involves developing strategic sales plans, managing the national sales team, and ensuring the company meets or exceeds its sales goals.\n The individual will work closely with marketing, product development, and regional managers to ensure a unified and effective sales strategy.",      require: {
+        one: "Bachelor's degree in Business Administration, Marketing, or related field (MBA preferred).",
+        two: "Minimum 7 years of experience in sales, with at least 2-3 years in a leadership or management role.",
+        three: "Proven track record of meeting or exceeding sales targets in a national or large regional capacity.",
+        four: 'Experience in HVAC is a plus.',
+        five: 'Strong leadership and team management skills.',
+        six: 'Excellent communication, negotiation, and presentation skills.',
+        seven: 'Analytical mindset with proficiency in CRM systems and sales analytics tools.',
+        eight: 'Ability to travel nationally as required.',
+        nine: 'Results orientation',
+        ten: 'Costumers focus',
+        eleven: 'Adaptability and openness to change in dynamic market conditions.',
+        twelve: 'Strategic thinking and problem-solving.',
+        thirteen: 'High level of initiative and drive to succeed.',
+        fourteen: 'Ability to work under pressure and meet tight deadlines.',
+        more: "Develop and implement comprehensive national sales strategies to achieve company sales targets and profitability.",
+        more01: "Identify new business opportunities, target markets, and sales growth areas.",
+        more02: "Monitor market trends, competitor activities, and customer feedback to fine-tune sales strategies.",
+        more03: 'Lead, manage, and mentor the national sales team, including regional sales managers and representatives.',
+        more04: 'Set sales performance goals and KPIs for the sales team.',
+        more05: 'Conduct regular performance reviews, provide feedback, and ensure the team is adequately trained and motivated.',
+        more06: 'Build and maintain strong relationships with key customers and partners.',
+        more07: 'Oversee national key account management and ensure high levels of customer satisfaction.',
+        more08: 'Attend major sales meetings with clients and negotiate contracts when necessary.',
+        more09: 'Prepare and manage the national sales budget, forecasting sales figures, and ensuring cost-effective practices.',
+        more10: 'Monitor sales performance against targets and analyze financial reports to drive profitability.',
+        more11: 'Work closely with finance teams to ensure accurate sales reporting and financial health.',
+        more12: 'Collaborate with marketing to ensure sales campaigns and promotional activities align with sales strategies.',
+        more13: 'Provide feedback to product development teams based on customer needs and market trends.',
+        more14: 'Participate in the development and launch of new products and services.',
+        more15: 'Prepare regular sales reports, including detailed performance analysis of sales regions and product lines.',
+        more16: 'Present sales updates, forecasts, and progress reports to the senior leadership team.',
+        more17: 'Use data-driven insights to recommend adjustments to sales strategies.',
+        more18: 'Ensure that the sales processes align with the company’s policies, legal requirements, and industry standards.',
+        more19: 'Implement and enforce ethical sales practices and promote a customer-centric culture within the sales team.',
       },
-      type: "Full time/On site",
-    },
+      type: "Full time/On site or Remote",
+      beneficii1: 'Competitive salary with performance-based incentives.',
+      beneficii2: 'Benefits package including health, dental, and retirement plans.',
+      beneficii3: 'Opportunities for professional growth and development.',    },
     {
       title: "Cloud Platform Operations Team Lead",
+      completed: true,
       location: "Brasov, Romania",
       description:"\nOur IT Infrastructure department is continuing to grow. As a result, we are looking for a Cloud Platform Operations Team Lead with strategic responsibility.\n The role of the Cloud Platform Operations Team Lead is part of Brasov Management Team. From this role, you will lead the unit by enabling the employees to work efficient and develop in their career, derives the unit goals from department goals and will be responsible for the unit budget.\n Managing the complete Cloud Platform Operations unit, you will work closely with the Director Software Technology BV Plant in order to achieve the business goals.",
       require: {
@@ -1433,6 +1492,92 @@ function Vacancies() {
       beneficii2: 'Flexibilitate în programul de lucru, cu opțiunea de a lucra hibrid.',
       beneficii3: 'Posibilitatea de a contribui la creșterea și dezvoltarea unei clinici dentare de top.',
       type: "Full time/Hybrid",
+    },
+    {
+      title: "Marketing Content Writer",
+      location: "Bucharest, Romania",
+      description:"\nOur firm is the leading solutions provider of end-to-end wireless connectivity. We help network operators, service providers, and private networks worldwide increase operational efficiency and enhance end customers’ quality of experience with innovative wireless transport solutions.\n Company's employee community spans multiple countries, is highly diverse regionally and culturally, yet connected and cohesive.\nWe are looking for a dedicated, passionate, and experienced Content Writer to join our marketing team! If English is your mother tongue, you love writing, are excited by the opportunity of working on a variety of content types ranging from blogs, to case studies, to white papers, are detail-oriented, and have a strategic mind - this could be the perfect career opportunity for you!",
+      require: {
+        one: "English as native language",
+        two: "High-level writing, editing, and proofreading skills",
+        three: "Experience in writing content marketing - preference for B2B experience",
+        nice: 'Ability to work independently',
+        nice1: 'Openness to feedback, edits, and revisions.',
+        nice2: 'Ability to comfortably switch between various assignments',
+        nice3: 'Capacity to create copy within tight deadlines while maintaining high-quality standards',
+        nice4: 'A very organized, detail-oriented approach',
+        nice5: 'Familiarity with multiple AI tools for use in assisting in the research and writing process',
+        more: "Deliver high-quality writing for various types of content including, case studies, blogs, landing pages, press releases, white papers, and video scripts, as well as social media posts and support material",
+        more01: "Turn complex technical concepts into compelling and engaging stories",
+        more02: "Optimizing content for search engines and lead generation.",
+        more03: 'Tailor content for specific audiences at various stages in the customer journey and sales funnel',
+        more04: 'Create persuasive and engaging copy for online social posts, advertising ads, banners, and campaigns relevant to our target audiences',
+        more05: 'Implement brand voice and tone in all channels to maintain a coherent and consistent brand identity',
+        more06: 'Continuously optimize and develop ways to improve content performance',
+        more07: 'Work closely with the Ceragon creative studio to ensure that content translates into innovative, persuasive, and visually effective final assets',
+        more08: 'Collaborate with many stakeholders across the Marketing team and greater organization - including salespeople, product and marketing managers',
+      },
+      type: "Full time/On site",
+    },
+    {
+      title: "Senior Auditor",
+      location: "Bucharest, Romania",
+      description:"\nFor our client, one of the top ten  financial consultancy firms, we are looking for a Senior Auditor in Bucharest. \nThe main responsibilities of the job include leading audit engagements, oversee audit teams, and ensure compliance with professional standards.\nThere will be also full responsibilities for planning audits, reviewing the work of junior auditors, and delivering reliable results to management.\n Please be aware that some traveling may be involved.",
+      require: {
+        one: "Bachelor’s degree in accounting or related field",
+        two: "Professional certification (ASPAAS, CAFR, ACCA, etc.) preferred",
+        three: "Proven experience in auditing roles",
+        four: 'Strong analytical and problem-solving skills',
+        five: 'Detailed - oriented',
+        six: 'Ability to communicate effectively with clients',
+        seven: 'Focus on continuous improvement',
+        more: "Participate in lcient meetings and presentation",
+        more01: "Assist in the preparation of audit planning documentation.",
+        more02: "Communicate the audit plan, responsibilities, and objectives to audit assistants.",
+        more03: 'Lead the audit team by assigning tasks, providing instructions, coaching, evaluating, motivating, etc.',
+        more04: 'Conduct engagement administration reviews to ensure audits are conducted properly and audit reports are presented on time.',
+        more05: 'Collaborate with managers to deliver reliable outputs that are ready for manager or partner review.',
+        more06: 'Ensure the audit team adheres to professional quality standards under your supervision.',
+        more07: 'Oversee the timely completion of assigned engagements, maintaining continuous communication with the client, manager, and audit team.',
+        more08: 'Identify client or potential client needs to support the delivery of additional services by our firm.',
+        more09: 'Build strong working relationships with clients to meet engagement goals and assess their needs.',
+      },
+      beneficii1: 'There is an interesting financial pakage, as well as benefits plan associated with this job.',
+      type: "Full time/On site",
+    },
+    {
+      title: "Agent Vânzări HORECA",
+      location: "Depinde de aria de acoperire, posibil implicare în mai multe zone geografice",
+      description:"\nAgentul de vânzări HORECA este responsabil pentru promovarea și vânzarea produselor companiei către clienții din sectorul HORECA (Hoteluri, Restaurante, Catering). \nAcesta dezvoltă relații de lungă durată cu clienții, asigură suport în vânzări și contribuie la creșterea cifrei de afaceri în segmentul HORECA.\nAcest post este esențial pentru dezvoltarea afacerii în sectorul HORECA, necesitând o persoană dinamică, organizată și motivată să aducă valoare adăugată companiei și clienților săi.",
+      require: {
+        one: "Experiență anterioară în vânzări, preferabil în sectorul HORECA.",
+        two: "Capacitate excelentă de comunicare și negociere.",
+        three: "Abilități dovedite în atingerea și depășirea obiectivelor de vânzări.",
+        four: 'Cunoștințe solide despre piața HORECA și tendințele curente.',
+        five: 'Disponibilitate pentru deplasări frecvente.',
+        six: 'Categoria B, obligatoriu.',
+        seven: 'Studii medii finalizate.',
+        more: "Identificarea și atragerea de noi clienți în segmentul HORECA.",
+        more01: "Menținerea și consolidarea relațiilor cu clienții existenți.",
+        more02: "Negocierea prețurilor, termenelor de plată și condițiilor de livrare.",
+        more03: 'Încheierea și gestionarea contractelor comerciale.',
+        more04: 'Prezentarea gamelor de produse și consilierea clienților în alegerea soluțiilor optime.',
+        more05: 'Realizarea de prezentări și degustări pentru clienții din sectorul HORECA.',
+        more06: 'Colectarea și analiza informațiilor de piață, a nevoilor și a tendințelor din industria HORECA.',
+        more07: 'Monitorizarea concurenței și propunerea de strategii pentru creșterea competitivității.',
+        more08: 'Gestionarea comenzilor clienților și asigurarea respectării termenelor de livrare.',
+        more09: 'Urmărirea feedback-ului post-vânzare și soluționarea eventualelor probleme.',
+        more10: 'Realizarea targeturilor lunare și anuale stabilite de companie.',
+        more11: 'Elaborarea rapoartelor periodice de activitate și vânzări.',
+      },
+      musthave1: 'Persoană orientată spre client și soluții.',
+      musthave2: 'Capacitate de a construi și menține relații pe termen lung.',
+      musthave3: 'Spirit de inițiativă și proactivitate.',
+      musthave4: 'Flexibilitate și adaptabilitate la schimbările din piață.',
+      beneficii1: 'Pachet salarial competitiv, cu bonusuri de performanță.',
+      beneficii2: 'Mașină de serviciu, telefon mobil, laptop.',
+      beneficii3: 'Oportunități de dezvoltare profesională în cadrul companiei.',
+      type: "Full time/On site",
     },
     {
       title: "Payroll Specialist",

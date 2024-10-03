@@ -210,6 +210,15 @@ function Blog() {
                   <a href="/blog/member-professional-women-network">HHA proud member of Professional Women Network</a>
                 </h2>
               </div>
+              <div className="post-entry-1 pt-5">
+                <a href="/blog/accessability-expo">
+                  <img src="assets/img/expo.jpeg" alt="" className="img-fluid" />
+                </a>
+                <div className="post-meta"></div>
+                <h2>
+                  <a href="/blog/accessability-expo">AccessABILITY EXPO</a>
+                </h2>
+              </div>
             </div>
 
             <div className="col-lg-8">
