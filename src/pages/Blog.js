@@ -192,7 +192,7 @@ function Blog() {
                   companies, and stakeholders.
                 </p>
               </div>
-              <div className="post-entry-1 lg">
+              <div className="post-entry-1 lg" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                 <a href="/blog/ramona-ungureanu">
                   <img src="assets/img/ramona.jpeg" alt="" className="img-fluid" />
                 </a>
@@ -201,7 +201,7 @@ function Blog() {
                   <a href="/blog/ramona-ungureanu">Presenting Ramona Ungureanu</a>
                 </h2>
               </div>
-              <div className="post-entry-1 pt-5">
+              <div className="post-entry-1 pt-5" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                 <a href="/blog/member-professional-women-network">
                   <img src="assets/img/events/pwn/pwn5.jpeg" alt="" className="img-fluid" />
                 </a>
@@ -210,7 +210,7 @@ function Blog() {
                   <a href="/blog/member-professional-women-network">HHA proud member of Professional Women Network</a>
                 </h2>
               </div>
-              <div className="post-entry-1 pt-5">
+              <div className="post-entry-1 pt-5" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                 <a href="/blog/accessability-expo">
                   <img src="assets/img/expo.jpeg" alt="" className="img-fluid" />
                 </a>
@@ -224,7 +224,7 @@ function Blog() {
             <div className="col-lg-8">
               <div className="row g-5">
                 <div className="col-lg-6 border-start custom-border">
-                  <div className="post-entry-1">
+                  <div className="post-entry-1" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <a href="/blog/NRCC">
                       <img
                         src="assets/img/nrcc.jpeg"
@@ -254,7 +254,7 @@ function Blog() {
                       </a>
                     </h2>
                   </div>
-                  <div className="post-entry-1">
+                  <div className="post-entry-1" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <a href="/blog/DWNT">
                       <img
                         src="assets/img/dwnt.jpeg"
@@ -269,7 +269,7 @@ function Blog() {
                       </a>
                     </h2>
                   </div>
-                  <div className="post-entry-1">
+                  <div className="post-entry-1" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <a href="/blog/womenrise">
                       <img
                         src="assets/img/wr2.jpeg"
@@ -284,7 +284,7 @@ function Blog() {
                       </a>
                     </h2>
                   </div>
-                  <div className="post-entry-1">
+                  <div className="post-entry-1" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <a href="/blog/networking-breakfast">
                       <img
                         src="assets/img/network.jpg"
@@ -299,7 +299,7 @@ function Blog() {
                       </a>
                     </h2>
                   </div>
-                  <div className="post-entry-1">
+                  <div className="post-entry-1" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <a href="/blog/valentina-calin">
                       <img
                         src="assets/img/valentina.jpeg"
@@ -325,7 +325,7 @@ function Blog() {
                   </div> 
                 </div>
                 <div className="col-lg-6 border-start custom-border">
-                  <div className="post-entry-1">
+                  <div className="post-entry-1" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <a href="/blog/professional-women-network">
                       <img src="assets/img/pwn.jpeg" alt="" className="img-fluid" />
                     </a>
@@ -336,7 +336,7 @@ function Blog() {
                       </a>
                     </h2>
                   </div>
-                  <div className="post-entry-1">
+                  <div className="post-entry-1" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <a href="/blog/advantage-austria">
                       <img
                         src="assets/img/austria.jpeg"
@@ -349,7 +349,7 @@ function Blog() {
                       <a href="/blog/advantage-austria">Advantage Austria</a>
                     </h2>
                   </div>
-                  <div className="post-entry-1">
+                  <div className="post-entry-1" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <a href="/blog-RDCC">
                       <img
                         src="assets/img/diversity.jpeg"
@@ -364,7 +364,7 @@ function Blog() {
                       </a>
                     </h2>
                   </div>
-                  <div className="post-entry-1 lg">
+                  <div className="post-entry-1 lg" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <a href="/blog/robert-negru">
                       <img
                         src="assets/img/robert-present.jpeg"
@@ -377,7 +377,7 @@ function Blog() {
                       <a href="/blog/robert-negru">Presenting Robert Negru</a>
                     </h2>
                   </div>
-                  <div className="post-entry-1 ">
+                  <div className="post-entry-1 " style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <a href="/blog/a_best-ac_texas">
                       <img
                         src="assets/img/best.jpg"
@@ -390,7 +390,7 @@ function Blog() {
                       <a href="/blog/a_best-ac_texas">Launching of Strategic Partnership between<br></br>Centrul de Limbi Straine A_BEST & <br></br>AC Language School Texas, USA</a>
                     </h2>
                   </div>
-                  <div className="post-entry-1 ">
+                  <div className="post-entry-1 " style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <a href="/blog/IMD-international-london">
                       <img
                         src="assets/img/londra.jpeg"
@@ -401,6 +401,20 @@ function Blog() {
                     <div className="post-meta"></div>
                     <h2>
                       <a href="/blog/IMD-international-london">Annual General Meeting <br/>IMD International London</a>
+                    </h2>
+                  </div>
+                  <div className="post-entry-1 pt-5" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                    <a href="/blog/alexandru-dragomir">
+                      <img
+                        src="assets/img/alexdragomir.jpg"
+                        alt=""
+                        className="img-fluid"
+                        style={{height: '30vh'}}
+                      />
+                    </a>
+                    <div className="post-meta"></div>
+                    <h2>
+                      <a href="/blog/alexandru-dragomir">Presenting Alexandru Dragomir</a>
                     </h2>
                   </div>
                 </div>

@@ -36,13 +36,6 @@ const Event19 = () => {
               </div>
 
             </div>
-            <div className="container">
-                <div className="row justify-content-center">
-                    <div className="col-12 col-md-12 mb-4 d-flex justify-content-center">
-                        <img src="assets/img/alexdragomir.jpg" alt="Expo 1" style={{ height: "25vh" }} />
-                    </div>
-                </div>
-                </div>
           </div>
       <Footer />
     </section>
