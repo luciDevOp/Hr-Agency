@@ -779,6 +779,31 @@ Topics presented included:<br></br>
           </div>
 
         </div>
+        <div className="row pt-5 justify-content-center align-items-center">
+        <div className="col-lg-12">
+            <div className="text-center text-md-right">
+              <h3 className="pt-5">
+              Participare Angajatori de Top by Hipo</h3>
+              <p>25-26 Octombrie</p>
+            </div>
+          </div>
+          <div className="col-md-6 py-4">
+            <img
+              // style={{marginTop: "120px"}}
+              src="assets/img/hipo1.jpeg"
+              alt=""
+              className="img-fluid mx-auto d-block"
+            />
+          </div>
+          <div className="col-md-6 py-4">
+            <img 
+              style={{height: "70vh"}}
+              src="assets/img/hipo2.jpeg"
+              alt=""
+              className="img-fluid mx-auto d-block"
+            />
+          </div>          
+        </div>
         <div className="row pt-5">
         <div className="col-lg-12 py-5">
             <div className="text-center text-md-right">
@@ -812,9 +837,6 @@ Topics presented included:<br></br>
               className="img-fluid mx-auto d-block"
             />
           </div>
-          <div className="row">
-          </div>
-          
         </div>
       </div>
       <MyPDFViewer />
