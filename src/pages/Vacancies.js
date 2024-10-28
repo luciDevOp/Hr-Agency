@@ -752,6 +752,7 @@ function Vacancies() {
     {
       title: "Key Account Manager",
       location: "Bucharest, Romania",
+      completed: true,
       description:
         "\nKey Account Manager-ul va raporta CEO/ Deputy CEO, se va ocupa de relatia cu clientii / consumatorii finali de energie electrica, va administra un portofoliu de clienti finali si va dezvolta acest portofoliu.",
         require: {
@@ -861,6 +862,7 @@ function Vacancies() {
     },
     {
       title: "Digital Marketing Manager",
+      completed: true,
       location: "Bucharest, Romania",
       description:"\nOur client is looking for a person willing to join our team, with special skills in the field of digital marketing, branding & communication in Social Media. ",
       require: {
@@ -1104,6 +1106,7 @@ function Vacancies() {
     {
       title: "Solutions Architect - Capital Markets",
       location: "Fully remote",
+      completed:true,
       type: "Full time, contractors welcome",
       description: "\nOur client is an international network of developers building hybrid smart contracts that combine on-chain code with an extensive collection of secure off-chain services. \nThe Solution Architect - Capital Markets is a strategic role responsible for driving the adoption of our client’s products within the capital markets industry. This role entails collaborating with Sales and Marketing teams to promote our client’s technology, working closely with major institutions to gather requirements and deliver innovative solutions, and contributing significantly to the development of our client’s capital markets product strategy.",
       require: {
@@ -1274,6 +1277,7 @@ function Vacancies() {
     },
     {
       title: "Estimator Preturi",
+      completed: true,
       location: "Craiova, Romania On site sau Remote Bucuresti",
       description:"\nEstimatorul Preturi (Senior Estimator) este responsabil pentru evaluarea si calcularea costurilor asociate cu proiectele de constructii.\n Acest rol crucial implica analiza detaliata a planurilor de constructie, a specificatiilor tehnice si a altor documente relevante pentru a estima costurile materialelor, manoperei si echipamentelor necesare pentru finalizarea proiectului.",
       require: {
@@ -1612,6 +1616,46 @@ function Vacancies() {
       beneficii3: 'Professional environment in our office situated in a central area.',
       type: "Full time/On site",
     },
+    {
+      title: "Key Account Manager",
+      location: "Bucharest, Romania",
+      require: {
+        one: "Experiență relevantă (min. 5 ani) într-o poziție similară în sectorul bunurilor de larg consum (în special carne sau preparate din carne) in Modern Trade (Kaufland, Lidl, Carrefour, Selgros, Metro, Profi, Penny, Auchan etc.)",
+        two: "Studii superioare (economie, finanțe, comerț, marketing, industria alimentară / inginerie, matematică)",
+        three: "Cunoștințe de limbi străine",
+        four: 'Engleză - nivel avansat;',
+        five: 'Germană - nivel avansat (avantaj). ',
+        six: 'Cunoștințe avansate de Microsoft Word, Excel, Outlook, sistem ERP.',
+        seven: 'Abilități de adaptare la specificul organizației,  comunicare, sociale și de negociere;',
+        eight: 'Spirit de inițiativă, perseverent, analitic, cu accent pe rezultate.',
+        more: "Organizează, coordonează și verifică funcționarea sistemelor de vânzare, respectiv de promovare a produselor comercializate către clienții atribuiți.",
+        more01: "Elaborează planul de vânzări și profit și monitorizează realizarea acestuia pentru clienții atribuiți postului, apoi împreună cu Customer Relationship Manager și Marketing Manager elaborează planul de vânzări și profit, consolidat pe companie.",
+        more02: "Menține relațiile cu clienții din portofoliu (Modern Trade), recrutează noi clienți, evaluează anual portofoliul de clienți din punct de vedere al profitabilității și adecvării la modelul de business al companiei. ",
+        more03: 'Identifică direcțiile de dezvoltare și propune promovarea de noi produse/soluții noi.',
+        more04: 'Negocierea și încheierea contractelor comerciale asigurând buna derulare a acestora și asigurarea vânzării optime a stocurilor din punct de vedere al profitului și al satisfacției clienților.',
+        more05: 'Colaborează cu ceilalți manageri din cadrul companiei în vederea atingerii obiectivelor.',
+        more06: 'Conduce și organizează activitatea personalului din subordine.',
+      },
+      type: "Full time/Hybrid",
+    },
+    {
+      title: "Medic",
+      location: "Bucharest, Romania",
+      tipContract: 'Full Time angajat, Part Time sau colaborator',
+      description:"\nIn cateva cuvinte, suntem clinica de top din Romania, cu specializare in implantul parului la barbati si femei, implant de sprancene si implant de barba.\nIn urma tragediei de la Club Colectiv, Clinica s-a specializat si in implantul de par pe grefe de piele, fiind singura Clinica din lume care efectueaza astfel de interventii.",
+      require: {
+        one: "⁠Chirurgie plastica / dermatologie / specializari chirurgicale",
+        two: "Persoana responsabila, prompta in indeplinirea sarcinilor",
+        three: "Persoana orientata spre nevoile pacientului",
+        four: 'Persoana rabdatoare, organizata si capabila de munca in echipa',
+        five: 'Abilitati bune de comunicare, discretie si seriozitate',
+        more: "Consultaţii de chirurgie plastică generală, dermatologie",
+        more01: "Interventii de chirurgie plastica, reconstructie capilara",
+      },
+      beneficii1: 'Salariu oferit intre 3000 si 5000 eur/luna',
+      type: "Full time/On site",
+    },
+    
   ];
   const filteredJobs = jobs.filter((job) =>
     filter === "completed" ? job.completed : !job.completed

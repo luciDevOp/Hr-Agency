@@ -149,6 +149,36 @@ const Team = () => {
               </div>
             </div>
           </div>
+          
+        </div>
+        <div className="row">
+          <div
+            className="col-lg-6 mt-4"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          >
+            <div className="member d-flex align-items-start">
+              <div className="pic">
+                <img
+                  src="assets/img/alexdragomir.jpg"
+                  className="img-fluid"
+                  alt="Alexandru Dragomir – Data Wrangler Head Hunting Agency"
+                />
+              </div>
+              <div className="member-info">
+                <h4>Alexandru Dragomir</h4>
+                <span>Data Wrangler</span>
+                <p>Behind every good business there is a reliable database administrator</p>
+                <div className="social">
+                  <a href="https://www.linkedin.com/in/alexandru-dragomir-88b041ab/">
+                    {" "}
+                    <i className="ri-linkedin-box-fill"></i>{" "}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
         </div>
       </div>
     </section>
