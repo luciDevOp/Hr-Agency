@@ -97,6 +97,23 @@ const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
               {jobDetails.require && jobDetails.require.fourteen && (
                 <li>{jobDetails.require.fourteen}</li>
               )}
+              {jobDetails.require && jobDetails.require.fifteen && (
+                <li>{jobDetails.require.fifteen}</li>
+              )}
+              {jobDetails.require && jobDetails.require.sixteen && (
+                <li>{jobDetails.require.sixteen}</li>
+              )}
+              {jobDetails.require && jobDetails.require.seventeen && (
+                <li>{jobDetails.require.seventeen}</li>
+              )}
+              {jobDetails.require && jobDetails.require.eighteen && (
+                <li>{jobDetails.require.eighteen}</li>
+              )}
+              {jobDetails.require && jobDetails.require.nineteen && (
+                <li>{jobDetails.require.nineteen}</li>
+              )}
+
+              
             </ul>
             {jobDetails.require && jobDetails.require.nice && (
                 <p className="job-title">Nice to have:</p>
@@ -215,6 +232,15 @@ const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
               {jobDetails.require && jobDetails.require.more4 && (
                 <li>{jobDetails.require.more4}</li>
               )}
+              {jobDetails.require && jobDetails.require.more41 && (
+                <li>{jobDetails.require.more41}</li>
+              )}
+              {jobDetails.require && jobDetails.require.more42 && (
+                <li>{jobDetails.require.more42}</li>
+              )}
+              {jobDetails.require && jobDetails.require.more43 && (
+                <li>{jobDetails.require.more43}</li>
+              )}
             </ul>
             {jobDetails.require && jobDetails.require.more && (
               <p>{jobDetails.secondTitle4}</p>
@@ -281,6 +307,9 @@ const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
 
               {jobDetails.salariu && (
                 <p className="job-title">Salary: {jobDetails.salariu}</p>
+              )}
+              {jobDetails.disclaimer && (
+                <p className="job-title">Disclaimer: {jobDetails.disclaimer}</p>
               )}
               
 
@@ -537,6 +566,7 @@ function Vacancies() {
     {
       title: "Social Worker/Community Worker",
       location: "Bucharest, Romania",
+      completed: true,
       description:
         "\nCommunity Based Program for Blind children and young people",
       require: {
@@ -1058,6 +1088,7 @@ function Vacancies() {
     },
     {
       title: "Corporate Commercial Litigation Lawyer",
+      completed: true,
       location: "Bucharest, Romania",
       description:"\nOur client  is a law firm based in Bucharest, Romania, committed to delivering high-quality legal solutions tailored to meet their clients' needs both nationally and internationally.\nThis is a full-time on-site role for a Corporate Commercial Litigation Lawyer.\nThe Lawyer will be responsible for handling a variety of legal tasks and providing legal advice to clients.",
       require: {
@@ -1239,6 +1270,7 @@ function Vacancies() {
     },
     {
       title: "Senior Generic Recruiter",
+      completed: true,
       location: "Bucharest, Romania",
       description:"\nGeneric Recruiter for an international Recruitment company",
       require: {
@@ -1525,6 +1557,7 @@ function Vacancies() {
     },
     {
       title: "Senior Auditor",
+      completed: true,
       location: "Bucharest, Romania",
       description:"\nFor our client, one of the top ten  financial consultancy firms, we are looking for a Senior Auditor in Bucharest. \nThe main responsibilities of the job include leading audit engagements, oversee audit teams, and ensure compliance with professional standards.\nThere will be also full responsibilities for planning audits, reviewing the work of junior auditors, and delivering reliable results to management.\n Please be aware that some traveling may be involved.",
       require: {
@@ -1551,6 +1584,7 @@ function Vacancies() {
     },
     {
       title: "Agent Vânzări HORECA",
+      completed: true,
       location: "Depinde de aria de acoperire, posibil implicare în mai multe zone geografice",
       description:"\nAgentul de vânzări HORECA este responsabil pentru promovarea și vânzarea produselor companiei către clienții din sectorul HORECA (Hoteluri, Restaurante, Catering). \nAcesta dezvoltă relații de lungă durată cu clienții, asigură suport în vânzări și contribuie la creșterea cifrei de afaceri în segmentul HORECA.\nAcest post este esențial pentru dezvoltarea afacerii în sectorul HORECA, necesitând o persoană dinamică, organizată și motivată să aducă valoare adăugată companiei și clienților săi.",
       require: {
@@ -1655,6 +1689,74 @@ function Vacancies() {
       beneficii1: 'Salariu oferit intre 3000 si 5000 eur/luna',
       type: "Full time/On site",
     },
+    {
+      title: "Public Procurement Lawyer",
+      location: "Bucharest, Romania",
+      require: {
+        one: "2-3 years experience as lawyer",
+        two: 'Law school degree',
+        three: "Proven experience in concessions",
+        four: 'Results oriented with pragmatic approach to problem solving',
+        five: 'Excellent communication and presentation skills',
+        six: "Proven experience in Public Procurement transactions, preferably in well known law firms",
+        seven: '2-3 years experience in dealing with Public Procurement matters',
+        eight: 'Capability to work, prioritize and make decisions',
+        nine: 'Excellent English and professional legal writing skills',
+      },
+      beneficii1: 'Growing opportunities in a leading law firm',
+      beneficii2: 'Competitive reward system',
+      type: "Full time/On site",
+    },
+    {
+      title: "Talent Acquisition Sourcing Partner",
+      location: "Globally Remote",
+      description: '\nOn behalf of our client, a well known College in USA, we are seeking for a  Talent Acquisition Sourcing Partner. \nThe Talent Acquisition Sourcing Partner plays a critical role in the day-to-day candidate sourcing activities within the Talent Acquisition team. \nThis role is responsible for identifying, attracting and nurturing candidates to fill current or future vacancies.  A key element of this role is the ability to attract highly-skilled and best-fit candidates by sourcing through multiple recruiting channels. \nThis position requires a self-starter who is comfortable talking to and engaging with people. The ability to think critically and work independently is essential for success in this role.',
+      require: {
+        one: "High School Diploma or GED (required)",
+        two: 'Experience using various applicant tracking systems, sourcing software, and human resources information systems (preferred)',
+        three: "Minimum of three (3) years experience as a talent sourcing, recruiter or similar role",
+        four: 'Corporate, sales, skilled trade, healthcare, and/or higher education recruiting experience',
+        five: 'Project management experience',
+        six: "Possess excellent listening, interpersonal, sales, and influencing skills, with the ability to present ideas clearly and compellingly, both verbally and in writing",
+        seven: "Actively assist with candidate's needs and foster long-term relationships with stakeholders.",
+        eight: 'Ability to use good judgment, problem-solving, and decision-making skills.',
+        nine: 'Understand the implications of new information for both current and future problem-solving and decision-making.',
+        ten: 'Ability to use good judgment, problem-solving, and decision-making skills.',
+        eleven: 'High degree of integrity and confidentiality.',
+        twelve: 'Ability to maintain confidentiality and manage sensitive information with discretion.',
+        thirteen: 'Drive, and be accountable for, results in a fast-paced environment.',
+        fourteen: 'Strong attention to detail with the ability to work in a fast-paced environment.',
+        fifteen: 'Basic to intermediate level proficiency with productivity software (MS Office), ATS (iCIMS), social media platforms (Indeed, Instagram, Threads, Twitter, LinkedIn, etc.), and other enterprise-level software (Adobe DC, SharePoint, etc.).',
+        sixteen: 'Project coordination, data reporting, and analytics expertise',
+        seventeen: 'Ability to work independently; adjust to changes, solve problems, manage work schedule, and stay on track without direct, continuous supervision.',
+        eighteen: 'Demonstrate and utilize active listening, inductive reasoning, information ordering, and category flexibility.',
+        nineteen: 'Ability to work in a fast-paced environment where deadlines are essential and multiple projects are worked simultaneously.',
+        more: 'Attract and identify candidates for current and future vacancies; ',
+        more01: 'Establish a qualified candidate pool for current or future vacancies;',
+        more02: 'Leverage multiple communication channels (email, phone, text, various groups, social media, etc.) to engage passive applicants;',
+        more03: 'Create and maintain job postings sourcing campaigns, employee referral campaigns, and internal/external candidate communication templates that are compelling and engaging that clearly define the role and company values for various recruitment and sourcing channels;',
+        more04: 'Create meaningful online events, hiring days ad recruiting campaigns for increasing visibility;',
+        more1: 'Develop and maintain strong working relationships with leaders, vendors, community organizations and other team members to create partnerships that yield successful recruiting outcomes, predictable results and credibility;',
+        more2: 'Select internal ambassadors and influencers;',
+        more3: 'Collaborate with stakeholders and participate in employer branding initiatives, recruiting events, and community/industry networking events;',
+        more4: 'Research industry and market trends, sourcing software, job boards, social media, industry events, and other networking opportunities to maximize lead generation;',
+        more41: 'Use of technology to maximize lead generation;',
+        more42: 'Provide recommendations or solutions based on data analysis;',
+        more43: 'Maintain the candidate database and ensure accurate documentation for sourcing activities;',
+        more5: 'Define and report on metrics (applicant flow, conversion rates, retention rates, time to fill, etc.);',
+        more6: 'Assist with recruiting processes including background checks and onboarding.',
+      },
+      disclaimer: 'Our client is an Equal Opportunity Employer and do not discriminate against applicants or employees due to race, color, religion, sex (including pregnancy, gender identity and sexual orientation), national origin, age, disability, genetic information or any other federal, state or local protected class.',
+      beneficii1: 'Growing opportunities in a leading law firm',
+      beneficii2: 'Competitive reward system',
+      secondTitle1: "Candidate Sourcing and Engagement",
+      secondTitle2: "Relationship Building",
+      secondTitle3: "Market Research, Trend Analysis and Database and Documentation Management",
+      secondTitle4: "Metrics, Reporting and Process Support",
+      type: "Full time/Remote",
+    },
+    
+    
     
   ];
   const filteredJobs = jobs.filter((job) =>
