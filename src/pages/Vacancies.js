@@ -1755,6 +1755,29 @@ function Vacancies() {
       secondTitle4: "Metrics, Reporting and Process Support",
       type: "Full time/Remote",
     },
+    {
+      title: "Manager Locatie Catering",
+      location: "Bucharest (Pipera), Romania",
+      description: '\nProgramul de lucru va fi 12/24, astfel incat sa aiba 2 weekend uri libere , adica Vineri, Sambata, Duminica. \nOra incepere program 4:30-5:00-17:00.',
+      require: {
+        one: "Experienta de lucru in HoReCa;",
+        two: 'Cunostinte PC : Excel, Word;',
+        three: "Lucru in echipa;",
+        four: 'Abilitatea de a coordona echipa;',
+        five: 'Abilitatea de a comunica cu spitalele;',
+      },
+      type: "Full time/On site",
+    },
+    {
+      title: "Operator Calculator",
+      location: "Bucharest (Pipera), Romania",
+      description: '\nProgramul de lucru va fi 12/24, astfel incat 2 zile lucreaza, 2 zile libere. \nOra incepere program 4:30-5:00-17:00.',
+      require: {
+        two: 'Cunostinte PC : Word, Excel;',
+        three: "Lucru in echipa;",
+      },
+      type: "Full time/On site",
+    },
     
     
     
