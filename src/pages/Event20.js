@@ -1,6 +1,5 @@
 import React from "react";
 import Footer from "../components/Footer";
-import PhotoAlbum from "react-photo-album";
 
 const EventsGallery = () => {
   return (
