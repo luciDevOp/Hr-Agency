@@ -2,11 +2,30 @@ import React from "react";
 import Footer from "../components/Footer";
 import PhotoAlbum from "react-photo-album";
 
+const EventsGallery = () => {
+  return (
+      <div className="container my-4">
+          <div className="row">
+          <div className="col-12 col-md-6 d-flex justify-content-center mb-3">
+                <img 
+                      src="assets/img/events/age1.jpg" 
+                      alt="Event 1" 
+                      className="img-fluid rounded"
+                  />
+              </div>
+              <div className="col-12 col-md-6 d-flex align-items-center mb-3">
+                  <img 
+                      src="assets/img/events/age2.jpg" 
+                      alt="Event 2" 
+                      className="img-fluid rounded"
+                  />
+              </div>
+          </div>
+      </div>
+  );
+};
 
-const photos = [
-    { src: "assets/img/events/age1.jpg", width: 2900, height: 2800 },
-    { src: "assets/img/events/age2.jpg", width: 1500, height: 700 },
-  ];
+
   const Hashtags = () => {
     const hashtags = [
       "ageinclusion",
@@ -107,9 +126,7 @@ const Event13 = () => {
               </div>
 
             </div>
-            <div className="container">
-                <PhotoAlbum layout="rows" photos={photos} spacing={10} padding={20} />
-            </div>
+            <EventsGallery />
           </div>
       <Footer />
     </section>

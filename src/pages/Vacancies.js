@@ -224,6 +224,9 @@ const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
               {jobDetails.require && jobDetails.require.more3 && (
                 <li>{jobDetails.require.more3}</li>
               )}
+              {jobDetails.require && jobDetails.require.more31 && (
+                <li>{jobDetails.require.more31}</li>
+              )}
             </ul>
             {jobDetails.require && jobDetails.require.more && (
               <p>{jobDetails.secondTitle3}</p>
@@ -265,6 +268,20 @@ const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
                 <li>{jobDetails.require.more001}</li>
               )}
             </ul>
+            {jobDetails.require && jobDetails.require.more && (
+              <p>{jobDetails.secondTitle5}</p>
+            )}
+            <ul>
+              {jobDetails.require && jobDetails.require.more51 && (
+                <li>{jobDetails.require.more51}</li>
+              )}
+              {jobDetails.require && jobDetails.require.more52 && (
+                <li>{jobDetails.require.more52}</li>
+              )}
+              {jobDetails.require && jobDetails.require.more53 && (
+                <li>{jobDetails.require.more53}</li>
+              )}
+            </ul>
             
               {jobDetails.musthave1 && (
                 <p className="job-title">Must have:</p>
@@ -302,6 +319,9 @@ const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
               )}
               {jobDetails.profile5 && (
                 <li>{jobDetails.profile5}</li>
+              )}
+              {jobDetails.profile6 && (
+                <li>{jobDetails.profile6}</li>
               )}
               </ul>
 
@@ -1783,6 +1803,202 @@ function Vacancies() {
       },
       type: "Full time/On site",
     },
+    {
+      title: "SAP Accountant",
+      location: "Bucharest, Romania",
+      require: {
+        one: "Good knowledge in Accounting;",
+        two: "Good Knowledge in accounting software - SAP",
+        three: "Must be proficient with MS Office, advance skills in MS Excel are a plus",
+        four: 'Exceptional attention to details and can do attitude, proactive in communication.',
+        five: 'Working well under pressure with minimum supervision.',
+        six: 'Willingness to learn, explore and suggest on how to improve the process',
+        seven: 'Experience working in SAP',
+        eight: 'Education: BS Accountancy graduate /  Economics',
+        nine: 'Experience: 3 to 5 years accounting experience, preferably in construction',
+        ten: 'Fluent English speaker, Italian language is a plus',
+        more: "Oversee and manage the general accounting functions, including, but not limited to: accounts payable, accounts receivable, general ledger, and taxes.",
+        more01: "Managing book keeping; office inventory, petty cash and ensure proper closing on a daily basis.",
+        more02: "Assist with month end closing and financial reports preparation.",
+        more03: 'Prepare, review, and analyze financial statements to ensure accuracy and completeness.',
+        more04: 'Prepare VAT return and ensure that VAT is filed timely;',
+        more05: 'Ensure compliance with the Romanian law.',
+        more06: 'Issue invoices to customers.',
+        more07: 'Reconcile bank transactions.',
+        more08: 'Other tasks as assigned.',
+      },
+      type: "Full time/On site",
+    },
+    {
+      title: "Executive Director",
+      location: "Bucharest, Romania",
+      description: '\nOur company is dedicated to fostering an inclusive business environment that supports diversity in all its forms. Our mission is to empower diverse businesses, promote equitable economic growth, and advocate for policies that benefit our members.',
+      require: {
+        one: "Bachelor's degree in Business Administration, Public Administration, or a related field. Advanced degree preferred.",
+        two: 'Minimum of 5 years of experience in a leadership role, preferably within a nonprofit, chamber of commerce, or similar organization.',
+        three: "Proven experience in strategic planning, organizational management, and advocacy.",
+        four: 'Strong understanding of diversity, equity, and inclusion principles and practices.',
+        five: 'Excellent leadership and interpersonal skills with the ability to inspire and motivate others.',
+        six: "Effective communication skills, both written and verbal, with the ability to engage diverse audiences.",
+        seven: "Strong financial acumen and experience in budgeting and financial management.",
+        eight: 'Demonstrated ability to build and maintain strategic partnerships.',
+        nine: 'Proficiency in Microsoft Office Suite and familiarity with CRM systems.',
+        ten: 'Passionate about diversity, equity, and inclusion.',
+        eleven: 'Innovative and strategic thinker.',
+        twelve: 'Collaborative and team-oriented.',
+        thirteen: 'Highly organized and detail-oriented.',
+        fourteen: 'Resilient and adaptable to change.',
+        more: "Develop and implement the Chamber's strategic plan in alignment with its mission and goals",
+        more01: 'Identify opportunities for growth and expansion of Chamber initiatives.',
+        more02: 'Foster strong relationships with members, partners, and stakeholders.',
+        more1: 'Oversee the daily operations of the Chamber, ensuring efficiency and effectiveness.',
+        more2: 'Manage the Chamber’s budget, financial planning, and reporting.',
+        more3: 'Supervise and mentor the junior assistant, providing guidance and development opportunities.',
+        more31: 'Delegate appropriate tasks to the junior assistant, including event planning, research, presentations, and administrative support.',
+        more4: 'Drive membership growth and retention through targeted outreach and engagement strategies.',
+        more41: 'Organize and lead events, workshops, and seminars that promote diversity and inclusion in business.',
+        more42: 'Serve as the primary spokesperson for the Chamber, representing it at public events, meetings, and in the media.',
+        more5: 'Advocate for policies and practices that support diverse businesses and equitable economic opportunities.',
+        more6: 'Collaborate with government agencies, industry groups, and other organizations to influence policy and legislative changes.',
+        more7: "Stay informed on issues affecting diverse businesses and communicate relevant information to members.",
+        more51: 'Identify and pursue funding opportunities, including grants, sponsorships, and partnerships.',
+        more52: 'Develop and maintain relationships with potential and existing donors and sponsors.',
+        more53: 'Ensure sustainable financial support for the Chamber’s programs and initiatives.',
+      },
+      secondTitle1: "Strategic Leadership",
+      secondTitle2: "Operational Management",
+      secondTitle3: "Membership and Community Engagement",
+      secondTitle4: "Advocacy and Policy Development",
+      secondTitle5: 'Fundraising and Resource Development',
+      type: "Full time/On site",
+    },
+    {
+      title: "Program and Development Manager",
+      location: "Bucharest, Romania",
+      require: {
+        one: "Experience in program management and fundraising.",
+        two: "Knowledge of diversity and inclusion best practices.",
+        three: "Strong project management skills.",
+        four: 'Excellent writing and communication skills.',
+        five: 'Ability to build and maintain relationships.',
+        six: 'Proficiency in Romanian and English.',
+        more: "Develop and manage diversity and inclusion programs.",
+        more01: "Coordinate events, workshops, and training sessions.",
+        more02: "Monitor and evaluate program effectiveness.",
+        more03: 'Lead fundraising initiatives and secure sponsorships.',
+        more04: 'Write grant proposals.',
+        more05: 'Build relationships with donors and partners.',
+      },
+      beneficii1: 'Competitive salary.',
+      beneficii2: '22 days of paid vacation leave per year and public holidays.',
+      beneficii3: 'Professional development opportunities.',
+      beneficii4: 'Participation at events',
+      beneficii5: 'Remote work options.',
+
+      type: "Full time/On site",
+    },
+    {
+      title: "Communications, Outreach, and Operations Manager",
+      location: "Bucharest, Romania",
+      require: {
+        one: "Experience in public relations, communications, or marketing.",
+        two: "Strong writing and editing skills.",
+        three: "Proficiency with digital communication tools.",
+        four: 'Experience in community outreach or engagement.',
+        five: 'Strong interpersonal and communication skills.',
+        six: 'Experience in office administration and financial management.',
+        seven: 'Strong organizational and analytical skills.',
+        eight: "Proficiency with office and financial software and tools.",
+        nine: "Proficiency in Romanian and English.",
+        more: "Develop and implement communication strategies.",
+        more01: "Manage media relations and social media presence.",
+        more02: "Create content for newsletters, press releases, and our website.",
+        more03: 'Engage with community members and stakeholders.',
+        more04: 'Organize outreach events and activities.',
+        more05: 'Manage office operations and administrative tasks.',
+        more06: 'Support staff with scheduling, correspondence, and office supplies.',
+        more07: 'Manage financial records and budgets.',
+        more08: 'Prepare financial reports and audits.',
+      },
+      beneficii1: 'Competitive salary.',
+      beneficii2: '22 days of paid vacation leave per year and public holidays.',
+      beneficii3: 'Professional development opportunities.',
+      beneficii4: 'Participation at events',
+      beneficii5: 'Remote work options.',
+
+      type: "Full time/On site",
+    },
+    {
+      title: "Junior Assistant",
+      location: "Bucharest, Romania",
+      require: {
+        one: "Strong organizational and multitasking abilities.",
+        two: "Good communication and interpersonal skills.",
+        three: "Proficiency with office software (e.g., Microsoft Office Suite).",
+        four: 'Attention to detail and accuracy.',
+        five: 'Previous administrative experience is a plus but not required.',
+        six: 'Proficiency in Romanian and English.',
+        more: "Assist with administrative tasks and office management.",
+        more01: "Support the Communications, Outreach, and Operations Manager with scheduling and correspondence.",
+        more02: "Help organize events, workshops, and meetings.",
+        more03: 'Maintain office supplies and inventory.',
+        more04: 'Perform data entry and basic record-keeping tasks.',
+      },
+      beneficii1: 'Competitive salary.',
+      beneficii2: '22 days of paid vacation leave per year and public holidays.',
+      beneficii3: 'Professional development opportunities.',
+      beneficii4: 'Participation at events',
+      beneficii5: 'Remote work options.',
+
+      type: "Part time/On site",
+    },
+    {
+      title: "Junior Assistant",
+      location: "Bucharest, Romania",
+      require: {
+        one: "Strong organizational and multitasking abilities.",
+        two: "Good communication and interpersonal skills.",
+        three: "Proficiency with office software (e.g., Microsoft Office Suite).",
+        four: 'Attention to detail and accuracy.',
+        five: 'Previous administrative experience is a plus but not required.',
+        six: 'Proficiency in Romanian and English.',
+        more: "Assist with administrative tasks and office management.",
+        more01: "Support the Communications, Outreach, and Operations Manager with scheduling and correspondence.",
+        more02: "Help organize events, workshops, and meetings.",
+        more03: 'Maintain office supplies and inventory.',
+        more04: 'Perform data entry and basic record-keeping tasks.',
+      },
+      beneficii1: 'Competitive salary.',
+      beneficii2: '22 days of paid vacation leave per year and public holidays.',
+      beneficii3: 'Professional development opportunities.',
+      beneficii4: 'Participation at events',
+      beneficii5: 'Remote work options.',
+
+      type: "Part time/On site",
+    },
+    {
+      title: "Office & Marketing Assistant - Entry level",
+      location: "Bucharest, Romania",
+      description: '\nLooking for motivated people who understand the concept of international standards of Diversity; Inclusion and Sustainability, customer service, office management, research, etc. \nWe need a junior person who is not afraid to take initiative, and who likes new challenges, has a sharp intellect and is open-minded!',
+      require: {
+        one: "Native Romanian speaker with very good level of English",
+        two: "Acts proactively and without much supervision, good organization skils",
+        three: "Good familiarity with basic office software (MS Office) and apps",
+        four: 'Strong communication skills',
+        more: "Event planning and management",
+        more01: "Research and presentations",
+        more02: "Administrative and office support",
+      },
+      profile1: 'Walks into a room and can’t leave without making a few friends',
+      profile2: 'Is thoughtful when interacting with online communities and building relationships',
+      profile3: 'Has the ability to prioritize and manage multiple projects simultaneously',
+      profile4: 'Is an effective contributor with the ability to work well with others in a global, team-oriented environment',
+      profile5: 'Has big-picture vision and the drive to make that vision a reality',
+      profile6: 'Is self-motivated with positive attitude',
+      type: "Full time/Hybrid",
+    },
+    
+    
     
     
     
