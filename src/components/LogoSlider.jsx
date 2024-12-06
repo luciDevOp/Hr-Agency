@@ -16,7 +16,7 @@ function LogoSlider() {
         <img alt="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0kP7Q-JEvvAvFz1VDYVRDBK0eTeGEJKqXbeBq140STg&s" />
         <img alt="logo" src="https://download.logo.wine/logo/Auchan/Auchan-Logo.wine.png" />
         <img alt="logo" src="https://autonet.az/web/img/new-logo-fb.png" />
-        <img alt="logo" src="https://imworld.ro/2016/wp-content/uploads/2016/08/Avangate-logo-04.png" />
+        <img alt="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8SdoXgCeHL7KcRAbQ_waz1EKuzb4KL8IdJQ&s" />
         <img alt="logo" src="https://logowik.com/content/uploads/images/axa5054.jpg" />
         <img alt="logo" src="https://storage.googleapis.com/mrfinance.appspot.com/wordpress/1/2020/03/banca-transilvania-logo.png" />
         <img alt="logo" src="https://1000logos.net/wp-content/uploads/2020/03/McLaren-Logo-2002.jpg" />
@@ -37,7 +37,7 @@ function LogoSlider() {
         <img alt="logo" src="https://assets-global.website-files.com/640b54881d62e1308fc494f8/652fdc252b28e26669365f82_BusinessLease-LOGO-Landscape.png" />
         <img alt="logo" src="https://www.corasupport.org/wp-content/uploads/2016/01/bristol-myers-squibb-logo-e1476302468899.jpg" />
         <img alt="logo" src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/092014/bwin.png?itok=zMognic0" />
-        <img alt="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cadbury.svg/1280px-Cadbury.svg.png" />
+        <img alt="logo" src="https://i.pinimg.com/736x/af/2c/dc/af2cdce0beb8270468c328785a95724a.jpg" />
         <img alt="logo" src="https://www.winmarkt.ro/en/wp-content/uploads/2016/04/logo07.jpg" />
         <img alt="logo" src="https://tukuz.com/wp-content/uploads/2020/10/chase-de-vere-logo-vector.png" />
         <img alt="logo" src="https://kommunikasjon.ntb.no/data/images/00041/b23989e5-64b6-4791-8bc7-f754a784a12f.jpg/social" />
@@ -55,7 +55,7 @@ function LogoSlider() {
         <img alt="logo" src="https://logowik.com/content/uploads/images/e-on1236.logowik.com.webp" />
         <img alt="logo" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Eti_logo.png" />
         <img alt="logo" src="https://logowik.com/content/uploads/images/eurofins-scientific1551.jpg" />
-        <img alt="logo" src="https://www.brandient.com/wp-content/uploads/2017/10/Europharm-rebranding-bt-Brandient-Logo-Design-1.jpg" />
+        <img alt="logo" src="https://i0.wp.com/europharm.ro/wp-content/uploads/2021/09/Europharm-Distributie-1200x545_c.jpg?fit=1200%2C545&ssl=1" />
         <img alt="logo" src="https://seekvectorlogo.com/wp-content/uploads/2022/01/eventim-international-vector-logo-2022-small.png" />
         <img alt="logo" src="https://media.licdn.com/dms/image/C4D0BAQHxvCxObWcKQA/company-logo_200_200/0/1631357028268/evialis_galicia_logo?e=2147483647&v=beta&t=EvscZJPNjPO9N_N0mFcB5dHWp9hO3dRY4zZZLtksRa0" />
         <img alt="logo" src="https://upload.wikimedia.org/wikipedia/commons/6/66/Fox_International_Channels_logo_20130122.png" />
@@ -101,10 +101,10 @@ function LogoSlider() {
         <img alt="logo" src="https://www.adstore.it/wp-content/uploads/2017/11/logo-motivi.jpg" />
         <img alt="logo" src="https://www.belli-france.com/wp-content/uploads/2017/07/logo-mr-bricolage.jpg" />
         <img alt="logo" src="https://logovectorseek.com/wp-content/uploads/2019/11/nidec-corporation-logo-vector.png" />
-        <img alt="logo" src="https://bsnl.ch/wp-content/uploads/2016/07/2.novartis-logo.jpg" />
+        <img alt="logo" src="https://logos-world.net/wp-content/uploads/2023/02/Novartis-Emblem.png" />
         <img alt="logo" src="https://cdn.worldvectorlogo.com/logos/ntn.svg" />
         <img alt="logo" src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/092010/snr.gif?itok=Bkaht-x5" />
-        <img alt="logo" src="https://content.nlinbusiness.com/app/uploads/sites/25/2022/08/NRCC-Logo-2-1024x369.png" />
+        <img alt="logo" src="https://www.nrcc.ro/assets/img/frontend/logo-fb.jpg" />
         <img alt="logo" src="https://logowik.com/content/uploads/images/pepsico4720.jpg" />
         <img alt="logo" src="https://images.philips.com/is/image/PhilipsConsumer/Philips_Wordmark-ALI-global?wid=700&$jpglarge$&fit=crop" />
         <img alt="logo" src="https://procaresoftware.com/wp-content/uploads/2020/05/blog-sub_new-logo-3550664.png" />
@@ -134,7 +134,7 @@ function LogoSlider() {
         <img alt="logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b4/TMF_Group.png" />
         <img alt="logo" src="https://logowik.com/content/uploads/images/trumpf8115.jpg" />
         <img alt="logo" src="https://upload.wikimedia.org/wikipedia/en/archive/b/b9/20130819104932%21TSB_logo_2013.svg" />
-        <img alt="logo" src="https://www.umeb.ro/image/max_0/motoare-electrice-asincrone-tip-asr-0_600-400.jpg" />
+        <img alt="logo" src="https://www.infoharta.ro/wp-content/uploads/2016/06/UMEB-Proiectare-fabricare-si-comercializare-motoare-electrice-si-grupuri-electrogene.jpg" />
         <img alt="logo" src="https://clcprojects.com/wp-content/uploads/2018/02/Unimasters.jpg" />
         <img alt="logo" src="https://seeklogo.com/images/T/TUV-logo-44EF751C05-seeklogo.com.png" />
         <img alt="logo" src="https://play-lh.googleusercontent.com/aSbXoxsHyN-Xb2gfiW4rQmI0rOyixjexha8YOdJsClDhUDl9LzsWplmuNyxeJqKaww" />

@@ -525,6 +525,7 @@ function Vacancies() {
     {
       title: "General Manager IFN",
       location: "Bucharest. Romania",
+      completed: true,
       require: {
         one: "represents the Company towards third parties, in accordance with the representation method specified in the Company's Articles of Association and in line with the current representation practices within the Company.",
         two: "ensures the leadership and management of the Company's activities to achieve the business objectives established in the Articles of Association and the goals set by the General Shareholders' Meeting for the respective financial year.",
@@ -1508,6 +1509,7 @@ function Vacancies() {
     },
     {
       title: "Community Manager - Clinica Dentară",
+      completed: true,
       location: "Bucuresti, Romania",
       tipContract: 'Colaborare PFA/SRL',
       description:"\nClinica stomatologică din București, cu o echipă de medici specialiști, caută un Community Manager pentru a gestiona și dezvolta rețelele sociale și campaniile de marketing digital.",
@@ -1710,6 +1712,7 @@ function Vacancies() {
     {
       title: "Talent Acquisition Sourcing Partner",
       location: "Globally Remote",
+      completed: true,
       description: '\nOn behalf of our client, a well known College in USA, we are seeking for a  Talent Acquisition Sourcing Partner. \nThe Talent Acquisition Sourcing Partner plays a critical role in the day-to-day candidate sourcing activities within the Talent Acquisition team. \nThis role is responsible for identifying, attracting and nurturing candidates to fill current or future vacancies.  A key element of this role is the ability to attract highly-skilled and best-fit candidates by sourcing through multiple recruiting channels. \nThis position requires a self-starter who is comfortable talking to and engaging with people. The ability to think critically and work independently is essential for success in this role.',
       require: {
         one: "High School Diploma or GED (required)",
@@ -1757,6 +1760,7 @@ function Vacancies() {
     },
     {
       title: "Manager Locatie Catering",
+      completed: true,
       location: "Bucharest (Pipera), Romania",
       description: '\nProgramul de lucru va fi 12/24, astfel incat sa aiba 2 weekend uri libere , adica Vineri, Sambata, Duminica. \nOra incepere program 4:30-5:00-17:00.',
       require: {
@@ -1770,6 +1774,7 @@ function Vacancies() {
     },
     {
       title: "Operator Calculator",
+      completed:true,
       location: "Bucharest (Pipera), Romania",
       description: '\nProgramul de lucru va fi 12/24, astfel incat 2 zile lucreaza, 2 zile libere. \nOra incepere program 4:30-5:00-17:00.',
       require: {

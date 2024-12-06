@@ -40,6 +40,30 @@ const Team = () => {
             </div>
           </div>
         </div>
+        <div className="row justify-content-md-center">
+          <div className="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="100">
+            <div className="member d-flex align-items-start">
+              <div className="pic">
+                <img
+                  src="assets/img/bogdan.jpg"
+                  className="img-fluid"
+                  alt="Bogdan Costinescu, Partner"
+                />
+              </div>
+              <div className="member-info">
+                <h4>Bogdan Costinescu</h4>
+                <span>Partner</span>
+                <p>Finding your talent is our business</p>
+                <div className="social">
+                  <a href="https://www.linkedin.com/in/bogdan-costinescu-00321085/">
+                    {" "}
+                    <i className="ri-linkedin-box-fill"></i>{" "}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="row">
           <div
             className="col-lg-6 mt-4"

@@ -219,6 +219,15 @@ function Blog() {
                   <a href="/blog/accessability-expo">AccessABILITY EXPO</a>
                 </h2>
               </div>
+              <div className="post-entry-1 pt-5" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                <a href="/blog/age-inclusive-workplace">
+                  <img src="assets/img/events/age.jpg" alt="" className="img-fluid" />
+                </a>
+                <div className="post-meta"></div>
+                <h2>
+                  <a href="/blog/age-inclusive-workplace"> Age Inclusive Workplace by Romanian Diversity Chamber of Commerce</a>
+                </h2>
+              </div>
             </div>
 
             <div className="col-lg-8">
@@ -810,6 +819,41 @@ Topics presented included:<br></br>
               <h3 className="pt-4">
               BRCC Summer Garden Party              </h3>
               <p>Honored to be part of such a wonderful project, Thank you, <a href='https://nineoclock.ro/'>Nine O'Clock</a></p>
+              <p></p>
+            </div>
+          </div>
+          <div className="col-lg-6 py-5">
+            <img
+              style={{maxWidth: "60%"}}
+              src="assets/img/garden3.jpeg"
+              alt=""
+              className="img-fluid mx-auto d-block"
+            />
+          </div>
+          <div className="col-lg-6 py-5">
+            <img 
+              style={{maxWidth: "60%"}}
+              src="assets/img/garden1.jpeg"
+              alt=""
+              className="img-fluid mx-auto d-block"
+            />
+          </div>
+          <div className="col-lg-12 pt-5">
+            <img
+              style={{maxWidth: "50%"}}
+              src="assets/img/garden2.jpeg"
+              alt=""
+              className="img-fluid mx-auto d-block"
+            />
+          </div>
+        </div>
+        <div className="row pt-5">
+        <div className="col-lg-12 py-5">
+            <div className="text-center text-md-right">
+              <h3 className="pt-4">
+              NRCC Night of SMEs</h3>
+              <p>
+𝐓𝐡𝐞 𝐍𝐢𝐠𝐡𝐭 𝐭𝐡𝐚𝐭 𝐂𝐨𝐧𝐧𝐞𝐜𝐭𝐬 𝐚𝐧𝐝 𝐂𝐞𝐥𝐞𝐛𝐫𝐚𝐭𝐞𝐬 𝐒𝐦𝐚𝐥𝐥 & 𝐌𝐞𝐝𝐢𝐮𝐦 𝐄𝐧𝐭𝐞𝐫𝐩𝐫𝐢𝐬𝐞𝐬—𝐁𝐞 𝐏𝐚𝐫𝐭 𝐨𝐟 𝐈𝐭.</p>
               <p></p>
             </div>
           </div>
