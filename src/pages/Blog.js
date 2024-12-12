@@ -857,26 +857,18 @@ Topics presented included:<br></br>
               <p></p>
             </div>
           </div>
-          <div className="col-lg-6 py-5">
+          <div className="col-lg-6 pb-5">
             <img
-              style={{maxWidth: "60%"}}
-              src="assets/img/garden3.jpeg"
+              style={{maxWidth: "70%"}}
+              src="assets/img/night1.jpeg"
               alt=""
               className="img-fluid mx-auto d-block"
             />
           </div>
-          <div className="col-lg-6 py-5">
+          <div className="col-12 col-md-6 pb-5 d-flex align-items-center mb-3">
             <img 
-              style={{maxWidth: "60%"}}
-              src="assets/img/garden1.jpeg"
-              alt=""
-              className="img-fluid mx-auto d-block"
-            />
-          </div>
-          <div className="col-lg-12 pt-5">
-            <img
-              style={{maxWidth: "50%"}}
-              src="assets/img/garden2.jpeg"
+              style={{maxWidth: "100%"}}
+              src="assets/img/night2.jpeg"
               alt=""
               className="img-fluid mx-auto d-block"
             />

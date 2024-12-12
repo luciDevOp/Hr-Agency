@@ -127,7 +127,7 @@ function Services() {
           >
             <div className="icon-box">
               <div className="icon">
-                <i class="bx bxs-paper-plane"></i>
+                <i className="bx bxs-paper-plane"></i>
               </div>
               <h2>
                 <a
@@ -170,7 +170,7 @@ function Services() {
             </div>
           </div>
           <div
-            className="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0"
+            className="col-xl-3 col-md-6 d-flex align-items-stretch my-4 mt-xl-0"
             data-aos="zoom-in"
             data-aos-delay="400"
           >
@@ -194,7 +194,7 @@ function Services() {
             </div>
           </div>
           <div
-            className="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0"
+            className="col-xl-3 col-md-6 d-flex align-items-stretch my-4 mt-xl-0"
             data-aos="zoom-in"
             data-aos-delay="400"
           >
@@ -218,7 +218,7 @@ function Services() {
             </div>
           </div>
           <div
-            className="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0"
+            className="col-xl-3 col-md-6 d-flex align-items-stretch my-4 mt-xl-0"
             data-aos="zoom-in"
             data-aos-delay="400"
           >
@@ -243,7 +243,7 @@ function Services() {
             </div>
           </div>
           <div
-            className="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0"
+            className="col-xl-3 col-md-6 d-flex align-items-stretch my-4 mt-xl-0"
             data-aos="zoom-in"
             data-aos-delay="400"
           >
@@ -266,6 +266,101 @@ function Services() {
                 responsible corporate citizenship.
               </p>
             </div>
+          </div>
+          <div
+            className="col-xl-3 col-md-6 d-flex align-items-stretch my-5 mt-xl-0"
+            data-aos="zoom-in"
+            data-aos-delay="400"
+          >
+            <div className="icon-box">
+              <div className="icon">
+                <i className="bx bxs-book-reader"></i>
+              </div>
+              <h4>
+                <a
+                  href="#remuneration"
+                  className="service-link"
+                  data-target="remuneration"
+                >
+                  Remuneration Studies
+                </a>
+              </h4>
+              <p>
+              HHA conducts compensation studies to provide managers with market-based insights on salaries and benefits, considering requirements, industry, and location.              </p>
+            </div>
+          </div>
+          <div
+            className="col-xl-3 col-md-6 d-flex align-items-stretch my-5 mt-xl-0"
+            data-aos="zoom-in"
+            data-aos-delay="400"
+          >
+            <div className="icon-box">
+              <div className="icon">
+              <img 
+                      src="assets/img/bpw.png" 
+                      alt="Best Places to Work" 
+                      className="bpw-img"
+                  />
+              </div>
+              <h4>
+                <a
+                  href="#bpw"
+                  className="service-link"
+                  data-target="bpw"
+                >
+                  Best Places to Work 
+                </a>
+              </h4>
+              <p>
+              We help organizations improve workplace culture by identifying strengths, addressing weaknesses, and offering guidance. Our global certification programs celebrate the Best Places to Work.              </p>
+            </div>
+          </div>
+          <div
+            className="col-xl-3 col-md-6 d-flex align-items-stretch my-5 mt-xl-0"
+            data-aos="zoom-in"
+            data-aos-delay="400"
+          >
+            <div className="icon-box">
+              <div className="icon">
+                <i className="bx bx-group"></i>
+              </div>
+              <h4>
+                <a
+                  href="#interview"
+                  className="service-link"
+                  data-target="interview"
+                >
+                  Stay Interviews
+                </a>
+              </h4>
+              <p>
+              A stay interview is a one-on-one meeting with a tenured, high-performing employee to understand what motivates them to stay.        
+              
+              </p>
+                  </div>
+          </div>
+          <div
+            className="col-xl-3 col-md-6 d-flex align-items-stretch my-5 mt-xl-0"
+            data-aos="zoom-in"
+            data-aos-delay="400"
+          >
+            <div className="icon-box">
+              <div className="icon">
+                <i className="bx bx-user-voice"></i>
+              </div>
+              <h4>
+                <a
+                  href="#exit"
+                  className="service-link"
+                  data-target="exit"
+                >
+                  Exit Interviews
+                </a>
+              </h4>
+              <p>
+              An exit interview is a brief conversation or survey with a departing employee, student, or member to understand their reasons for leaving.              
+              </p>
+                  </div>
           </div>
         </div>
       </div>
@@ -363,6 +458,38 @@ function Services() {
             us help you build a purpose-driven and socially responsible
             organization.
           </p>
+        </section>
+
+        <section id="remuneration" className="my-5 text-center hidden-left">
+          <h1 className="pb-5">Remuneration Studies</h1>
+          <p className="lead">
+          HHA conducts compensation studies that allow managers to have adequate information at the time of hiring regarding salaries, benefits in acordance with the median of the market related to requirements, industry, geographical area, etc.
+          </p>
+        </section>
+        <section id="bpw" className="my-5 text-center hidden-right">
+          <h1 className="pb-5">Best Places to Work</h1>
+          <p className="lead">
+          We help organizations transform the culture of their workplace by identifying strengths, uncovering weaknesses and providing advice and guidance to spark change and inspire people. We manage certification programs across Europe, LATAM, Africa, Middle East, Asia and America that are looking for remarkable organizations to celebrate as Best Places to Work.
+          </p>
+        </section>
+        <section id="interview" className="my-5 text-center hidden-left">
+          <h1 className="pb-5">Stay Interviews</h1>
+          <p className="lead">
+          A stay interview is a meeting used to uncover what parts of an employee’s job keeps them coming back every day. 
+
+It is often a one-on-one conversation conducted with a tenured, high-performing employee. 
+
+Contrary to popular belief, a stay interview isn’t a conversation where you attempt to convince a departing employee to stay. 
+
+Rather, it is a way to gather feedback about what an employee values in their role, and what might make a great employee move on.
+
+Stay Interviews is a great method to use for Succession Planning, Retention, Organizational Development, and Employer Branding.          </p>
+        </section>
+        <section id="exit" className="my-5 text-center hidden-right">
+          <h1 className="pb-5">Exit Interviews</h1>
+          <p className="lead">
+          An exit interview is a brief conversation or survey that is conducted with an employee who is leaving an organization. Exit interviews occur most often between an employee and an organization, but they can also be between a student and an educational institution, or between a member and an association.    
+     </p>
         </section>
       </div>
       <Footer />
