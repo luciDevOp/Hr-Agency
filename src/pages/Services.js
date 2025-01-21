@@ -129,7 +129,7 @@ function Services() {
               <div className="icon">
                 <i className="bx bxs-paper-plane"></i>
               </div>
-              <h2>
+              <h4>
                 <a
                   href="#recruitment"
                   className="service-link"
@@ -137,11 +137,37 @@ function Services() {
                 >
                   Recruitment
                 </a>
-              </h2>
+              </h4>
               <p>
                 Efficient and tailored recruitment services, connecting your
                 company with the right individuals to foster growth.
               </p>
+            </div>
+          </div>
+          <div
+            className="col-xl-3 col-md-6 d-flex align-items-stretch my-4 mt-xl-0"
+            data-aos="zoom-in"
+            data-aos-delay="400"
+          >
+            <div className="icon-box">
+              <div className="icon">
+              <img 
+                      src="assets/img/bpw.png" 
+                      alt="Best Places to Work" 
+                      className="bpw-img"
+                  />
+              </div>
+              <h4>
+                <a
+                  href="#bpw"
+                  className="service-link"
+                  data-target="bpw"
+                >
+                  Best Places to Work 
+                </a>
+              </h4>
+              <p>
+              We help organizations improve workplace culture by identifying strengths, addressing weaknesses, and offering guidance. Our global certification programs celebrate the Best Places to Work.              </p>
             </div>
           </div>
 
@@ -287,32 +313,6 @@ function Services() {
               </h4>
               <p>
               HHA conducts compensation studies to provide managers with market-based insights on salaries and benefits, considering requirements, industry, and location.              </p>
-            </div>
-          </div>
-          <div
-            className="col-xl-3 col-md-6 d-flex align-items-stretch my-5 mt-xl-0"
-            data-aos="zoom-in"
-            data-aos-delay="400"
-          >
-            <div className="icon-box">
-              <div className="icon">
-              <img 
-                      src="assets/img/bpw.png" 
-                      alt="Best Places to Work" 
-                      className="bpw-img"
-                  />
-              </div>
-              <h4>
-                <a
-                  href="#bpw"
-                  className="service-link"
-                  data-target="bpw"
-                >
-                  Best Places to Work 
-                </a>
-              </h4>
-              <p>
-              We help organizations improve workplace culture by identifying strengths, addressing weaknesses, and offering guidance. Our global certification programs celebrate the Best Places to Work.              </p>
             </div>
           </div>
           <div

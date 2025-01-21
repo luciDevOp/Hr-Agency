@@ -154,36 +154,6 @@ const Team = () => {
             <div className="member d-flex align-items-start">
               <div className="pic">
                 <img
-                  src="assets/img/mihaela.jpeg"
-                  className="img-fluid"
-                  alt="Valentina Călin, International Researcher"
-                />
-              </div>
-              <div className="member-info">
-                <h4>Mihaela Ileana Marin</h4>
-                <span>Researcher</span>
-                <p>“Skill is what you are able to do.<br/> Motivation determined what you do.<br/>
-                Attitude determines how well you do it” Lou Holtz.</p>
-                <div className="social">
-                  <a href="https://www.linkedin.com/in/mihaela-ileana-marin-517997303/">
-                    {" "}
-                    <i className="ri-linkedin-box-fill"></i>{" "}
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-        <div className="row">
-          <div
-            className="col-lg-6 mt-4"
-            data-aos="zoom-in"
-            data-aos-delay="300"
-          >
-            <div className="member d-flex align-items-start">
-              <div className="pic">
-                <img
                   src="assets/img/alexdragomir.jpg"
                   className="img-fluid"
                   alt="Alexandru Dragomir – Data Wrangler Head Hunting Agency"

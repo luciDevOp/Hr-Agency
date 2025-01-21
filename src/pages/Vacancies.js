@@ -52,8 +52,44 @@ const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
             {jobDetails.tipContract && (
               <p className="job-title">Tip contract: {jobDetails.tipContract}</p>
             )}
+            {jobDetails.mainpoint1 && (
+              <p className="job-title">Main points of the position:</p>
+            )}
+            <ul>
+              
+              {jobDetails.require && jobDetails.require.mainpoint1 && (
+                <li>{jobDetails.require.mainpoint1}</li>
+              )}
+              {jobDetails.require && jobDetails.require.mainpoint2 && (
+                <li>{jobDetails.require.mainpoint2}</li>
+              )}
+              {jobDetails.require && jobDetails.require.mainpoint3 && (
+                <li>{jobDetails.require.mainpoint3}</li>
+              )}
+              {jobDetails.require && jobDetails.require.mainpoint4 && (
+                <li>{jobDetails.require.mainpoint4}</li>
+              )}
+              {jobDetails.require && jobDetails.require.mainpoint5 && (
+                <li>{jobDetails.require.mainpoint5}</li>
+              )}
+              {jobDetails.require && jobDetails.require.mainpoint6 && (
+                <li>{jobDetails.require.mainpoint6}</li>
+              )}
+              {jobDetails.require && jobDetails.require.mainpoint7 && (
+                <li>{jobDetails.require.mainpoint7}</li>
+              )}
+              {jobDetails.require && jobDetails.require.mainpoint8 && (
+                <li>{jobDetails.require.mainpoint8}</li>
+              )}
+              {jobDetails.require && jobDetails.require.mainpoint9 && (
+                <li>{jobDetails.require.mainpoint9}</li>
+              )}
+              
+            </ul>
           
-            <p className="job-title">Requirements:</p>
+              {jobDetails.require.one && (
+                <p className="job-title">Requirements:</p>
+              )}
             <ul>
               {jobDetails.require && jobDetails.require.one && (
                 <li>{jobDetails.require.one}</li>
@@ -143,7 +179,7 @@ const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
               <p className="job-title">Key Responsibilities:</p>
             )}
             {jobDetails.require && jobDetails.require.more && (
-              <p>{jobDetails.secondTitle1}</p>
+              <p style={{fontWeight: '500'}}>{jobDetails.secondTitle1}</p>
             )}
             <ul>
               {jobDetails.require && jobDetails.require.more && (
@@ -212,7 +248,7 @@ const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
               
             </ul>
             {jobDetails.require && jobDetails.require.more && (
-              <p>{jobDetails.secondTitle2}</p>
+              <p style={{fontWeight: '500'}}>{jobDetails.secondTitle2}</p>
             )}
             <ul>
               {jobDetails.require && jobDetails.require.more1 && (
@@ -227,9 +263,11 @@ const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
               {jobDetails.require && jobDetails.require.more31 && (
                 <li>{jobDetails.require.more31}</li>
               )}
+              
+              
             </ul>
             {jobDetails.require && jobDetails.require.more && (
-              <p>{jobDetails.secondTitle3}</p>
+              <p style={{fontWeight: '500'}}>{jobDetails.secondTitle3}</p>
             )}
             <ul>
               {jobDetails.require && jobDetails.require.more4 && (
@@ -244,9 +282,20 @@ const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
               {jobDetails.require && jobDetails.require.more43 && (
                 <li>{jobDetails.require.more43}</li>
               )}
+              {jobDetails.require && jobDetails.require.more44 && (
+                <li>{jobDetails.require.more44}</li>
+              )}
+              {jobDetails.require && jobDetails.require.more45 && (
+                <li>{jobDetails.require.more45}</li>
+              )}
+              {jobDetails.require && jobDetails.require.more46 && (
+                <li>{jobDetails.require.more46}</li>
+              )}
+
+              
             </ul>
             {jobDetails.require && jobDetails.require.more && (
-              <p>{jobDetails.secondTitle4}</p>
+              <p style={{fontWeight: '500'}}>{jobDetails.secondTitle4}</p>
             )}
             <ul>
               {jobDetails.require && jobDetails.require.more5 && (
@@ -269,7 +318,7 @@ const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
               )}
             </ul>
             {jobDetails.require && jobDetails.require.more && (
-              <p>{jobDetails.secondTitle5}</p>
+              <p style={{fontWeight: '500'}}>{jobDetails.secondTitle5}</p>
             )}
             <ul>
               {jobDetails.require && jobDetails.require.more51 && (
@@ -280,6 +329,15 @@ const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
               )}
               {jobDetails.require && jobDetails.require.more53 && (
                 <li>{jobDetails.require.more53}</li>
+              )}
+              {jobDetails.require && jobDetails.require.more54 && (
+                <li>{jobDetails.require.more54}</li>
+              )}
+              {jobDetails.require && jobDetails.require.more55 && (
+                <li>{jobDetails.require.more55}</li>
+              )}
+              {jobDetails.require && jobDetails.require.more56 && (
+                <li>{jobDetails.require.more56}</li>
               )}
             </ul>
             
@@ -322,6 +380,41 @@ const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
               )}
               {jobDetails.profile6 && (
                 <li>{jobDetails.profile6}</li>
+              )}
+              {jobDetails.profile7 && (
+                <li>{jobDetails.profile7}</li>
+              )}
+              {jobDetails.profile8 && (
+                <li>{jobDetails.profile8}</li>
+              )}
+              {jobDetails.profile9 && (
+                <li>{jobDetails.profile9}</li>
+              )}
+              {jobDetails.profile10 && (
+                <li>{jobDetails.profile10}</li>
+              )}
+              </ul>
+              {jobDetails.pref1 && (
+                <p className="job-title">Preferred Experience and Education</p>
+              )}
+              <ul>
+              {jobDetails.pref1 && (
+                <li>{jobDetails.pref1}</li>
+              )}
+              {jobDetails.pref2 && (
+                <li>{jobDetails.pref2}</li>
+              )}
+              {jobDetails.pref3 && (
+                <li>{jobDetails.pref3}</li>
+              )}
+              {jobDetails.pref4 && (
+                <li>{jobDetails.pref4}</li>
+              )}
+              {jobDetails.pref5 && (
+                <li>{jobDetails.pref5}</li>
+              )}
+              {jobDetails.pref6 && (
+                <li>{jobDetails.pref6}</li>
               )}
               </ul>
 
@@ -935,6 +1028,7 @@ function Vacancies() {
     },
     {
       title: "Energy Sales Support Specialist",
+      completed: true,
       location: "Bucharest, Romania",
       description:"\nThe Energy Sales Support Specialist will play a critical role in supporting the sales team by managing administrative tasks, coordinating with various departments, and ensuring a seamless sales process. \nThis position requires excellent organizational skills, attention to detail, and the ability to handle multiple tasks simultaneously.\nThe successful candidate will be a proactive problem solver with strong communication skills and a customer-focused mindset.",
       require: {
@@ -1082,6 +1176,7 @@ function Vacancies() {
     },
     {
       title: "Analist Tranzactionare Energie Electrica",
+      completed: true,
       location: "Bucharest, Romania",
       description:"\nAnalist Tranzacționare Energie Electrică pe Piața Intrazilnică \nSuntem în căutarea unui Analist Tranzacționare Energie Electrică pe Piața Intrazilnică dedicat și dornic să evolueze pentru a se alătura echipei noastre. \nAceastă poziție implică activități precum: analiză de piață și strategii de tranzacționare în vederea dezvoltării liniei de bussines pentru a maximiza profitabilitatea, a minimiza costurile de echilibrare și a gestiona eficient riscul în cadrul piețelor de energie electrică.",
       require: {
@@ -1484,6 +1579,7 @@ function Vacancies() {
     },
     {
       title: "Performance Marketing Manager",
+      completed: true,
       location: "Global",
       description:"\nOur client is specialized in app purchases, online transactions and payments. \nOur client's global team consists of more than 50 product-driven people. \nThe Performance Marketing Manager will play a crucial role in our client's digital marketing efforts, creating a strategy for paid ads across different regions.",
       require: {
@@ -1553,6 +1649,7 @@ function Vacancies() {
     },
     {
       title: "Marketing Content Writer",
+      completed: true,
       location: "Bucharest, Romania",
       description:"\nOur firm is the leading solutions provider of end-to-end wireless connectivity. We help network operators, service providers, and private networks worldwide increase operational efficiency and enhance end customers’ quality of experience with innovative wireless transport solutions.\n Company's employee community spans multiple countries, is highly diverse regionally and culturally, yet connected and cohesive.\nWe are looking for a dedicated, passionate, and experienced Content Writer to join our marketing team! If English is your mother tongue, you love writing, are excited by the opportunity of working on a variety of content types ranging from blogs, to case studies, to white papers, are detail-oriented, and have a strategic mind - this could be the perfect career opportunity for you!",
       require: {
@@ -1696,6 +1793,7 @@ function Vacancies() {
     },
     {
       title: "Medic",
+      completed: true,
       location: "Bucharest, Romania",
       tipContract: 'Full Time angajat, Part Time sau colaborator',
       description:"\nIn cateva cuvinte, suntem clinica de top din Romania, cu specializare in implantul parului la barbati si femei, implant de sprancene si implant de barba.\nIn urma tragediei de la Club Colectiv, Clinica s-a specializat si in implantul de par pe grefe de piele, fiind singura Clinica din lume care efectueaza astfel de interventii.",
@@ -1971,6 +2069,101 @@ function Vacancies() {
       profile4: 'Is an effective contributor with the ability to work well with others in a global, team-oriented environment',
       profile5: 'Has big-picture vision and the drive to make that vision a reality',
       profile6: 'Is self-motivated with positive attitude',
+      type: "Full time/Hybrid",
+    },
+    {
+      title: "Expert Financial Controlling",
+      location: "Bucharest, Romania",
+      description: '\n For our client, a holding currently developing projects in the field of renewable energy, we are looking for a passionate professionals ready to contribute to projects that shape the energy future of Romania.\nPurpose of position:\nTo oversee and coordinate the financial management, cash management and reporting processes for all group companies.\nThis role ensures accurate and timely management reporting, implements effective internal controls, and provides strategic financial insights to support decision-making.',
+      require: {
+        one: "Educational Background: Bachelor’s degree in Controlling, Accounting, Finance or a related field.",
+        two: 'Experience: Five years of experience in controlling, accounting or finance.',
+        three: "Financial Reporting: Good knowledge of planning and economics, controlling, finance, and financial management (e.g., net present value). Strong ability to prepare and present accurate and timely financial reports, including actual vs budget analysis, forecasts, budgets, cash flow.",
+        four: 'MS Office Proficiency: Advanced proficiency in Microsoft Excel, including the ability to create complex financial models, use pivot tables, and perform data analysis. Good knowledge of other MS Office applications, including Word, Power Point, Outlook, Teams, etc.',
+        five: 'Collaboration: Excellent interpersonal and communication skills to effectively collaborate with business colleagues across various departments.',
+        six: "Independent and Team Work: Demonstrates the ability to work effectively both individually and as part of a team. This includes taking initiative and managing tasks autonomously, while also collaborating seamlessly with colleagues to achieve common goals.",
+        seven: "Analytical Skills: Strong analytical and problem-solving skills to interpret financial data, identify trends, and provide actionable insights.",
+        eight: 'Internal Controls: Experience in developing and maintaining robust internal control systems to ensure financial integrity and compliance.',
+        nine: 'Innovative Problem Solving: Ability to innovate by suggesting improvements to activities, participating in the development of solutions for complex problems, and actively identifying opportunities for improvement.',
+        ten: 'Flexibility and Adaptability: Ability to adjust to new requirements and to changes in the work environment or job tasks efficiently, demonstrating flexibility in thinking and behavior.',
+        eleven: 'Time Management: Ability to manage multiple priorities and meet tight deadlines, ensuring timely and accurate financial reporting.',
+        twelve: 'Advanced English Language Skills: Proficiency in English, both written and spoken, is required.',
+        more: "Annual Business Plan preparation: Develop the company’s annual business plan and budget (P&L, KPI, CAPEX, cash flow for all Group companies) by collaborating with other departments to gather necessary data and ensure alignment with strategic goals.",
+        more01: 'Capital Expenditure: Monitor the capital expenditures budget, ensuring that investments align with the company’s approved budgets.',
+        more02: 'Financial Forecasting: Create monthly/quarterly financial forecasts for future revenues, expenses, and cash flows at company level. This involves analyzing historical data and other available information to make informed projections.',
+        more03: 'Stakeholder Communication: Present budget and forecast reports to senior management and stakeholders, providing clear explanations of assumptions, methodologies, and key findings.',
+        more04: 'Continuous Improvement: Continuously refine budgeting and forecasting processes to enhance accuracy, efficiency, and relevance. Incorporate feedback and lessons learned from previous cycles.',
+        more05: 'Financial Modeling: Create financial models to simulate different scenarios and predict future financial outcomes. These models are essential for strategic planning, budgeting, and forecasting',
+        more1: 'Monthly closing activities: Timely execution of monthly, quarterly, and annual closing activities, including verification of estimates and cost allocations per project.',
+        more2: 'Variance Analysis: Monitor and analyze variances between actual financial results and budgeted figures. Identify the reasons for discrepancies and recommend corrective actions.',
+        more3: 'Ad-hoc operational analyses: Prepare various ad-hoc operational analyses for a comprehensive understanding of operational results (e.g., trend and variance analyses, comparability analyses).',
+        more31: 'Projects: Participate and contribute expertise to relevant projects. Prepare and consolidate various scenarios and strategic project reports.',
+        more4: 'Policy Development: Develop and implement financial policies and procedures to improve operational efficiency and effectiveness. Establish and document internal control policies and procedures to ensure financial integrity and compliance with regulations.',
+        more41: 'Risk Assessment: Identify and assess financial risks, implementing controls to mitigate these risks effectively.',
+        more42: 'Control Activities: Design and implement control activities such as reconciliations, approvals, and reviews to safeguard assets and ensure accurate financial reporting. Ensure proper segregation of duties within the controlling, accounting and finance functions to prevent fraud and errors.',
+        more43: 'Monitoring: Continuously monitor and evaluate the effectiveness of internal controls, making adjustments as necessary to address any weaknesses. Implement measures to improve the standardization, optimization, and automation of financial processes.',
+        more44: 'Training and Awareness: Provide training and resources to staff to promote awareness and understanding of internal control policies and procedures.',
+        more45: 'Documentation: Maintain comprehensive documentation of all internal control processes and procedures for transparency and audit purposes.',
+        more46: ' Reporting: Regularly report on the status of internal controls to senior management and the board of directors, highlighting any significant issues or improvements.',
+        more5: 'Cash Flow Monitoring: Regularly monitor the company’s cash flow to ensure there are sufficient funds to meet operational needs and financial obligations.',
+        more6: 'Cash Flow Forecasting: Prepare accurate cash flow projections to anticipate future cash needs and identify potential shortfalls or surpluses.',
+        more7: "Liquidity Management: Participate in the process of maintaining optimal liquidity levels by and ensuring funds are available for immediate and short-term needs.",
+        more8: 'Reporting: Prepare and present regular cash management reports to senior management, providing insights into cash positions, forecasts, and any potential issues.',
+        more51: 'Continuous improvement: Dedication to continuously improving technical skills and gaining knowledge from more experienced colleagues.',
+        more52: 'Proactive attitude: Maintain a proactive approach by actively addressing and communicating important issues, opportunities, and improvements to superiors. Prompt and proactive communication to superiors of any errors or issues.',
+        more53: 'Effective Stakeholder Communication: Maintain effective communication with all involved parties and providie clear and quick responses to requests.',
+        more54: 'Proficiency in Controlling Software: Demonstrate experience in using controlling-specific software.',
+        more55: 'Active Involvement: Participate in all activities and projects required by the CFO, ensuring comprehensive support and contribution to the department’s objectives.',
+        more56: 'HSE Responsibilities: Comply with legislation and internal health, safety, security, and environmental protection standards, fire prevention, and civil protection at the workplace; use equipment properly according to technical instructions; do not affect the proper functioning, alter, change, or arbitrarily modify security systems in the building where you work; immediately report to the employer or responsible persons any situation where there are potential dangers to employee safety and health, or any malfunction in the protection system; inform the direct manager or employer about any accidents suffered; cooperate with the employer or responsible persons to enable the implementation of any legal measures or requirements from authorities; cooperate with the employer and authorities for the proper conduct of safety and health in the work environment; provide information in the event of or discovery of an imminent fire hazard or any other emergency to the responsible persons according to workplace procedures; participate in health examinations at the workplace as scheduled by a doctor and with the employer’s consent.',
+        mainpoint1: 'Strategic Impact: Play a crucial role in shaping the company’s financial strategy and ensuring alignment with long-term goals.',
+        mainpoint2: 'Comprehensive Financial Management: Oversee budgeting, forecasting, and financial modeling, providing a holistic view of the company’s financial health.',
+        mainpoint3: 'Insightful Reporting: Generate detailed management reports that offer valuable insights into financial performance, aiding strategic decision-making.',
+        mainpoint4: 'Robust Internal Controls: Establish and maintain strong internal control systems to safeguard company assets and ensure financial integrity.',
+        mainpoint5: 'Dynamic Cash Management: Manage cash flow effectively, ensuring liquidity and financial stability.',
+        mainpoint6: 'Collaborative Environment: Work closely with senior management and various departments, fostering a collaborative and supportive work culture.',
+        mainpoint7: 'Continuous Improvement: Drive continuous improvement initiatives, enhancing financial processes and systems. Key contributor to initiatives in the area of financial and controlling process optimization, automation and standardization.',
+        mainpoint8: 'Professional Development: Opportunities for ongoing professional growth and development in a dynamic and challenging environment.',
+        mainpoint9: 'Expert Financial and Controlling Support: Provide financial and controlling expertise for a variety of complex tasks, as well as independently solving problems for group companies.',
+
+      },
+      secondTitle1: "Budgeting and Forecasting: Develop and manage the Business Plan, the annual budget and quarterly financial forecasts, ensuring alignment with the company’s strategic goals:",
+      secondTitle2: "Reporting: Generate monthly/quarterly detailed management reports that provide insights into financial performance, trends, and forecasts to support strategic decision-making:",
+      secondTitle3: "Internal Controls: Establish and maintain robust internal control systems to safeguard company assets and ensure financial integrity. Ensure that all activities are completed in accordance with internal procedures and are recorded and reported:",
+      secondTitle4: "Cash Management: Oversee cash flow management, including the monitoring of cash balances and forecasting future cash needs:",
+      secondTitle5: 'Strategic Planning: Collaborate with senior management to develop and execute financial strategies that support the company’s long-term objectives:',
+      type: "Full time/On site",
+    },
+    {
+      title: "Business Development Manager",
+      location: "Romania",
+      description: '\nOur client  is a growth-oriented organization specializing in manufacturing and distribution of interior design products.\nOn behalf of our client, we are looking to hire a Business Development Manager with the skills to spearhead growth initiatives and identify new opportunities for our organization. \nThe ideal candidate will be responsible for developing a robust pipeline, building strategic partnerships, and driving revenue growth through innovative solutions.\n This role is perfect for an individual with a passion for strategic planning, excellent communication skills, and a proven ability to exceed business targets.',
+      require: {
+        more: "Identify and generate new business opportunities by researching and analyzing market trends, competitor activity, and client needs.",
+        more02: "Develop and execute comprehensive business development strategies to drive company growth and profitability.",
+        more03: 'Build and maintain strong relationships with key stakeholders, potential clients, and industry partners.',
+        more04: 'Lead the end-to-end sales process, including prospecting, pitching, negotiation, and closing deals.',
+        more05: 'Collaborate with internal teams (e.g., marketing, product development, operations) to create tailored solutions for potential clients.',
+        more06: 'Prepare and present business proposals, participate in tenders and presentations to senior leadership and client decision-makers.',
+        more07: 'Monitor industry developments and emerging trends to identify opportunities for growth and innovation.',
+        more08: "Develop and maintain a robust sales pipeline using own company's CRM tool to track progress and performance metrics.",
+        more09: 'Represent the company at industry events, conferences, and networking opportunities to build brand awareness and establish connections.',
+      },
+      profile1: 'Strong ability to identify and capitalize on business opportunities through strategic thinking and market analysis.',
+      profile2: 'Exceptional communication and negotiation skills, with the ability to influence decision-making at all levels.',
+      profile3: 'Proven expertise in developing and executing successful sales and business development strategies.',
+      profile4: 'Adept at building relationships with senior executives, stakeholders, and industry leaders.',
+      profile5: 'Solid understanding of business dynamics, sales cycles, and consultative selling techniques.',
+      profile6: 'Analytical mindset to assess market trends and performance data to inform strategic decisions.',
+      profile7: 'Self-motivated and results-driven attitude, with a demonstrated ability to meet and exceed revenue goals.',
+      profile8: 'Ability to thrive in a fast-paced, entrepreneurial environment, with excellent problem-solving skills.',
+      profile9: 'High attention to detail and organizational skills for managing complex deals and long-term partnerships.',
+      profile10: 'Good people management skills, with the ability to drive and lead the business development team.',
+      pref1: 'Proven track record in business development, sales, or a related role, with measurable achievements in revenue generation.',
+      pref2: 'Bachelor’s degree in Business Administration, Marketing, Economics, or a related field (MBA is a plus).',
+      pref3: 'Industry-specific experience (e.g., technology, professional services, or B2B sales) is highly desirable.',
+      pref4: 'Experience managing high-value accounts and long-term business partnerships.',
+      pref5: 'English language is a must',
+      pref6: 'German language is an advantage',
       type: "Full time/Hybrid",
     },
     

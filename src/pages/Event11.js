@@ -30,7 +30,7 @@ const Event11 = () => {
                     <h5 style={{ color: "#7947a2", fontWeight: "500" }}>Head Hunting Agency</h5>{" "}
                     <h4>Managing Director</h4>
                     <h3 className="lead"><span style={{fontWeight: "700", paddingTop: "10px"}}>Industry:</span> Executive Coaching and Development</h3>
-                    <h3 className="lead"><span style={{fontWeight: "700", paddingTop: "10px" }}>Place name:</span> Bucharest</h3>
+                    <h3 className="lead"><span style={{fontWeight: "700", paddingTop: "10px" }}>Place name:</span> Bucharest, Romania</h3>
                     <h3 className="lead"><span style={{fontWeight: "700", paddingTop: "10px" }}>Citizenship:</span> Romanian</h3>
                     <h3 className="lead"><span style={{fontWeight: "700", paddingTop: "10px" }}>Gender:</span> Female</h3>
                     <h3 className="lead"><span style={{fontWeight: "700", paddingTop: "10px" }}>Education:</span>{" "}Master's degree</h3>

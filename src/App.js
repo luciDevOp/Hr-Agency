@@ -29,6 +29,7 @@ import Event17 from "./pages/Event17";
 import Event18 from "./pages/Event18";
 import Event19 from "./pages/Event19";
 import Event20 from "./pages/Event20";
+import Event21 from "./pages/Event21";
 
 import Privacy from "./pages/Privacy";
 import Vacancies from "./pages/Vacancies";
@@ -67,10 +68,11 @@ function App() {
         <Route path="/blog/a_best-ac_texas" element={<Event13 />} />
         <Route path="/blog/valentina-calin" element={<Event15 />} />
         <Route path="/blog/IMD-international-london" element={<Event16 />} />
-        <Route path="/blog/mihaela-marin" element={<Event17 />} />
+        <Route path="/blog/loreda-dragomir" element={<Event17 />} />
         <Route path="/blog/accessability-expo" element={<Event18 />} />
         <Route path="/blog/alexandru-dragomir" element={<Event19 />} />
         <Route path="/blog/age-inclusive-workplace" element={<Event20 />} />
+        <Route path="/blog/bogdan-costinescu" element={<Event21 />} />
 
         
       </Routes>

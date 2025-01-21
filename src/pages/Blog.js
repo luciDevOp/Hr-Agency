@@ -169,6 +169,104 @@ function Blog() {
         </div>
       </section>
       <div className="section-title blog-header">
+        <h2>Team Presentation</h2>
+      </div>
+      <section id="posts" className="posts">
+        <div className="container" data-aos="fade-up">
+          <div className="row g-5">
+            <div className="col-lg-4">  
+              <div className="post-entry-1 lg" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                <a href="/blog/ramona-ungureanu">
+                  <img src="assets/img/ramona.jpeg" alt="" className="img-fluid" />
+                </a>
+                <div className="post-meta"></div>
+                <h2>
+                  <a href="/blog/ramona-ungureanu">Presenting Ramona Ungureanu</a>
+                </h2>
+              </div>
+              <div className="post-entry-1 lg" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                    <a href="/blog/robert-negru">
+                      <img
+                        src="assets/img/robert-present.jpeg"
+                        alt=""
+                        className="img-fluid"
+                      />
+                    </a>
+                    <div className="post-meta"></div>
+                    <h2>
+                      <a href="/blog/robert-negru">Presenting Robert Negru</a>
+                    </h2>
+                  </div>
+
+            </div>
+
+            <div className="col-lg-8">
+              <div className="row g-5">
+                <div className="col-lg-6 border-start custom-border">
+                  <div className="post-entry-1" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                    <a href="/blog/valentina-calin">
+                      <img
+                        src="assets/img/valentina.jpeg"
+                        alt=""
+                        className="img-fluid"
+                      />
+                    </a>
+                    <div className="post-meta"></div>
+                    <h2>
+                      <a style={{fontSize: '40px'}} href="/blog/valentina-calin">Presenting Valentina Călin</a>
+                    </h2>
+                  </div> 
+                  <div className="post-entry-1" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                    <a href="/blog/bogdan-costinescu">
+                      <img
+                        src="assets/img/bogdan.jpg"
+                        alt=""
+                        className="img-fluid"
+                      />
+                    </a>
+                    <div className="post-meta"></div>
+                    <h2>
+                      <a style={{fontSize: '40px'}} href="/blog/bogdan-costinescu">Presenting Bogdan Costinescu</a>
+                    </h2>
+                  </div>   
+                </div>
+
+                <div className="col-lg-6 border-start custom-border">
+
+                  <div className="post-entry-1" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                    <a style={{textAlign:'center'}} href="/blog/loreda-dragomir">
+                      <img
+                        src="assets/img/loreda-prezentare.png"
+                        alt=""
+                        className="img-fluid"
+                        style={{height: '400px'}}
+                      />
+                    </a>
+                    <div className="post-meta"></div>
+                    <h2>
+                      <a style={{fontSize: '40px'}} href="/blog/loreda-dragomir">Presenting Loreda Dragomir</a>
+                    </h2>
+                  </div>
+                  <div className="post-entry-1 pt-5" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                    <a href="/blog/alexandru-dragomir">
+                      <img
+                        src="assets/img/alexdragomir.jpg"
+                        alt=""
+                        style={{height: '30vh'}}
+                      />
+                    </a>
+                    <div className="post-meta"></div>
+                    <h2 style={{textAlign: 'center'}}>
+                      <a style={{fontSize: '40px', textAlign: 'center'}} href="/blog/alexandru-dragomir">Presenting Alexandru Dragomir</a>
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div className="section-title blog-header">
         <h2>Events</h2>
       </div>
       <section id="posts" className="posts">
@@ -182,23 +280,6 @@ function Blog() {
                 <div className="post-meta"></div>
                 <h2>
                   <a href="/blog/swiss-chamber-of-commerce">Swiss Chamber of Commerce</a>
-                </h2>
-                <p className="mb-4 d-block">
-                  The Swiss Chamber of Commerce serves as a pivotal organization
-                  dedicated to fostering economic and business relations within
-                  Switzerland and beyond. As a key player in the business
-                  community, it aims to provide a platform for networking,
-                  collaboration, and knowledge exchange among professionals,
-                  companies, and stakeholders.
-                </p>
-              </div>
-              <div className="post-entry-1 lg" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                <a href="/blog/ramona-ungureanu">
-                  <img src="assets/img/ramona.jpeg" alt="" className="img-fluid" />
-                </a>
-                <div className="post-meta"></div>
-                <h2>
-                  <a href="/blog/ramona-ungureanu">Presenting Ramona Ungureanu</a>
                 </h2>
               </div>
               <div className="post-entry-1 pt-5" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
@@ -307,30 +388,6 @@ function Blog() {
                       Networking Breakfast
                       </a>
                     </h2>
-                  </div>
-                  <div className="post-entry-1" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                    <a href="/blog/valentina-calin">
-                      <img
-                        src="assets/img/valentina.jpeg"
-                        alt=""
-                        className="img-fluid"
-                      />
-                    </a>
-                    <div className="post-meta"></div>
-                    <h2>
-                      <a href="/blog/valentina-calin">
-                      Presenting Valentina Călin
-                      </a>
-                    </h2>
-                  </div>  
-                  <div className="post-entry-1 pt-5" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                  <a href="/blog/mihaela-marin">
-                      <img src="assets/img/mihaela.jpeg" alt="" className="img-fluid " style={{height: 350}}/>
-                    </a>
-                    <div className="post-meta"></div>
-                    <h2 style={{fontSize: 25}}>
-                      <a href="/blog/mihaela-marin">Presenting Mihaela Marin</a>
-                    </h2>
                   </div> 
                 </div>
                 <div className="col-lg-6 border-start custom-border">
@@ -359,7 +416,7 @@ function Blog() {
                     </h2>
                   </div>
                   <div className="post-entry-1" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                    <a href="/blog-RDCC">
+                    <a href="/blog/RDCC">
                       <img
                         src="assets/img/diversity.jpeg"
                         alt=""
@@ -371,19 +428,6 @@ function Blog() {
                       <a href="/blog/RDCC">
                         Romanian Diversity Chamber of Commerce
                       </a>
-                    </h2>
-                  </div>
-                  <div className="post-entry-1 lg" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                    <a href="/blog/robert-negru">
-                      <img
-                        src="assets/img/robert-present.jpeg"
-                        alt=""
-                        className="img-fluid"
-                      />
-                    </a>
-                    <div className="post-meta"></div>
-                    <h2>
-                      <a href="/blog/robert-negru">Presenting Robert Negru</a>
                     </h2>
                   </div>
                   <div className="post-entry-1 " style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
@@ -410,20 +454,6 @@ function Blog() {
                     <div className="post-meta"></div>
                     <h2>
                       <a href="/blog/IMD-international-london">Annual General Meeting <br/>IMD International London</a>
-                    </h2>
-                  </div>
-                  <div className="post-entry-1 pt-5" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                    <a href="/blog/alexandru-dragomir">
-                      <img
-                        src="assets/img/alexdragomir.jpg"
-                        alt=""
-                        className="img-fluid"
-                        style={{height: '30vh'}}
-                      />
-                    </a>
-                    <div className="post-meta"></div>
-                    <h2>
-                      <a href="/blog/alexandru-dragomir">Presenting Alexandru Dragomir</a>
                     </h2>
                   </div>
                 </div>

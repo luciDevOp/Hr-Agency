@@ -22,7 +22,13 @@ function Hero() {
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <h1 className="IMD">IMD-Bucharest, Romania</h1>
+            <h1 className="IMD" style={{textAlign:'center'}}>IMD-Bucharest, Romania</h1>
+            <div>
+              <h2 className="best-places" style={{textAlign:'center'}}>Official Partner Romania Best Places to Work</h2>
+              <div className="best-places-img">
+                <img  src="assets/img/bp.png" className="img-fluid" alt="" />
+              </div>
+            </div>
           </div>
         </div>
       </div>

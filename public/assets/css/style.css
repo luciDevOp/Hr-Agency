@@ -495,7 +495,6 @@ h6 {
 .IMD {
   font-family: "Hedvig+Letters+Serif";
   padding-top: 15%;
-  padding-left: 5%;
 }
 
 #hero h1 {
@@ -599,6 +598,7 @@ h6 {
     line-height: 36px;
   }
 
+
   #hero h2 {
     font-size: 18px;
     line-height: 24px;
@@ -609,6 +609,17 @@ h6 {
     width: 70%;
   }
 }
+
+ .best-places-img{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+ }
+ .best-places-img img{
+  width: 20%;
+  margin-left: 5px;
+ }
+
 
 @media (max-width: 575px) {
   #hero .hero-img img {
@@ -2430,8 +2441,70 @@ section {
   color: #fff;
   text-decoration: none;
 }
-.pad{
-  margin-left: -100px;
+#event {
+  padding: 50px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  color: #7947a2;
+}
+
+.bio-content h3 {
+  font-size: 1.8rem;
+  color: #7947a2;
+}
+
+.bio-content h4 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-top: 15px;
+}
+
+.bio-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.bio-content .btn {
+  background-color: #7947a2;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.bio-content .btn:hover {
+  background-color: #5e3481;
+}
+
+.pic img {
+  max-width: 70%;
+  border: 3px solid #7947a2;
+}
+
+@media (max-width: 768px) {
+
+  .pic img {
+    margin-bottom: 30px;
+  }
+  .bio-content{
+    text-align: center;
+
+  }
+}
+
+@media (min-width: 768px) {
+  .desktop-right{
+    text-align: right;
+  }
 }
 @media (max-width: 768px) {
   .pad{
