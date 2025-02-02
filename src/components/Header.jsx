@@ -78,6 +78,14 @@ function Header() {
                     </Link>
                   </li>
                   <li>
+                    <Link
+                      to="/bptw-news"
+                      onClick={closeMobileMenu}
+                    >
+                      Noutati BPTW
+                    </Link>
+                  </li>
+                  <li>
                     <Link to="/about-our-commitment" onClick={closeMobileMenu}>
                       Our Commitment
                     </Link>

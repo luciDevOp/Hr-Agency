@@ -9,6 +9,7 @@ import Services from "./pages/Services";
 import { Route, Routes } from "react-router-dom";
 import GlobalOffices from "./pages/GlobalOffices";
 import GlobalMarket from "./pages/GlobalMarket";
+import BPTW from "./pages/BPTW";
 import OurCommitment from "./pages/OurCommitment";
 import Event1 from "./pages/Event1";
 import Event3 from "./pages/Event3";
@@ -47,6 +48,7 @@ function App() {
           path="/about-global-market-coverage"
           element={<GlobalMarket />}
         />
+        <Route path="/bptw-news" element={<BPTW />} />
         <Route path="/error" element={<Error />} />
         <Route path="/about-our-commitment" element={<OurCommitment />} />
         <Route path="/services" element={<Services />} />
