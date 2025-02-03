@@ -175,16 +175,16 @@ function Blog() {
         <div className="container" data-aos="fade-up">
           <div className="row g-5">
             <div className="col-lg-4">  
-              <div className="post-entry-1 lg" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+              <div className="post-entry-1" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                 <a href="/blog/ramona-ungureanu">
                   <img src="assets/img/ramona.jpeg" alt="" className="img-fluid" />
                 </a>
                 <div className="post-meta"></div>
-                <h2>
-                  <a href="/blog/ramona-ungureanu">Presenting Ramona Ungureanu</a>
+                <h2 style={{textAlign: 'center'}}>
+                  <a style={{fontSize: '40px', textAlign: 'center'}} href="/blog/ramona-ungureanu">Presenting Ramona Ungureanu</a>
                 </h2>
               </div>
-              <div className="post-entry-1 lg" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+              <div className="post-entry-1" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <a href="/blog/robert-negru">
                       <img
                         src="assets/img/robert-present.jpeg"
@@ -193,8 +193,8 @@ function Blog() {
                       />
                     </a>
                     <div className="post-meta"></div>
-                    <h2>
-                      <a href="/blog/robert-negru">Presenting Robert Negru</a>
+                    <h2 style={{textAlign: 'center'}}>
+                      <a style={{fontSize: '40px', textAlign: 'center'}} href="/blog/robert-negru">Presenting Robert Negru</a>
                     </h2>
                   </div>
 
@@ -212,8 +212,8 @@ function Blog() {
                       />
                     </a>
                     <div className="post-meta"></div>
-                    <h2>
-                      <a style={{fontSize: '40px'}} href="/blog/valentina-calin">Presenting Valentina Călin</a>
+                    <h2 style={{textAlign: 'center'}}>
+                      <a style={{fontSize: '40px', textAlign: 'center'}} href="/blog/valentina-calin">Presenting Valentina Călin</a>
                     </h2>
                   </div> 
                   <div className="post-entry-1" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
@@ -225,8 +225,8 @@ function Blog() {
                       />
                     </a>
                     <div className="post-meta"></div>
-                    <h2>
-                      <a style={{fontSize: '40px'}} href="/blog/bogdan-costinescu">Presenting Bogdan Costinescu</a>
+                    <h2 style={{textAlign: 'center'}}>
+                      <a style={{fontSize: '40px', textAlign: 'center'}} href="/blog/bogdan-costinescu">Presenting Bogdan Costinescu</a>
                     </h2>
                   </div>   
                 </div>
@@ -243,16 +243,16 @@ function Blog() {
                       />
                     </a>
                     <div className="post-meta"></div>
-                    <h2>
-                      <a style={{fontSize: '40px'}} href="/blog/loreda-dragomir">Presenting Loreda Dragomir</a>
+                    <h2 style={{textAlign: 'center'}}>
+                      <a style={{fontSize: '40px', textAlign: 'center'}} href="/blog/loreda-dragomir">Presenting Loreda Dragomir</a>
                     </h2>
                   </div>
-                  <div className="post-entry-1 pt-5" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                  <div className="post-entry-1" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <a href="/blog/alexandru-dragomir">
                       <img
-                        src="assets/img/alexdragomir.jpg"
+                        src="assets/img/alex-dragomir.jpeg"
                         alt=""
-                        style={{height: '30vh'}}
+                        style={{width: '390px'}}
                       />
                     </a>
                     <div className="post-meta"></div>

@@ -19,10 +19,9 @@ function GlobalOffices() {
               </p>
             </div>
             <div className="col-md-4">
-                <p><span style={{fontWeight:600}}>Website:</span> <a href="http://www.bestplacetoworkfor.org/">http://www.bestplacetoworkfor.org/</a></p>
+                <p><span style={{fontWeight:600}}>Website:</span> <a href="http://www.bestplacestoworkfor.org/">http://www.bestplacestoworkfor.org/</a></p>
                 <p><span style={{fontWeight:600}}>Phone:</span> +44 208 895 6562</p>
                 <p><span style={{fontWeight:600}}>Industry:</span> Human Resources Services</p>
-                <p><span style={{fontWeight:600}}>Company size:</span> 2-10 employees, <a href="https://www.linkedin.com/search/results/people/?currentCompany=%5B%2222338566%22%5D&origin=COMPANY_PAGE_CANNED_SEARCH&sid=oe2">2 associated members</a></p>
                 <p><span style={{fontWeight:600}}>Founded:</span> 2017</p>
                 <p><span style={{fontWeight:600}}>Specialties:</span> Employer Branding, Employee Experience, Employee Engagement, Organizational Change, Workplace Culture, Workplace Culture, and Leadership Development</p>
 
@@ -31,7 +30,7 @@ function GlobalOffices() {
             </div>
           </div>
         </div>
-        <div className="off-img">
+        <div className="bptw-divslide">
           <div className="bptw-slide"></div>
         </div>
       </div>

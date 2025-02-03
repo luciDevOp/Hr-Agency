@@ -82,7 +82,7 @@ function Header() {
                       to="/bptw-news"
                       onClick={closeMobileMenu}
                     >
-                      Noutati BPTW
+                      Best Places to Work Certification
                     </Link>
                   </li>
                   <li>

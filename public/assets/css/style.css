@@ -1672,34 +1672,23 @@ section {
   padding: 120px 0;
 }
 .bptw-slide {
-  background: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      from(rgba(255, 255, 255, 0.9)),
-      to(rgba(250, 250, 250, 0.9))
-    ),
-    url("../img/bptw-slide.jpg") fixed center center;
-  background: -o-linear-gradient(
-      rgba(255, 255, 255, 0.9),
-      rgba(255, 255, 255, 0.9)
-    ),
-    url("../img/bptw-slide.jpg") fixed center center;
-  background: linear-gradient(
-      rgba(245, 231, 255, 0.9),
-      rgba(228, 189, 255, 0.9)
-    ),
-    url("../img/bptw-slide.jpg") fixed center center;
-  background-size: cover;
-  padding: 200px 0;
+  background: url("../img/bptw-slide_copy.jpg") no-repeat center center;
+  background-size: contain;
+  padding: 100px 0px 600px 0px;
 }
 
 .off-img {
   padding: 10% 0;
 }
+.bptw-divslide {
+  padding: 10% 0;
+}
 @media (max-width: 768px) {
   .off-img {
     display: none;
+  }
+  .bptw-slide {
+    padding: 0px 0px 100px 0px;
   }
 }
 .global-office {
@@ -2192,6 +2181,9 @@ section {
     -webkit-transform: none;
     -ms-transform: none;
     transform: none;
+  }
+  .bptw-slide {
+    padding: 50px 0px 300px 0px;
   }
 }
 
