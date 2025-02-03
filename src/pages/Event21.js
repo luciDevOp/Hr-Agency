@@ -12,7 +12,7 @@ function Event21() {
         <section className="container">
           <div className="row align-items-center">
             <div className="col-md-4 text-center">
-              <div className="pic">
+              <div className="pic-bogdan">
                 <img
                   src="assets/img/bogdan.jpg"
                   className="img-fluid rounded-circle shadow"

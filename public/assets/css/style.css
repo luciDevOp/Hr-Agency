@@ -2499,14 +2499,14 @@ section {
   background-color: #5e3481;
 }
 
-.pic img {
+.pic-bogdan img {
   max-width: 70%;
   border: 3px solid #7947a2;
 }
 
 @media (max-width: 768px) {
 
-  .pic img {
+  .pic-bogdan img {
     margin-bottom: 30px;
   }
   .bio-content{
