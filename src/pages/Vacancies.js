@@ -245,6 +245,19 @@ const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
               {jobDetails.require && jobDetails.require.more19 && (
                 <li>{jobDetails.require.more19}</li>
               )}
+              {jobDetails.require && jobDetails.require.more20 && (
+                <li>{jobDetails.require.more20}</li>
+              )}
+              {jobDetails.require && jobDetails.require.more21 && (
+                <li>{jobDetails.require.more21}</li>
+              )}
+              {jobDetails.require && jobDetails.require.more22 && (
+                <li>{jobDetails.require.more22}</li>
+              )}
+              {jobDetails.require && jobDetails.require.more23 && (
+                <li>{jobDetails.require.more23}</li>
+              )}
+              
               
             </ul>
             {jobDetails.require && jobDetails.require.more && (
@@ -424,6 +437,23 @@ const JobDetailsModal = ({ isOpen, onClose, jobDetails }) => {
               {jobDetails.disclaimer && (
                 <p className="job-title">Disclaimer: {jobDetails.disclaimer}</p>
               )}
+              {jobDetails.certificari1 && (
+                <p className="job-title">Certifications:</p>
+              )}
+              <ul>
+                {jobDetails.certificari1 && (
+                  <li>{jobDetails.certificari1}</li>
+                )}
+                {jobDetails.certificari2 && (
+                  <li>{jobDetails.certificari2}</li>
+                )}
+                {jobDetails.certificari3 && (
+                  <li>{jobDetails.certificari3}</li>
+                )}
+                {jobDetails.certificari4 && (
+                  <li>{jobDetails.certificari4}</li>
+                )}
+              </ul>
               
 
               {jobDetails.beneficii1 && (
@@ -1932,6 +1962,7 @@ function Vacancies() {
     },
     {
       title: "Executive Director",
+      completed:true,
       location: "Bucharest, Romania",
       description: '\nOur company is dedicated to fostering an inclusive business environment that supports diversity in all its forms. Our mission is to empower diverse businesses, promote equitable economic growth, and advocate for policies that benefit our members.',
       require: {
@@ -2000,6 +2031,7 @@ function Vacancies() {
     },
     {
       title: "Communications, Outreach, and Operations Manager",
+      completed:true,
       location: "Bucharest, Romania",
       require: {
         one: "Experience in public relations, communications, or marketing.",
@@ -2171,6 +2203,7 @@ function Vacancies() {
     },
     {
       title: "Procurement Manager",
+      completed:true,
       location: "Bucharest, Romania",
       description: "\nFor our client, specialized in complete solutions of laboratory and testing, we are looking for a Procurement Manager to oversee purchasing activities and ensure that purchased items are both cost-efficient and of high quality.\n The Procurement Manager's responsibilities include maintaining positive supplier relations, evaluating supply options, approving purchases, and maintaining accurate records.",
       require: {
@@ -2348,6 +2381,167 @@ function Vacancies() {
       },
 
       type: "Full Time/Remote",
+    },
+    {
+      title: "Quality Manager",
+      location: "Bucharest, Romania",
+      description: "\nA key Management Team role reporting to the General Manager responsible for Production and Paper Machine Process Management & Development, supporting and supported by Plant & Engineering Managers",
+      require: {
+        one: "Ideally a paper making qualification",
+        two: "Degree level qualification or equivalent. ",
+        three: "Good organizational and leadership skills",
+        four: 'Creative thinking and problem-solving skills ',
+        five: 'Full P & L responsibility and contribution to Capital Plan Development Plan',
+        six: 'Leading role in Annual Budget process particularly in Product & Process Costings & BOM Development',
+        seven: 'Assertive communication with  subordinates, colleagues, stakeholders, external parties and customers.',
+        eight: 'Reporting and numerical analytical skills',
+        nine: 'Presentation skills',
+        ten: 'Minimum experience required: 5 years in senior paper mill roles',
+        eleven: 'Background of managerial experience in continuous paper mill operations. ',
+        twelve: 'Successful track record of achievements',
+        thirteen: 'Strong team-work ethic with ability motivate others',
+        fourteen: 'Creative, innovative, analytical problem-solver',
+        fifteen: 'Willingness to embrace new ways of thinking',
+        sixteen: 'Team orientated / actively promote a positive and cooperative team spirit',
+        more: "To ensure a safe working environment is maintained at all times",
+        more01: "Report defects, shortcomings & any incidents or injuries immediately",
+        more02: "Ensures all activities undertaken within departments are covered by Risk Assessment/Safe Systems of Work",
+        more03: 'Ensures safety of all work colleagues, contractors, visitors and members of the public',
+        more04: 'As a key member of the Management Team, this role will support Operational Excellence at all levels through visible leadership & behaviors, challenging poor performance, recognizing & encouraging success.',
+        more05: 'Support both Plant and Engineering Managers in daily management of site operations to ensure safe, sustainable and cost-effective paper production and process operations.',
+        more06: 'Is responsible for health and safety compliance for himself and the coordinated personnel',
+        more07: 'Coordinates and develops the production personnel, conducts the personnel review for direct reports',
+        more08: 'Is responsible for achieving the production budget, at the requested quality standards, and within the validated costs',
+        more09: 'Is part of budgeting process of production',
+        more10: 'Is responsible for the development of the coordinated personnel',
+        more11: 'Coordinates with maintenance for production planning',
+        more12: 'Follows and is responsible for making, updating and promoting a list of spare parts needed for the main components of PM',
+        more13: 'Collaborates for removing the deficiencies which occur accidentally in the equipment/ installations of paper machines',
+        more14: 'Is involved in the activity of preventing and removing the consequences of the damage that occurred in relation with the equipment/ installations of paper machines',
+        more15: 'Is responsible for the endowment with devices, tools, machines for the paper machines and the coordinated personnel, in accordance to the programs approved at the company level.',
+        more16: 'Follows up the production process and brings optimization proposals',
+        more17: 'Participates in the process of installation, repair, testing, optimization of the necessary equipment.',
+        more18: 'Knows the production KPIs and use them for reaching the target',
+        more19: "Is responsible for respecting all company's policies and standards, for himself and coordinated personnel",
+        more20: 'In partnership with the Procurement and Production Managers, ensure the efficient & continually improving supply of raw materials to the paper making operations.',
+        more21: 'In partnership with Finance, develop reporting systems to measure actual consumption vs Bill of Materials and co-ordinate actions to correct variances.',
+        more22: 'Ensure routine inspection & maintenance of relevant process plant is conducted safely & on time either through direct employees or sub-contract/suppliers.',
+        more23: 'Primary link with mill networks relating to papermaking science & technology such as BAT Group, Technical Groups, etc.  Bring best practice into the mill environment.',
+      },
+
+      type: "Full Time/On site",
+    },
+    {
+      title: "JUNIOR LAWYER CORPORATE / REAL ESTATE",
+      location: "Bucharest, Romania",
+      description: "\nOn behalf of our client, a global law firm, based in Bucharest, we are seeking a dedicated Junior Legal Counsel to support the legal team. \nThis role involves assisting in drafting and negotiating commercial agreements, maintaining legal documentation, and ensuring compliance with legal standards. \nThe ideal candidate will have a strong foundation in law, with a focus on commercial and corporate legal matters, or real estate. \nThis position is perfect for someone with a keen eye for detail, excellent communication skills, and the ability to thrive in a fast-paced environment.",
+      require: {
+        one: "BSc in Law or International Law",
+        two: "1-2 years’ minimum international experience in legal/commercial /  real estate terms",
+        three: "Ability to document complex contractual arrangements with attention to detail",
+        four: 'Proactive, collaborative work style',
+        five: 'Excellent written and spoken English',
+        more: "Identifying and establishing new business",
+        more01: " Assist in negotiating and drafting commercial and vendor agreements",
+        more02: "Establish and maintain scalable contracting processes and templates",
+        more03: 'Provide administrative support for legal documentation',
+        more04: 'Assist with corporate initiatives like litigation, employment matters, trademarks',
+        more05: 'Participate in developing company policies on legal issues',
+        more06: 'Assist in compliance projects, particularly with data privacy regulations',
+        more07: 'Conduct legal research and provide updates on applicable laws and regulations',
+        more08: 'Support legal counsel in liaising with internal and external stakeholders',
+      },
+
+      type: "Full Time/On site",
+    },
+    {
+      title: "Regional CEO Nordics & Central Europe",
+      location: "Global",
+      description: "\nOn Behalf of our client, a fast-growing international supplier of building materials, operating across 15 countries, we are currently searching for a \nRegional CEO Nordics & Central Europe \n The scope of the role is to manage multiple country operations, creating and maintaining synergies across markets and teams, optimizing sales performance, and driving revenue growth. \nThis role offers flexibility in location within North/Central Europe and requires regular travel (ca. 3-4 days per week). \nThe position reports to a Global CEO, supervise a team of ca. 10 managers, total workforce of +400 FTEs.",
+      require: {
+        one: "15+ years of progressive commercial experience, general management, leadership, people management.",
+        two: "At least 5+ years of experience as CEO, Full P&L responsibility, Leading cross-functional teams",
+        three: "3+ years of experience managing operations in 4+ countries.",
+        four: '5+ years in B2B technical distribution environment.',
+        five: 'Experience in professionalizing organizational processes and creating synergies across countries.',
+        six: "Master’s degree in engineering or business.",
+        seven: "Fluency in English",
+        eight: 'Fluency in German',
+        more: "Dynamic and motivational leader",
+        more01: "Excellent people management skills",
+        more02: "Persuading, influencing, convincing",
+        more03: 'High degree of empathy and sensitivity.',
+        more04: 'Ability to drive impactful changes ',
+        more05: 'Assertive communication',
+        more06: 'Pragmatic, determined, ambitious and results oriented',
+        more07: 'Down-to-earth as well as hands-on',
+        more08: 'Highly skilled in stakeholder management',
+        more09: 'Connecting with people at all levels (clients, suppliers, peers, team)',
+        more10: 'Entrepreneurial mindset',
+        more11: 'Ability to thrive in a fast paced and changing environment.',
+      },
+
+      type: "Full Time/On site",
+    },
+    {
+      title: "Business Development / Marketing Specialist",
+      location: "Bucharest, Romania",
+      description: "\nA leading engineering and construction company in South Korea is seeking a Business Development / Marketing Specialist for its expansion plans in Romania. \nFounded in 1957, this company is one of the largest engineering design firms in South Korea, with over 6,900 completed projects globally. With a presence in more than 15 countries, the firm continues to grow and innovate in the industry. \nIf you're looking to be part of a dynamic, globally recognized team, this could be the opportunity for you!",
+      require: {
+        one: "Bachelor degree in Engineering or experience in Business Development within the engineering sector;",
+        two: "Previous knowledge in similar role in engineering companies;",
+        three: "3-5 years of relevant experiences in the construction / engineering projects.",
+        four: 'Pro-active approach and able to work under own initiative;',
+        five: 'Good communication in English and Romanian;',
+        six: "Able to use MS Office suite, CRM and other business critical tools.",
+        seven: "Driver license",
+        more: "Responsible for improving the organization’s market position and achieve financial growth;",
+        more01: "Coordinate and make the business development actions coherent within the company’s strategy;",
+        more02: "Responsible for the overall management of all strategic and operational marketing and customer relationship activities;",
+        more03: 'Take ownership of the management of the sales and marketing functions of the business;',
+        more04: 'Drive increased revenue and profit to achieve the company’s ambitious growth;',
+        more05: 'Participation in all related tenders - public or state;',
+        more06: 'Create and maintain a good relationship with local authorities;',
+        more07: 'Planning and coordinating the implementation of business plans and the penetration of new markets.',
+      },
+      type: "Full Time/Hybrid",
+    },
+    {
+      title: "Quality Manager",
+      location: "Bucharest, Romania",
+      description: "\nFor our client, a manufacturer of components for the aerospace industry, we are looking for a Quality Manager.",
+      require: {
+        one: "Higher technical and economic studies, preferably in Aerospace",
+        two: "10 years of general professional experience",
+        three: "3-5 years of experience in aviation",
+        four: 'English – mandatory',
+        five: 'French, German, or Italian – a strong advantage',
+        more: "Design, implement, certify, and continuously improve the quality management system",
+        more01: "Develop and improve the safety management system",
+        more02: "Monitor and evaluate compliance with safety management requirements",
+        more03: 'Inform and report on quality-related matters to the executive management and relevant institutions',
+        more04: 'Optimize the structural organization of the company, aligning it with quality management system requirements to enhance process efficiency',
+        more05: 'Ensure legal compliance and protect the rights and legitimate interests of the company and employees',
+        more06: 'Manage processes that ensure human resource availability for achieving strategic objectives, as well as their development and retention',
+        more07: 'Security structure management',
+        more08: 'Represent and defend the organization’s interests before regulatory authorities in nuclear, civil aviation, and other regulated sectors',
+        more09: 'Occupational Health & Safety (OHS) responsibilities',
+        more10: 'Emergency Situations responsibilities',
+        more11: 'GDPR compliance responsibilities',
+        more12: 'Reports directly to the President / General Director',
+        more13: 'Manages a team of 6 direct-reporting managers',
+        more14: 'Collaborates with all other departments',
+      },
+      beneficii1: 'Competitive salary',
+      beneficii2: 'Company car',
+      beneficii3: 'Laptop',
+      beneficii4: 'Mobile phone',
+      beneficii5: 'Performance-based bonuses',
+      certificari1: 'ISO 9001, ISO 14001, ISO 45001',
+      certificari2: 'Quality System Designer',
+      certificari3: 'Internal Auditor',
+      certificari4 : 'Microsoft Office, SAP',
+      type: "Full Time/On site",
     },
     
     
