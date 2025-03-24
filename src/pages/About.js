@@ -1,10 +1,23 @@
-import React from "react";
-import Team from "../components/Team";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";import Team from "../components/Team";
 import Call from "../components/Call";
 import Footer from "../components/Footer";
 import Testimonials from "../components/Testimonials";
 
 function About() {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === "#team") {
+      const teamSection = document.getElementById("team");
+      if (teamSection) {
+        teamSection.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }
+  }, [location]);
+
+
   return (
     <section id="about" className="about" data-aos="fade-up">
       <div className="section-title">

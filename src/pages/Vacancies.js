@@ -1770,6 +1770,7 @@ function Vacancies() {
     },
     {
       title: "Payroll Specialist",
+      completed: true,
       location: "Bucharest, Romania",
       description:"\nWe are looking for a payroll specialist to join our team on site, in Bucharest. If you are working well in a team, but also thriving individually, we have just the job for you!",
       require: {
@@ -1936,6 +1937,7 @@ function Vacancies() {
     },
     {
       title: "SAP Accountant",
+      completed: true,
       location: "Bucharest, Romania",
       require: {
         one: "Good knowledge in Accounting;",
@@ -2006,6 +2008,7 @@ function Vacancies() {
     },
     {
       title: "Program and Development Manager",
+      completed:true,
       location: "Bucharest, Romania",
       require: {
         one: "Experience in program management and fundraising.",
@@ -2063,6 +2066,7 @@ function Vacancies() {
     },
     {
       title: "Junior Assistant",
+      completed:true,
       location: "Bucharest, Romania",
       require: {
         one: "Strong organizational and multitasking abilities.",
@@ -2087,6 +2091,7 @@ function Vacancies() {
     },
     {
       title: "Office & Marketing Assistant - Entry level",
+      completed:true,
       location: "Bucharest, Romania",
       description: '\nLooking for motivated people who understand the concept of international standards of Diversity; Inclusion and Sustainability, customer service, office management, research, etc. \nWe need a junior person who is not afraid to take initiative, and who likes new challenges, has a sharp intellect and is open-minded!',
       require: {
@@ -2231,6 +2236,7 @@ function Vacancies() {
     },
     {
       title: "Sales Engineer",
+      completed:true,
       location: "Bucharest, Romania",
       description: "\nFor our client, specialized in complete solutions of laboratory and testing, we are looking for a Sales Engineer based in Bucharest. \nThe Sales Engineer is a key position in the organization as they are the point of contact for clients, answering queries, providing technical advice and demonstrating how to use new products, offering services and solutions.",
       require: {
@@ -2293,6 +2299,7 @@ function Vacancies() {
     },
     {
       title: "Sales Engineer",
+      completed: true,
       location: "Iasi, Romania",
       description: "\nFor our client, specialized in complete solutions of laboratory and testing, we are looking for a Sales Engineer based in Iasi.\nThe Sales Engineer is a key position in the organization as they are the point of contact for clients, answering queries, providing technical advice and demonstrating how to use new products, offering services and solutions.",
       require: {
@@ -2324,6 +2331,7 @@ function Vacancies() {
     },
     {
       title: "Sales Engineer",
+      completed:true,
       location: "Brasov / Sibiu, Romania",
       description: "\nFor our client, specialized in complete solutions of laboratory and testing, we are looking for a Sales Engineer based in Brasov / Sibiu.\nThe Sales Engineer is a key position in the organization as they are the point of contact for clients, answering queries, providing technical advice and demonstrating how to use new products, offering services and solutions.",
       require: {
@@ -2383,7 +2391,7 @@ function Vacancies() {
       type: "Full Time/Remote",
     },
     {
-      title: "Quality Manager",
+      title: "Production Manager",
       location: "Bucharest, Romania",
       description: "\nA key Management Team role reporting to the General Manager responsible for Production and Paper Machine Process Management & Development, supporting and supported by Plant & Engineering Managers",
       require: {

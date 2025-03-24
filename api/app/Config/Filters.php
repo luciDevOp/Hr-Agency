@@ -3,6 +3,8 @@
 namespace Config;
 
 use CodeIgniter\Config\Filters as BaseFilters;
+use App\Filters\CorsFilter;
+
 use CodeIgniter\Filters\Cors;
 use CodeIgniter\Filters\CSRF;
 use CodeIgniter\Filters\DebugToolbar;
@@ -30,7 +32,8 @@ class Filters extends BaseFilters
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
-        'cors'          => Cors::class,
+        // 'cors'          => Cors::class,
+        'cors'          => CorsFilter::class,
         'forcehttps'    => ForceHTTPS::class,
         'pagecache'     => PageCache::class,
         'performance'   => PerformanceMetrics::class,
@@ -51,6 +54,7 @@ class Filters extends BaseFilters
      */
     public array $required = [
         'before' => [
+            'cors',       // Cross-Origin Resource Sharing
             'forcehttps', // Force Global Secure Requests
             'pagecache',  // Web Page Caching
         ],

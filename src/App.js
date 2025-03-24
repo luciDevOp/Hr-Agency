@@ -6,7 +6,7 @@ import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import Services from "./pages/Services";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import GlobalOffices from "./pages/GlobalOffices";
 import GlobalMarket from "./pages/GlobalMarket";
 import BPTW from "./pages/BPTW";
@@ -31,15 +31,31 @@ import Event18 from "./pages/Event18";
 import Event19 from "./pages/Event19";
 import Event20 from "./pages/Event20";
 import Event21 from "./pages/Event21";
-
 import Privacy from "./pages/Privacy";
 import Vacancies from "./pages/Vacancies";
+import SendCV from "./pages/SendCV";
+
+//admin
+import AdminLogin from "./pages/admin/AdminLogin";
+import AdminHeader from "./components/admin/AdminHeader";
+
 
 function App() {
+  const location = useLocation();
+  const isAdminRoute = location.pathname.startsWith("/admin");
+
   return (
     <div className="App">
-      <Header />
+      {isAdminRoute ? <AdminHeader /> : <Header />}
+
       <Routes>
+        {/* admin */}
+
+        <Route path="/admin/login" element={<AdminLogin />} />
+        {/* <Route path="/admin/dashboard" element={<AdminDashboard />} /> */}
+
+        {/* public */}
+
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/privacy-policy" element={<Privacy />} />
@@ -76,7 +92,8 @@ function App() {
         <Route path="/blog/age-inclusive-workplace" element={<Event20 />} />
         <Route path="/blog/bogdan-costinescu" element={<Event21 />} />
 
-        
+        <Route path="/send-cv" element={<SendCV />} />
+
       </Routes>
     </div>
   );

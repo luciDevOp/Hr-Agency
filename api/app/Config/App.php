@@ -16,7 +16,7 @@ class App extends BaseConfig
      *
      * E.g., http://example.com/
      */
-    public string $baseURL = 'http://hha.ro/api/';
+    public string $baseURL  = 'http://localhost:8080/';
     
     //parola ftp:  VU9Ty%#J4k$K
 
@@ -135,7 +135,7 @@ class App extends BaseConfig
      * @see https://www.php.net/manual/en/timezones.php for list of timezones
      *      supported by PHP.
      */
-    public string $appTimezone = 'UTC';
+    public string $appTimezone = 'Europe/Bucharest';
 
     /**
      * --------------------------------------------------------------------------

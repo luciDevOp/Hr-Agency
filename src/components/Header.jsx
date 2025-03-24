@@ -17,8 +17,9 @@ function Header() {
   };
 
   const handleToggleClick = () => {
-    // This function handles both click and touch events
-    toggleAboutDropdown();
+    if (window.innerWidth <= 992) { 
+      toggleAboutDropdown();
+    }  
   };
 
   return (
@@ -65,6 +66,15 @@ function Header() {
                     </Link>
                   </li>
                   <li>
+                    
+                    <Link
+                      to="/about#team"
+                      onClick={closeMobileMenu}
+                    >
+                      Team
+                    </Link>
+                  </li>
+                  <li>
                     <Link to="/about-global-offices" onClick={closeMobileMenu}>
                       IMD Global reach
                     </Link>
@@ -78,10 +88,7 @@ function Header() {
                     </Link>
                   </li>
                   <li>
-                    <Link
-                      to="/bptw-news"
-                      onClick={closeMobileMenu}
-                    >
+                    <Link to="/bptw-news" onClick={closeMobileMenu}>
                       Best Places to Work Certification
                     </Link>
                   </li>
@@ -137,6 +144,11 @@ function Header() {
                   Get Started
                 </Link>
               </li>
+              <li>
+                <Link className="getstarted scrollto" to="/send-cv">
+                  Send CV
+                </Link>
+            </li>
             </ul>
           </nav>
         </div>

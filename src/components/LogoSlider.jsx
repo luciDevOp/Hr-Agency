@@ -83,7 +83,7 @@ function LogoSlider() {
         <img alt="logo" src="https://upload.wikimedia.org/wikipedia/commons/1/1c/KWS_SAAT_AG_logo.jpg" />
         <img alt="logo" src="https://www.single-pair-ethernet.com/sites/default/files/styles/4_3/public/2020-08/lapp-logo-weg.jpg?itok=7d0ipbtN" />
         <img alt="logo" src="https://logowik.com/content/uploads/images/leroy-merlin8331.jpg" />
-        <img alt="logo" src="https://www.agrisuport.ro/wp-content/uploads/2019/09/Libra-Bank.png" />
+        <img alt="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT60vJO1SL-ofEHzA8eGMCi4MMAYpBq4N91NQ&s" />
         <img alt="logo" src="https://chemarkrom.ro/wp-content/uploads/2018/10/limagrain-logo.png" />
         <img alt="logo" src="https://image.pitchbook.com/rhlz4ZLAF0m7Uze4XPIpJXyDSvI1618596604104_200x200" />
         <img alt="logo" src="https://www.manutan.com/medias/img/logos/logo_Manutan.jpg" />
@@ -98,7 +98,7 @@ function LogoSlider() {
         <img alt="logo" src="https://logos-world.net/wp-content/uploads/2023/03/Miele-Logo.jpg" />
         <img alt="logo" src="https://ami.cname.ro/_/company/mirus-consultanta-fiscala/mediaPool/Mirus_11191313.jpg" />
         <img alt="logo" src="https://findvectorlogo.com/wp-content/uploads/2019/01/mks-instruments-vector-logo.png" />
-        <img alt="logo" src="https://www.adstore.it/wp-content/uploads/2017/11/logo-motivi.jpg" />
+        <img alt="logo" src="https://media.licdn.com/dms/image/v2/C4D0BAQF6WNW8bqk8EQ/company-logo_200_200/company-logo_200_200/0/1630542150875?e=2147483647&v=beta&t=AD30MU-_kc5W2HIte0kzcs05Erksth-1sX4AZ3hElBk" />
         <img alt="logo" src="https://www.belli-france.com/wp-content/uploads/2017/07/logo-mr-bricolage.jpg" />
         <img alt="logo" src="https://logovectorseek.com/wp-content/uploads/2019/11/nidec-corporation-logo-vector.png" />
         <img alt="logo" src="https://logos-world.net/wp-content/uploads/2023/02/Novartis-Emblem.png" />
@@ -122,7 +122,7 @@ function LogoSlider() {
         <img alt="logo" src="https://logowik.com/content/uploads/images/770_sodexo.jpg" />
         <img alt="logo" src="https://upload.wikimedia.org/wikipedia/commons/6/64/Stada_logo.svg" />
         <img alt="logo" src="https://tukuz.com/wp-content/uploads/2019/06/sun-chemical-logo-vector.png" />
-        <img alt="logo" src="https://www.b2bcentral.co.za/wp-content/uploads/2017/06/Ascendis-acquisition-Sunwave-Pharma-logo.jpg" />
+        <img alt="logo" src="https://media.licdn.com/dms/image/v2/D560BAQHDVqe1uKpTbA/company-logo_200_200/company-logo_200_200/0/1665500848276/sun_wave_pharma_logo?e=2147483647&v=beta&t=9HPmBFGRNAxPeTY_Ul8D0wvjOx1HWE6ewtuwCHO2Lds" />
         <img alt="logo" src="https://swiss-capital.co/wp-content/uploads/2022/06/LOGO.svg" />
         <img alt="logo" src="https://1000logos.net/wp-content/uploads/2020/08/Syngenta-Logo.png" />
         <img alt="logo" src="https://wpcdn.us-east-1.vip.tn-cloud.net/www.wccbcharlotte.com/content/uploads/2016/06/Takata-logo.jpg" />
@@ -147,7 +147,7 @@ function LogoSlider() {
         <img alt="logo" src="https://findvectorlogo.com/wp-content/uploads/2019/02/weidmuller-gruppe-vector-logo.png" />
         <img alt="logo" src="https://logos-world.net/wp-content/uploads/2022/12/Whirlpool-Logo.png" />
         <img alt="logo" src="https://feelinglucky.ro/wp-content/uploads/winmasters-logo.png" />
-        <img alt="logo" src="https://www.startupcafe.ro/sites/default/files/2023-09/yazaki-logo.jpg" />
+        <img alt="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8uLgG377_CUwYmO3YmwCaiJ-xZAkryqXoGDxBH-4EgIS94FqHH4w4f8BMS8VuCqG5r5Q&usqp=CAU" />
         <img alt="logo" src="https://i.pinimg.com/564x/12/86/99/128699f55ba10f7d9ed14473de504540.jpg" />
         <img alt="logo" src="https://web-material3.yokogawa.com/1/10029/tabs/trademark.jpg" />
       </div>
