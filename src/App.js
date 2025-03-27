@@ -38,6 +38,9 @@ import SendCV from "./pages/SendCV";
 //admin
 import AdminLogin from "./pages/admin/AdminLogin";
 import AdminHeader from "./components/admin/AdminHeader";
+import Dashboard from "./pages/admin/Dashboard";
+
+
 
 
 function App() {
@@ -52,7 +55,7 @@ function App() {
         {/* admin */}
 
         <Route path="/admin/login" element={<AdminLogin />} />
-        {/* <Route path="/admin/dashboard" element={<AdminDashboard />} /> */}
+        <Route path="/admin/dashboard" element={<Dashboard />} />
 
         {/* public */}
 

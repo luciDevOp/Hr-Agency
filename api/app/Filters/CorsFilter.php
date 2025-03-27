@@ -12,7 +12,7 @@ class CorsFilter implements FilterInterface
         $response = service('response');
         $response->setHeader('Access-Control-Allow-Origin', '*');
         $response->setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-        $response->setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+        $response->setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, Token');
         $response->setHeader('Access-Control-Allow-Credentials', 'true');
 
         // Handle preflight requests

@@ -7,8 +7,9 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 $routes->get('/test/test', 'Test::test');
-$routes->post('/login/login', 'Admin\Login::login');
+$routes->post('/admin/login', 'Admin\Login::login');
 $routes->post('candidate/save', 'CandidateController::save');
+$routes->post('dashboard/index', 'Admin\Dashboard::index');
 
 
 $routes->setDefaultNamespace('App\Controllers');

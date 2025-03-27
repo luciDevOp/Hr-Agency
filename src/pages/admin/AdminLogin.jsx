@@ -1,6 +1,11 @@
 import React, { useState } from "react";
-import axios from "axios";
+import { axiosPost } from "../../utils/api"; // adjust path based on location
+import { useNavigate } from "react-router-dom";
+
+
 import { TextField, Button, Box, Typography, Alert } from "@mui/material";
+
+
 
 const AdminLogin = () => {
   const [email, setEmail] = useState("");
@@ -8,10 +13,13 @@ const AdminLogin = () => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
+  const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
     setSuccess("");
+    
 
     try {
       const formData = new FormData();
@@ -19,16 +27,18 @@ const AdminLogin = () => {
       formData.append("password", password);
   
       // Send the form data using axios
-      const response = await axios.post("http://localhost:8080/login/login", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
+      const response = await axiosPost("/admin/login", {
+        email,
+        password,
       });
+
       console.log(response);  
       if (!response.data.Error) {
         setSuccess("Login successful!");
         // Redirect to admin dashboard
-        // window.location.href = "/admin/dashboard";
+        localStorage.setItem("Token", response.data.Token);
+
+        navigate("/admin/dashboard");
       } else {
         setError(response.data.MesajEroare || "Invalid credentials");
       }
@@ -44,13 +54,13 @@ const AdminLogin = () => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        height: "100vh",
+        height: "90vh",
         backgroundColor: "#f4f4f9",
       }}
     >
       <Box
         sx={{
-          width: 300,
+          width: 400,
           padding: 3,
           borderRadius: 2,
           boxShadow: 3,
@@ -58,7 +68,7 @@ const AdminLogin = () => {
         }}
       >
         <Typography variant="h5" align="center" gutterBottom>
-          Admin Login
+          Login
         </Typography>
         {error && <Alert severity="error">{error}</Alert>}
         {success && <Alert severity="success">{success}</Alert>}

@@ -11,7 +11,7 @@ use DateTime;
 use stdClass;
 use TableSql;
 
-class CV extends BaseController
+class Dashboard extends BaseController
 {
 
    public function index()
@@ -24,12 +24,12 @@ class CV extends BaseController
 
 
         $order_by          = $this->request->getPost("OrderBy");
-        $pg_info           = new PaginationInfo($this->request->getPost("PaginationInfo") );
+      //   $pg_info           = new PaginationInfo($this->request->getPost("PaginationInfo") );
         $sql = new TableSql(
                             "SELECT *
-                            FROM 
-                                CV
-                                WHERE 1=1",
+                              FROM 
+                                 candidates t1
+                              WHERE 1=1"
                         );
 
         
@@ -51,17 +51,17 @@ class CV extends BaseController
         //         $sql->addIfNeeded($filters['Data'], '', " AND Date(t1.DataCreare) LIKE '%%%s%%' ");
         //     }
         // }      
-        $sql->addOrderBy("t1.Id","DESC");
+        $sql->addOrderBy("t1.id","DESC");
 
 
         $result = $sql->getResult();
         $rows   = $result->Rows;
-        $pg_info->RowCount = $result->FullRowsCount;
-        $ret->Results = $rows;
-        $ret->PaginationInfo = $pg_info;
+      //   $pg_info->RowCount = $result->FullRowsCount;
+        $ret->candidates = $rows;
+      //   $ret->PaginationInfo = $pg_info;
       }
 
-      echo  json_encode($ret);
+      return $this->response->setJSON($ret);   
    }
 
    public function get_info()

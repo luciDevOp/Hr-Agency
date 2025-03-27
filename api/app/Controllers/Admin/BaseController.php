@@ -9,6 +9,8 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use Psr\Log\LoggerInterface;
 use stdClass;
+use chillerlan\QRCode\QRCode;
+use chillerlan\QRCode\QROptions;
 use DateInterval;
 use DatePeriod;
 use DateTime;
@@ -90,7 +92,7 @@ class BaseController extends Controller
                
                 $differenceInMinutes = ($currentDate - strtotime($user->last_seen)) / 60;
                 
-                if(empty($user) || $client->DataExpirare < date('Y-m-d H:i:s') || $user->last_seen < $currentDatePast60minutes){
+                if(empty($user) || $client->expire_date < date('Y-m-d H:i:s') || $user->last_seen < $currentDatePast60minutes){
                     $client = new stdClass();
                     $client->MesajEroare = "Sesiunea a expirat!";
                 }elseif($differenceInMinutes > 5){
@@ -122,10 +124,10 @@ class BaseController extends Controller
     {
     $token          = $this->request->getHeaderLine("token");
         
-    $id_user = ($this->db->query("SELECT id_user FROM auth_token WHERE Token='$token'")->getRow())->id_user;
+    $id_user = ($this->db->query("SELECT id_user FROM auth_token WHERE token='$token'")->getRow())->id_user;
 
     if($id_user){
-        return $this->db->query("SELECT * FROM user WHERE id = " . $id_user)->getRow();
+        return $this->db->query("SELECT * FROM users WHERE id = " . $id_user)->getRow();
         }
     }
 
@@ -143,45 +145,45 @@ class BaseController extends Controller
         }
         return $ret;
     }
-    public function logError() {
-        $input = file_get_contents('php://input');
-        $data = json_decode($input, true);
+    // public function logError() {
+    //     $input = file_get_contents('php://input');
+    //     $data = json_decode($input, true);
     
-        $token = $this->request->getHeaderLine('Token');
-        $utilizator = null;
+    //     $token = $this->request->getHeaderLine('Token');
+    //     $utilizator = null;
     
-        if ($token) {
-            $utilizator = $this->db->query("SELECT id_user FROM auth_token WHERE token = ?", [$token])->getRow();
-        }
+    //     if ($token) {
+    //         $utilizator = $this->db->query("SELECT IdUtilizator FROM auth_token WHERE Token = ?", [$token])->getRow();
+    //     }
     
-        $errorDetails = json_decode($data['errorDetails'] ?? '{}', true);
-        $timestampISO = $data['timestamp'] ?? null;
+    //     $errorDetails = json_decode($data['errorDetails'] ?? '{}', true);
+    //     $timestampISO = $data['timestamp'] ?? null;
     
-        $timestampSQL = null;
-        if ($timestampISO) {
-            $datetime = new DateTime($timestampISO);
-            $datetime->setTimezone(new DateTimeZone(date_default_timezone_get()));
-            $timestampSQL = $datetime->format('Y-m-d H:i:s');
-        }
+    //     $timestampSQL = null;
+    //     if ($timestampISO) {
+    //         $datetime = new DateTime($timestampISO);
+    //         $datetime->setTimezone(new DateTimeZone(date_default_timezone_get()));
+    //         $timestampSQL = $datetime->format('Y-m-d H:i:s');
+    //     }
     
-        $urlError = $errorDetails['url'] ?? null;
-        $payload = json_encode($errorDetails['args'] ?? null);
-        $response = json_encode($errorDetails['responseData'] ?? null);
-        $cod = $errorDetails['status'] ?? null;
-        $mesaj = $errorDetails['responseData']['message'] ?? null;
-        $json = json_encode($errorDetails);
+    //     $urlError = $errorDetails['url'] ?? null;
+    //     $payload = json_encode($errorDetails['args'] ?? null);
+    //     $response = json_encode($errorDetails['responseData'] ?? null);
+    //     $cod = $errorDetails['status'] ?? null;
+    //     $mesaj = $errorDetails['responseData']['message'] ?? null;
+    //     $json = json_encode($errorDetails);
     
-        $this->db->query(
-            "INSERT INTO log_error (TimeStamp, UrlError, Payload, Response, Cod, Mesaj, JSON) VALUES (?, ?, ?, ?, ?, ?, ?)",
-            [$timestampSQL, $urlError, $payload, $response, $cod, $mesaj, $json]
-        );
+    //     $this->db->query(
+    //         "INSERT INTO log_error (TimeStamp, UrlError, Payload, Response, Cod, Mesaj, JSON) VALUES (?, ?, ?, ?, ?, ?, ?)",
+    //         [$timestampSQL, $urlError, $payload, $response, $cod, $mesaj, $json]
+    //     );
     
-        $ret = new stdClass;
-        $ret->status = 'success';
-        $ret->user = $utilizator;
-        $ret->timestamp = $timestampSQL;
-        $ret->test = $errorDetails;
-        echo json_encode($ret);
-    }
+    //     $ret = new stdClass;
+    //     $ret->status = 'success';
+    //     $ret->user = $utilizator;
+    //     $ret->timestamp = $timestampSQL;
+    //     $ret->test = $errorDetails;
+    //     echo json_encode($ret);
+    // }
 
 }
