@@ -11,6 +11,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.8.4",
     "basic-ftp": "^5.0.5",
+    "dayjs": "^1.11.13",
     "helmet": "^7.1.0",
     "mdb-react-ui-kit": "^7.0.0",
     "react": "^18.2.0",

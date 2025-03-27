@@ -10,6 +10,7 @@ $routes->get('/test/test', 'Test::test');
 $routes->post('/admin/login', 'Admin\Login::login');
 $routes->post('candidate/save', 'CandidateController::save');
 $routes->post('dashboard/index', 'Admin\Dashboard::index');
+$routes->post('dashboard/delete_cv', 'Admin\Dashboard::delete_cv');
 
 
 $routes->setDefaultNamespace('App\Controllers');
