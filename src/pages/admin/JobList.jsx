@@ -15,27 +15,34 @@ import {
   TablePagination,
   Typography,
 } from "@mui/material";
-import { axiosPost } from "../../utils/api"; // adjust path based on location
-import CandidateModal from "../../components/admin/DialogInfoCandidat"; // adjust path based on location
+import { axiosPost } from "../../utils/api";
+import JobDialog from "../../components/admin/JobDialog";
 
 
-const Dashboard = () => {
-  const [candidates, setCandidates] = useState([]);
-  const [filters, setFilters] = useState({ name: "", email: "", phone: "" });
+const JobList = () => {
+  const [jobs, setJobs] = useState([]);
+  const [filters, setFilters] = useState({ title: ""});
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
+  const [openDialog, setOpenDialog] = useState(false);
+  const [selectedJob, setSelectedJob] = useState(null); // Store selected job for editing
+
   const [paginationInfo, setPaginationInfo] = useState({ RowCount: 0 }); // Inițializează cu RowCount 0
   useEffect(() => {
-    fetchCandidates();
+    fetchJobs();
   }, [page, rowsPerPage, filters]);
 
-  const [selectedCandidate, setSelectedCandidate] = useState(null);
-
-  const showCandidateInfo = (candidate) => {
-    setSelectedCandidate(candidate);
+  const showJobInfo = (job) => {
+    setSelectedJob(job);
+    setOpenDialog(true); 
   };
 
-  const fetchCandidates = async () => {
+  const handleCloseDialog = () => {
+    setSelectedJob(null); 
+    setOpenDialog(false);
+  };
+
+  const fetchJobs = async () => {
     try {
       const formData = new FormData();
       formData.append("Filters_name", filters.name);
@@ -44,12 +51,12 @@ const Dashboard = () => {
       formData.append("PaginationInfo_Page", page + 1);
       formData.append("PaginationInfo_RowsPerPage", rowsPerPage);
   
-      const response = await axiosPost("/dashboard/index", formData);
+      const response = await axiosPost("/jobs/index", formData);
 
-      setCandidates(response.candidates || []);
+      setJobs(response.jobs || []);
       setPaginationInfo(response.PaginationInfo || {});
     } catch (error) {
-      console.error("Error fetching candidates:", error);
+      console.error("Error fetching jobs:", error);
     }
   };
   
@@ -68,21 +75,10 @@ const Dashboard = () => {
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
   };
-  
 
-  const previewCV = (cvUrl) => {
-    window.open(cvUrl, "_blank");
-  };
-
-  const downloadCV = (cvUrl) => {
-    const link = document.createElement("a");
-    link.href = cvUrl;
-    link.download = cvUrl.split("/").pop();
-    link.click();
-  };
-  const delete_candidate = async (id) => {
+  const completeJob = async (id) => {
     try {
-      const response = await axiosPost("dashboard/delete_cv", { id });
+      const response = await axiosPost("/jobs/complete_job", { id });
   
       if (response.data?.Error) {
         // Notificare de eroare
@@ -95,12 +91,43 @@ const Dashboard = () => {
         // Notificare de succes
         setSnackbar({
           open: true,
-          message: "Candidatul a fost șters cu succes.",
+          message: "Jobul a fost marcat ca finalizat.",
           severity: "success",
         });
   
         // opțional: reîncarcă lista
-        fetchCandidates();
+        fetchJobs();
+      }
+    } catch (err) {
+      setSnackbar({
+        open: true,
+        message: "Eroare la conexiunea cu serverul.",
+        severity: "error",
+      });
+    }
+  }
+  
+  const deleteJob = async (id) => {
+    try {
+      const response = await axiosPost("/jobs/delete_job", { id });
+  
+      if (response.data?.Error) {
+        // Notificare de eroare
+        setSnackbar({
+          open: true,
+          message: response.data.MesajEroare || "A apărut o eroare.",
+          severity: "error",
+        });
+      } else {
+        // Notificare de succes
+        setSnackbar({
+          open: true,
+          message: "Jobul a fost șters cu succes.",
+          severity: "success",
+        });
+  
+        // opțional: reîncarcă lista
+        fetchJobs();
       }
     } catch (err) {
       setSnackbar({
@@ -121,88 +148,71 @@ const Dashboard = () => {
     
     <Box sx={{ padding: 3 }}>
       <Typography variant="h4" gutterBottom>
-        Candidates Dashboard
+        Jobs List
+        <Button
+            variant="contained"
+            color="success"
+            size="small"
+            onClick={() => showJobInfo(null)}
+            sx={{ marginLeft: 2 }}
+            >Add job</Button>
       </Typography>
 
       {/* Filters */}
       <Box sx={{ display: "flex", gap: 2, marginBottom: 2 }}>
         <TextField
-          label="Filter by Name"
-          name="name"
-          value={filters.name}
-          onChange={handleFilterChange}
-          fullWidth
-        />
-        <TextField
-          label="Filter by Email"
-          name="email"
-          value={filters.email}
-          onChange={handleFilterChange}
-          fullWidth
-        />
-        <TextField
-          label="Filter by Phone"
-          name="phone"
-          value={filters.phone}
+          label="Filter by title"
+          name="title"
+          value={filters.title}
           onChange={handleFilterChange}
           fullWidth
         />
       </Box>
 
-      {/* Candidates Table */}
       <TableContainer component={Paper}>
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell>Last Name</TableCell>
-              <TableCell>First Name</TableCell>
-              <TableCell>Email</TableCell>
-              <TableCell>Phone</TableCell>
+              <TableCell>Title</TableCell>
+              <TableCell>Location</TableCell>
+              <TableCell>Environment</TableCell>
+              <TableCell>Type</TableCell>
               <TableCell sx={{ textAlign: "right" }}>Actions</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-            {candidates.map((candidate) => (
-              <TableRow key={candidate.id}>
-                <TableCell>{candidate.lastname}</TableCell>
-                <TableCell>{candidate.firstname}</TableCell>
-                <TableCell>{candidate.email}</TableCell>
-                <TableCell>{candidate.phone_number}</TableCell>
+            {jobs.map((job) => (
+              <TableRow key={job.id}>
+                <TableCell>{job.title}</TableCell>
+                <TableCell>{job.location}</TableCell>
+                <TableCell>{job.environment}</TableCell>
+                <TableCell>{job.type}</TableCell>
                 <TableCell sx={{ textAlign: "right" }}>
                   <Button
                     variant="contained"
-                    color="primary"
+                    color="info"
                     size="small"
-                    onClick={() => previewCV(candidate.cv_url)}
+                    onClick={() => showJobInfo(job)}
                     sx={{ marginRight: 1 }}
                   >
-                    Preview CV
-                  </Button>
-                  <Button
-                    variant="contained"
-                    color="secondary"
-                    size="small"
-                    onClick={() => downloadCV(candidate.cv_url)}
-                    sx={{ marginRight: 1 }}
-                  >
-                    Download CV
+                    Show job info
                   </Button>
                   <Button
                     variant="contained"
                     color="info"
                     size="small"
-                    onClick={() => showCandidateInfo(candidate)}
+                    onClick={() => completeJob(job.id)}
                     sx={{ marginRight: 1 }}
                   >
-                    Show Info
+                    Complete job
                   </Button>
                   <Button
                     variant="contained"
                     color="error"
                     size="small"
-                    onClick={() => delete_candidate(candidate.id)}
+                    onClick={() => deleteJob(job.id)}
                   >
-                    Delete CV
+                    Delete job
                   </Button>
                 </TableCell>
               </TableRow>
@@ -221,11 +231,11 @@ const Dashboard = () => {
         onRowsPerPageChange={handleChangeRowsPerPage}  // funcția pentru schimbarea numărului de rânduri per pagină
       />
 
-      <CandidateModal
-        open={!!selectedCandidate}
-        onClose={() => setSelectedCandidate(null)}
-        candidate={selectedCandidate}
-      />
+        <JobDialog
+            open={openDialog}
+            onClose={handleCloseDialog}
+            job={selectedJob}
+        />
       <Snackbar
         open={snackbar.open}
         autoHideDuration={3000}
@@ -244,4 +254,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default JobList;

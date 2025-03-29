@@ -39,6 +39,7 @@ import SendCV from "./pages/SendCV";
 import AdminLogin from "./pages/admin/AdminLogin";
 import AdminHeader from "./components/admin/AdminHeader";
 import Dashboard from "./pages/admin/Dashboard";
+import JobList from "./pages/admin/JobList";
 
 
 
@@ -56,6 +57,7 @@ function App() {
 
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route path="/admin/dashboard" element={<Dashboard />} />
+        <Route path="/admin/job_list" element={<JobList />} />
 
         {/* public */}
 

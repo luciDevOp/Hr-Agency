@@ -1,6 +1,5 @@
 import axios from "axios";
 
-// Base instance (optional)
 const api = axios.create({
   baseURL: "http://localhost:8080", // Set your base URL here
 });
@@ -16,24 +15,17 @@ api.interceptors.request.use((config) => {
 
 /**
  * Reusable Axios POST helper
- * Automatically sends as application/x-www-form-urlencoded
+ * @param {string} url - The API URL to call
+ * @param {FormData} formData - The FormData to send in the POST request
+ * @param {Object} [config={}] - Additional Axios configuration (optional)
  */
-export const axiosPost = async (url, data = {}, config = {}) => {
-  const formData = new URLSearchParams();
-  for (const key in data) {
-    formData.append(key, data[key]);
-  }
-
+const axiosPost = async (url, formData, config = {}) => {
   try {
-    const response = await api.post(url, formData, {
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-        ...config.headers,
-      },
-      ...config,
-    });
-    return response;
+    const response = await api.post(url, formData, config);
+    return response.data;
   } catch (error) {
+    console.error("Error in Axios POST request:", error);
     throw error;
   }
 };
+export { axiosPost };

@@ -16,14 +16,23 @@ class Dashboard extends BaseController
 
    public function index()
    {
+
        $ret = $this->verify_login();
        if (!$ret->NotLogged) {
-           $filters = $this->request->getPost("Filters");
-           $order_by = $this->request->getPost("OrderBy");
-           $pg_info = new PaginationInfo($this->request->getPost("PaginationInfo"));
+
+            $filters = [
+                  'name' => $this->request->getPost("Filters_name"),
+                  'email' => $this->request->getPost("Filters_email"),
+                  'phone' => $this->request->getPost("Filters_phone")
+            ];
+            $order_by          = $this->request->getPost("OrderBy");
+            $pg_info = new PaginationInfo([
+                  'Page' => $this->request->getPost("PaginationInfo_Page"),
+                  'PerPage' => $this->request->getPost("PaginationInfo_RowsPerPage")
+            ]);
    
            $sql = new TableSql(
-               "SELECT * FROM candidates t1 WHERE deleted = 0"
+               "SELECT * FROM candidates t1 WHERE t1.deleted = 0"
            );
    
            // Adaugă filtre dacă există
@@ -39,7 +48,9 @@ class Dashboard extends BaseController
    
            // Adaugă ordonare
            $sql->addOrderBy("t1.id", "DESC");
-   
+           
+           $sql->addLimitFromPagination($pg_info);
+
            // Execută query-ul cu paginare
            $result = $sql->getResult($pg_info);
            $rows = $result->Rows;
@@ -50,7 +61,6 @@ class Dashboard extends BaseController
                    $row->cv_url = base_url('uploads/cvs/' . $row->cv_file);
                }
            }
-   
            // Returnează rezultatele și informațiile de paginare
            $pg_info->RowCount = $result->FullRowsCount;
            $ret->candidates = $rows;

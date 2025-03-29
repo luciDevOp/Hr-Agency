@@ -1,25 +1,27 @@
 <?php
 class PaginationInfo
 {
-	public $Page      = 0;
-	public $PerPage   = 10;
-	public $RowCount  = 0;
-	public $PageSizes = [10, 100, 200, 500];
+    public $Page      = 0;
+    public $PerPage   = 10;
+    public $RowCount  = 0;
+    public $PageSizes = [10, 100, 200, 500];
 
-	public function __construct( $fromArray=null )
-	{
-		if (!empty($fromArray))
-		{
-			$this->Page      = intval( $fromArray['Page'     ]);
-			$this->PerPage   = intval( $fromArray['PerPage'  ]);
-			$this->RowCount  = intval( $fromArray['RowCount' ]);
-			$this->PageSizes = [];
-			foreach($fromArray["PageSizes"] as $page_size){
-				$this->PageSizes[] = intval( $page_size );
-			}
-		}
-	}
+    public function __construct($fromArray = null)
+    {
+        if (!empty($fromArray)) {
+            // Ensure that each field exists in the array before trying to access it
+            $this->Page      = isset($fromArray['Page']) ? intval($fromArray['Page']) : $this->Page;
+            $this->PerPage   = isset($fromArray['PerPage']) ? intval($fromArray['PerPage']) : $this->PerPage;
+            $this->RowCount  = isset($fromArray['RowCount']) ? intval($fromArray['RowCount']) : $this->RowCount;
+            
+            // Ensure that 'PageSizes' is an array and handle it accordingly
+            if (isset($fromArray['PageSizes']) && is_array($fromArray['PageSizes'])) {
+                $this->PageSizes = array_map('intval', $fromArray['PageSizes']);
+            }
+        }
+    }
 }
+
 
 class TableSqlResult
 {
