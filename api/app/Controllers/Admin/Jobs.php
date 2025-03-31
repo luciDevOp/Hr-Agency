@@ -53,6 +53,33 @@ class Jobs extends BaseController
        return $this->response->setJSON($ret);
    }
 
+   public function get_job()
+   {
+        $ret            = $this->verify_login();
+        if(!$ret->NotLogged)
+        {
+             $id = $this->request->getPost("id");
+             if($id != null)
+             {
+                $jobModel = new JobModel();
+                $jobDetailModel = new JobDetailModel();
+                $job = $jobModel->find($id);
+                if ($job) {
+                    $jobDetails = $jobDetailModel->getJobDetails($id);
+                    $job['subtitles'] = $jobDetails;
+                    $ret->job = $job;
+                } else {
+                    $ret->Error = true;
+                    $ret->MesajEroare = 'Job not found';
+                }
+             }else{
+                $ret->Error = true;
+                $ret->MesajEroare = 'Eroare la server!';
+             }
+        }
+        return $this->response->setJSON($ret);
+   }
+
    public function delete_job()
    {
       $ret            = $this->verify_login();
@@ -86,6 +113,23 @@ class Jobs extends BaseController
         }
         return $this->response->setJSON($ret); 
    }
+
+   public function uncomplete_job()
+    {
+          $ret            = $this->verify_login();
+          if(!$ret->NotLogged)
+          {
+                $id = $this->request->getPost("id");
+                if($id != null)
+                {
+                 $this->db->table('jobs')->where('id', $id)->update(['completed' => 0]);
+                }else{
+                 $ret->Error = true;
+                 $ret->MesajEroare = 'Eroare la server!';
+                }
+          }
+          return $this->response->setJSON($ret);
+    }
 
     public function save()
     {

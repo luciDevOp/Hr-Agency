@@ -26,7 +26,7 @@ class Login extends BaseController
         
         if ( $user == null ) {
             $ret->Error = true;
-            $ret->MesajEroare = 'Email sau parola incorecte';
+            $ret->MesajEroare = 'Email or password is incorrect';
         } else {
 
 

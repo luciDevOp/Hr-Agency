@@ -9,17 +9,23 @@ import {
   TableRow,
   Paper,
   Snackbar,
+  Tooltip,
   Alert,
   Button,
   TextField,
   TablePagination,
+  CircularProgress,
   Typography,
 } from "@mui/material";
 import { axiosPost } from "../../utils/api"; // adjust path based on location
 import CandidateModal from "../../components/admin/DialogInfoCandidat"; // adjust path based on location
-
+import DeleteIcon from "@mui/icons-material/Delete";
+import DownloadIcon from '@mui/icons-material/Download';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import FindInPageIcon from '@mui/icons-material/FindInPage';
 
 const Dashboard = () => {
+  const [loading, setLoading] = useState(false);
   const [candidates, setCandidates] = useState([]);
   const [filters, setFilters] = useState({ name: "", email: "", phone: "" });
   const [page, setPage] = useState(0);
@@ -37,6 +43,7 @@ const Dashboard = () => {
 
   const fetchCandidates = async () => {
     try {
+      setLoading(true);
       const formData = new FormData();
       formData.append("Filters_name", filters.name);
       formData.append("Filters_email", filters.email);
@@ -50,6 +57,8 @@ const Dashboard = () => {
       setPaginationInfo(response.PaginationInfo || {});
     } catch (error) {
       console.error("Error fetching candidates:", error);
+    }finally {
+      setLoading(false); 
     }
   };
   
@@ -74,21 +83,23 @@ const Dashboard = () => {
     window.open(cvUrl, "_blank");
   };
 
-  const downloadCV = (cvUrl) => {
-    const link = document.createElement("a");
-    link.href = cvUrl;
-    link.download = cvUrl.split("/").pop();
-    link.click();
+  const downloadCV = (cv_file) => {
+    window.open(`http://localhost:8080/dashboard/download_cv/${cv_file}`, "_blank");
   };
-  const delete_candidate = async (id) => {
-    try {
-      const response = await axiosPost("dashboard/delete_cv", { id });
   
-      if (response.data?.Error) {
+  const delete_candidate = async (id) => {
+    const confirmDelete = window.confirm("Are you sure you want to delete this candidate?");
+    if (!confirmDelete) return;
+    try {
+      const formData = new FormData();
+      formData.append("id", id);
+      const response = await axiosPost("dashboard/delete_cv", formData);
+  
+      if (response.Error) {
         // Notificare de eroare
         setSnackbar({
           open: true,
-          message: response.data.MesajEroare || "A apărut o eroare.",
+          message: response.MesajEroare || "A apărut o eroare.",
           severity: "error",
         });
       } else {
@@ -162,52 +173,79 @@ const Dashboard = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {candidates.map((candidate) => (
-              <TableRow key={candidate.id}>
-                <TableCell>{candidate.lastname}</TableCell>
-                <TableCell>{candidate.firstname}</TableCell>
-                <TableCell>{candidate.email}</TableCell>
-                <TableCell>{candidate.phone_number}</TableCell>
-                <TableCell sx={{ textAlign: "right" }}>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    size="small"
-                    onClick={() => previewCV(candidate.cv_url)}
-                    sx={{ marginRight: 1 }}
-                  >
-                    Preview CV
-                  </Button>
-                  <Button
-                    variant="contained"
-                    color="secondary"
-                    size="small"
-                    onClick={() => downloadCV(candidate.cv_url)}
-                    sx={{ marginRight: 1 }}
-                  >
-                    Download CV
-                  </Button>
-                  <Button
-                    variant="contained"
-                    color="info"
-                    size="small"
-                    onClick={() => showCandidateInfo(candidate)}
-                    sx={{ marginRight: 1 }}
-                  >
-                    Show Info
-                  </Button>
-                  <Button
-                    variant="contained"
-                    color="error"
-                    size="small"
-                    onClick={() => delete_candidate(candidate.id)}
-                  >
-                    Delete CV
-                  </Button>
+            {loading ? (
+              <TableRow>
+                <TableCell colSpan={5} align="center">
+                  <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', py: 4 }}>
+                    <CircularProgress />
+                  </Box>
                 </TableCell>
               </TableRow>
-            ))}
+            ) : candidates.length === 0 ? (
+              <TableRow>
+                <TableCell colSpan={5} align="center">
+                  <Typography variant="body2" color="text.secondary">
+                    Nu s-au găsit candidați.
+                  </Typography>
+                </TableCell>
+              </TableRow>
+            ) : (
+              candidates.map((candidate) => (
+                <TableRow key={candidate.id}>
+                  <TableCell>{candidate.lastname}</TableCell>
+                  <TableCell>{candidate.firstname}</TableCell>
+                  <TableCell>{candidate.email}</TableCell>
+                  <TableCell>{candidate.phone_number}</TableCell>
+                  <TableCell sx={{ textAlign: "right" }}>
+                    <Tooltip title="Preview CV">
+                      <Button
+                        variant="contained"
+                        color="secondary"
+                        size="small"
+                        onClick={() => previewCV(candidate.cv_url)}
+                        sx={{ marginRight: 1 }}
+                      >
+                        <FindInPageIcon />
+                      </Button>
+                    </Tooltip>
+                    <Tooltip title="Download CV">
+                      <Button
+                        variant="contained"
+                        color="success"
+                        size="small"
+                        onClick={() => downloadCV(candidate.cv_file)}
+                        sx={{ marginRight: 1 }}
+                      >
+                        <DownloadIcon />
+                      </Button>
+                    </Tooltip>
+                    <Tooltip title="View candidate info">
+                      <Button
+                        variant="contained"
+                        color="info"
+                        size="small"
+                        onClick={() => showCandidateInfo(candidate)}
+                        sx={{ marginRight: 1 }}
+                      >
+                        <VisibilityIcon />
+                      </Button>
+                    </Tooltip>
+                    <Tooltip title="Delete candidate">
+                      <Button
+                        variant="contained"
+                        color="error"
+                        size="small"
+                        onClick={() => delete_candidate(candidate.id)}
+                      >
+                        <DeleteIcon />
+                      </Button>
+                    </Tooltip>
+                  </TableCell>
+                </TableRow>
+              ))
+            )}
           </TableBody>
+
         </Table>
       </TableContainer>
 

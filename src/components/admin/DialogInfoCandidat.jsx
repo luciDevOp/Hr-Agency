@@ -22,16 +22,16 @@ const CandidateModal = ({ open, onClose, candidate }) => {
           <Typography><strong>Email: </strong> {candidate.email}</Typography>
           <Typography><strong>Telefon: </strong> {candidate.phone_number}</Typography>
           <Typography><strong>Recomandat de: </strong> 
-            {candidate.recommended_by == null || candidate.recommended_by == ''  ? 'Nerecomandat' : candidate.recommended_by }
+            {candidate.recommended_by === null || candidate.recommended_by === ''  ? 'Nerecomandat' : candidate.recommended_by }
           </Typography>
           <Typography><strong>Titlu job actual: </strong>
-             {candidate.current_job_title == null || candidate.current_job_title == ''  ? 'Neangajat' : candidate.current_job_title }
+             {candidate.current_job_title === null || candidate.current_job_title === ''  ? 'Neangajat' : candidate.current_job_title }
           </Typography>
           <Typography><strong>Angajat la: </strong> 
-            {candidate.current_employer == null || candidate.current_employer == ''  ? 'Neangajat' : candidate.current_employer }
+            {candidate.current_employer === null || candidate.current_employer === ''  ? 'Neangajat' : candidate.current_employer }
           </Typography>
           <Typography><strong>Informatii suplimentare:</strong> 
-            {candidate.additional_information == null || candidate.additional_information == ''  ? 'Nesetat' : candidate.additional_information }
+            {candidate.additional_information === null || candidate.additional_information === ''  ? 'Nesetat' : candidate.additional_information }
           </Typography>
           <Typography><strong>Data trimitere CV: </strong> 
           {!candidate.created_at

@@ -17,32 +17,31 @@ import {
   Typography,
 } from "@mui/material";
 import { axiosPost } from "../../utils/api";
-import JobDialog from "../../components/admin/JobDialog";
+// import JobDialog from "../../components/admin/JobDialog";
 import DeleteIcon from "@mui/icons-material/Delete";
 import CheckIcon from "@mui/icons-material/Check";
 import EditIcon from '@mui/icons-material/Edit';
 import CloseIcon from "@mui/icons-material/Close";
 
-const JobList = () => {
-  const [jobs, setJobs] = useState([]);
+const PostList = () => {
+  const [posts, setPosts] = useState([]);
   const [filters, setFilters] = useState({ title: ""});
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
-  const [openDialog, setOpenDialog] = useState(false);
-  const [selectedJob, setSelectedJob] = useState(null); // Store selected job for editing
-
+//   const [openDialog, setOpenDialog] = useState(false);
+  const [selectedPost, setSelectedPost] = useState(null); // Store selected job for editing
   const [paginationInfo, setPaginationInfo] = useState({ RowCount: 0 }); // Inițializează cu RowCount 0
   useEffect(() => {
-    fetchJobs();
+    fetchPosts();
   }, [page, rowsPerPage, filters]);
 
-  const showJobInfo = (job) => {
-    setSelectedJob(job);
+  const showPostInfo = (job) => {
+    setSelectedPost(job);
     setOpenDialog(true); 
   };
 
   const handleCloseDialog = () => {
-    setSelectedJob(null); 
+    setSelectedPost(null); 
     setOpenDialog(false);
   };
 

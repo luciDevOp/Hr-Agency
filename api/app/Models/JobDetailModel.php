@@ -22,7 +22,33 @@ class JobDetailModel extends Model
     // Fetch all job details for a specific job
     public function getJobDetails($jobId)
     {
-        return $this->asArray()->where('job_id', $jobId)->findAll();
+        $rawDetails = $this->asArray()
+            ->where('job_id', $jobId)
+            ->findAll();
+    
+        $grouped = [];
+    
+        foreach ($rawDetails as $detail) {
+            $subtitle = $detail['subtitle'];
+            $listItem = $detail['list_item'];
+    
+            if (!isset($grouped[$subtitle])) {
+                $grouped[$subtitle] = [];
+            }
+    
+            $grouped[$subtitle][] = $listItem;
+        }
+    
+        // Convertim în formatul dorit de frontend
+        $structured = [];
+        foreach ($grouped as $subtitle => $list) {
+            $structured[] = [
+                'subtitle' => $subtitle,
+                'list' => $list
+            ];
+        }
+    
+        return $structured;
     }
 
     // Insert job details (subtitles and list items)

@@ -10,13 +10,12 @@ import {
   InputLabel,
   Select,
   MenuItem,
-  TextareaAutosize,
   IconButton,
 } from "@mui/material";
 import { axiosPost } from "../../utils/api";
 import CloseIcon from "@mui/icons-material/Close";
 
-const JobDialog = ({ open, onClose, job }) => {
+const JobDialog = ({ open, onClose, job, onSaveSuccess}) => {
   const [jobData, setJobData] = useState({
     id: "",
     title: "",
@@ -28,18 +27,32 @@ const JobDialog = ({ open, onClose, job }) => {
   });
 
   useEffect(() => {
-    if (job) {
-      setJobData({
-        id: job.id,
-        title: job.title,
-        location: job.location,
-        description: job.description,
-        environment: job.environment,
-        type: job.type,
-        subtitles: job.subtitles || [],
-      });
+    const fetchJobDetails = async (id) => {
+      try {
+        const formData = new FormData();
+        formData.append("id", id);
+        const response = await axiosPost("/jobs/get_job", formData); 
+        var jobBackend = response.job;
+        setJobData({
+          id: jobBackend.id,
+          title: jobBackend.title || "",
+          location: jobBackend.location || "",
+          description: jobBackend.description || "",
+          environment: jobBackend.environment || "on site", // fallback
+          type: jobBackend.type || "full time",             // fallback
+          subtitles: jobBackend.subtitles || [],
+        });
+        
+      } catch (error) {
+        console.error("Eroare la preluarea datelor jobului:", error);
+      }
+    };
+  
+    if (job?.id) {
+      fetchJobDetails(job.id);
     }
   }, [job]);
+  
 
   // Handle input changes for text fields and the subtitles
   const handleInputChange = (e) => {
@@ -96,6 +109,9 @@ const JobDialog = ({ open, onClose, job }) => {
         },
       });
       if (response.jobId) {
+        if (onSaveSuccess) {
+          onSaveSuccess(); // ✅ apelează funcția din JobList
+        }
         // Handle success (e.g., close the dialog, refresh job list)
         onClose();
       }
@@ -157,28 +173,36 @@ const JobDialog = ({ open, onClose, job }) => {
           margin="normal"
         />
         <FormControl fullWidth margin="normal">
-          <InputLabel>Environment</InputLabel>
+          <InputLabel id="environment-label">Environment</InputLabel>
           <Select
+            labelId="environment-label"
+            id="environment"
             name="environment"
             value={jobData.environment}
             onChange={handleInputChange}
+            label="Environment"
           >
             <MenuItem value="on site">On Site</MenuItem>
             <MenuItem value="remote">Remote</MenuItem>
             <MenuItem value="hybrid">Hybrid</MenuItem>
           </Select>
         </FormControl>
+
         <FormControl fullWidth margin="normal">
-          <InputLabel>Type</InputLabel>
+          <InputLabel id="type-label">Type</InputLabel>
           <Select
+            labelId="type-label"
+            id="type"
             name="type"
             value={jobData.type}
             onChange={handleInputChange}
+            label="Type"
           >
             <MenuItem value="full time">Full Time</MenuItem>
             <MenuItem value="part time">Part Time</MenuItem>
           </Select>
         </FormControl>
+
 
         <div>
           <h4>Job Details (Subtitles)</h4>

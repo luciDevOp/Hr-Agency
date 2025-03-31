@@ -47,15 +47,16 @@ import JobList from "./pages/admin/JobList";
 function App() {
   const location = useLocation();
   const isAdminRoute = location.pathname.startsWith("/admin");
+  const isLoginPage = location.pathname === "/admin";
 
   return (
     <div className="App">
-      {isAdminRoute ? <AdminHeader /> : <Header />}
+      {!isLoginPage && (isAdminRoute ? <AdminHeader /> : <Header />)}
 
       <Routes>
         {/* admin */}
 
-        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin" element={<AdminLogin />} />
         <Route path="/admin/dashboard" element={<Dashboard />} />
         <Route path="/admin/job_list" element={<JobList />} />
 

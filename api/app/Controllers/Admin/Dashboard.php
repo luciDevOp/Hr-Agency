@@ -86,4 +86,15 @@ class Dashboard extends BaseController
       }
       return $this->response->setJSON($ret);   
    }
+
+    public function download_cv($filename)
+    {
+        $path = FCPATH . 'uploads/cvs/' . $filename;
+
+        if (!file_exists($path)) {
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+        }
+
+        return $this->response->download($path, null);
+    }
 }

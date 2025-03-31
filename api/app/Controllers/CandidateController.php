@@ -29,7 +29,7 @@ class CandidateController extends BaseController
 
         $cvFile = $this->request->getFile('cv_file');
         $cvFileName = $cvFile->getRandomName();
-        $cvFile->move(WRITEPATH . 'uploads/cvs/', $cvFileName);
+        $cvFile->move(FCPATH . 'uploads/cvs/', $cvFileName);
 
         $optionalFields = [
             'current_employer' => $this->request->getPost('current_employer'),

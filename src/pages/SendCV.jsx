@@ -132,30 +132,28 @@ const SendCV = () => {
           Submit Your CV
         </Typography>
         <form onSubmit={handleSubmit}>
-          <Grid container spacing={1}>
-            <Grid item xs={12} sm={6}>
+          <Grid container spacing={2}>
+            <Grid size={{ xs: 12, sm: 6 }} item>
               <TextField
                 label="Your Firstname"
                 name="firstname"
                 fullWidth
-                margin="normal"
                 value={formData.firstname}
                 onChange={handleChange}
                 required
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }} item>
               <TextField
                 label="Your Lastname"
                 name="lastname"
                 fullWidth
-                margin="normal"
                 value={formData.lastname}
                 onChange={handleChange}
                 required
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }} item>
               <TextField
                 label="Email"
                 name="email"
@@ -167,44 +165,44 @@ const SendCV = () => {
                 required
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
-                <Box
-                    sx={{
-                    "& .PhoneInput": {
-                        width: "100%",
-                        marginTop: "16px",
-                        borderRadius: "4px",
-                        border: "1px solid #ccc",
-                        padding: "14px",
-                        boxSizing: "border-box",
-                        fontSize: "16px",
-                        color: "#000",
-                        backgroundColor: "#fff",
-                        outline: "none",
-                        "&:focus-within": {
-                        borderColor: "#3f51b5", 
-                        boxShadow: "0 0 0 2px rgba(63, 81, 181, 0.2)",
-                        },
-                    },
-                    "& .PhoneInputInput": {
-                        border: "none",
-                        outline: "none",
-                        fontSize: "16px",
-                        width: "100%",
-                    },
-                    }}
-                >
-                    <PhoneInput
-                    international
-                    defaultCountry="US"
-                    value={formData.phone_number}
-                    onChange={handlePhoneChange}
-                    placeholder="Enter phone number"
-                    className="PhoneInput"
-                    />
-                </Box>
-                </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }} item>
+              <Box
+                  sx={{
+                  "& .PhoneInput": {
+                      width: "100%",
+                      marginTop: "16px",
+                      borderRadius: "4px",
+                      border: "1px solid #ccc",
+                      padding: "14px",
+                      boxSizing: "border-box",
+                      fontSize: "16px",
+                      color: "#000",
+                      backgroundColor: "#fff",
+                      outline: "none",
+                      "&:focus-within": {
+                      borderColor: "#3f51b5", 
+                      boxShadow: "0 0 0 2px rgba(63, 81, 181, 0.2)",
+                      },
+                  },
+                  "& .PhoneInputInput": {
+                      border: "none",
+                      outline: "none",
+                      fontSize: "16px",
+                      width: "100%",
+                  },
+                  }}
+              >
+                  <PhoneInput
+                  international
+                  defaultCountry="US"
+                  value={formData.phone_number}
+                  onChange={handlePhoneChange}
+                  placeholder="Enter phone number"
+                  className="PhoneInput"
+                  />
+              </Box>
+            </Grid>
+            <Grid size={{ xs: 12, sm: 6 }} item>
               <TextField
                 label="Current Employer"
                 name="current_employer"
@@ -214,7 +212,7 @@ const SendCV = () => {
                 onChange={handleChange}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }} item>
               <TextField
                 label="Current Job Title"
                 name="current_job_title"
@@ -224,7 +222,7 @@ const SendCV = () => {
                 onChange={handleChange}
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12, sm: 6 }} item>
               <TextField
                 label="Additional Information"
                 name="additional_information"
@@ -236,7 +234,7 @@ const SendCV = () => {
                 onChange={handleChange}
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12, sm: 6 }} item>
               <TextField
                 label="Recommended By"
                 name="recommended_by"
@@ -246,7 +244,7 @@ const SendCV = () => {
                 onChange={handleChange}
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 24 }} item>
                 <Button
                     variant="contained"
                     component="label"
@@ -257,7 +255,7 @@ const SendCV = () => {
                     "&:hover": { backgroundColor: "#6a3d8e" },
                     }}
                 >
-                    Upload CV (PDF, DOC, DOCX, JPG, PNG)
+                  <span style={{textAlign: 'center'}}>Upload CV (PDF, DOC, DOCX, JPG, PNG)</span>
                     <input type="file" hidden onChange={handleFileChange} />
                 </Button>
                 {formData.cv_file && (
@@ -266,7 +264,7 @@ const SendCV = () => {
                     </Typography>
                 )}
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 24}} item>
               <FormControlLabel
                 control={
                   <Checkbox
@@ -279,7 +277,7 @@ const SendCV = () => {
                 label="I give my consent for my data to be processed in accordance with GDPR."
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 24 }} item>
               <Button
                 type="submit"
                 variant="contained"

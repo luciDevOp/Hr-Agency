@@ -26,21 +26,18 @@ const AdminLogin = () => {
       formData.append("email", email);
       formData.append("password", password);
   
-      // Send the form data using axios
-      const response = await axiosPost("/admin/login", {
-        email,
-        password,
-      });
+      const response = await axiosPost("/admin/login", formData);
+      
 
       console.log(response);  
-      if (!response.data.Error) {
+      if (!response.Error) {
         setSuccess("Login successful!");
         // Redirect to admin dashboard
-        localStorage.setItem("Token", response.data.Token);
-
+        localStorage.setItem("Token", response.Token);
+        console.log(response.Token);
         navigate("/admin/dashboard");
       } else {
-        setError(response.data.MesajEroare || "Invalid credentials");
+        setError(response.MesajEroare || "Invalid credentials");
       }
     } catch (err) {
       setError("An error occurred. Please try again.");
@@ -54,7 +51,7 @@ const AdminLogin = () => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        height: "90vh",
+        height: "100vh",
         backgroundColor: "#f4f4f9",
       }}
     >
