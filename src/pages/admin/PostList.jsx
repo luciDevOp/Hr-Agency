@@ -17,7 +17,7 @@ import {
   Typography,
 } from "@mui/material";
 import { axiosPost } from "../../utils/api";
-// import JobDialog from "../../components/admin/JobDialog";
+import PostDialog from "../../components/admin/PostDialog";
 import DeleteIcon from "@mui/icons-material/Delete";
 import CheckIcon from "@mui/icons-material/Check";
 import EditIcon from '@mui/icons-material/Edit';
@@ -28,8 +28,8 @@ const PostList = () => {
   const [filters, setFilters] = useState({ title: ""});
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
-//   const [openDialog, setOpenDialog] = useState(false);
-  const [selectedPost, setSelectedPost] = useState(null); // Store selected job for editing
+  const [openDialog, setOpenDialog] = useState(false);
+  const [selectedPost, setSelectedPost] = useState(null); 
   const [paginationInfo, setPaginationInfo] = useState({ RowCount: 0 }); // Inițializează cu RowCount 0
   useEffect(() => {
     fetchPosts();
@@ -45,19 +45,19 @@ const PostList = () => {
     setOpenDialog(false);
   };
 
-  const fetchJobs = async () => {
+  const fetchPosts = async () => {
     try {
       const formData = new FormData();
       formData.append("Filters_title", filters.title);
       formData.append("PaginationInfo_Page", page + 1);
       formData.append("PaginationInfo_RowsPerPage", rowsPerPage);
   
-      const response = await axiosPost("/jobs/index", formData);
+      const response = await axiosPost("/posts/index", formData);
 
-      setJobs(response.jobs || []);
+      setPosts(response.posts || []);
       setPaginationInfo(response.PaginationInfo || {});
     } catch (error) {
-      console.error("Error fetching jobs:", error);
+      console.error("Error fetching posts:", error);
     }
   };
   
@@ -76,84 +76,16 @@ const PostList = () => {
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
   };
-
-  const completeJob = async (id) => {
-    const confirmComplete = window.confirm("Ești sigur că vrei să marchezi acest job ca finalizat?");
-    if (!confirmComplete) return;
-
-    try {
-      const formData = new FormData();
-      formData.append("id", id);
-
-      const response = await axiosPost("/jobs/complete_job", formData);
   
-      if (response.Error) {
-        // Notificare de eroare
-        setSnackbar({
-          open: true,
-          message: response.MesajEroare || "A apărut o eroare.",
-          severity: "error",
-        });
-      } else {
-        // Notificare de succes
-        setSnackbar({
-          open: true,
-          message: "Jobul a fost marcat ca finalizat.",
-          severity: "success",
-        });
-        fetchJobs();
-      }
-    } catch (err) {
-      setSnackbar({
-        open: true,
-        message: "Eroare la conexiunea cu serverul.",
-        severity: "error",
-      });
-    }
-  }
-
-  const uncompleteJob = async (id) => {
-    const confirmComplete = window.confirm("Ești sigur că vrei să marchezi acest job ca nefinalizat?");
-    if (!confirmComplete) return;
-
-    try {
-      const formData = new FormData();
-      formData.append("id", id);
-
-      const response = await axiosPost("/jobs/uncomplete_job", formData);
-  
-      if (response.Error) {
-        setSnackbar({
-          open: true,
-          message: response.MesajEroare || "A apărut o eroare.",
-          severity: "error",
-        });
-      } else {
-        setSnackbar({
-          open: true,
-          message: "Jobul a fost marcat ca nefinalizat.",
-          severity: "success",
-        });
-        fetchJobs();
-      }
-    } catch (err) {
-      setSnackbar({
-        open: true,
-        message: "Eroare la conexiunea cu serverul.",
-        severity: "error",
-      });
-    }
-  }
-  
-  const deleteJob = async (id) => {
-    const confirmDelete = window.confirm("Ești sigur că vrei să ștergi acest job?");
+  const deletePost = async (id) => {
+    const confirmDelete = window.confirm("Ești sigur că vrei să ștergi aceasta postare?");
     if (!confirmDelete) return;
   
     try {
       const formData = new FormData();
       formData.append("id", id);
 
-      const response = await axiosPost("/jobs/delete_job", formData);
+      const response = await axiosPost("/posts/delete_post", formData);
   
       if (response.Error) {
         // Notificare de eroare
@@ -166,10 +98,10 @@ const PostList = () => {
         // Notificare de succes
         setSnackbar({
           open: true,
-          message: "Jobul a fost șters cu succes.",
+          message: "Postarea a fost ștersa cu succes.",
           severity: "success",
         });
-        fetchJobs();
+        fetchPosts();
       }
     } catch (err) {
       setSnackbar({
@@ -190,14 +122,14 @@ const PostList = () => {
     
     <Box sx={{ padding: 3 }}>
       <Typography variant="h4" gutterBottom>
-        Jobs List
+        Posts List
         <Button
             variant="contained"
             color="success"
             size="small"
-            onClick={() => showJobInfo(null)}
+            onClick={() => showPostInfo(null)}
             sx={{ marginLeft: 2 }}
-            >Add job</Button>
+            >Add post</Button>
       </Typography>
 
       {/* Filters */}
@@ -216,65 +148,35 @@ const PostList = () => {
           <TableHead>
             <TableRow>
               <TableCell>Title</TableCell>
-              <TableCell>Location</TableCell>
-              <TableCell>Environment</TableCell>
-              <TableCell>Type</TableCell>
-              <TableCell>Completed</TableCell>
+              <TableCell>Category</TableCell>
+              <TableCell>Date added</TableCell>
               <TableCell sx={{ textAlign: "right" }}>Actions</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-            {jobs.map((job) => (
-              <TableRow key={job.id}>
-                <TableCell>{job.title}</TableCell>
-                <TableCell>{job.location}</TableCell>
-                <TableCell>{job.environment}</TableCell>
-                <TableCell>{job.type}</TableCell>
-                <TableCell>{job.completed === '1' ? 'Completed' : 'Not completed'}</TableCell>
+            {posts.map((post) => (
+              <TableRow key={post.id}>
+                <TableCell>{post.title}</TableCell>
+                <TableCell>{post.category}</TableCell>
+                <TableCell>{post.created_at}</TableCell>
                 <TableCell sx={{ textAlign: "right" }}>
-                <Tooltip title="Edit job">
+                <Tooltip title="Edit post">
                     <Button
                       variant="contained"
                       color="info"
                       size="small"
-                      onClick={() => showJobInfo(job)}
+                      onClick={() => showPostInfo(post)}
                       sx={{ marginRight: 1 }}
                     >
                       <EditIcon />
                     </Button>
                   </Tooltip>
-                  
-                  {job.completed === "0" ? (
-                    <Tooltip title="Complete job">
-                      <Button
-                        variant="contained"
-                        color="success"
-                        size="small"
-                        onClick={() => completeJob(job.id)}
-                        sx={{ marginRight: 1 }}
-                      >
-                        <CheckIcon />
-                      </Button>
-                    </Tooltip>
-                  ) : (
-                    <Tooltip title="Mark as uncompleted">
-                      <Button
-                        variant="contained"
-                        color="warning"
-                        size="small"
-                        onClick={() => uncompleteJob(job.id)}
-                        sx={{ marginRight: 1 }}
-                      >
-                        <CloseIcon />
-                      </Button>
-                    </Tooltip>
-                  )}
-                  <Tooltip title="Delete job">
+                  <Tooltip title="Delete post">
                     <Button
                       variant="contained"
                       color="error"
                       size="small"
-                      onClick={() => deleteJob(job.id)}
+                      onClick={() => deletePost(post.id)}
                     >
                     <DeleteIcon />
                     </Button>
@@ -296,18 +198,18 @@ const PostList = () => {
         onRowsPerPageChange={handleChangeRowsPerPage}  // funcția pentru schimbarea numărului de rânduri per pagină
       />
 
-        <JobDialog
+        <PostDialog
             open={openDialog}
             onClose={handleCloseDialog}
-            job={selectedJob}
-            onSaveSuccess={fetchJobs}
+            post={selectedPost}
+            onSaveSuccess={fetchPosts}
         />
-      <Snackbar
-        open={snackbar.open}
-        autoHideDuration={3000}
-        onClose={() => setSnackbar({ ...snackbar, open: false })}
-        anchorOrigin={{ vertical: "top", horizontal: "center" }}
-      >
+        <Snackbar
+            open={snackbar.open}
+            autoHideDuration={3000}
+            onClose={() => setSnackbar({ ...snackbar, open: false })}
+            anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        >
         <Alert
           onClose={() => setSnackbar({ ...snackbar, open: false })}
           severity={snackbar.severity}
@@ -320,4 +222,4 @@ const PostList = () => {
   );
 };
 
-export default JobList;
+export default PostList;

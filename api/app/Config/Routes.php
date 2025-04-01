@@ -21,6 +21,11 @@ $routes->post('jobs/save', 'Admin\Jobs::save');
 $routes->post('jobs/get_job', 'Admin\Jobs::get_job');
 $routes->post('jobs/uncomplete_job', 'Admin\Jobs::uncomplete_job');
 
+$routes->post('posts/index', 'Admin\Posts::index');
+$routes->post('posts/delete_post', 'Admin\Posts::delete_post');
+$routes->post('posts/save', 'Admin\Posts::save');
+$routes->post('posts/get_post', 'Admin\Posts::get_post');
+
 $routes->setDefaultNamespace('App\Controllers');
 $routes->setDefaultController('Home');
 $routes->setDefaultMethod('index');

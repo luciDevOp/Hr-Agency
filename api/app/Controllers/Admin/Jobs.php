@@ -165,30 +165,7 @@ class Jobs extends BaseController
         
         return $this->response->setJSON($ret);
     }
-//     public function save()
-// {
-//     $ret = $this->verify_login();
-//     if (!$ret->NotLogged) {
-//         // Decode JSON payload into an array
-//         $jobData = json_decode(file_get_contents('php://input'), true);
 
-//         $jobId = $jobData['id'] ?? null;
-//         unset($jobData['id']); 
-//         $subtitles = $jobData['subtitles'] ?? null;
-//         unset($jobData['subtitles']);
-
-//         $jobModel = new JobModel();
-//         $ret->jobData = $jobData;
-//         $jobId = $jobModel->insert($jobData);
-//         if($jobId){
-//             $ret->jobId = $jobId;
-//             $ret->message = 'Job saved successfully!';
-//         }
-
-//     }
-
-//     return $this->response->setJSON($ret);
-// }
 
 
 }

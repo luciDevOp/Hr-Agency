@@ -40,7 +40,7 @@ import AdminLogin from "./pages/admin/AdminLogin";
 import AdminHeader from "./components/admin/AdminHeader";
 import Dashboard from "./pages/admin/Dashboard";
 import JobList from "./pages/admin/JobList";
-
+import PostList from "./pages/admin/PostList";
 
 
 
@@ -59,7 +59,7 @@ function App() {
         <Route path="/admin" element={<AdminLogin />} />
         <Route path="/admin/dashboard" element={<Dashboard />} />
         <Route path="/admin/job_list" element={<JobList />} />
-
+        <Route path="/admin/post_list" element={<PostList />} />
         {/* public */}
 
         <Route path="/" element={<Home />} />
