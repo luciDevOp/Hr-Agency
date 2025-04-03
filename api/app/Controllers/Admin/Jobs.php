@@ -156,11 +156,13 @@ class Jobs extends BaseController
             if ($jobId && !empty($subtitles)) {
                 $insertedDetails = $jobDetailModel->insertJobDetails($jobId, $subtitles);
                 if (!$insertedDetails) {
-                    $ret->error = "Failed to insert job details.";
-                    return $this->response->setJSON($ret);
+                    $ret->Error = true;
+                    $ret->MesajEroare = "Check subtitles and list items!";
                 }
+            }else{
+                $ret->Error = true;
+                $ret->MesajEroare = "The job has no subtitles and list items!";
             }
-
         }
         
         return $this->response->setJSON($ret);

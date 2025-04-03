@@ -6,6 +6,8 @@ import {
   DialogTitle,
   TextField,
   Button,
+  Snackbar,
+  Alert,
   FormControl,
   InputLabel,
   Select,
@@ -25,6 +27,11 @@ const JobDialog = ({ open, onClose, job, onSaveSuccess}) => {
     type: "full time", // Default to full-time
     subtitles: [],
   });
+    const [snackbar, setSnackbar] = useState({
+      open: false,
+      message: '',
+      severity: 'info', // 'success' | 'error' | 'warning' | 'info'
+    });
 
   useEffect(() => {
     const fetchJobDetails = async (id) => {
@@ -60,6 +67,14 @@ const JobDialog = ({ open, onClose, job, onSaveSuccess}) => {
     setJobData((prevState) => ({
       ...prevState,
       [name]: value,
+    }));
+  };
+  const handleDeleteListItem = (subtitleIndex, listIndex) => {
+    const updatedSubtitles = [...jobData.subtitles];
+    updatedSubtitles[subtitleIndex].list.splice(listIndex, 1); // elimină itemul
+    setJobData((prevState) => ({
+      ...prevState,
+      subtitles: updatedSubtitles,
     }));
   };
 
@@ -100,6 +115,14 @@ const JobDialog = ({ open, onClose, job, onSaveSuccess}) => {
       subtitles: updatedSubtitles,
     }));
   };
+  const handleDeleteSubtitle = (index) => {
+    const updatedSubtitles = [...jobData.subtitles];
+    updatedSubtitles.splice(index, 1); // șterge subtitlul la indexul dat
+    setJobData((prevState) => ({
+      ...prevState,
+      subtitles: updatedSubtitles,
+    }));
+  };
 
   const handleSave = async () => {
     try {
@@ -108,13 +131,29 @@ const JobDialog = ({ open, onClose, job, onSaveSuccess}) => {
           'Content-Type': 'application/json',  
         },
       });
-      if (response.jobId) {
-        if (onSaveSuccess) {
-          onSaveSuccess(); // ✅ apelează funcția din JobList
+      if (response.Error) {
+        // Notificare de eroare
+        setSnackbar({
+          open: true,
+          message: response.MesajEroare || "A apărut o eroare.",
+          severity: "error",
+        });
+      } else {
+        // Notificare de succes
+        if (response.jobId) {
+          if (onSaveSuccess) {
+            onSaveSuccess(); 
+            setSnackbar({
+              open: true,
+              message: "Job-ul a fost salvat cu succes.",
+              severity: "success",
+            });
+      
+          }
+          onClose();
         }
-        // Handle success (e.g., close the dialog, refresh job list)
-        onClose();
       }
+
     } catch (error) {
       console.error("Error saving job:", error);
     }
@@ -207,37 +246,75 @@ const JobDialog = ({ open, onClose, job, onSaveSuccess}) => {
         <div>
           <h4>Job Details (Subtitles)</h4>
           {jobData.subtitles.map((subtitle, index) => (
-            <div key={index} style={{ marginBottom: 16 }}>
-              <TextField
-                label="Subtitle"
-                name="subtitle"
-                value={subtitle.subtitle}
-                onChange={(e) => handleSubtitlesChange(e, index)}
-                fullWidth
-                margin="normal"
-              />
-              {subtitle.list.map((listItem, listIndex) => (
-                <TextField
-                  key={listIndex}
-                  label={`List Item ${listIndex + 1}`}
-                  value={listItem}
-                  onChange={(e) =>
-                    handleListItemChange(index, listIndex, e.target.value)
-                  }
-                  fullWidth
-                  margin="normal"
-                />
-              ))}
-              <Button
-                variant="outlined"
-                color="primary"
-                onClick={() => addListItem(index)}
-                sx={{ marginTop: 2 }}
-              >
-                Add List Item
-              </Button>
-            </div>
-          ))}
+  <div
+    key={index}
+    style={{
+      marginBottom: 24,
+      padding: 12,
+      border: "1px solid #ccc",
+      borderRadius: 8,
+      position: "relative",
+    }}
+  >
+    <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+      <TextField
+        label="Subtitle"
+        name="subtitle"
+        value={subtitle.subtitle}
+        onChange={(e) => handleSubtitlesChange(e, index)}
+        fullWidth
+        margin="normal"
+      />
+      <IconButton
+        onClick={() => handleDeleteSubtitle(index)}
+        color="error"
+        size="small"
+        aria-label="delete subtitle"
+        sx={{ marginTop: '8px' }}
+      >
+        <CloseIcon />
+      </IconButton>
+    </div>
+
+    {subtitle.list.map((listItem, listIndex) => (
+      <div
+        key={listIndex}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "8px",
+          marginBottom: "8px",
+        }}
+      >
+        <TextField
+          label={`List Item ${listIndex + 1}`}
+          value={listItem}
+          onChange={(e) =>
+            handleListItemChange(index, listIndex, e.target.value)
+          }
+          fullWidth
+        />
+        <IconButton
+          onClick={() => handleDeleteListItem(index, listIndex)}
+          color="error"
+          size="small"
+        >
+          <CloseIcon />
+        </IconButton>
+      </div>
+    ))}
+
+    <Button
+      variant="outlined"
+      color="primary"
+      onClick={() => addListItem(index)}
+      sx={{ marginTop: 2 }}
+    >
+      Add List Item
+    </Button>
+  </div>
+))}
+
           <Button
             variant="outlined"
             color="primary"
@@ -256,6 +333,20 @@ const JobDialog = ({ open, onClose, job, onSaveSuccess}) => {
           Save
         </Button>
       </DialogActions>
+        <Snackbar
+          open={snackbar.open}
+          autoHideDuration={3000}
+          onClose={() => setSnackbar({ ...snackbar, open: false })}
+          anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        >
+          <Alert
+            onClose={() => setSnackbar({ ...snackbar, open: false })}
+            severity={snackbar.severity}
+            sx={{ width: '100%' }}
+          >
+            {snackbar.message}
+          </Alert>
+        </Snackbar>
     </Dialog>
   );
 };
