@@ -12,14 +12,27 @@ import {
   Select,
   Typography
 } from '@mui/material';
-import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css';
 import { axiosPost } from "../../utils/api";
+import TiptapEditor from '../../components/admin/TiptapEditor';
 
 const dummyCategories = [
   { id: '1', name: 'Event' },
   { id: '2', name: 'Presentation' },
 ];
+// const quillModules = {
+//     toolbar: [
+//       [{ header: [1, 2, 3, false] }],
+//       [{ font: [] }],
+//       [{ size: [] }],
+//       ['bold', 'italic', 'underline'],
+//       [{ color: [] }, { background: [] }],
+//       [{ list: 'ordered' }, { list: 'bullet' }],
+//       [{ indent: '-1' }, { indent: '+1' }],
+//       [{ align: [] }],
+//       ['link'],
+//     ],
+//   };
+  
 
 export default function PostDialog({ open, onClose, onSaveSuccess, post = null }) {
   const [postData, setPostData] = useState({
@@ -37,7 +50,7 @@ export default function PostDialog({ open, onClose, onSaveSuccess, post = null }
       try {
         const formData = new FormData();
         formData.append("id", id);
-        const response = await axiosPost("/post/get_post", formData);
+        const response = await axiosPost("/posts/get_post", formData);
         const postBackend = response.post;
 
         setPostData((prev) => ({
@@ -170,14 +183,10 @@ export default function PostDialog({ open, onClose, onSaveSuccess, post = null }
 
         {/* WYSIWYG Editor */}
         <div style={{ marginTop: '20px' }}>
-          <label style={{ fontWeight: 'bold', marginBottom: '5px', display: 'block' }}>
-            Page Content
-          </label>
-          <ReactQuill
-            theme="snow"
+        <Typography variant="subtitle1" style={{ marginTop: 20 }}>Page Content</Typography>
+          <TiptapEditor
             value={postData.page_content}
             onChange={(val) => handleChange('page_content', val)}
-            style={{ height: '300px' }}
           />
         </div>
       </DialogContent>
