@@ -10,7 +10,9 @@ import {
   FormControl,
   InputLabel,
   Select,
-  Typography
+  Snackbar,
+  Typography,
+  Alert,
 } from '@mui/material';
 import { axiosPost } from "../../utils/api";
 import TiptapEditor from '../../components/admin/TiptapEditor';
@@ -19,21 +21,7 @@ const dummyCategories = [
   { id: '1', name: 'Event' },
   { id: '2', name: 'Presentation' },
 ];
-// const quillModules = {
-//     toolbar: [
-//       [{ header: [1, 2, 3, false] }],
-//       [{ font: [] }],
-//       [{ size: [] }],
-//       ['bold', 'italic', 'underline'],
-//       [{ color: [] }, { background: [] }],
-//       [{ list: 'ordered' }, { list: 'bullet' }],
-//       [{ indent: '-1' }, { indent: '+1' }],
-//       [{ align: [] }],
-//       ['link'],
-//     ],
-//   };
   
-
 export default function PostDialog({ open, onClose, onSaveSuccess, post = null }) {
   const [postData, setPostData] = useState({
     id: '',
@@ -43,6 +31,11 @@ export default function PostDialog({ open, onClose, onSaveSuccess, post = null }
     page_content: '',
     card_photo: null,
     page_photos: []
+  });
+  const [snackbar, setSnackbar] = useState({
+    open: false,
+    message: '',
+    severity: 'info', // 'success' | 'error' | 'warning' | 'info'
   });
 
   useEffect(() => {
@@ -112,9 +105,15 @@ export default function PostDialog({ open, onClose, onSaveSuccess, post = null }
           'Content-Type': 'multipart/form-data'
         }
       });
-
-      if (response.postId) {
-        onSaveSuccess?.();
+      if (response.post) {
+        if (onSaveSuccess) {
+          onSaveSuccess(); 
+          setSnackbar({
+            open: true,
+            message: "Postarea a fost salvata cu succes.",
+            severity: "success",
+          });
+        }
         onClose();
       }
     } catch (error) {
@@ -152,8 +151,8 @@ export default function PostDialog({ open, onClose, onSaveSuccess, post = null }
             label="Category"
             onChange={(e) => handleChange('category_id', e.target.value)}
           >
-            {dummyCategories.map((cat) => (
-              <MenuItem key={cat.id} value={cat.id}>
+            {dummyCategories.map((cat, index) => (
+              <MenuItem key={`${cat.id}-${index}`} value={cat.id}>
                 {cat.name}
               </MenuItem>
             ))}
@@ -197,6 +196,20 @@ export default function PostDialog({ open, onClose, onSaveSuccess, post = null }
           {post?.id ? "Update" : "Save"}
         </Button>
       </DialogActions>
+      <Snackbar
+        open={snackbar.open}
+        autoHideDuration={3000}
+        onClose={() => setSnackbar({ ...snackbar, open: false })}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+      >
+        <Alert
+          onClose={() => setSnackbar({ ...snackbar, open: false })}
+          severity={snackbar.severity}
+          sx={{ width: '100%' }}
+        >
+          {snackbar.message}
+        </Alert>
+      </Snackbar>
     </Dialog>
   );
 }

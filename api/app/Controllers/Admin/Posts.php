@@ -31,7 +31,7 @@ class Posts extends BaseController
             ]);
    
            $sql = new TableSql(
-               "SELECT *, t2.name as category
+               "SELECT t1.*, t2.name as category
                     FROM posts t1 
                     LEFT JOIN categories t2 ON t1.category_id = t2.id
                     WHERE t1.deleted = 0"

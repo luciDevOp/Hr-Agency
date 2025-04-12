@@ -16,6 +16,7 @@ import {
   TablePagination,
   Typography,
 } from "@mui/material";
+import dayjs from 'dayjs';
 import { axiosPost } from "../../utils/api";
 import PostDialog from "../../components/admin/PostDialog";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -158,7 +159,7 @@ const PostList = () => {
               <TableRow key={post.id}>
                 <TableCell>{post.title}</TableCell>
                 <TableCell>{post.category}</TableCell>
-                <TableCell>{post.created_at}</TableCell>
+                <TableCell>{dayjs(post.created_at).format("DD-MM-YYYY HH:mm:ss")}</TableCell>
                 <TableCell sx={{ textAlign: "right" }}>
                 <Tooltip title="Edit post">
                     <Button
