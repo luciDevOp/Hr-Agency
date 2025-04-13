@@ -210,7 +210,10 @@ const JobDialog = ({ open, onClose, job, onSaveSuccess}) => {
           onChange={handleInputChange}
           fullWidth
           margin="normal"
+          multiline
+          minRows={4} 
         />
+
         <FormControl fullWidth margin="normal">
           <InputLabel id="environment-label">Environment</InputLabel>
           <Select

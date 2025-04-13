@@ -32,7 +32,7 @@ import Event19 from "./pages/Event19";
 import Event20 from "./pages/Event20";
 import Event21 from "./pages/Event21";
 import Privacy from "./pages/Privacy";
-import Vacancies from "./pages/Vacancies";
+import Vacancies from "./pages/vacancies/Vacancies";
 import SendCV from "./pages/SendCV";
 
 //admin

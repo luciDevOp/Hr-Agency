@@ -168,6 +168,28 @@ class Jobs extends BaseController
         return $this->response->setJSON($ret);
     }
 
+    public function fetchAllJobs()
+    {
+        $ret = new \stdClass();
+        $jobModel = new JobModel();
+    
+        $page = (int)($this->request->getPost('PaginationInfo_Page') ?? 1);
+        $rowsPerPage = (int)($this->request->getPost('PaginationInfo_RowsPerPage') ?? 10);
+        $completed = $this->request->getPost('Filters_completed');
+    
+        $offset = ($page - 1) * $rowsPerPage;
+    
+        $ret->jobs = $jobModel->getJobsWithFilters($completed, $rowsPerPage, $offset);
+        $ret->PaginationInfo = [
+            'page' => $page,
+            'rowsPerPage' => $rowsPerPage,
+            'RowCount' => $jobModel->countJobsWithFilters($completed),
+        ];
+    
+        return $this->response->setJSON($ret);
+    }
+
+
 
 
 }

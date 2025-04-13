@@ -20,6 +20,7 @@ $routes->post('jobs/complete_job', 'Admin\Jobs::complete_job');
 $routes->post('jobs/save', 'Admin\Jobs::save');
 $routes->post('jobs/get_job', 'Admin\Jobs::get_job');
 $routes->post('jobs/uncomplete_job', 'Admin\Jobs::uncomplete_job');
+$routes->post('jobs/fetchAllJobs', 'Admin\Jobs::fetchAllJobs');
 
 $routes->post('posts/index', 'Admin\Posts::index');
 $routes->post('posts/delete_post', 'Admin\Posts::delete_post');

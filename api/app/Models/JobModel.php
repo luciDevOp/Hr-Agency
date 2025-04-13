@@ -63,4 +63,85 @@ class JobModel extends Model
 
         return $builder->countAllResults();
     }
+
+    public function getAllJobsWithoutDeleted()
+    {
+        $builder = $this->builder();
+        $builder->where('deleted', 0);
+        $builder->select('jobs.*, job_details.subtitle, job_details.list_item');
+        $builder->join('job_details', 'jobs.id = job_details.job_id', 'left');
+        $builder->orderBy('jobs.id', 'DESC');
+    
+        $results = $builder->get()->getResultArray(); 
+    
+        $groupedJobs = [];
+    
+        foreach ($results as $row) {
+            $jobId = $row['id'];
+    
+            if (!isset($groupedJobs[$jobId])) {
+                $groupedJobs[$jobId] = [
+                    'id' => $row['id'],
+                    'title' => $row['title'],
+                    'location' => $row['location'],
+                    'description' => $row['description'],
+                    'environment' => $row['environment'],
+                    'completed' => $row['completed'],
+                    'type' => $row['type'],                    
+                    'subtitles' => [],
+                ];
+            }
+    
+            // Group by subtitle, just like in getJobDetails()
+            $subtitle = $row['subtitle'];
+            $listItem = $row['list_item'];
+    
+            if (!empty($subtitle)) {
+                // Find if subtitle already exists
+                $index = array_search($subtitle, array_column($groupedJobs[$jobId]['subtitles'], 'subtitle'));
+    
+                if ($index === false) {
+                    // Not found, create it
+                    $groupedJobs[$jobId]['subtitles'][] = [
+                        'subtitle' => $subtitle,
+                        'list' => [$listItem]
+                    ];
+                } else {
+                    // Append to existing
+                    $groupedJobs[$jobId]['subtitles'][$index]['list'][] = $listItem;
+                }
+            }
+        }
+    
+        return array_values($groupedJobs);
+    }
+
+    public function getJobsWithFilters($completed = null, $limit = 10, $offset = 0)
+    {
+        $builder = $this->db->table('jobs')
+                            ->where('deleted', 0);
+
+        if ($completed !== null) {
+            $builder->where('completed', $completed);
+        }
+
+        return $builder->limit($limit, $offset)
+                    ->get()
+                    ->getResult();
+    }
+
+    public function countJobsWithFilters($completed = null)
+    {
+        $builder = $this->db->table('jobs')
+                            ->where('deleted', 0);
+
+        if ($completed !== null) {
+            $builder->where('completed', $completed);
+        }
+
+        return $builder->countAllResults();
+    }
+
+    
+    
 }
