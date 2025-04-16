@@ -112,23 +112,66 @@ class JobModel extends Model
                 }
             }
         }
+
     
         return array_values($groupedJobs);
     }
 
     public function getJobsWithFilters($completed = null, $limit = 10, $offset = 0)
     {
-        $builder = $this->db->table('jobs')
+        $jobBuilder = $this->db->table('jobs')
                             ->where('deleted', 0);
-
+    
         if ($completed !== null) {
-            $builder->where('completed', $completed);
+            $jobBuilder->where('completed', $completed);
         }
-
-        return $builder->limit($limit, $offset)
-                    ->get()
-                    ->getResult();
+    
+        $jobBuilder->orderBy('id', 'DESC')
+                   ->limit($limit, $offset);
+    
+        $jobs = $jobBuilder->get()->getResultArray();
+    
+        if (empty($jobs)) {
+            return [];
+        }
+    
+        $jobIds = array_column($jobs, 'id');
+    
+        $detailsBuilder = $this->db->table('job_details')
+                                ->whereIn('job_id', $jobIds)
+                                ->get()
+                                ->getResultArray();
+    
+        $detailsByJobId = [];
+        foreach ($detailsBuilder as $detail) {
+            $jobId = $detail['job_id'];
+            $subtitle = $detail['subtitle'];
+            $listItem = $detail['list_item'];
+    
+            if (!isset($detailsByJobId[$jobId])) {
+                $detailsByJobId[$jobId] = [];
+            }
+    
+            $index = array_search($subtitle, array_column($detailsByJobId[$jobId], 'subtitle'));
+    
+            if ($index === false) {
+                $detailsByJobId[$jobId][] = [
+                    'subtitle' => $subtitle,
+                    'list' => [$listItem]
+                ];
+            } else {
+                $detailsByJobId[$jobId][$index]['list'][] = $listItem;
+            }
+        }
+    
+        foreach ($jobs as &$job) {
+            $job['subtitles'] = $detailsByJobId[$job['id']] ?? [];
+        }
+    
+        return $jobs;
     }
+    
+    
 
     public function countJobsWithFilters($completed = null)
     {

@@ -56,9 +56,9 @@ function Vacancies() {
 
 
   return (
-    <section>
+    <section ref={jobsTopRef}>
       <div className="container mt-2 pt-3 pb-5" data-aos="fade-up">
-        <div ref={jobsTopRef} className="section-title mb-5">
+        <div  className="section-title mb-5">
           <h2>Open positions</h2>
           <p>
             Head Hunting Agency is a premier HR business committed to the art of
