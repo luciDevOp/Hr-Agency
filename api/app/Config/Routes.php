@@ -26,6 +26,7 @@ $routes->post('posts/index', 'Admin\Posts::index');
 $routes->post('posts/delete_post', 'Admin\Posts::delete_post');
 $routes->post('posts/save', 'Admin\Posts::save');
 $routes->post('posts/get_post', 'Admin\Posts::get_post');
+$routes->post('posts/fetchAllPosts', 'Admin\Posts::fetchAllPosts');
 
 $routes->setDefaultNamespace('App\Controllers');
 $routes->setDefaultController('Home');

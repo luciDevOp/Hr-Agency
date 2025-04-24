@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import Error from "./pages/Error";
 import About from "./pages/About";
-import Blog from "./pages/Blog";
+import Blog from "./pages/blog/Blog";
 import Contact from "./pages/Contact";
 import Services from "./pages/Services";
 import { Route, Routes, useLocation } from "react-router-dom";

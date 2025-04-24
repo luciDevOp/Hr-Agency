@@ -151,7 +151,17 @@ class Posts extends BaseController
        $ret->post = $postModel->find($postId);
        return $this->response->setJSON($ret);
    }
-   
+
+   public function fetchAllPosts()
+   {
+        $ret = new \stdClass();
+    
+        $postModel = new PostModel();
+        $posts = $postModel->getPostsWithPhotos();
+    
+        $ret->posts = $posts;
+        return $this->response->setJSON($ret);
+   }
    
 
 }

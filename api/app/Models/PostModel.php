@@ -47,4 +47,15 @@ class PostModel extends Model
 
         return $builder->countAllResults();
     }
+
+    public function getPostsWithPhotos()
+    {
+        return $this->select('posts.*, photos.file_name, photos.type, categories.name as category')
+                    ->join('photos', 'photos.post_id = posts.id', 'left')
+                    ->join('categories', 'categories.id = posts.category_id', 'left')
+                    ->where('posts.deleted', 0)
+                    ->where('photos.type', 'card_photo')
+                    ->findAll();
+    }
+
 }
