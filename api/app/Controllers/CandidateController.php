@@ -96,7 +96,7 @@ class CandidateController extends BaseController
             ]);
 
             $email->setFrom('jobs@hha.ro', 'Your Company');
-            $email->setTo('lucian.ungureanu@breakingpoint.ro'); // change to the appropriate recipient
+            $email->setTo('office@hha.ro'); // change to the appropriate recipient
             $email->setSubject('New Job Application Received');
         
             $fullName = $this->request->getPost('firstname') . ' ' . $this->request->getPost('lastname');
