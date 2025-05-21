@@ -2220,6 +2220,7 @@ section {
 
 .blog-header {
   margin-top: 50px;
+  padding: 0 50px 0 50px;
 }
 
 /* EVENTS CSS ///////////////////////////////////// */
@@ -2434,16 +2435,6 @@ section {
   font-weight: bold;
   color: green; /* Adjust the text color */
 }
-.pwn-img {
-  background: url("../img/events/pwn/pwn-banner.png") center;
-  background-size: cover;
-  padding: 200px 0;
-}
-@media (max-width: 768px) {
-  .pwn-img {
-    display: none;
-  }
-}
 #event .social-links a {
   font-size: 18px;
   display: inline-block;
@@ -2565,15 +2556,6 @@ section {
   padding-left: 100px;
   max-width: 90%;
 }
-.network1{
-  max-width: 70%;
-  align-self: center;
-}
-.network2{
-  width: 430px;
-  align-self: center;
-
-}
 @media (max-width: 768px) {
   .best-places{
     font-size: 10px;
@@ -2584,9 +2566,6 @@ section {
   }
   .business-img{
     padding-right: 50px;
-  }
-  .network2{
-    max-width: 50%;
   }
 }
 /* ERROR CSSS ////////// */

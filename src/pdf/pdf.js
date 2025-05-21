@@ -2,7 +2,7 @@ import React from 'react';
 
 function MyPDFViewer() {
   return (
-    <div className='pt-5'>
+    <div>
       <h3 className='pt-5' style={{textAlign: "center"}}>Celebrating its 50th anniversary, IMD
 International Search Group<br></br> launched its
 first global research: ‘Leading in a

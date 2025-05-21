@@ -7,6 +7,9 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 $routes->get('/test/test', 'Test::test');
+$routes->get('/test/test_db', 'Test::test_db');
+$routes->get('/test/test_db2', 'Test::test_db2');
+
 $routes->post('/admin/login', 'Admin\Login::login');
 $routes->post('candidate/save', 'CandidateController::save');
 
@@ -27,6 +30,23 @@ $routes->post('posts/delete_post', 'Admin\Posts::delete_post');
 $routes->post('posts/save', 'Admin\Posts::save');
 $routes->post('posts/get_post', 'Admin\Posts::get_post');
 $routes->post('posts/fetchAllPosts', 'Admin\Posts::fetchAllPosts');
+$routes->post('posts/fetchCategories', 'Admin\Posts::fetchCategories');
+$routes->post('posts/fetchPostBySlug', 'Admin\Posts::fetchPostBySlug');
+$routes->post('posts/delete_photo', 'Admin\Posts::delete_photo');
+$routes->post('posts/delete_card_photo', 'Admin\Posts::delete_card_photo');
+
+//latest toughts
+$routes->post('latestToughts/index', 'Admin\LatestToughts::index');
+$routes->post('latestToughts/delete_latest_tought', 'Admin\LatestToughts::delete_latest_tought');
+$routes->post('latestToughts/save', 'Admin\LatestToughts::save');
+$routes->post('latestToughts/get_latest_tought', 'Admin\LatestToughts::get_latest_tought');
+$routes->post('latestToughts/fetchAllLatestToughts', 'Admin\LatestToughts::fetchAllLatestToughts');
+
+//categories
+$routes->post('categories/index', 'Admin\Categories::index');
+$routes->post('categories/delete_category', 'Admin\Categories::delete_category');
+$routes->post('categories/save', 'Admin\Categories::save');
+
 
 $routes->setDefaultNamespace('App\Controllers');
 $routes->setDefaultController('Home');

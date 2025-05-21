@@ -52,7 +52,7 @@ function showSnackbar(message) {
 }
 
 const api = axios.create({
-  baseURL: "http://localhost:8080",
+  baseURL: "https://hha.ro/api/public/",
 });
 
 api.interceptors.request.use((config) => {

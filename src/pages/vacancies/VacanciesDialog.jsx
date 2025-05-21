@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   Dialog,
   DialogTitle,
@@ -13,7 +14,14 @@ import {
 } from '@mui/material';
 
 const VacanciesDialog = ({ job, open, onClose }) => {
+  const navigate = useNavigate();
+
   if (!job) return null;
+
+  const Apply = () => {
+    navigate(`/send-cv/${job.id}`);
+  };
+
 
   return (
     <Dialog open={open} onClose={onClose} maxWidth="md" fullWidth>
@@ -65,10 +73,20 @@ const VacanciesDialog = ({ job, open, onClose }) => {
       </DialogContent>
 
       <DialogActions>
-        <Button onClick={onClose} color="secondary">
-          Close
+      <Button
+          onClick={Apply}
+          variant="contained"
+          sx={{
+            backgroundColor: '#7947a2',
+            color: '#fff', // text color
+            '&:hover': {
+              backgroundColor: '#6b3f90', // optional darker shade for hover
+            },
+          }}
+        >
+          Apply
         </Button>
-        {/* Add action buttons like "Apply" or "Save" here if needed */}
+
       </DialogActions>
     </Dialog>
   );

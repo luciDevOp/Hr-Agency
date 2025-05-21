@@ -11,18 +11,28 @@ const AdminHeader = () => {
         <nav id="navbar" className="navbar">
           <ul>
             <li>
-              <Link className="nav-link scrollto" to="/admin/dashboard">
+              <Link className="nav-link scrollto" to="/admin6769/dashboard">
                 Dashboard
               </Link>
             </li>
             <li>
-              <Link className="nav-link scrollto" to="/admin/job_list">
+              <Link className="nav-link scrollto" to="/admin6769/job_list">
                 Jobs
               </Link>
             </li>
             <li>
-              <Link className="nav-link scrollto" to="/admin/post_list">
+              <Link className="nav-link scrollto" to="/admin6769/post_list">
                 Posts
+              </Link>
+            </li>
+            <li>
+              <Link className="nav-link scrollto" to="/admin6769/latest_thoughts_list">
+                Latest Thoughts
+              </Link>
+            </li>
+            <li>
+              <Link className="nav-link scrollto" to="/admin6769/categories_list">
+                Categories
               </Link>
             </li>
           </ul>

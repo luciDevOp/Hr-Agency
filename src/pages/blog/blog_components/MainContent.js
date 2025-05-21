@@ -1,136 +1,98 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
-import Avatar from '@mui/material/Avatar';
-import AvatarGroup from '@mui/material/AvatarGroup';
-import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Chip from '@mui/material/Chip';
-import Grid from '@mui/material/Grid';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import FormControl from '@mui/material/FormControl';
-import InputAdornment from '@mui/material/InputAdornment';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import { styled } from '@mui/material/styles';
+import { Box, Typography, Card, CardMedia, CardContent, Chip, Button, useMediaQuery } from '@mui/material';
+import { axiosPost } from "../../../utils/api";
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const cardData = [
-  {
-    img: 'https://picsum.photos/800/450?random=1',
-    tag: 'Engineering',
-    title: 'Revolutionizing software development with cutting-edge tools',
-    description:
-      'Our latest engineering tools are designed to streamline workflows and boost productivity. Discover how these innovations are transforming the software development landscape.',
-    authors: [
-      { name: 'Remy Sharp', avatar: '/static/images/avatar/1.jpg' },
-      { name: 'Travis Howard', avatar: '/static/images/avatar/2.jpg' },
-    ],
-  },
-  {
-    img: 'https://picsum.photos/800/450?random=2',
-    tag: 'Product',
-    title: 'Innovative product features that drive success',
-    description:
-      'Explore the key features of our latest product release that are helping businesses achieve their goals. From user-friendly interfaces to robust functionality, learn why our product stands out.',
-    authors: [{ name: 'Erica Johns', avatar: '/static/images/avatar/6.jpg' }],
-  },
-  {
-    img: 'https://picsum.photos/800/450?random=3',
-    tag: 'Design',
-    title: 'Designing for the future: trends and insights',
-    description:
-      'Stay ahead of the curve with the latest design trends and insights. Our design team shares their expertise on creating intuitive and visually stunning user experiences.',
-    authors: [{ name: 'Kate Morrison', avatar: '/static/images/avatar/7.jpg' }],
-  },
-  {
-    img: 'https://picsum.photos/800/450?random=4',
-    tag: 'Company',
-    title: "Our company's journey: milestones and achievements",
-    description:
-      "Take a look at our company's journey and the milestones we've achieved along the way. From humble beginnings to industry leader, discover our story of growth and success.",
-    authors: [{ name: 'Cindy Baker', avatar: '/static/images/avatar/3.jpg' }],
-  },
-  {
-    img: 'https://picsum.photos/800/450?random=45',
-    tag: 'Engineering',
-    title: 'Pioneering sustainable engineering solutions',
-    description:
-      "Learn about our commitment to sustainability and the innovative engineering solutions we're implementing to create a greener future. Discover the impact of our eco-friendly initiatives.",
-    authors: [
-      { name: 'Agnes Walker', avatar: '/static/images/avatar/4.jpg' },
-      { name: 'Trevor Henderson', avatar: '/static/images/avatar/5.jpg' },
-    ],
-  },
-  {
-    img: 'https://picsum.photos/800/450?random=6',
-    tag: 'Product',
-    title: 'Maximizing efficiency with our latest product updates',
-    description:
-      'Our recent product updates are designed to help you maximize efficiency and achieve more. Get a detailed overview of the new features and improvements that can elevate your workflow.',
-    authors: [{ name: 'Travis Howard', avatar: '/static/images/avatar/2.jpg' }],
-  },
-];
-
-const SyledCard = styled(Card)(({ theme }) => ({
-  display: 'flex',
-  flexDirection: 'column',
-  padding: 0,
-  height: '100%',
-  backgroundColor: (theme.vars || theme).palette.background.paper,
-  '&:hover': {
-    backgroundColor: 'transparent',
-    cursor: 'pointer',
-  },
-  '&:focus-visible': {
-    outline: '3px solid',
-    outlineColor: 'hsla(210, 98%, 48%, 0.5)',
-    outlineOffset: '2px',
-  },
-}));
-
-const SyledCardContent = styled(CardContent)({
-  display: 'flex',
-  flexDirection: 'column',
-  gap: 4,
-  padding: 16,
-  flexGrow: 1,
-  '&:last-child': {
-    paddingBottom: 16,
-  },
-});
-
-const StyledTypography = styled(Typography)({
-  display: '-webkit-box',
-  WebkitBoxOrient: 'vertical',
-  WebkitLineClamp: 2,
-  overflow: 'hidden',
-  textOverflow: 'ellipsis',
-});
 
 
 export default function MainContent() {
-  const [focusedCardIndex, setFocusedCardIndex] = React.useState(null);
+  const [posts, setPosts] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [currentPage, setCurrentPage] = useState(0);
+  const postsPerPage = 6;
+  
+  const filteredPosts = posts.filter(
+    (post) => selectedCategory === 'All' || post.category === selectedCategory
+  );
+  
+  const paginatedPosts = filteredPosts.slice(
+    currentPage * postsPerPage,
+    (currentPage + 1) * postsPerPage
+  );
+  const [opacity, setOpacity] = useState(1);
 
-  const handleFocus = (index) => {
-    setFocusedCardIndex(index);
+  const handlePageChange = (direction) => {
+    setOpacity(0);
+    setTimeout(() => {
+      setCurrentPage((prev) => prev + direction);
+      setOpacity(1);
+    }, 200);
   };
 
-  const handleBlur = () => {
-    setFocusedCardIndex(null);
+  const isMobile = useMediaQuery('(max-width:1299px)');
+
+  const navigateToPost = (slug) => {
+    navigate(`/blog/${slug}`);
   };
 
-  const handleClick = () => {
-    console.info('You clicked the filter chip.');
+    useEffect(() => {
+      fetchPosts();
+      fetchCategories();
+    }, []);
+
+    useEffect(() => {
+      setCurrentPage(0);
+    }, [selectedCategory]);
+
+      const fetchPosts = async () => {
+        try {
+          // var formData = new FormData();
+          // formData.append("Filters_completed", filters.completed);
+          // formData.append("PaginationInfo_Page", page + 1);
+          // formData.append("PaginationInfo_RowsPerPage", rowsPerPage);
+    
+          const response = await axiosPost("/posts/fetchAllPosts");
+    
+          if (response && response.posts) {
+            setPosts(response.posts);
+          }
+    
+        } catch (error) {
+          console.error("Error fetching jobs:", error);
+        }
+      };
+      const fetchCategories = async () => {
+        try {
+          var formData = new FormData();
+          formData.append("type", "posts");
+          const response = await axiosPost("/posts/fetchCategories", formData);
+          if (response && response.categories) {
+            setCategories(response.categories);
+          }
+        } catch (error) {
+          console.error("Error fetching categories:", error);
+        }
+      };
+      const navigate = useNavigate();
+
+
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-GB', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+    });
   };
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-      <div>
-        <Typography variant="h1" gutterBottom>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <Typography variant="h2" >
           Blog
         </Typography>
-        <Typography>Stay in the loop with the latest about our products</Typography>
       </div>
       <Box
         sx={{
@@ -148,58 +110,52 @@ export default function MainContent() {
           display: 'flex',
           flexDirection: { xs: 'column-reverse', md: 'row' },
           width: '100%',
-          justifyContent: 'space-between',
-          alignItems: { xs: 'start', md: 'center' },
+          justifyContent: 'center', // ← changed from 'space-between'
+          alignItems: 'center', 
           gap: 4,
           overflow: 'auto',
         }}
       >
-        <Box
+      <Box
+        sx={{
+          display: 'inline-flex',
+          flexDirection: 'row',
+          gap: 1,
+          flexWrap: 'wrap',           // optional: wraps chips on small screens
+          justifyContent: 'center',   // centers horizontally
+        }}
+      >
+        <Chip
+          label="All"
+          clickable
+          onClick={() => setSelectedCategory('All')}
           sx={{
-            display: 'inline-flex',
-            flexDirection: 'row',
-            gap: 3,
-            overflow: 'auto',
+            backgroundColor: selectedCategory === 'All' ? '#7947a2' : 'default',
+            color: selectedCategory === 'All' ? '#fff' : 'inherit',
+            '&:hover': {
+              backgroundColor: selectedCategory === 'All' ? '#6b3f90' : 'rgba(0, 0, 0, 0.04)',
+            },
           }}
-        >
-          <Chip onClick={handleClick} size="medium" label="All categories" />
+        />
+
+        {categories.map((category) => (
           <Chip
-            onClick={handleClick}
-            size="medium"
-            label="Company"
+            key={category.id}
+            label={category.name}
+            clickable
+            onClick={() => setSelectedCategory(category.name)}
             sx={{
-              backgroundColor: 'transparent',
-              border: 'none',
+              backgroundColor: selectedCategory === category.name ? '#7947a2' : 'default',
+              color: selectedCategory === category.name ? '#fff' : 'inherit',
+              '&:hover': {
+                backgroundColor: selectedCategory === category.name ? '#6b3f90' : 'rgba(0, 0, 0, 0.04)',
+              },
             }}
           />
-          <Chip
-            onClick={handleClick}
-            size="medium"
-            label="Product"
-            sx={{
-              backgroundColor: 'transparent',
-              border: 'none',
-            }}
-          />
-          <Chip
-            onClick={handleClick}
-            size="medium"
-            label="Design"
-            sx={{
-              backgroundColor: 'transparent',
-              border: 'none',
-            }}
-          />
-          <Chip
-            onClick={handleClick}
-            size="medium"
-            label="Engineering"
-            sx={{
-              backgroundColor: 'transparent',
-              border: 'none',
-            }}
-          />
-        </Box>
+
+        ))}
+      </Box>
+
         <Box
           sx={{
             display: { xs: 'none', sm: 'flex' },
@@ -211,136 +167,200 @@ export default function MainContent() {
         >
         </Box>
       </Box>
-      <Grid container spacing={2} columns={12}>
-        <Grid size={{ xs: 12, md: 6 }}>
-          <SyledCard
-            variant="outlined"
-            onFocus={() => handleFocus(0)}
-            onBlur={handleBlur}
-            tabIndex={0}
-            className={focusedCardIndex === 0 ? 'Mui-focused' : ''}
-          >
-            <CardMedia
-              component="img"
-              alt="green iguana"
-              image={cardData[0].img}
+      <Box sx={{ position: 'relative', mt: 4 }}>
+  {/* Desktop Arrows (left & right of grid) */}
+  {!isMobile && (
+    <>
+      <Button
+        onClick={() => handlePageChange(-1)}
+        disabled={currentPage === 0}
+        sx={{
+          position: 'absolute',
+          top: '50%',
+          left: -70,
+          transform: 'translateY(-50%)',
+          zIndex: 2,
+          minWidth: 0,
+          width: 44,
+          height: 44,
+          borderRadius: '50%',
+          backgroundColor: '#fff',
+          boxShadow: 3,
+          '&:hover': { backgroundColor: '#f0f0f0' },
+        }}
+      >
+        ←
+      </Button>
+      <Button
+        onClick={() => handlePageChange(1)}
+        disabled={(currentPage + 1) * postsPerPage >= filteredPosts.length}
+        sx={{
+          position: 'absolute',
+          top: '50%',
+          right: -70,
+          transform: 'translateY(-50%)',
+          zIndex: 2,
+          minWidth: 0,
+          width: 44,
+          height: 44,
+          borderRadius: '50%',
+          backgroundColor: '#fff',
+          boxShadow: 3,
+          '&:hover': { backgroundColor: '#f0f0f0' },
+        }}
+      >
+        →
+      </Button>
+    </>
+  )}
+
+  {/* Post Grid with smooth fade */}
+  <Box
+    sx={{
+      display: 'grid',
+      gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', md: '1fr 1fr 1fr' },
+      gap: 4,
+      transition: 'opacity 0.4s ease',
+      opacity: opacity,
+    }}
+  >
+          {paginatedPosts.map((post) => (
+            <Card
+              key={post.id}
+              onClick={() => navigateToPost(post.slug)}
               sx={{
-                aspectRatio: '16 / 9',
-                borderBottom: '1px solid',
-                borderColor: 'divider',
+                cursor: 'pointer',
+                width: '100%',
+                height: 450,
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                borderRadius: 3,
+                overflow: 'hidden',
+                boxShadow: 3,
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                '&:hover': {
+                  transform: 'translateY(-8px)',
+                  boxShadow: 6,
+                },
+                position: 'relative',
+                backgroundColor: '#fff',
               }}
-            />
-            <SyledCardContent>
-              <Typography gutterBottom variant="caption" component="div">
-                {cardData[0].tag}
-              </Typography>
-              <Typography gutterBottom variant="h6" component="div">
-                {cardData[0].title}
-              </Typography>
-              <StyledTypography variant="body2" color="text.secondary" gutterBottom>
-                {cardData[0].description}
-              </StyledTypography>
-            </SyledCardContent>
-            <Typography variant="caption" sx={{ textAlign: 'right', display: 'block', padding: '10px' }}>July 14, 2021</Typography>
-          </SyledCard>
-        </Grid>
-        <Grid size={{ xs: 12, md: 6 }}>
-          <SyledCard
-            variant="outlined"
-            onFocus={() => handleFocus(1)}
-            onBlur={handleBlur}
-            tabIndex={0}
-            className={focusedCardIndex === 1 ? 'Mui-focused' : ''}
-          >
-            <CardMedia
-              component="img"
-              alt="green iguana"
-              image={cardData[1].img}
-              aspect-ratio="16 / 9"
-              sx={{
-                borderBottom: '1px solid',
-                borderColor: 'divider',
-              }}
-            />
-            <SyledCardContent>
-              <Typography gutterBottom variant="caption" component="div">
-                {cardData[1].tag}
-              </Typography>
-              <Typography gutterBottom variant="h6" component="div">
-                {cardData[1].title}
-              </Typography>
-              <StyledTypography variant="body2" color="text.secondary" gutterBottom>
-                {cardData[1].description}
-              </StyledTypography>
-            </SyledCardContent>
-            <Typography variant="caption" sx={{ textAlign: 'right', display: 'block', padding: '10px' }}>July 14, 2021</Typography>
-          </SyledCard>
-        </Grid>
-        <Grid size={{ xs: 12, md: 4 }}>
-          <SyledCard
-            variant="outlined"
-            onFocus={() => handleFocus(2)}
-            onBlur={handleBlur}
-            tabIndex={0}
-            className={focusedCardIndex === 2 ? 'Mui-focused' : ''}
-            sx={{ height: '100%' }}
-          >
-            <CardMedia
-              component="img"
-              alt="green iguana"
-              image={cardData[2].img}
-              sx={{
-                height: { sm: 'auto', md: '50%' },
-                aspectRatio: { sm: '16 / 9', md: '' },
-              }}
-            />
-            <SyledCardContent>
-              <Typography gutterBottom variant="caption" component="div">
-                {cardData[2].tag}
-              </Typography>
-              <Typography gutterBottom variant="h6" component="div">
-                {cardData[2].title}
-              </Typography>
-              <StyledTypography variant="body2" color="text.secondary" gutterBottom>
-                {cardData[2].description}
-              </StyledTypography>
-            </SyledCardContent>
-            <Typography variant="caption" sx={{ textAlign: 'right', display: 'block', padding: '10px' }}>July 14, 2021</Typography>
-          </SyledCard>
-        </Grid>
-        <Grid size={{ xs: 12, md: 4 }}>
-          <SyledCard
-            variant="outlined"
-            onFocus={() => handleFocus(5)}
-            onBlur={handleBlur}
-            tabIndex={0}
-            className={focusedCardIndex === 5 ? 'Mui-focused' : ''}
-            sx={{ height: '100%' }}
-          >
-            <CardMedia
-              component="img"
-              alt="green iguana"
-              image={cardData[5].img}
-              sx={{
-                height: { sm: 'auto', md: '50%' },
-                aspectRatio: { sm: '16 / 9', md: '' },
-              }}
-            />
-            <SyledCardContent>
-              <Typography gutterBottom variant="caption" component="div">
-                {cardData[5].tag}
-              </Typography>
-              <Typography gutterBottom variant="h6" component="div">
-                {cardData[5].title}
-              </Typography>
-              <StyledTypography variant="body2" color="text.secondary" gutterBottom>
-                {cardData[5].description}
-              </StyledTypography>
-            </SyledCardContent>
-            <Typography variant="caption" sx={{ textAlign: 'right', display: 'block', padding: '10px' }}>July 14, 2021</Typography>
-          </SyledCard>
-        </Grid>
-      </Grid>
+            >
+              <CardMedia
+                component="img"
+                image={`https://hha.ro/api/public/uploads/cards/${post.file_name}`}
+                alt={post.title}
+                sx={{
+                  height: 220,
+                  objectFit: 'cover',
+                }}
+              />
+              <CardContent
+                sx={{
+                  flexGrow: 1,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                  p: 3,
+                }}
+              >
+                <Box sx={{ mb: 4 }}>
+                  <Typography
+                    variant="h5"
+                    component="div"
+                    sx={{
+                      fontWeight: 700,
+                      mb: 1,
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis',
+                      whiteSpace: 'nowrap',
+                    }}
+                  >
+                    {post.title}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    sx={{
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis',
+                      display: '-webkit-box',
+                      WebkitLineClamp: 5,
+                      WebkitBoxOrient: 'vertical',
+                    }}
+                  >
+                    {post.description}
+                  </Typography>
+                </Box>
+                <Box
+                  sx={{
+                    position: 'absolute',
+                    bottom: 16,
+                    left: 20,
+                    backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                    borderRadius: '12px',
+                    px: 1.5,
+                    py: 0.5,
+                    boxShadow: 1,
+                  }}
+                >
+                  <Typography variant="caption" color="text.secondary" sx={{ fontWeight: 500 }}>
+                    {post.category}
+                  </Typography>
+                </Box>
+                <Box
+                  sx={{
+                    position: 'absolute',
+                    bottom: 16,
+                    right: 20,
+                    backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                    borderRadius: '12px',
+                    px: 1.5,
+                    py: 0.5,
+                    boxShadow: 1,
+                  }}
+                >
+                  <Typography variant="caption" color="text.secondary" sx={{ fontWeight: 500 }}>
+                    {formatDate(post.created_at)}
+                  </Typography>
+                </Box>
+              </CardContent>
+            </Card>
+          ))}
+        </Box>
+{/* Mobile Arrows (below the cards) */}
+{isMobile && (
+    <Box
+      sx={{
+        mt: 3,
+        display: 'flex',
+        justifyContent: 'center',
+        gap: 2,
+      }}
+    >
+      <Button
+        onClick={() => handlePageChange(-1)}
+        disabled={currentPage === 0}
+        variant="outlined"
+        sx={{ borderRadius: '50%', minWidth: 0, width: 40, height: 40 }}
+      >
+        ←
+      </Button>
+      <Button
+        onClick={() => handlePageChange(1)}
+        disabled={(currentPage + 1) * postsPerPage >= filteredPosts.length}
+        variant="outlined"
+        sx={{ borderRadius: '50%', minWidth: 0, width: 40, height: 40 }}
+      >
+        →
+      </Button>
+    </Box>
+  )}
+</Box>
+
+
+
     </Box>
   );
 }

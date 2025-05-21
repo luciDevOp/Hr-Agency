@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { Box, TextField, Button, Typography, Grid, FormControlLabel, Checkbox, Snackbar, Alert } from "@mui/material";
 import axios from "axios";
+import { useParams } from "react-router-dom";
+
 import PhoneInput from "react-phone-number-input";
 import 'react-phone-number-input/style.css';
 
 const SendCV = () => {
+  const { jobId } = useParams();
+
   const [formData, setFormData] = useState({
     firstname: "",
     lastname: "",
@@ -69,8 +73,14 @@ const SendCV = () => {
     data.append("recommended_by", formData.recommended_by);
     data.append("cv_file", formData.cv_file);
 
+    if (jobId) {
+      data.append("job_id", jobId); 
+    }
+    
+
     try {
-      const response = await axios.post("http://localhost:8080/candidate/save", data, {
+    
+      const response = await axios.post("https://hha.ro/api/public/candidate/save", data, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

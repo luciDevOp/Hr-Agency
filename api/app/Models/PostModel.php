@@ -8,6 +8,7 @@ class PostModel extends Model
     protected $primaryKey = 'id';
     protected $allowedFields = [
         'title',
+        'slug',
         'description',
         'category_id',
         'page_content'
@@ -55,6 +56,7 @@ class PostModel extends Model
                     ->join('categories', 'categories.id = posts.category_id', 'left')
                     ->where('posts.deleted', 0)
                     ->where('photos.type', 'card_photo')
+                    ->orderBy('posts.created_at', 'DESC')
                     ->findAll();
     }
 

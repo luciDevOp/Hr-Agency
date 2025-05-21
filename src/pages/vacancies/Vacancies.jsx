@@ -8,14 +8,32 @@ function Vacancies() {
   const [openJobDialog, setOpenJobDialog] = useState(false);
 
   const [jobsBackend, setJobsBackend] = useState([]);
-  const [filter, setFilter] = useState("open"); 
   const [filters, setFilters] = useState({ completed: 0});
   const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(10);
+  const [rowsPerPage] = useState(10);
   const [paginationInfo, setPaginationInfo] = useState({ RowCount: 0 }); // Inițializează cu RowCount 0
   
   useEffect(() => {
+    const fetchJobs = async () => {
+      try {
+        var formData = new FormData();
+        formData.append("Filters_completed", filters.completed);
+        formData.append("PaginationInfo_Page", page + 1);
+        formData.append("PaginationInfo_RowsPerPage", rowsPerPage);
+  
+        const response = await axiosPost("/jobs/fetchAllJobs", formData);
+  
+        if (response && response.jobs) {
+          setJobsBackend(response.jobs);
+          setPaginationInfo(response.PaginationInfo); 
+        }
+  
+      } catch (error) {
+        console.error("Error fetching jobs:", error);
+      }
+    };
     fetchJobs();
+
   }, [page, rowsPerPage, filters]);
 
   useEffect(() => {
@@ -25,24 +43,7 @@ function Vacancies() {
   }, [jobsBackend]);
   
 
-  const fetchJobs = async () => {
-    try {
-      var formData = new FormData();
-      formData.append("Filters_completed", filters.completed);
-      formData.append("PaginationInfo_Page", page + 1);
-      formData.append("PaginationInfo_RowsPerPage", rowsPerPage);
 
-      const response = await axiosPost("/jobs/fetchAllJobs", formData);
-
-      if (response && response.jobs) {
-        setJobsBackend(response.jobs);
-        setPaginationInfo(response.PaginationInfo); 
-      }
-
-    } catch (error) {
-      console.error("Error fetching jobs:", error);
-    }
-  };
 
   const setOpenVacanciesModal = (job) => {
     setSelectedJob(job);
@@ -96,13 +97,13 @@ function Vacancies() {
           {jobsBackend.map((job, index) => (
             <div
               className={`col-lg-6 col-md-12 col-12 mt-4 pt-2 ${
-                job.completed == '1' ? "opacity-50" : ""
+                job.completed === '1' ? "opacity-50" : ""
               }`}
               key={index}
             >
               <div
                 className={`card border-0 bg-light rounded shadow ${
-                  job.completed == '1' ? "completed-card" : ""
+                  job.completed === '1' ? "completed-card" : ""
                 }`}
               >
                 <div className="card-body p-4">
@@ -119,7 +120,7 @@ function Vacancies() {
                     <button
                       className="details-button"
                       onClick={() => setOpenVacanciesModal(job)}
-                      disabled={job.completed == '1'}
+                      disabled={job.completed === '1'}
                     >
                       View Details
                     </button>

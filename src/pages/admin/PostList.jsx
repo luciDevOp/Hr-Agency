@@ -20,9 +20,7 @@ import dayjs from 'dayjs';
 import { axiosPost } from "../../utils/api";
 import PostDialog from "../../components/admin/PostDialog";
 import DeleteIcon from "@mui/icons-material/Delete";
-import CheckIcon from "@mui/icons-material/Check";
 import EditIcon from '@mui/icons-material/Edit';
-import CloseIcon from "@mui/icons-material/Close";
 
 const PostList = () => {
   const [posts, setPosts] = useState([]);
@@ -204,6 +202,7 @@ const PostList = () => {
             onClose={handleCloseDialog}
             post={selectedPost}
             onSaveSuccess={fetchPosts}
+            setSnackbar={setSnackbar}
         />
         <Snackbar
             open={snackbar.open}

@@ -35,7 +35,7 @@ const AdminLogin = () => {
         // Redirect to admin dashboard
         localStorage.setItem("Token", response.Token);
         console.log(response.Token);
-        navigate("/admin/dashboard");
+        navigate("/admin6769/dashboard");
       } else {
         setError(response.MesajEroare || "Invalid credentials");
       }

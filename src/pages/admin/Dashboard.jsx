@@ -16,6 +16,11 @@ import {
   TablePagination,
   CircularProgress,
   Typography,
+  FormControl,
+   FormLabel,
+   FormControlLabel,
+  RadioGroup,
+  Radio,
 } from "@mui/material";
 import { axiosPost } from "../../utils/api"; // adjust path based on location
 import CandidateModal from "../../components/admin/DialogInfoCandidat"; // adjust path based on location
@@ -27,7 +32,7 @@ import FindInPageIcon from '@mui/icons-material/FindInPage';
 const Dashboard = () => {
   const [loading, setLoading] = useState(false);
   const [candidates, setCandidates] = useState([]);
-  const [filters, setFilters] = useState({ name: "", email: "", phone: "" });
+  const [filters, setFilters] = useState({ name: "", email: "", phone: "", applied: false });
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
   const [paginationInfo, setPaginationInfo] = useState({ RowCount: 0 }); // Inițializează cu RowCount 0
@@ -38,6 +43,7 @@ const Dashboard = () => {
   const [selectedCandidate, setSelectedCandidate] = useState(null);
 
   const showCandidateInfo = (candidate) => {
+    console.log(candidate);
     setSelectedCandidate(candidate);
   };
 
@@ -48,6 +54,7 @@ const Dashboard = () => {
       formData.append("Filters_name", filters.name);
       formData.append("Filters_email", filters.email);
       formData.append("Filters_phone", filters.phone);
+      formData.append("Filters_applied", filters.applied);
       formData.append("PaginationInfo_Page", page + 1);
       formData.append("PaginationInfo_RowsPerPage", rowsPerPage);
   
@@ -66,7 +73,10 @@ const Dashboard = () => {
 
   const handleFilterChange = (e) => {
     const { name, value } = e.target;
-    setFilters({ ...filters, [name]: value });
+    setFilters((prev) => ({
+      ...prev,
+      [name]: name === "applied" && value !== "" ? value === "true" : value,
+    }));
   };
 
   const handleChangePage = (event, newPage) => {
@@ -84,7 +94,12 @@ const Dashboard = () => {
   };
 
   const downloadCV = (cv_file) => {
-    window.open(`http://localhost:8080/dashboard/download_cv/${cv_file}`, "_blank");
+    const link = document.createElement("a");
+    link.href = `https://hha.ro/api/public/dashboard/download_cv/${cv_file}`;
+    link.download = cv_file; // sau un nume de fișier explicit dacă îl știi
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
   
   const delete_candidate = async (id) => {
@@ -136,29 +151,54 @@ const Dashboard = () => {
       </Typography>
 
       {/* Filters */}
-      <Box sx={{ display: "flex", gap: 2, marginBottom: 2 }}>
-        <TextField
-          label="Filter by Name"
-          name="name"
-          value={filters.name}
-          onChange={handleFilterChange}
-          fullWidth
-        />
-        <TextField
-          label="Filter by Email"
-          name="email"
-          value={filters.email}
-          onChange={handleFilterChange}
-          fullWidth
-        />
-        <TextField
-          label="Filter by Phone"
-          name="phone"
-          value={filters.phone}
-          onChange={handleFilterChange}
-          fullWidth
-        />
-      </Box>
+      <Box
+  sx={{
+    display: "flex",
+    gap: 2,
+    marginBottom: 2,
+    flexWrap: "nowrap",
+    alignItems: "center",
+    overflowX: "auto",
+  }}
+>
+  <TextField
+    label="Filter by Name"
+    name="name"
+    value={filters.name}
+    onChange={handleFilterChange}
+    sx={{ minWidth: 200, flex: 1 }}
+  />
+  <TextField
+    label="Filter by Email"
+    name="email"
+    value={filters.email}
+    onChange={handleFilterChange}
+    sx={{ minWidth: 200, flex: 1 }}
+  />
+  <TextField
+    label="Filter by Phone"
+    name="phone"
+    value={filters.phone}
+    onChange={handleFilterChange}
+    sx={{ minWidth: 200, flex: 1 }}
+  />
+
+  <FormControl component="fieldset" sx={{ minWidth: 250 }}>
+    <FormLabel component="legend" sx={{ fontSize: '0.9rem', marginBottom: 1 }}>
+      Job Applicants
+    </FormLabel>
+    <RadioGroup
+      row
+      name="applied"
+      value={filters.applied}
+      onChange={handleFilterChange}
+    >
+      <FormControlLabel value="true" control={<Radio />} label="Applied" />
+      <FormControlLabel value="false" control={<Radio />} label="All" />
+    </RadioGroup>
+  </FormControl>
+</Box>
+
 
       {/* Candidates Table */}
       <TableContainer component={Paper}>
@@ -169,6 +209,7 @@ const Dashboard = () => {
               <TableCell>First Name</TableCell>
               <TableCell>Email</TableCell>
               <TableCell>Phone</TableCell>
+              <TableCell>Applied Job</TableCell>
               <TableCell sx={{ textAlign: "right" }}>Actions</TableCell>
             </TableRow>
           </TableHead>
@@ -196,6 +237,7 @@ const Dashboard = () => {
                   <TableCell>{candidate.firstname}</TableCell>
                   <TableCell>{candidate.email}</TableCell>
                   <TableCell>{candidate.phone_number}</TableCell>
+                  <TableCell>{candidate.applied_jobs.length === 0 ? 'Not a job applicant' : candidate.applied_jobs[0]}</TableCell>
                   <TableCell sx={{ textAlign: "right" }}>
                     <Tooltip title="Preview CV">
                       <Button

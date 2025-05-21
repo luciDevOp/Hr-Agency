@@ -57,27 +57,63 @@ class Posts extends BaseController
 
    public function get_post()
    {
-        $ret            = $this->verify_login();
-        if(!$ret->NotLogged)
-        {
-            $id = $this->request->getPost("id");
-            if($id != null)
-            {
-                $postModel = new PostModel();
-                $post = $postModel->find($id);
-                if ($post) {
-                    $ret->post = $post;
-                } else {
-                    $ret->Error = true;
-                    $ret->MesajEroare = 'Postare nu a fost gasita!';
-                }
-            }else{
-                $ret->Error = true;
-                $ret->MesajEroare = 'Eroare la server!';
-            }
-        }
-        return $this->response->setJSON($ret);
+       $ret = $this->verify_login();
+       if (!$ret->NotLogged) {
+           $id = $this->request->getPost("id");
+           if ($id != null) {
+               $postModel = new PostModel();
+               $post = $postModel->find($id);
+               if ($post) {
+                   $photoModel = new \App\Models\PhotoModel();
+                   $photos = $photoModel->where('post_id', $id)->findAll();
+   
+                   $post['card_photo_url'] = null;
+                   $post['page_photos'] = [];
+   
+                   foreach ($photos as $photo) {
+                       if ($photo['type'] === 'card_photo') {
+                           $post['card_photo_url'] = base_url('uploads/cards/' . $photo['file_name']);
+                       } elseif ($photo['type'] === 'page_photo') {
+                           $post['page_photos'][] = [
+                               'id' => $photo['id'],
+                               'url' => base_url('uploads/pages/' . $photo['file_name']),
+                               'file_name' => $photo['file_name'],
+                           ];
+                       }
+                   }
+   
+                   $ret->post = $post;
+               } else {
+                   $ret->Error = true;
+                   $ret->MesajEroare = 'Postarea nu a fost gasita!';
+               }
+           } else {
+               $ret->Error = true;
+               $ret->MesajEroare = 'Eroare la server!';
+           }
+       }
+       return $this->response->setJSON($ret);
    }
+   
+   public function delete_photo()
+   {
+      $ret            = $this->verify_login();
+      if(!$ret->NotLogged)
+      {
+         $id = $this->request->getPost("id");
+         if($id != null)
+         {
+            $this->db->table('photos')->where('id', $id)->delete();
+            //delete photos 
+
+         }else{
+            $ret->Error = true;
+            $ret->MesajEroare = 'Eroare la server!';
+         }
+      }
+      return $this->response->setJSON($ret);   
+   }
+   
 
    public function delete_post()
    {
@@ -88,6 +124,7 @@ class Posts extends BaseController
          if($id != null)
          {
             $this->db->table('posts')->where('id', $id)->update(['deleted' => 1]);
+            
          }else{
             $ret->Error = true;
             $ret->MesajEroare = 'Eroare la server!';
@@ -95,6 +132,64 @@ class Posts extends BaseController
       }
       return $this->response->setJSON($ret);   
    }
+
+   public function delete_card_photo()
+   {
+      $ret            = $this->verify_login();
+      if(!$ret->NotLogged)
+      {
+         $id = $this->request->getPost("post_id");
+         if($id != null)
+         {
+            $this->db->table('photos')->where('post_id', $id)->where('type', 'card_photo')->delete();
+
+         }else{
+            $ret->Error = true;
+            $ret->MesajEroare = 'Eroare la server!';
+         }
+      }
+      return $this->response->setJSON($ret);   
+   }
+
+    /**
+     * Create a slug from a string
+     *
+     * @param string $string
+     * @return string
+     */
+
+
+
+     private function createSlug($string, $postModel, $postId = null)
+     {
+         $slug = mb_strtolower($string, 'UTF-8');
+     
+         $slug = preg_replace('/[^\p{L}\p{Nd}\s-]/u', '', $slug);
+         $slug = preg_replace('/[\s-]+/', '-', $slug);
+         $slug = trim($slug, '-');
+     
+         $originalSlug = $slug;
+         $i = 1;
+     
+         while (true) {
+             $builder = $postModel->where('slug', $slug);
+             if ($postId) {
+                 $builder->where('id !=', $postId);
+             }
+             $exists = $builder->first();
+     
+             if (!$exists) {
+                 break;
+             }
+     
+             $slug = $originalSlug . '-' . $i;
+             $i++;
+         }
+     
+         return $slug;
+     }
+     
+     
 
    public function save()
    {
@@ -109,12 +204,16 @@ class Posts extends BaseController
        $categoryId = (int) $this->request->getPost('category_id');
 
        $postId = $this->request->getPost('id');
+       $title = $this->request->getPost('title');
+       $slug = $this->createSlug($title, $postModel, $postId);
        $data = [
-           'title'        => $this->request->getPost('title'),
+           'title'        => $title,
            'description'  => $this->request->getPost('description'),
            'category_id'  => $categoryId,
            'page_content' => $this->request->getPost('page_content'),
+           'slug'         => $slug,
        ];
+
 
 
    
@@ -160,6 +259,41 @@ class Posts extends BaseController
         $posts = $postModel->getPostsWithPhotos();
     
         $ret->posts = $posts;
+        return $this->response->setJSON($ret);
+   }
+
+   public function fetchCategories()
+   {
+        $ret = new \stdClass();
+        $type = $this->request->getPost('type');
+        $categoryModel = new \App\Models\CategoryModel();
+
+        $categories = $categoryModel->where('deleted !=', 1)
+            ->where('type', $type)
+            ->findAll();
+    
+        $ret->categories = $categories;
+        return $this->response->setJSON($ret);
+   }
+
+   public function fetchPostBySlug()
+   {
+        $ret = new \stdClass();
+    
+        $slug = $this->request->getPost('slug');
+        $postModel = new PostModel();
+        $post = $postModel->where('slug', $slug)->where('deleted', 0)->first();
+        $photoModel = new \App\Models\PhotoModel();
+
+        if ($post) {
+            $photos = $photoModel->getPhotosByPostId($post['id']);
+            $post['photos'] = $photos;
+            $ret->post = $post;
+        } else {
+            $ret->Error = true;
+            $ret->MesajEroare = 'Postare nu a fost gasita!';
+        }
+    
         return $this->response->setJSON($ret);
    }
    

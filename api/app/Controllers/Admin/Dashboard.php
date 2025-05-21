@@ -23,7 +23,8 @@ class Dashboard extends BaseController
             $filters = [
                   'name' => $this->request->getPost("Filters_name"),
                   'email' => $this->request->getPost("Filters_email"),
-                  'phone' => $this->request->getPost("Filters_phone")
+                  'phone' => $this->request->getPost("Filters_phone"),
+                  'applied' => filter_var($this->request->getPost("Filters_applied"), FILTER_VALIDATE_BOOLEAN)
             ];
             $order_by          = $this->request->getPost("OrderBy");
             $pg_info = new PaginationInfo([
@@ -32,9 +33,11 @@ class Dashboard extends BaseController
             ]);
    
            $sql = new TableSql(
-               "SELECT * FROM candidates t1 WHERE t1.deleted = 0"
-           );
-   
+               "SELECT t1.* 
+                FROM candidates t1
+                WHERE t1.deleted = 0
+               "
+           );   
            // Adaugă filtre dacă există
            if (!empty($filters['name'])) {
                $sql->addIfNeeded($filters['name'], '', " AND CONCAT(t1.firstname, ' ', t1.lastname) LIKE '%%%s%%'");
@@ -45,6 +48,9 @@ class Dashboard extends BaseController
            if (!empty($filters['phone'])) {
                $sql->addIfNeeded($filters['phone'], '', " AND t1.phone_number LIKE '%%%s%%'");
            }
+              if (isset($filters['applied']) && $filters['applied'] === true) {
+                $sql->addIfNeeded($filters['applied'], '', " AND EXISTS (SELECT 1 FROM job_applications WHERE candidate_id = t1.id)");
+              }
    
            // Adaugă ordonare
            $sql->addOrderBy("t1.id", "DESC");
@@ -54,12 +60,24 @@ class Dashboard extends BaseController
            // Execută query-ul cu paginare
            $result = $sql->getResult($pg_info);
            $rows = $result->Rows;
+
    
            // Adaugă URL-ul pentru fișierele CV
            foreach ($rows as $row) {
                if (!empty($row->cv_file)) {
                    $row->cv_url = base_url('uploads/cvs/' . $row->cv_file);
                }
+               //adaugam la ce joburi a aplicat
+                $job_ids = $this->db->table('job_applications')->select('job_id')->where('candidate_id', $row->id)->get()->getResult();
+                $jobs_applied_array = [];
+                foreach ($job_ids as $job_id) {
+                    //luam numele joburilor si le punem in array
+                    $job = $this->db->table('jobs')->select('title')->where('id', $job_id->job_id)->get()->getRow();
+                    if ($job) {
+                        $jobs_applied_array[] = $job->title;
+                    }
+                }
+                $row->applied_jobs = $jobs_applied_array;
            }
            // Returnează rezultatele și informațiile de paginare
            $pg_info->RowCount = $result->FullRowsCount;

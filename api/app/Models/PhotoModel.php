@@ -19,6 +19,6 @@ class PhotoModel extends Model
 
     public function getPhotosByPostId($postId)
     {
-        return $this->where('post_id', $postId)->findAll();
+        return $this->where('post_id', $postId)->where('type', 'page_photo')->findAll();
     }
 }

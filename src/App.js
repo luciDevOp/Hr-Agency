@@ -11,29 +11,10 @@ import GlobalOffices from "./pages/GlobalOffices";
 import GlobalMarket from "./pages/GlobalMarket";
 import BPTW from "./pages/BPTW";
 import OurCommitment from "./pages/OurCommitment";
-import Event1 from "./pages/Event1";
-import Event3 from "./pages/Event3";
-import Event2 from "./pages/Event2";
-import Event4 from "./pages/Event4";
-import Event5 from "./pages/Event5";
-import Event6 from "./pages/Event6";
-import Event7 from "./pages/Event7";
-import Event8 from "./pages/Event8";
-import Event9 from "./pages/Event9";
-import Event10 from "./pages/Event10";
-import Event11 from "./pages/Event11";
-import Event12 from "./pages/Event12";
-import Event13 from "./pages/Event13";
-import Event15 from "./pages/Event15";
-import Event16 from "./pages/Event16";
-import Event17 from "./pages/Event17";
-import Event18 from "./pages/Event18";
-import Event19 from "./pages/Event19";
-import Event20 from "./pages/Event20";
-import Event21 from "./pages/Event21";
 import Privacy from "./pages/Privacy";
 import Vacancies from "./pages/vacancies/Vacancies";
 import SendCV from "./pages/SendCV";
+import PostContent from "./pages/blog/PostContent";
 
 //admin
 import AdminLogin from "./pages/admin/AdminLogin";
@@ -41,13 +22,15 @@ import AdminHeader from "./components/admin/AdminHeader";
 import Dashboard from "./pages/admin/Dashboard";
 import JobList from "./pages/admin/JobList";
 import PostList from "./pages/admin/PostList";
+import LatestToughtsList from "./pages/admin/LatestToughtsList";
+import CategoriesList from "./pages/admin/CategoriesList";
 
 
 
 function App() {
   const location = useLocation();
-  const isAdminRoute = location.pathname.startsWith("/admin");
-  const isLoginPage = location.pathname === "/admin";
+  const isAdminRoute = location.pathname.startsWith("/admin6769");
+  const isLoginPage = location.pathname === "/admin6769";
 
   return (
     <div className="App">
@@ -56,10 +39,12 @@ function App() {
       <Routes>
         {/* admin */}
 
-        <Route path="/admin" element={<AdminLogin />} />
-        <Route path="/admin/dashboard" element={<Dashboard />} />
-        <Route path="/admin/job_list" element={<JobList />} />
-        <Route path="/admin/post_list" element={<PostList />} />
+        <Route path="/admin6769" element={<AdminLogin />} />
+        <Route path="/admin6769/dashboard" element={<Dashboard />} />
+        <Route path="/admin6769/job_list" element={<JobList />} />
+        <Route path="/admin6769/post_list" element={<PostList />} />
+        <Route path="/admin6769/latest_thoughts_list" element={<LatestToughtsList />} />
+        <Route path="/admin6769/categories_list" element={<CategoriesList />} />
         {/* public */}
 
         <Route path="/" element={<Home />} />
@@ -77,7 +62,7 @@ function App() {
         <Route path="/vacancies" element={<Vacancies />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/swiss-chamber-of-commerce" element={<Event1 />} />
+        {/* <Route path="/blog/swiss-chamber-of-commerce" element={<Event1 />} />
         <Route path="/blog/NRCC" element={<Event2 />} />
         <Route path="/blog/BRCC" element={<Event3 />} />
         <Route path="/blog/DWNT" element={<Event4 />} />
@@ -96,9 +81,10 @@ function App() {
         <Route path="/blog/accessability-expo" element={<Event18 />} />
         <Route path="/blog/alexandru-dragomir" element={<Event19 />} />
         <Route path="/blog/age-inclusive-workplace" element={<Event20 />} />
-        <Route path="/blog/bogdan-costinescu" element={<Event21 />} />
-
-        <Route path="/send-cv" element={<SendCV />} />
+        <Route path="/blog/bogdan-costinescu" element={<Event21 />} />*/}
+        <Route path="/blog/:slug" element={<PostContent />} /> 
+        <Route path="/send-cv/:jobId?" element={<SendCV />} />
+        <Route path="*" element={<Error />} />
 
       </Routes>
     </div>
