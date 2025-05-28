@@ -89,7 +89,7 @@ function Header() {
                   </li>
                   <li>
                     <Link to="/bptw-news" onClick={closeMobileMenu}>
-                      Best Places to Work Certification
+                      Best Places to Work <br></br> Certification
                     </Link>
                   </li>
                   <li>

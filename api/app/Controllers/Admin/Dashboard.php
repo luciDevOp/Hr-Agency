@@ -23,6 +23,7 @@ class Dashboard extends BaseController
             $filters = [
                   'name' => $this->request->getPost("Filters_name"),
                   'email' => $this->request->getPost("Filters_email"),
+                  'current_job_title' => $this->request->getPost("Filters_current_job_title"),
                   'phone' => $this->request->getPost("Filters_phone"),
                   'applied' => filter_var($this->request->getPost("Filters_applied"), FILTER_VALIDATE_BOOLEAN)
             ];
@@ -48,9 +49,12 @@ class Dashboard extends BaseController
            if (!empty($filters['phone'])) {
                $sql->addIfNeeded($filters['phone'], '', " AND t1.phone_number LIKE '%%%s%%'");
            }
-              if (isset($filters['applied']) && $filters['applied'] === true) {
+           if (!empty($filters['current_job_title'])) {
+                $sql->addIfNeeded($filters['current_job_title'], '', " AND t1.current_job_title LIKE '%%%s%%'");
+            }
+            if (isset($filters['applied']) && $filters['applied'] === true) {
                 $sql->addIfNeeded($filters['applied'], '', " AND EXISTS (SELECT 1 FROM job_applications WHERE candidate_id = t1.id)");
-              }
+            }
    
            // Adaugă ordonare
            $sql->addOrderBy("t1.id", "DESC");

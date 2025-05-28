@@ -8,7 +8,7 @@ function Hero() {
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <h1>Global reach with local knowledge</h1>
+            <h1 className='global-reach'>Global reach with local knowledge</h1>
             <p className="hero-info">
               Welcome to one of Romania’s leading executive search firms, Head
               Hunting IMD. We aim to create a true people advantage for our

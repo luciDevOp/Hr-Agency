@@ -230,6 +230,7 @@ const SendCV = () => {
                 margin="normal"
                 value={formData.current_job_title}
                 onChange={handleChange}
+                required
               />
             </Grid>
             <Grid size={{ xs: 12, sm: 6 }} item>

@@ -32,7 +32,7 @@ import FindInPageIcon from '@mui/icons-material/FindInPage';
 const Dashboard = () => {
   const [loading, setLoading] = useState(false);
   const [candidates, setCandidates] = useState([]);
-  const [filters, setFilters] = useState({ name: "", email: "", phone: "", applied: false });
+  const [filters, setFilters] = useState({ name: "", current_job_title:"", email: "", phone: "", applied: false });
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
   const [paginationInfo, setPaginationInfo] = useState({ RowCount: 0 }); // Inițializează cu RowCount 0
@@ -54,6 +54,7 @@ const Dashboard = () => {
       formData.append("Filters_name", filters.name);
       formData.append("Filters_email", filters.email);
       formData.append("Filters_phone", filters.phone);
+      formData.append("Filters_current_job_title", filters.current_job_title);
       formData.append("Filters_applied", filters.applied);
       formData.append("PaginationInfo_Page", page + 1);
       formData.append("PaginationInfo_RowsPerPage", rowsPerPage);
@@ -166,21 +167,28 @@ const Dashboard = () => {
     name="name"
     value={filters.name}
     onChange={handleFilterChange}
-    sx={{ minWidth: 200, flex: 1 }}
+    sx={{ minWidth: 100, flex: 1 }}
   />
   <TextField
     label="Filter by Email"
     name="email"
     value={filters.email}
     onChange={handleFilterChange}
-    sx={{ minWidth: 200, flex: 1 }}
+    sx={{ minWidth: 100, flex: 1 }}
   />
   <TextField
     label="Filter by Phone"
     name="phone"
     value={filters.phone}
     onChange={handleFilterChange}
-    sx={{ minWidth: 200, flex: 1 }}
+    sx={{ minWidth: 100, flex: 1 }}
+  />
+    <TextField
+    label="Filter by current job title"
+    name="current_job_title"
+    value={filters.current_job_title}
+    onChange={handleFilterChange}
+    sx={{ minWidth: 100, flex: 1 }}
   />
 
   <FormControl component="fieldset" sx={{ minWidth: 250 }}>

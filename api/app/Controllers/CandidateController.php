@@ -18,6 +18,7 @@ class CandidateController extends BaseController
             'lastname'  => 'required',
             'email'     => 'required|valid_email',
             'phone_number' => 'required',
+            'current_job_title' => 'required',
             'cv_file' => 'uploaded[cv_file]|max_size[cv_file,2048]|ext_in[cv_file,pdf,doc,docx,jpg,jpeg,png]',
         ]);
 

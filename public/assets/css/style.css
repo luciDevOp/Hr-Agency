@@ -2078,6 +2078,9 @@ section {
   .img-bg {
     height: 400px;
   }
+  .global-reach{
+    padding-top: 60px;
+  }
 }
 
 .img-bg:before {
