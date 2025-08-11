@@ -135,7 +135,7 @@ const Team = () => {
               </div>
               <div className="member-info">
                 <h4>Valentina Călin</h4>
-                <span>International Researcher</span>
+                <span>Consultant</span>
                 <p>Finding the right person for the right job.</p>
                 <div className="social">
                   <a href="https://www.linkedin.com/in/valentina-c%C4%83lin-43a968176/">

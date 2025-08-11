@@ -38,7 +38,7 @@ class Jobs extends BaseController
                $sql->addIfNeeded($filters['title'], '', " AND t1.title LIKE '%%%s%%'");
            }
            // Adaugă ordonare
-           $sql->addOrderBy("t1.id", "DESC");
+           $sql->addOrderByRaw("t1.completed ASC, t1.id DESC");
            
            $sql->addLimitFromPagination($pg_info);
 
