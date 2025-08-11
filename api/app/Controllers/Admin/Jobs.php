@@ -131,6 +131,45 @@ class Jobs extends BaseController
           return $this->response->setJSON($ret);
     }
 
+    public function get_job_observations()
+    {
+        $ret = $this->verify_login();
+        if (!$ret->NotLogged) {
+            $id = $this->request->getPost("id");
+            if ($id != null) {
+                $job = $this->db->table('jobs')->select('observations')->where('id', $id)->get()->getRow();
+                if ($job) {
+                    $ret->observations = $job->observations;
+                    $ret->id = $id;
+                } else {
+                    $ret->Error = true;
+                    $ret->MesajEroare = 'Job not found';
+                }
+            } else {
+                $ret->Error = true;
+                $ret->MesajEroare = 'Error retrieving job observations!';
+            }
+        }
+        return $this->response->setJSON($ret);
+    }
+
+    public function save_observations()
+    {
+        $ret = $this->verify_login();
+        if (!$ret->NotLogged) {
+            $id = $this->request->getPost("id");
+            $observations = $this->request->getPost("observations");
+            if ($id != null) {
+                $this->db->table('jobs')->where('id', $id)->update(['observations' => $observations]);
+                $ret->jobId = $id;
+            } else {
+                $ret->Error = true;
+                $ret->MesajEroare = 'Error saving observations!';
+            }
+        }
+        return $this->response->setJSON($ret);
+    }
+
     public function save()
     {
         $ret = $this->verify_login();

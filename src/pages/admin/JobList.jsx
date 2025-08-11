@@ -18,9 +18,11 @@ import {
 } from "@mui/material";
 import { axiosPost } from "../../utils/api";
 import JobDialog from "../../components/admin/JobDialog";
+import JobDialogObservations from "../../components/admin/JobDialogObservations";
 import DeleteIcon from "@mui/icons-material/Delete";
 import CheckIcon from "@mui/icons-material/Check";
 import EditIcon from '@mui/icons-material/Edit';
+import VisibilityIcon from '@mui/icons-material/Visibility';
 import CloseIcon from "@mui/icons-material/Close";
 
 const JobList = () => {
@@ -29,7 +31,9 @@ const JobList = () => {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
   const [openDialog, setOpenDialog] = useState(false);
+  const [openDialogObservations, setOpenDialogObservations] = useState(false);
   const [selectedJob, setSelectedJob] = useState(null); // Store selected job for editing
+  const [selectedJobObservations, setSelectedJobObservations] = useState(null); // Store selected job for observations
 
   const [paginationInfo, setPaginationInfo] = useState({ RowCount: 0 }); // Inițializează cu RowCount 0
   useEffect(() => {
@@ -40,6 +44,17 @@ const JobList = () => {
     setSelectedJob(job);
     setOpenDialog(true); 
   };
+
+  const showObservations = (job) => {
+    setSelectedJobObservations(job);
+    setOpenDialogObservations(true); 
+  };
+
+  const handleCloseDialogObservations = () => {
+    setSelectedJobObservations(null); 
+    setOpenDialogObservations(false);
+  };
+
 
   const handleCloseDialog = () => {
     setSelectedJob(null); 
@@ -233,6 +248,17 @@ const JobList = () => {
                 <TableCell>{job.type}</TableCell>
                 <TableCell>{job.completed === '1' ? 'Completed' : 'Not completed'}</TableCell>
                 <TableCell sx={{ textAlign: "right" }}>
+                <Tooltip title="Observations">
+                    <Button
+                      variant="contained"
+                      color="secondary"
+                      size="small"
+                      onClick={() => showObservations(job)}
+                      sx={{ marginRight: 1 }}
+                    >
+                      <VisibilityIcon />
+                    </Button>
+                  </Tooltip>
                 <Tooltip title="Edit job">
                     <Button
                       variant="contained"
@@ -301,6 +327,12 @@ const JobList = () => {
             open={openDialog}
             onClose={handleCloseDialog}
             job={selectedJob}
+            onSaveSuccess={fetchJobs}
+        />
+          <JobDialogObservations
+            open={openDialogObservations}
+            onClose={handleCloseDialogObservations}
+            job={selectedJobObservations}
             onSaveSuccess={fetchJobs}
         />
       <Snackbar

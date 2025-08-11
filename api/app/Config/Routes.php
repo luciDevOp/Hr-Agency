@@ -24,6 +24,8 @@ $routes->post('jobs/save', 'Admin\Jobs::save');
 $routes->post('jobs/get_job', 'Admin\Jobs::get_job');
 $routes->post('jobs/uncomplete_job', 'Admin\Jobs::uncomplete_job');
 $routes->post('jobs/fetchAllJobs', 'Admin\Jobs::fetchAllJobs');
+$routes->post('jobs/get_job_observations', 'Admin\Jobs::get_job_observations');
+$routes->post('jobs/save_observations', 'Admin\Jobs::save_observations');
 
 $routes->post('posts/index', 'Admin\Posts::index');
 $routes->post('posts/delete_post', 'Admin\Posts::delete_post');
