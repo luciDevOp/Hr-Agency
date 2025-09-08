@@ -15,6 +15,7 @@ import {
   TextField,
   TablePagination,
   Typography,
+  CircularProgress
 } from "@mui/material";
 import { axiosPost } from "../../utils/api";
 import JobDialog from "../../components/admin/JobDialog";
@@ -36,9 +37,21 @@ const JobList = () => {
   const [selectedJobObservations, setSelectedJobObservations] = useState(null); // Store selected job for observations
 
   const [paginationInfo, setPaginationInfo] = useState({ RowCount: 0 }); // Inițializează cu RowCount 0
+
+  const [observationsDraft, setObservationsDraft] = useState({}); // { [jobId]: 'text' }
+  const [saving, setSaving] = useState({}); // { [jobId]: boolean }
+
+
+
   useEffect(() => {
     fetchJobs();
   }, [page, rowsPerPage, filters]);
+
+  useEffect(() => {
+    const map = {};
+    jobs.forEach(j => { map[j.id] = j.observations || ""; });
+    setObservationsDraft(map);
+  }, [jobs]);
 
   const showJobInfo = (job) => {
     setSelectedJob(job);
@@ -200,6 +213,54 @@ const JobList = () => {
     message: '',
     severity: 'info', // 'success' | 'error' | 'warning' | 'info'
   });
+
+    const saveObservation = async (jobId) => {
+    try {
+      setSaving(prev => ({ ...prev, [jobId]: true }));
+      const formData = new FormData();
+      formData.append("id", jobId);
+      formData.append("observations", observationsDraft[jobId] || "");
+      const response = await axiosPost("/jobs/save_observations", formData);
+
+      if (response.Error) {
+        setSnackbar({
+          open: true,
+          message: response.MesajEroare || "A apărut o eroare.",
+          severity: "error",
+        });
+      } else {
+        if (response.jobId) {
+          // refresh pentru a vedea datele curente din backend
+          await fetchJobs();
+          setSnackbar({
+            open: true,
+            message: "Observations saved successfully.",
+            severity: "success",
+          });
+        }
+      }
+    } catch (error) {
+      console.error("Error saving job:", error);
+      setSnackbar({
+        open: true,
+        message: "Eroare la salvarea observațiilor.",
+        severity: "error",
+      });
+    } finally {
+      setSaving(prev => ({ ...prev, [jobId]: false }));
+    }
+  };
+
+    const handleObservationChange = (jobId, value) => {
+    setObservationsDraft(prev => ({ ...prev, [jobId]: value }));
+  };
+
+  const handleObservationKeyDown = (e, jobId) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      saveObservation(jobId);
+    }
+  };
   
 
   return (
@@ -236,6 +297,7 @@ const JobList = () => {
               <TableCell>Environment</TableCell>
               <TableCell>Type</TableCell>
               <TableCell>Completed</TableCell>
+              <TableCell>Observations</TableCell>          
               <TableCell sx={{ textAlign: "right" }}>Actions</TableCell>
             </TableRow>
           </TableHead>
@@ -247,18 +309,28 @@ const JobList = () => {
                 <TableCell>{job.environment}</TableCell>
                 <TableCell>{job.type}</TableCell>
                 <TableCell>{job.completed === '1' ? 'Completed' : 'Not completed'}</TableCell>
+                <TableCell sx={{ minWidth: 260 }}>
+                  <TextField
+                    size="small"
+                    fullWidth
+                    variant="outlined"
+                    placeholder="Adaugă observații…"
+                    value={
+                      observationsDraft[job.id] !== undefined
+                        ? observationsDraft[job.id]
+                        : (job.observations || "")
+                    }
+                    onChange={(e) => handleObservationChange(job.id, e.target.value)}
+                    onKeyDown={(e) => handleObservationKeyDown(e, job.id)}
+                    disabled={!!saving[job.id]}
+                    InputProps={{
+                      endAdornment: saving[job.id] ? (
+                        <CircularProgress size={16} />
+                      ) : null,
+                    }}
+                  />
+                </TableCell>
                 <TableCell sx={{ textAlign: "right" }}>
-                <Tooltip title="Observations">
-                    <Button
-                      variant="contained"
-                      color="secondary"
-                      size="small"
-                      onClick={() => showObservations(job)}
-                      sx={{ marginRight: 1 }}
-                    >
-                      <VisibilityIcon />
-                    </Button>
-                  </Tooltip>
                 <Tooltip title="Edit job">
                     <Button
                       variant="contained"
