@@ -68,7 +68,7 @@ function LogoSlider() {
         <img alt="logo" src="https://technica.ch/wp-content/uploads/2020/10/Galika-Logo.jpg" />
         <img alt="logo" src="https://1000logos.net/wp-content/uploads/2021/03/Gazprom-logo.jpg" />
         <img alt="logo" src="https://logowik.com/content/uploads/images/gea-engineering-new-20225715.jpg" />
-        <img alt="logo" src="https://cdn.worldvectorlogo.com/logos/gewiss-1.svg" />
+        <img alt="logo" src="https://www.gewiss.com/content/dam/gewiss/logo/gewiss-logo.png" />
         <img alt="logo" src="https://addaptny.org/wp-content/uploads/2017/11/GKN-Aerospace-Logo.png" />
         <img alt="logo" src="https://logowik.com/content/uploads/images/glencore4479.logowik.com.webp" />
         <img alt="logo" src="https://www.gmv.com/sites/default/files/content/image/2021/11/03/115/gmv_rgbredblack.png" />
@@ -92,7 +92,7 @@ function LogoSlider() {
         <img alt="logo" src="https://s3-us-west-2.amazonaws.com/cbi-image-service-prd/original/389b3b31-bcad-41ed-b875-5eb8b3388fec.jpeg" />
         <img alt="logo" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/MedPark_Hospital.jpg" />
         <img alt="logo" src="https://upload.wikimedia.org/wikipedia/ro/thumb/1/1d/Logo_Mega_Image.svg/1200px-Logo_Mega_Image.svg.png" />
-        <img alt="logo" src="https://merxu.com/pages-assets/social-merxu-logo.png" />
+        <img alt="logo" src="https://www.eu-startups.com/wp-content/uploads/2021/12/merXu.jpg" />
         <img alt="logo" src="https://i.pinimg.com/originals/86/39/68/863968d4e6c26b27ab214a867a0f9c2c.png" />
         <img alt="logo" src="https://logowik.com/content/uploads/images/855_metro.jpg" />
         <img alt="logo" src="https://logos-world.net/wp-content/uploads/2023/03/Miele-Logo.jpg" />
