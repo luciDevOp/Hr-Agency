@@ -12,12 +12,12 @@ const Call = () => {
           </div>
           <div className="col-lg-3 text-center">
             <img className="call-icons" src="/assets/img/job offers.png" alt=""/>
-            <h1>340</h1>
+            <h1>389</h1>
             <h3>Clients</h3>
           </div>
           <div className="col-lg-3 text-center">
             <img className="call-icons" src="/assets/img/resumes.png" alt=""/>
-            <h1>25,400</h1>
+            <h1>30,360</h1>
             <h3>Candidates within reach</h3>
           </div>
           <div className="col-lg-3 text-center">
