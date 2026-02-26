@@ -88,11 +88,6 @@ function Header() {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/bptw-news" onClick={closeMobileMenu}>
-                      Best Places to Work <br></br> Certification
-                    </Link>
-                  </li>
-                  <li>
                     <Link to="/about-our-commitment" onClick={closeMobileMenu}>
                       Our Commitment
                     </Link>
@@ -137,7 +132,7 @@ function Header() {
               </li>
               <li>
                 <Link
-                  className="getstarted scrollto"
+                  className="getstarted nav-link scrollto"
                   to="/about"
                   onClick={closeMobileMenu}
                 >
@@ -145,7 +140,7 @@ function Header() {
                 </Link>
               </li>
               <li>
-                <Link className="getstarted scrollto" to="/send-cv">
+                <Link className="getstarted nav-link scrollto" to="/send-cv" onClick={closeMobileMenu}>
                   Send CV
                 </Link>
             </li>

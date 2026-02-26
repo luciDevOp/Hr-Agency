@@ -32,7 +32,7 @@ function About() {
             <p className="py-3">
               The company was founded in December 2013 as CABS RECRUITMENT in
               partnership with CNA International Executive Search, and rebranded
-              into HEAD HUNTING AGENCY in 2023, since 2024 Partner with IMD International Executive Search Group and Since 2024 Official Partner Best Places to Work Certification Program.
+              into HEAD HUNTING AGENCY in 2023, since 2024 Partner with IMD International Executive Search Group.
             </p>
             <p className="pb-5">
               Celebrating 10 years on the local market, the agency built a solid

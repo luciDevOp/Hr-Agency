@@ -45,7 +45,7 @@ function LogoSlider() {
         <img alt="logo" src="https://www.fcrapid.ro/wp-content/uploads/23-Dacris.jpg" />
         <img alt="logo" src="https://i.pinimg.com/originals/49/0d/8e/490d8e60e2c5b3eb5325037df652fff4.png" />
         <img alt="logo" src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Daimler_logo.jpg" />
-        <img alt="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT64EvByq-1E9Qxs_s311vYzUwq2zQAVjp9pA&usqp=CAU" />
+        <img alt="logo" src="https://static.vecteezy.com/system/resources/previews/023/141/777/non_2x/cau-letter-logo-design-in-illustration-logo-calligraphy-designs-for-logo-poster-invitation-etc-vector.jpg" />
         <img alt="logo" src="https://logowik.com/content/uploads/images/danfoss7157.logowik.com.webp" />
         <img alt="logo" src="https://cdn.iconscout.com/icon/free/png-256/free-dhl-express-3442895-2875356.png" />
         <img alt="logo" src="https://logowik.com/content/uploads/images/dpd-dynamic-parcel-distribution5336.jpg" />
@@ -111,7 +111,7 @@ function LogoSlider() {
         <img alt="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/PricewaterhouseCoopers_Logo.svg/2560px-PricewaterhouseCoopers_Logo.svg.png" />
         <img alt="logo" src="https://1000logos.net/wp-content/uploads/2020/04/Raiffeisen-Bank-International-Logo.jpg" />
         <img alt="logo" src="https://cdn.worldvectorlogo.com/logos/reader-s-digest.svg" />
-        <img alt="logo" src="https://seeklogo.com/images/R/rompetrol-logo-E5D7093995-seeklogo.com.png" />
+        <img alt="logo" src="https://www.rompetrol.ro/upload/dynamic_photos/og_image_personal_business_company_80_1200_90_bigger.png" />
         <img alt="logo" src="https://upload.wikimedia.org/wikipedia/it/thumb/f/f3/Logo_Riello.svg/1280px-Logo_Riello.svg.png" />
         <img alt="logo" src="https://logowik.com/content/uploads/images/rossmann2254.jpg" />
         <img alt="logo" src="https://logowik.com/content/uploads/images/sandoz-new9018.logowik.com.webp" />
@@ -136,7 +136,7 @@ function LogoSlider() {
         <img alt="logo" src="https://upload.wikimedia.org/wikipedia/en/archive/b/b9/20130819104932%21TSB_logo_2013.svg" />
         <img alt="logo" src="https://www.infoharta.ro/wp-content/uploads/2016/06/UMEB-Proiectare-fabricare-si-comercializare-motoare-electrice-si-grupuri-electrogene.jpg" />
         <img alt="logo" src="https://clcprojects.com/wp-content/uploads/2018/02/Unimasters.jpg" />
-        <img alt="logo" src="https://seeklogo.com/images/T/TUV-logo-44EF751C05-seeklogo.com.png" />
+        <img alt="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNHe-hEi9baslHAjmKj145i4pLIh14g6gKAA&s" />
         <img alt="logo" src="https://play-lh.googleusercontent.com/aSbXoxsHyN-Xb2gfiW4rQmI0rOyixjexha8YOdJsClDhUDl9LzsWplmuNyxeJqKaww" />
         <img alt="logo" src="https://www.ergar.org/wp-content/uploads/2019/03/vertis_logo_hi-res_trasparent-300x225.png" />
         <img alt="logo" src="https://s23775.pcdn.co/wp-content/uploads/sites/44/2017/09/Velcro-We-R-the-World-Press-and-News.jpg.optimal.jpg" />

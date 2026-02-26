@@ -151,11 +151,7 @@ function Services() {
           >
             <div className="icon-box">
               <div className="icon">
-              <img 
-                      src="assets/img/bpw.png" 
-                      alt="Best Places to Work" 
-                      className="bpw-img"
-                  />
+                <i className="bx bx-brain"></i>
               </div>
               <h4>
                 <a
@@ -163,11 +159,12 @@ function Services() {
                   className="service-link"
                   data-target="bpw"
                 >
-                  Best Places to Work 
+                  Emotional Intelligence
                 </a>
               </h4>
               <p>
-              We help organizations improve workplace culture by identifying strengths, addressing weaknesses, and offering guidance. Our global certification programs celebrate the Best Places to Work.              </p>
+                Develop self-awareness, empathy, and interpersonal skills within your teams to build stronger, more resilient organizations driven by emotionally intelligent leadership.
+              </p>
             </div>
           </div>
 
@@ -467,9 +464,9 @@ function Services() {
           </p>
         </section>
         <section id="bpw" className="my-5 text-center hidden-right">
-          <h1 className="pb-5">Best Places to Work</h1>
+          <h1 className="pb-5">Emotional Intelligence</h1>
           <p className="lead">
-          We help organizations transform the culture of their workplace by identifying strengths, uncovering weaknesses and providing advice and guidance to spark change and inspire people. We manage certification programs across Europe, LATAM, Africa, Middle East, Asia and America that are looking for remarkable organizations to celebrate as Best Places to Work.
+            Emotional Intelligence (EI) is the ability to recognize, understand, manage, and effectively use emotions, both your own and those of others. At HHA, we help organizations cultivate emotionally intelligent cultures by assessing EI competencies, designing targeted development programs, and coaching leaders to foster empathy, self-regulation, and authentic communication. Investing in Emotional Intelligence improves team dynamics, reduces conflict, strengthens leadership, and drives long-term organizational resilience.
           </p>
         </section>
         <section id="interview" className="my-5 text-center hidden-left">
