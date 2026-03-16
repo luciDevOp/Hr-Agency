@@ -174,7 +174,7 @@ const Team = () => {
           </div>
           
         </div>
-        <div className="row justify-content-md-center">
+        <div className="row">
           <div
             className="col-lg-6 mt-4"
             data-aos="zoom-in"
@@ -194,6 +194,32 @@ const Team = () => {
                 <p>HR with a Human Touch: Psychology and Passion in Action.</p>
                 <div className="social">
                   <a href="https://www.linkedin.com/in/stefan-ilioaica-1a5059226/">
+                    {" "}
+                    <i className="ri-linkedin-box-fill"></i>{" "}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+            <div
+            className="col-lg-6 mt-4"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          >
+            <div className="member d-flex align-items-start">
+              <div className="pic">
+                <img
+                  src="assets/img/katerina.png"
+                  className="img-fluid"
+                  alt="Kateryna Popova – Marketing Intern Head Hunting Agency"
+                />
+              </div>
+              <div className="member-info">
+                <h4>Kateryna Popova</h4>
+                <span>Marketing Intern</span>
+                <p>Driven by creativity, guided by strategy.</p>
+                <div className="social">
+                  <a href="https://www.linkedin.com/in/kateryna-popova-97463b260/?utm_source=share_via&utm_content=profile&utm_medium=member_ios">
                     {" "}
                     <i className="ri-linkedin-box-fill"></i>{" "}
                   </a>
