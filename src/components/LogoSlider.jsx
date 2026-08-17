@@ -4,6 +4,26 @@ function LogoSlider() {
   return (
     <div className="logos">
       <div className="logos-slide">
+        <img alt="logo" src="/assets/img/logos/alive.jpg" />
+        <img alt="logo" src="/assets/img/logos/archirodon.png" />
+        <img alt="logo" src="/assets/img/logos/axi.png" />
+        <img alt="logo" src="/assets/img/logos/borzesti.png" />
+        <img alt="logo" src="/assets/img/logos/ceravagon.png" />
+        <img alt="logo" src="/assets/img/logos/daswork.png" />
+        <img alt="logo" src="/assets/img/logos/dentons.jpg" />
+        <img alt="logo" src="/assets/img/logos/dohwa.jpg" />
+        <img alt="logo" src="/assets/img/logos/event-stuff.png" />
+        <img alt="logo" src="/assets/img/logos/jokey.jpg" />
+        <img alt="logo" src="/assets/img/logos/lorencic.png" />
+        <img alt="logo" src="/assets/img/logos/niczuk.png" />
+        <img alt="logo" src="/assets/img/logos/reinert.png" />
+        <img alt="logo" src="/assets/img/logos/returo.png" />
+        <img alt="logo" src="/assets/img/logos/rocapital.png" />
+        <img alt="logo" src="/assets/img/logos/ruck.jpg" />
+        <img alt="logo" src="/assets/img/logos/sandori.jpg" />
+        <img alt="logo" src="/assets/img/logos/tempus.jpg" />
+        <img alt="logo" src="/assets/img/logos/tfb.png" />
+        <img alt="logo" src="/assets/img/logos/turbo.jpg" />
         <img alt="logo" src="/assets/img/logos/logo_001_aco-gruppe7259.jpg" />
         <img alt="logo" src="/assets/img/logos/logo_002_images.jpg" />
         <img alt="logo" src="/assets/img/logos/logo_003_images.png" />
