@@ -25,6 +25,26 @@ function Header() {
   return (
     <div>
       <header id="header" className="fixed-top navnav">
+        <div className="topbar-rating">
+          <div className="container">
+            <a
+              href="https://share.google/BTE1zYZIik39nQIRA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rating-link"
+            >
+              <span className="rating-score">4.9</span>
+              <span className="rating-stars">
+                <i className="bx bxs-star"></i>
+                <i className="bx bxs-star"></i>
+                <i className="bx bxs-star"></i>
+                <i className="bx bxs-star"></i>
+                <i className="bx bxs-star"></i>
+              </span>
+              <span className="rating-text">96 recenzii pe Google</span>
+            </a>
+          </div>
+        </div>
         <div className="container d-flex align-items-center">
           <Link to="/" className="logo me-auto">
             <img src="assets/img/hhasnip.png" alt="" className="img-fluid" />

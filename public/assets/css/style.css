@@ -19,7 +19,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
-  padding-top: 90px;
+  padding-top: 112px;
 }
 
 a {
@@ -140,6 +140,58 @@ h6 {
   padding: 15px 0;
 } */
 
+.topbar-rating {
+  background: #fff;
+  padding: 0 0 6px;
+  margin: 0;
+}
+
+.topbar-rating .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.topbar-rating .rating-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 6px;
+  color: #283a5a;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.topbar-rating .rating-link:hover {
+  color: #7947a2;
+}
+
+.topbar-rating .rating-stars i {
+  color: #ffc107;
+  font-size: 13px;
+  margin: 0 1px;
+}
+
+.topbar-rating .rating-text {
+  font-weight: 400;
+  color: #666;
+}
+
+@media (max-width: 575px) {
+  .topbar-rating .rating-link {
+    font-size: 11px;
+  }
+}
+
 #header {
   background-color: #fff;
   position: fixed;
@@ -151,6 +203,10 @@ h6 {
   -o-transition: all 0.5s;
   transition: all 0.5s;
   z-index: 1031;
+  padding: 0;
+}
+
+#header > .container {
   padding: 15px 0;
 }
 
