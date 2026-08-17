@@ -13,10 +13,9 @@ function Blog() {
           <div className="section-title blog-header" data-aos="fade-up">
             <h2>People for People</h2>
           </div>
-          <div style={{ textAlign: 'center', margin: '16px 0' }}>
-            <a target="_blank" rel="noopener noreferrer" href="https://listafirme.ro/head-hunting-agency-srl-32600925/">
-              <img src="https://listafirme.ro/platform-static/platform-images/top5.gif" alt="firmă de top" border="0" />
-            </a>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '32px', margin: '24px 0', flexWrap: 'wrap' }}>
+            <img src="/assets/img/prima.png" alt="Diplomă Locul 1 Top Afaceri România 2025" style={{ maxWidth: '420px', width: '100%', borderRadius: '8px' }} />
+            <img src="/assets/img/doua.png" alt="Diplomă Locul 1 Top Profit România 2025" style={{ maxWidth: '420px', width: '100%', borderRadius: '8px' }} />
           </div>
           <section id="hero-slider" className="hero-slider" style={{ marginBottom: '0px', paddingBottom: '0px' }}>
             <div className="container-md" data-aos="fade-in">
