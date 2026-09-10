@@ -7,8 +7,6 @@ import Blog from "./pages/blog/Blog";
 import Contact from "./pages/Contact";
 import Services from "./pages/Services";
 import { Route, Routes, useLocation } from "react-router-dom";
-import GlobalOffices from "./pages/GlobalOffices";
-import GlobalMarket from "./pages/GlobalMarket";
 import OurCommitment from "./pages/OurCommitment";
 import Privacy from "./pages/Privacy";
 import Vacancies from "./pages/vacancies/Vacancies";
@@ -49,11 +47,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/privacy-policy" element={<Privacy />} />
-        <Route path="/about-global-offices" element={<GlobalOffices />} />
-        <Route
-          path="/about-global-market-coverage"
-          element={<GlobalMarket />}
-        />
         <Route path="/error" element={<Error />} />
         <Route path="/about-our-commitment" element={<OurCommitment />} />
         <Route path="/services" element={<Services />} />
@@ -74,7 +67,6 @@ function App() {
         <Route path="/blog/networking-breakfast" element={<Event12 />} />
         <Route path="/blog/a_best-ac_texas" element={<Event13 />} />
         <Route path="/blog/valentina-calin" element={<Event15 />} />
-        <Route path="/blog/IMD-international-london" element={<Event16 />} />
         <Route path="/blog/loreda-dragomir" element={<Event17 />} />
         <Route path="/blog/accessability-expo" element={<Event18 />} />
         <Route path="/blog/alexandru-dragomir" element={<Event19 />} />

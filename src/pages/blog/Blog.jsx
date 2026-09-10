@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Footer from "../../components/Footer";
-import MyPDFViewer from "../../pdf/pdf";
 import SwiperComponent from "./SwiperComponent";
 
 import Container from '@mui/material/Container';
@@ -32,7 +31,6 @@ function Blog() {
             <MainContent />
             <Latest />
           </Container>
-            <MyPDFViewer />
             <Footer />
         </div>
   );

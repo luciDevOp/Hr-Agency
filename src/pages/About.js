@@ -32,10 +32,10 @@ function About() {
             <p className="py-3">
               The company was founded in December 2013 as CABS RECRUITMENT in
               partnership with CNA International Executive Search, and rebranded
-              into HEAD HUNTING AGENCY in 2023, since 2024 Partner with IMD International Executive Search Group.
+              into HEAD HUNTING AGENCY in 2023.
             </p>
             <p className="pb-5">
-              Celebrating 10 years on the local market, the agency built a solid
+              Celebrating 13 years on the local market, the agency built a solid
               reputation, serving more than 300 clients, approaching more than
               26,600 candidates, having an average NPS score of 92%, an
               average success rate of above 90% and repeated business from

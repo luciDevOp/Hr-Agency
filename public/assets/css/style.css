@@ -206,10 +206,6 @@ h6 {
   padding: 0;
 }
 
-#header > .container {
-  padding: 15px 0;
-}
-
 #header.header-scrolled,
 #header.header-inner-pages {
   background: rgba(40, 58, 90, 0.9);
@@ -561,25 +557,6 @@ h6 {
   padding-top: 60px;
 }
 
-.map-container {
-  margin-top: -30px;
-  background-color: #f9f7f8;
-}
-.imd-map {
-  height: 100vh;
-  margin-top: 60px;
-}
-.imd-map-img {
-  max-width: 100%;
-  height: auto;
-}
-.h1-map {
-  font-size: 4rem;
-}
-.p-map {
-  font-size: 1rem;
-  padding-bottom: 5%;
-}
 .IMD {
   font-family: "Hedvig+Letters+Serif";
   padding-top: 15%;

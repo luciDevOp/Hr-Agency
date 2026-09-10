@@ -11,7 +11,7 @@ function Hero() {
             <h1 className='global-reach'>Global reach with local knowledge</h1>
             <p className="hero-info">
               Welcome to one of Romania’s leading executive search firms, Head
-              Hunting IMD. We aim to create a true people advantage for our
+              Hunting Agency. We aim to create a true people advantage for our
               clients, by finding the best fit for both the employer and the
               employee. Enjoy your browsing; we strive to make your visit lead
               to personal insight and inspiration.
@@ -22,7 +22,7 @@ function Hero() {
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <h1 className="IMD" style={{textAlign:'center'}}>IMD-Bucharest, Romania</h1>
+            <h1 className="IMD" style={{textAlign:'center'}}>Bucharest, Romania</h1>
           </div>
         </div>
       </div>

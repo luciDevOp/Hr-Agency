@@ -47,7 +47,7 @@ function Header() {
         </div>
         <div className="container d-flex align-items-center">
           <Link to="/" className="logo me-auto">
-            <img src="assets/img/hhasnip.png" alt="" className="img-fluid" />
+              <img className="logo-img" src="assets/img/hha-logo.png" alt="hha-logo"/>
           </Link>
           <button
             type="button"
@@ -92,19 +92,6 @@ function Header() {
                       onClick={closeMobileMenu}
                     >
                       Team
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/about-global-offices" onClick={closeMobileMenu}>
-                      IMD Global reach
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/about-global-market-coverage"
-                      onClick={closeMobileMenu}
-                    >
-                      Global Market Coverage
                     </Link>
                   </li>
                   <li>
