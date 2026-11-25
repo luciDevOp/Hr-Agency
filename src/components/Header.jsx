@@ -41,7 +41,7 @@ function Header() {
                 <i className="bx bxs-star"></i>
                 <i className="bx bxs-star"></i>
               </span>
-              <span className="rating-text">96 recenzii pe Google</span>
+              <span className="rating-text">97 recenzii pe Google</span>
             </a>
           </div>
         </div>

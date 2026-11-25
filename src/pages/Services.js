@@ -359,6 +359,98 @@ function Services() {
               </p>
                   </div>
           </div>
+          <div
+            className="col-xl-3 col-md-6 d-flex align-items-stretch my-5 mt-xl-0"
+            data-aos="zoom-in"
+            data-aos-delay="400"
+          >
+            <div className="icon-box">
+              <div className="icon">
+                <i className="bx bx-briefcase-alt-2"></i>
+              </div>
+              <h4>
+                <a
+                  href="#bpo"
+                  className="service-link"
+                  data-target="bpo"
+                >
+                  BPO
+                </a>
+              </h4>
+              <p>
+                Reliable business process outsourcing that lets your teams focus on core activities, with recurring operational support delivered at consistent quality.
+              </p>
+            </div>
+          </div>
+          <div
+            className="col-xl-3 col-md-6 d-flex align-items-stretch my-5 mt-xl-0"
+            data-aos="zoom-in"
+            data-aos-delay="400"
+          >
+            <div className="icon-box">
+              <div className="icon">
+                <i className="bx bx-shield-quarter"></i>
+              </div>
+              <h4>
+                <a
+                  href="#psychologicalSafety"
+                  className="service-link"
+                  data-target="psychologicalSafety"
+                >
+                  Workplace Psychological Safety Training
+                </a>
+              </h4>
+              <p>
+                Training that builds teams where people feel safe to speak up, share ideas and learn from mistakes, backed by HHA's people and psychology expertise.
+              </p>
+            </div>
+          </div>
+          <div
+            className="col-xl-3 col-md-6 d-flex align-items-stretch my-5 mt-xl-0"
+            data-aos="zoom-in"
+            data-aos-delay="400"
+          >
+            <div className="icon-box">
+              <div className="icon">
+                <i className="bx bx-bar-chart-alt-2"></i>
+              </div>
+              <h4>
+                <a
+                  href="#compensationBenchmarking"
+                  className="service-link"
+                  data-target="compensationBenchmarking"
+                >
+                  Compensation & Benefits Benchmarking
+                </a>
+              </h4>
+              <p>
+                Market-based remuneration studies and management-level consulting to keep your pay and benefits competitive.
+              </p>
+            </div>
+          </div>
+          <div
+            className="col-xl-3 col-md-6 d-flex align-items-stretch my-5 mt-xl-0"
+            data-aos="zoom-in"
+            data-aos-delay="400"
+          >
+            <div className="icon-box">
+              <div className="icon">
+                <i className="bx bx-trending-up"></i>
+              </div>
+              <h4>
+                <a
+                  href="#employerBranding"
+                  className="service-link"
+                  data-target="employerBranding"
+                >
+                  Employer Branding & Talent Attraction
+                </a>
+              </h4>
+              <p>
+                Strategies that make your company an employer of choice and attract talent well beyond individual recruitment assignments.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       <div className="container" id="service">
@@ -487,6 +579,30 @@ Stay Interviews is a great method to use for Succession Planning, Retention, Org
           <p className="lead">
           An exit interview is a brief conversation or survey that is conducted with an employee who is leaving an organization. Exit interviews occur most often between an employee and an organization, but they can also be between a student and an educational institution, or between a member and an association.    
      </p>
+        </section>
+        <section id="bpo" className="my-5 text-center hidden-left">
+          <h1 className="pb-5">Business Process Outsourcing</h1>
+          <p className="lead">
+            HHA's Business Process Outsourcing (BPO) service takes over recurring operational and HR-related processes so that your organization can concentrate on its core business. We design, run and continuously improve outsourced processes, ensuring consistent quality, flexibility and predictable costs, supported by dedicated professionals and clear performance metrics.
+          </p>
+        </section>
+        <section id="psychologicalSafety" className="my-5 text-center hidden-right">
+          <h1 className="pb-5">Workplace Psychological Safety Training</h1>
+          <p className="lead">
+            Psychological safety is the foundation of high-performing teams: people who feel safe to speak up, ask questions and admit mistakes innovate more and stay longer. HHA's Workplace Psychological Safety Training combines organizational and psychological expertise to help leaders and teams build trust, open communication and a healthy culture, through practical workshops, real-life cases and actionable tools.
+          </p>
+        </section>
+        <section id="compensationBenchmarking" className="my-5 text-center hidden-left">
+          <h1 className="pb-5">Compensation & Benefits Benchmarking</h1>
+          <p className="lead">
+            HHA's Compensation & Benefits Benchmarking compares your salary and benefits packages with the market, by role, industry, company size and location. The resulting remuneration studies and management-level advice help you attract and retain talent, keep internal pay equity and make informed decisions on your reward strategy.
+          </p>
+        </section>
+        <section id="employerBranding" className="my-5 text-center hidden-right">
+          <h1 className="pb-5">Employer Branding & Talent Attraction</h1>
+          <p className="lead">
+            A strong employer brand attracts the right people before you even open a position. HHA supports organizations in defining their employer value proposition, communicating it authentically and building long-term talent attraction strategies, so that you reach and engage the talent you need beyond individual recruitment assignments.
+          </p>
         </section>
       </div>
       <Footer />
